@@ -1,0 +1,4 @@
+Co to jest język Python?
+Python jest szeroko stosowanym dynamicznym językiem programowania wysokiego poziomu, ogólnego przeznaczenia. Jego filozofia projektowania kładzie nacisk na czytelność kodu, a jego składnia pozwala programistom na wyrażanie koncepcji w mniejszej liczbie wierszy kodu niż jest to możliwe w językach takich jak C++ lub Java.
+Python obsługuje wiele paradygmatów programowania, w tym programowanie obiektowe, imperatywne i funkcjonalne oraz style proceduralne. Posiada dynamiczny system typów i automatyczne zarządzanie pamięcią oraz dużą i wszechstronną bibliotekę standardową.
+Najlepszym sposobem nauki języka Python są ćwiczenia i pytania z ćwiczeniami.
