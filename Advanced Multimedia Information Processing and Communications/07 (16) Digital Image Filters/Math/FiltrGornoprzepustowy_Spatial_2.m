@@ -1,0 +1,20 @@
+I0 = imread( 'Birds.bmp'); 
+I0grey = im2double(rgb2gray(I0)); 
+K0= 0.01;
+lp = fir1(32,K0, 'high');  
+lp_2D = ftrans2(lp);  
+figure(1);
+F1=fftshift(log(abs(lp_2D))); 
+mesh(F1);
+title('Charakterystyka czêstotliwoœciowa filtru:');
+I_double = im2double(I0grey);
+I_lowpass_rep = imfilter(I_double,lp_2D, 'replicate');   
+I_lowpass_gray = mat2gray(I_lowpass_rep);
+figure(2);
+subplot(2,1,1);
+imshow(I_lowpass_gray);
+title('Obraz rozmazany:');
+subplot(2,1,2);
+imshow(I_lowpass_gray);
+title('Obraz po filtracji górnoprzepustowej:');
+
