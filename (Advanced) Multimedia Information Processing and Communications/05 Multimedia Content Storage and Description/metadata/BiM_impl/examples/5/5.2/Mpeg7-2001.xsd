@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- *********************************************************************
+
+  This XML document was originally developed in the course of development 
+  of the ISO/IEC 15938 standard (MPEG-7). This XML document contains 
+  either a part of the MPEG-7 schema implementation for one or more MPEG-7 
+  tools as specified by the MPEG-7 Requirements or MPEG-7 description 
+  examples conformant to the MPEG-7 schema.
+
+  ISO/IEC gives users of MPEG-7 free license to this XML document or 
+  modifications thereof for use in hardware or software products claiming 
+  conformance to MPEG-7.
+
+  Those intending to use this XML document in hardware or software products 
+  are advised that its use may infringe existing patents. The original 
+  developers of this XML document and his/her company, the subsequent 
+  editors and their companies, and ISO/IEC have no liability for use of
+  this XML document or modifications thereof in an implementation.
+
+  Copyright is not released for non MPEG-7 conforming products. The 
+  organizations who contributed to this XML document retain the full right 
+  to use the code for their own purpose,
+  assign or donate their contribution to a third party and inhibit third 
+  parties from using their contribution for non MPEG-7 conforming products.
+
+  Copyright (c) 1999-2001 ISO/IEC. 
+
+  This XML document is provided for informative purposes only. If any parts 
+  of this XML document contradict the normative part of the corresponding 
+  standard document then the normative part should be used as the definitive 
+  specification.
+
+  This notice must be included in all copies or derivative works.
+  
+************************************************************************** -->
+
+<!-- ##################################################################### -->
+<!-- ISO/IEC 15938 Information Technology - Multimedia Content Description -->
+<!-- Interface MPEG-7 Description Example developed by MPEG MDS Sub-group, -->
+<!-- ##################################################################### -->
+<schema targetNamespace="urn:mpeg:mpeg7:schema:2001"
+        xmlns:xml="http://www.w3.org/XML/1998/namespace"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001"
+          elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <annotation>
+    <documentation>
+      This document contains main wrapper of MPEG-7 schema
+    </documentation>
+  </annotation>
+  <!-- ########################################################### -->
+  <!--  import xml components                                      -->
+  <!-- ########################################################### -->
+  <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="./xml-1998.xsd"/>
+  <!-- ########################################################### -->
+  <!--  include MPEG-7 specific extensions for DDL(ISO/IEC 15938-2)-->
+  <!-- ########################################################### -->
+  <include schemaLocation="./ddl-2001.xsd"/>
+  <!-- ########################################################### -->
+  <!--  include MPEG-7 Visual tools (ISO/IEC 15938-3)              -->
+  <!-- ########################################################### -->
+  <include schemaLocation="./visual-2001.xsd"/>
+  <!-- ########################################################### -->
+  <!--  include MPEG-7 Audio tools (ISO/IEC 15938-4)               -->
+  <!-- ########################################################### -->
+  <include schemaLocation="./audio-2001.xsd"/>
+  <!-- ########################################################### -->
+  <!--  include MPEG-7 MDS tools (ISO/IEC 15938-5)                 -->
+  <!-- ########################################################### -->
+  <include schemaLocation="./mds-2001.xsd"/>
+</schema>

@@ -1,0 +1,24 @@
+/ActivityToken.java/1.1/Fri Feb 22 15:12:15 2002//
+/ActivityTokenLinkedList.java/1.1/Fri Feb 22 15:12:15 2002//
+/ActivityTokenLinkedListEnumeration.java/1.1/Fri Feb 22 15:12:16 2002//
+/ActivityTokenNode.java/1.1/Fri Feb 22 15:12:16 2002//
+/ApplicationContextAware.java/1.1/Fri Feb 22 15:12:16 2002//
+/AutomataException.java/1.1/Fri Feb 22 15:12:17 2002//
+/ControlledFiniteStateAutomata.java/1.1/Fri Feb 22 15:12:17 2002//
+/FinalStateNotReachedException.java/1.1/Fri Feb 22 15:12:17 2002//
+/FiniteStateAutomata.java/1.1/Fri Feb 22 15:12:18 2002//
+/FiniteStateAutomataInterface.java/1.1/Fri Feb 22 15:12:18 2002//
+/OneTokenAutomata.java/1.1/Fri Feb 22 15:12:18 2002//
+/RejectionException.java/1.1/Fri Feb 22 15:12:19 2002//
+/SimpleState.java/1.1/Fri Feb 22 15:12:19 2002//
+/SimpleTransition.java/1.1/Fri Feb 22 15:12:19 2002//
+/State.java/1.1/Fri Feb 22 15:12:20 2002//
+/StateLinkedList.java/1.1/Fri Feb 22 15:12:20 2002//
+/StateLinkedListEnumeration.java/1.1/Fri Feb 22 15:12:20 2002//
+/StateNode.java/1.1/Fri Feb 22 15:12:21 2002//
+/Transition.java/1.1/Fri Feb 22 15:12:21 2002//
+/TransitionException.java/1.1/Fri Feb 22 15:12:21 2002//
+/TransitionLinkedList.java/1.1/Fri Feb 22 15:12:22 2002//
+/TransitionLinkedListEnumeration.java/1.1/Fri Feb 22 15:12:22 2002//
+/TransitionNode.java/1.1/Fri Feb 22 15:12:22 2002//
+D

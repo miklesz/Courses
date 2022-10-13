@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<MdsExampleTest xmlns="urn:mpeg:mpeg7:schema:2001"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001"
+                xsi:schemaLocation="urn:mpeg:mpeg7:schema:2001 .\examples.xsd">
+<Spatial2DCoordinateSystem id="s2dcs1" xRepr="255" yRepr="10" xSrcSize="800" ySrcSize="600">
+   <Unit>pixel</Unit>
+   <LocalCoordinateSystem name="pierwszy" dataSet="anyURI">
+      <CurrPixel>1024 1023</CurrPixel>
+      <SrcPixel>32767 -1</SrcPixel>
+      <CurrPixel>24 23</CurrPixel>
+      <SrcPixel>50 -10</SrcPixel>
+      <CurrPixel>10 12</CurrPixel>
+      <SrcPixel>65 -21</SrcPixel>
+      <MappingFunct>x=x;y=2*x*x</MappingFunct>
+      <MappingFunct>x=x;y=x*x</MappingFunct>
+   </LocalCoordinateSystem>
+   <IntegratedCoordinateSystem modelType="translational" xOrigin="123.43" yOrigin="321.003">
+      <TimeIncr mediaTimeUnit="PT1N10F">123</TimeIncr>
+      <MotionParams>10.2</MotionParams>
+      <MotionParams>15.1</MotionParams>
+      <TimeIncr>10</TimeIncr>
+      <MotionParams>0.2</MotionParams>
+      <MotionParams>1.1</MotionParams>
+   </IntegratedCoordinateSystem>
+</Spatial2DCoordinateSystem>
+<Spatial2DCoordinateSystem id="s2dcs2" xRepr="16" yRepr="20">
+   <Unit>meter</Unit>
+   <LocalCoordinateSystem name="drugi">
+      <Pixel>222 2047</Pixel>
+      <CoordPoint>23.9 98.1</CoordPoint>
+      <Pixel>4 3</Pixel>
+      <CoordPoint>3.9 8.1</CoordPoint>
+   </LocalCoordinateSystem>
+</Spatial2DCoordinateSystem>
+<Spatial2DCoordinateSystem id="s2dcs3" xRepr="255" yRepr="10">
+   <IntegratedCoordinateSystem modelType="affine" xOrigin="0" yOrigin="0">
+      <TimeIncr mediaTimeUnit="PT1S">150</TimeIncr>
+      <MotionParams>10.2</MotionParams>
+      <MotionParams>15.1</MotionParams>
+      <MotionParams>0.2</MotionParams>
+      <MotionParams>5.1</MotionParams>
+      <MotionParams>1.2</MotionParams>
+      <MotionParams>1.1</MotionParams>
+   </IntegratedCoordinateSystem>
+</Spatial2DCoordinateSystem>
+
+</MdsExampleTest>

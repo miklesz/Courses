@@ -1,0 +1,3170 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- #########################################################  -->
+<!-- ###          MPEG-7 Monster Description                             ###  -->
+<!-- ###       Developed by MPEG MDS Group,                            ###  -->
+<!-- #########################################################  -->
+<Mpeg7 type="complete" xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cc="zob"
+	xsi:schemaLocation="http://www.mpeg7.org/2001/MPEG-7_Schema ./Mpeg7Ver3.xsd">
+
+	<!-- #####################################################  -->
+	<!-- ###           Description Metadata                ###  -->
+	<!-- #####################################################  -->
+	<DescriptionMetadata>
+		<Confidence>0.75</Confidence>
+		<Version>1.4</Version>
+		<LastUpdate>2001-03-11T10:00:00+00:00</LastUpdate>
+		<Comment>
+			<FreeTextAnnotation>Monster Jr. description of Soccer game video.</FreeTextAnnotation>
+		</Comment>
+		<PublicIdentifier type="UUID" organization="ISO">
+			0f93sjd8-h38f-20dk-kjf9-02kj78li
+		</PublicIdentifier>
+		<PrivateIdentifier>Monster Jr.</PrivateIdentifier>
+		<Creator>
+			<Role href="creatorCS">
+				<Name>Creator</Name>
+			</Role>
+			<Agent xsi:type="OrganizationType">
+				<Name>MPEG-7 Multimedia Description Schemes Group</Name>
+				<Kind>
+					<Name>ISO MPEG subgroup</Name>
+				</Kind>
+				<Contact xsi:type="PersonType">
+						<Name>
+							<GivenName>John R.</GivenName>
+							<FamilyName>Smith</FamilyName>
+						</Name>
+						<ElectronicAddress>
+							<Email>jrsmith@watson.ibm.com</Email>
+						</ElectronicAddress>
+				</Contact>
+				<ElectronicAddress>
+					<URL>http://www.cselt.it/mpeg/</URL>
+				</ElectronicAddress>
+			</Agent>
+		</Creator>
+		<CreationLocation>
+			<Country>en</Country>
+			<AdministrativeUnit>New York</AdministrativeUnit>
+		</CreationLocation>
+		<CreationTime>2001-02-20T10:00:00+00:00</CreationTime>
+		<Instrument>
+			<Tool>
+				<Name>MPEG-7 WizzoExtracto Tool</Name>
+			</Tool>
+			<Setting name="precision" value="highest"/>
+		</Instrument>
+		<Rights>
+			<RightsId organization="MPEG" type="MPEGcopyright">
+				mpeg7:98shdj28:021
+			</RightsId>
+		</Rights>
+		<Package name="Sports - Soccer Package">
+			<Scheme name="GraphType"/>
+			<Scheme name="AffectiveType"/>
+			<Scheme name="MediaInformationType"/>
+			<Scheme name="CreationInformationType"/>
+			<Scheme name="UsageInformationType"/>
+			<Scheme name="StructuedAnnotationType"/>
+			<Scheme name="PointOfViewType"/>
+			<Scheme name="VideoSegmentType"/>
+			<Scheme name="SummarizationType"/>
+			<Scheme name="ViewType"/>
+			<Scheme name="ViewDecompositionType"/>
+			<Scheme name="VariationType"/>
+			<Scheme name="CollectionType"/>
+			<Scheme name="ModelType"/>
+			<Scheme name="SemanticsType"/>
+			<Scheme name="UserPreferencesType"/>
+		</Package>
+	</DescriptionMetadata>
+	<ContentDescription xsi:type="ContentEntityType">
+		<!-- #####################################################  -->
+		<!-- ###         Relationships description             ###  -->
+		<!-- #####################################################  -->
+		<Relationships>
+			<Header/>
+			<Node id="s0" idref="Seg0"/>
+			<Node id="s1" idref="Seg1"/>
+			<Node id="s2" idref="Seg2"/>
+			<Node id="s3" idref="Seg3"/>
+			<Node id="s4" idref="Seg4"/>
+			<Node id="s5" idref="Seg5"/>
+			<Node id="s6" idref="Seg6"/>
+			<Node id="s7" idref="Seg7"/>
+			<Relation xsi:type="RelationType" name="before" arity="2" source="s0" target="s1" properties="nonsymmetric"/>
+			<Relation xsi:type="RelationType" name="before" arity="2" source="s1" target="s2" properties="nonsymmetric"/>
+			<Relation xsi:type="RelationType" name="before" arity="2" source="s2" target="s3" properties="nonsymmetric"/>
+			<Relation xsi:type="RelationType" name="before" arity="2" source="s3" target="s4" properties="nonsymmetric"/>
+			<Relation xsi:type="RelationType" name="before" arity="2" source="s4" target="s5" properties="nonsymmetric"/>
+			<Relation xsi:type="RelationType" name="before" arity="2" source="s5" target="s6" properties="nonsymmetric"/>
+			<Relation xsi:type="RelationType" name="before" arity="2" source="s6" target="s7" properties="nonsymmetric"/>
+		</Relationships>
+		<!-- #####################################################  -->
+		<!-- ###          Affective Description                ###  -->
+		<!-- #####################################################  -->
+		<Affective id="affect1">
+			<Header xsi:type="DescriptionMetadataType">
+				<Confidence>0.85</Confidence>
+				<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+				<Comment>
+					<FreeTextAnnotation>
+						Description of Affective information of soccer game video.</FreeTextAnnotation>
+				</Comment>
+				<Creator>
+					<Role href="creatorCS">
+						<Name>Creator</Name>
+					</Role>
+					<Agent xsi:type="PersonType">
+						<Name>
+							<GivenName>Yoshiaki</GivenName>
+							<FamilyName>Shibata</FamilyName>
+						</Name>
+						<Affiliation>
+							<Organization>
+								<Name xml:lang="jp">Sony Corporation, HNC, BBC</Name>
+							</Organization>
+						</Affiliation>
+					</Agent>
+				</Creator>
+				<CreationTime>2001-01-08T10:00</CreationTime>
+				<Instrument>
+					<Tool>
+						<Name>Manual</Name>
+					</Tool>
+				</Instrument>
+			</Header>
+			<Type href="AffectTypeCS">
+				<Name>Excited</Name>
+			</Type>
+			<Score idref="Seg0">0.00360117</Score>
+			<Score idref="Seg1">0.00720234</Score>
+			<Score idref="Seg2">0.825006</Score>
+			<Score idref="Seg3">0.00360117</Score>
+			<Score idref="Seg4">0.00720234</Score>
+			<Score idref="Seg5">0.825006</Score>
+			<Score idref="Seg6">0.00720234</Score>
+			<Score idref="Seg7">0.825006</Score>
+		</Affective>
+		<MultimediaContent xsi:type="VideoType">
+			<!-- #####################################################  -->
+			<!-- ###        MediaInformation Description           ###  -->
+			<!-- #####################################################  -->
+			<Header xsi:type="DescriptionMetadataType">
+				<Confidence>1.0</Confidence>
+				<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+				<Comment>
+					<FreeTextAnnotation>
+						Description of AudioVisual content of soccer game video.</FreeTextAnnotation>
+				</Comment>
+				<Creator>
+					<Role href="creatorCS">
+						<Name>Creator</Name>
+					</Role>
+					<Agent xsi:type="PersonType">
+						<Name>
+							<GivenName>John R. Smith</GivenName>
+						</Name>
+						<Affiliation>
+							<Organization>
+								<Name>IBM T. J. Watson Research Center</Name>
+							</Organization>
+						</Affiliation>
+					</Agent>
+				</Creator>
+				<CreationTime>2001-01-08T10:00</CreationTime>
+				<Instrument>
+					<Tool>
+						<Name>Manual</Name>
+					</Tool>
+				</Instrument>
+			</Header>
+			<Video>
+				<!-- #####################################################  -->
+				<!-- ###       MediaInformation Description            ###  -->
+				<!-- #####################################################  -->
+				<MediaInformation>
+					<Header xsi:type="DescriptionMetadataType">
+						<Confidence>1.0</Confidence>
+						<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+						<Comment>
+							<FreeTextAnnotation>
+								Description of MediaInformation of soccer game video.</FreeTextAnnotation>
+						</Comment>
+						<Creator>
+							<Role href="creatorCS">
+								<Name>Creator</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>John R. Smith</GivenName>
+								</Name>
+								<Affiliation>
+									<Organization>
+										<Name>IBM T. J. Watson Research Center</Name>
+									</Organization>
+								</Affiliation>
+							</Agent>
+						</Creator>
+						<CreationTime>2001-01-08T10:00</CreationTime>
+						<Instrument>
+							<Tool>
+								<Name>Manual</Name>
+							</Tool>
+						</Instrument>
+					</Header>
+					<MediaIdentification>
+						<EntityIdentifier type="TestItemNumber" organization="MPEG7">
+							MPEG7.V16
+						</EntityIdentifier>
+						<AudioDomain href="Mpeg7CS">
+							<Name>Natural</Name>
+						</AudioDomain>
+						<AudioDomain href="Mpeg7CS">
+							<Name>Speech</Name>
+						</AudioDomain>
+						<VideoDomain href="Mpeg7CS">
+							<Name>natural</Name>
+						</VideoDomain>
+						<ImageDomain href="Mpeg7CS">
+							<Name>color photograph</Name>
+						</ImageDomain>
+						<ImageDomain href="Mpeg7CS">
+							<Name>simple color graphic</Name>
+						</ImageDomain>
+					</MediaIdentification>
+					<MediaProfile master="false">
+						<MediaFormat>
+							<Content>audiovisual</Content>
+							<Medium href="MPEG7MediumCS">
+								<Name>CD</Name>
+							</Medium>
+							<FileFormat href="MPEG7FileFormatCS">
+								<Name>MPEG</Name>
+							</FileFormat>
+							<FileSize>200000000</FileSize>
+							<System href="MPEG7SystemCS">
+								<Name>PAL</Name>
+							</System>
+							<Bandwidth>1.5e6</Bandwidth>
+							<BitRate>1500000</BitRate>
+							<VisualCoding>
+								<Format href="MPEG7FileFormatCS" colorDomain="color">
+									<Name>MPEG-1</Name>
+								</Format>
+								<Pixel resolution="2" aspectRatio="1"/>
+								<Frame height="240" width="320" aspectRatio="1.3333"
+										rate="30.0" structure="progressive"/>
+							</VisualCoding>
+							<AudioCoding>
+								<Format href="MPEG7FileFormatCS">
+									<Name>MPEG-1 Layer II</Name>
+								</Format>
+								<AudioChannels>1</AudioChannels>
+								<Sample rate="22000"/>
+							</AudioCoding>
+						</MediaFormat>
+						<MediaInstance>
+							<InstanceIdentifier>soccer playoffs</InstanceIdentifier>
+							<MediaLocator>
+								<MediaUri>http://www.nutopia.gov/soccer.mpg</MediaUri>
+							</MediaLocator>
+						</MediaInstance>
+					</MediaProfile>
+					<MediaProfile id="mediaprofile1">
+						<MediaFormat>
+							<Content>audiovisual</Content>
+							<FileFormat href="MPEG7FileFormatCS">
+								<Name>MPEG-1</Name>
+							</FileFormat>
+						</MediaFormat>
+						<MediaInstance>
+							<InstanceIdentifier>7000005</InstanceIdentifier>
+							<MediaLocator>
+								<MediaUri>http://www.nutopia.gov/soccer3.mpg</MediaUri>
+							</MediaLocator>
+						</MediaInstance>
+					</MediaProfile>
+				</MediaInformation>
+				<!-- #####################################################  -->
+				<!-- ###       CreationInformation Description         ###  -->
+				<!-- #####################################################  -->
+				<CreationInformation>
+					<Header xsi:type="DescriptionMetadataType">
+						<Confidence>1.0</Confidence>
+						<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+						<Comment>
+							<FreeTextAnnotation>
+								Description of CreationInformation of soccer game video.
+							</FreeTextAnnotation>
+						</Comment>
+						<Creator>
+							<Role href="creatorCS">
+								<Name>Creator</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Jose (Chema) Martinez</GivenName>
+								</Name>
+								<Affiliation>
+									<Organization>
+										<Name xml:lang="es">Universidad Politecnica de Madrid</Name>
+									</Organization>
+								</Affiliation>
+							</Agent>
+						</Creator>
+						<CreationTime>2001-01-08T10:00</CreationTime>
+						<Instrument>
+							<Tool>
+								<Name>Manual</Name>
+							</Tool>
+						</Instrument>
+					</Header>
+					<Creation>
+						<Title type="popular"/>
+						<TitleMedia>
+							<TitleImage>
+								<MediaUri>http://www.mpeg7.org/Soccer/Soccer_2.bmp</MediaUri>
+							</TitleImage>
+						</TitleMedia>
+						<Abstract>
+							<FreeTextAnnotation>
+					Spain scores a goal quickly in this 
+					World Cup soccer match against Sweden. 
+					The scoring player is Morientes.</FreeTextAnnotation>
+						</Abstract>
+						<Creator>
+							<Role href="producerCS">
+								<Name>Producer</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Joe Producer</GivenName>
+								</Name>
+								<Affiliation>
+									<Organization>
+										<Name>TV Spain</Name>
+									</Organization>
+								</Affiliation>
+							</Agent>
+						</Creator>
+						<CreationCoordinates>
+							<CreationLocation>
+								<Name>Spain</Name>
+								<Role>
+									<Name>Production studio</Name>
+								</Role>
+								<AstronomicalBody>
+									<Name>Earth</Name>
+								</AstronomicalBody>
+								<Country>es</Country>
+								<AdministrativeUnit>Stadium</AdministrativeUnit>
+							</CreationLocation>
+							<CreationDate>
+								<TimePoint>1998-10-03T14:13+01:00</TimePoint>
+							</CreationDate>
+						</CreationCoordinates>
+						<CreationTool>
+							<Tool>
+								<Name>Televison camera</Name>
+							</Tool>
+							<Setting name="zoom" value="2x"/>
+							<Setting name="angle" value="wide"/>
+							<Setting name="aperture" value="35"/>
+						</CreationTool>
+					</Creation>
+					<Classification>
+						<Form href="EBUEscort2.4ContentCS:1:1:1">
+							<Name>Daily news</Name>
+						</Form>
+						<Genre href="EBUEscort2.4ContentCS:1:3:2">
+							<Name>Sports</Name>
+						</Genre>
+						<Release date="1998-06-16T21:30+01:00">
+							<Country>es</Country>
+						</Release>
+						<Target>
+							<Age max="35" min="15"/>
+						</Target>
+						<MediaReview>
+							<Rating>
+								<RatingValue>3.0</RatingValue>
+								<RatingScheme best="4" style="higherBetter" worst="1">
+									<Name>Overall</Name>
+								</RatingScheme>
+							</Rating>
+							<FreeTextReview>
+					Exciting and high-scoring Soccer World Cup 
+					qualifier game. Morientes of Spain shines.</FreeTextReview>
+							<Reviewer xsi:type="OrganizationType">
+								<Name>Associated Press</Name>
+							</Reviewer>
+						</MediaReview>
+					</Classification>
+				</CreationInformation>
+				<!-- #####################################################  -->
+				<!-- ###         UsageInformation Description          ###  -->
+				<!-- #####################################################  -->
+				<UsageInformation>
+					<Header xsi:type="DescriptionMetadataType">
+						<Confidence>1.0</Confidence>
+						<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+						<Comment>
+							<FreeTextAnnotation>
+								Description of UsageInformation of soccer game video.
+							</FreeTextAnnotation>
+						</Comment>
+						<Creator>
+							<Role href="creatorCS">
+								<Name>Creator</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Jose (Chema) Martinez</GivenName>
+								</Name>
+								<Affiliation>
+									<Organization>
+										<Name xml:lang="es">Universidad Politecnica de Madrid</Name>
+									</Organization>
+								</Affiliation>
+							</Agent>
+						</Creator>
+						<CreationTime>2001-01-08T10:00</CreationTime>
+						<Instrument>
+							<Tool>
+								<Name>Manual</Name>
+							</Tool>
+						</Instrument>
+					</Header>
+					<Rights>
+						<RightsId organization="TVE" type="TVECopyrights">
+							1998/4D3748
+						</RightsId>
+					</Rights>
+					<FinancialResults>
+						<AccountItem value="120000" currency="EUR">
+							<CostType>
+								<Name>Rights</Name>
+							</CostType>
+						</AccountItem>
+						<AccountItem value="15000" currency="EUR">
+							<CostType>
+								<Name>Production</Name>
+							</CostType>
+						</AccountItem>
+						<AccountItem value="6000" currency="EUR">
+							<CostType>
+								<Name>Emission</Name>
+							</CostType>
+						</AccountItem>
+						<AccountItem value="150000" currency="EUR">
+							<IncomeType>
+								<Name>Advertisement</Name>
+							</IncomeType>
+						</AccountItem>
+						<AccountItem value="12000" currency="EUR">
+							<IncomeType>
+								<Name>Summary sales</Name>
+							</IncomeType>
+						</AccountItem>
+					</FinancialResults>
+					<Availability id="live">
+						<InstanceRef href="http://www.rtve.es/19980325/scoccer.mpeg"/>
+						<PublicationType href="MPEG7PublicaionTypeCS:4">
+							<Name>Internet</Name>
+						</PublicationType>
+						<OriginPlace>
+							<Country>es</Country>
+						</OriginPlace>
+						<AvailabilityPeriod type="live">
+							<TimePoint>1997-10-03T14:13+01:00</TimePoint>
+							<Duration>P500D</Duration>
+						</AvailabilityPeriod>
+					</Availability>
+					<Availability id="onDemand">
+						<InstanceRef href="http://www.rtve.es/19980325/scoccer.mpeg"/>
+						<PublicationType href="MPEG7PublicaionTypeCS:4">
+							<Name>Internet</Name>
+						</PublicationType>
+						<OriginPlace>
+							<Country>es</Country>
+						</OriginPlace>
+						<Financial>
+							<AccountItem value="3" currency="EUR">
+								<CostType>
+									<Name>Pay-per-view price</Name>
+								</CostType>
+							</AccountItem>
+						</Financial>
+						<AvailabilityPeriod type="repeat payPerUse">
+							<TimePoint>2001-10-03T14:13+01:00</TimePoint>
+						</AvailabilityPeriod>
+					</Availability>
+					<UsageRecord>
+						<AvailabilityRef idref="live"/>
+						<Audience>8345747</Audience>
+					</UsageRecord>
+				</UsageInformation>
+				<!-- #####################################################  -->
+				<!-- ###       StructuredAnnotation Description        ###  -->
+				<!-- #####################################################  -->
+				<TextAnnotation>
+					<StructuredAnnotation>
+						<Who>
+							<Name>Suecia</Name>
+						</Who>
+						<WhatObject>
+							<Name>Soccer field</Name>
+						</WhatObject>
+						<WhatAction>
+							<Name>Soccer game</Name>
+						</WhatAction>
+						<Where>
+							<Name>Spain</Name>
+						</Where>
+					</StructuredAnnotation>
+				</TextAnnotation>
+				<MediaTime>
+					<!-- (XML Spy 3.5 Bug)
+						<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT0S</MediaRelTimePoint>
+					-->
+					<MediaRelTimePoint timeBase="../../">PT0S</MediaRelTimePoint>
+					<MediaDuration>PT1N10F</MediaDuration>
+				</MediaTime>
+				<!-- #####################################################  -->
+				<!-- ###	        PointOfView Description                ###  -->
+				<!-- #####################################################  -->
+				<TemporalDecomposition>
+					<Header xsi:type="DescriptionMetadataType">
+						<Confidence>1.0</Confidence>
+						<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+						<Comment>
+							<FreeTextAnnotation>
+								Description of PointOfView of soccer game video.</FreeTextAnnotation>
+						</Comment>
+						<Creator>
+							<Role href="creatorCS">
+								<Name>Creator</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Koichi Emura</GivenName>
+								</Name>
+							</Agent>
+						</Creator>
+						<CreationTime>2001-01-08T10:00</CreationTime>
+						<Instrument>
+							<Tool>
+								<Name>Manual</Name>
+							</Tool>
+						</Instrument>
+					</Header>
+					<VideoSegment id="Seg0">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>0.2</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.6</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.6</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT10S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT10S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+					<VideoSegment id="Seg1">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>1.0</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.3</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.7</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT20S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT20S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+					<VideoSegment id="Seg2">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>0.0</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.4</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.2</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT30S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT30S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+					<VideoSegment id="Seg3">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>1.0</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.3</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.7</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT40S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT40S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+					<VideoSegment id="Seg4">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>0.5</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.8</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.2</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT50S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT50S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+					<VideoSegment id="Seg5">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>0.2</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.4</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.4</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT60S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT60S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+					<VideoSegment id="Seg6">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>1.0</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.4</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.4</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT70S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT70S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+					<VideoSegment id="Seg7">
+						<PointOfView viewpoint="CAMERA ZOOM">
+							<Importance>
+								<Value>1.0</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="CAMERA SPEED">
+							<Importance>
+								<Value>0.1</Value>
+							</Importance>	
+						</PointOfView>
+						<PointOfView viewpoint="exciting">
+							<Importance>
+								<Value>0.2</Value>
+							</Importance>	
+						</PointOfView>
+						<MediaTime>
+						<!-- (XML Spy 3.5 Bug)
+							<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT80S</MediaRelTimePoint>
+						-->
+							<MediaRelTimePoint timeBase="../../">PT80S</MediaRelTimePoint>
+							<MediaDuration>PT1N10F</MediaDuration>
+						</MediaTime>
+					</VideoSegment>
+				</TemporalDecomposition>
+				<!-- #####################################################  -->
+				<!-- ###      VideoSegment (Index) Description         ###  -->
+				<!-- #####################################################  -->
+				<TemporalDecomposition>
+					<Header xsi:type="DescriptionMetadataType">
+						<Confidence>1.0</Confidence>
+						<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+						<Comment>
+							<FreeTextAnnotation>
+								Description of Video Segment Decomposition (Index) of soccer game video.
+							</FreeTextAnnotation>
+						</Comment>
+						<Creator>
+							<Role href="creatorCS">
+								<Name>Creator</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Philippe Salembier</GivenName>
+								</Name>
+								<Affiliation>
+									<Organization>
+										<Name xml:lang="es">Universitat Politecnica de Catalunya</Name>
+									</Organization>
+								</Affiliation>
+							</Agent>
+						</Creator>
+						<CreationTime>2001-01-08T10:00</CreationTime>
+						<Instrument>
+							<Tool>
+								<Name>Manual</Name>
+							</Tool>
+						</Instrument>
+					</Header>
+					<VideoSegment>
+						<MediaTime>
+							<MediaTimePoint>2001-10-03T14:13:02:0F30</MediaTimePoint>
+							<MediaIncrDuration timeUnit="PT1N30F">1340</MediaIncrDuration>
+						</MediaTime>
+					</VideoSegment>
+				</TemporalDecomposition>
+			</Video>
+		</MultimediaContent>
+	</ContentDescription>
+	<ContentDescription xsi:type="SummaryDescriptionType">
+		<!-- #####################################################  -->
+		<!-- ###          Summarization Description           ###  -->
+		<!-- #####################################################  -->
+		<Summarization>
+			<Header xsi:type="DescriptionMetadataType">
+				<Confidence>1.0</Confidence>
+				<LastUpdate>2001-02-20T10:00:00+00:00</LastUpdate>
+				<Comment>
+					<FreeTextAnnotation>
+				Description of summarization of soccer game video.</FreeTextAnnotation>
+				</Comment>
+				<Creator>
+					<Role href="creatorCS">
+						<Name>Creator</Name>
+					</Role>
+					<Agent xsi:type="PersonType">
+						<Name>
+							<GivenName>Peter van Beek</GivenName>
+						</Name>
+						<Affiliation>
+							<Organization>
+								<Name>Sharp Labs</Name>
+							</Organization>
+						</Affiliation>
+					</Agent>
+				</Creator>
+				<CreationTime>2001-01-08T10:00</CreationTime>
+				<Instrument>
+					<Tool>
+						<Name>Manual</Name>
+					</Tool>
+				</Instrument>
+			</Header>
+			<!-- #####################################################  -->
+			<!-- ###      HierarchicalSummaryType Description      ###  -->
+			<!-- #####################################################  -->
+			<Summary xsi:type="HierarchicalSummaryType" hierarchy="independent" 
+				components="keyVideoClips">
+				<SummaryThemeList>
+					<SummaryTheme id="st1">
+					team intros</SummaryTheme>
+					<SummaryTheme id="st2">
+					goals</SummaryTheme>
+					<SummaryTheme id="st3">
+					replays</SummaryTheme>
+					<SummaryTheme id="st4">
+					free kicks</SummaryTheme>
+					<SummaryTheme id="st5">
+					officials</SummaryTheme>
+					<SummaryTheme id="st6">
+					spectators</SummaryTheme>
+					<SummaryTheme id="st7">
+					interviews</SummaryTheme>
+				</SummaryThemeList>
+				<HighlightSummary themeIds="st1 st2 st3 st4">
+					<HighlightSegment>
+						<KeyAVClip/>
+					</HighlightSegment>
+				</HighlightSummary>
+			</Summary>
+			<!-- #####################################################  -->
+			<!-- ###      HierarchicalSummaryType Description      ###  -->
+			<!-- #####################################################  -->
+			<!-- Example from subclause 13.1.4.3 -->
+			<Summary xsi:type="HierarchicalSummaryType" hierarchy="dependent" components="keyVideoClips">
+				<SourceLocator>
+					<MediaUri>file://disk/video001.mpg</MediaUri>
+				</SourceLocator>
+				<SourceInformation idref="Seg0"/>
+				<HighlightSummary level="0">
+					<HighlightSegment>
+						<!-- segment #1 at level 0 -->
+					</HighlightSegment>
+					<HighlightSegment>
+						<!-- segment #2 at level 0 -->
+					</HighlightSegment>
+					<HighlightSegment>
+						<!-- segment #3 at level 0 -->
+					</HighlightSegment>
+					<HighlightChild level="1">
+						<HighlightSegment>
+							<!-- segment #1 at level 1 -->
+						</HighlightSegment>
+					</HighlightChild>
+				</HighlightSummary>
+			</Summary>
+			<!-- #####################################################  -->
+			<!-- ###      HighlightSummaryType Description         ###  -->
+			<!-- #####################################################  -->
+			<!-- Example from subclause 13.1.6.3 -->
+			<Summary xsi:type="HierarchicalSummaryType" hierarchy="independent" components="keyFrames">
+				<SourceInformation idref="Seg0"/>
+				<HighlightSummary level="0" numOfKeyFrames="1">
+					<HighlightSegment id="key_frame_A">
+						<KeyFrame>
+							<MediaTimePoint>T14:13:02:0F30</MediaTimePoint>
+						</KeyFrame>
+					</HighlightSegment>
+					<HighlightChild level="1" fidelity="0.4" numOfKeyFrames="1">
+						<!-- e1 -->
+						<HighlightSegment id="key_frame_B">
+							<KeyFrame>
+								<MediaTimePoint>T14:13:03:0F30</MediaTimePoint>
+							</KeyFrame>
+						</HighlightSegment>
+						<HighlightChild level="2" fidelity="0.4" numOfKeyFrames="1">
+							<!-- e4 -->
+							<HighlightSegment id="key_frame_E">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:04:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+						<HighlightChild level="2" fidelity="0.2" numOfKeyFrames="1">
+							<!-- e5 -->
+							<HighlightSegment id="key_frame_F">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:05:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+						<HighlightChild level="2" fidelity="0.6" numOfKeyFrames="1">
+							<!-- e6 -->
+							<HighlightSegment id="key_frame_G">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:06:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+					</HighlightChild>
+					<HighlightChild level="1" fidelity="0.5" numOfKeyFrames="1">
+						<!-- e2 -->
+						<HighlightSegment id="key_frame_C">
+							<KeyFrame>
+								<MediaTimePoint>T14:13:07:0F30</MediaTimePoint>
+							</KeyFrame>
+						</HighlightSegment>
+						<HighlightChild level="2" fidelity="0.3" numOfKeyFrames="1">
+							<!-- e7 -->
+							<HighlightSegment id="key_frame_H">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:08:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+						<HighlightChild level="2" fidelity="0.3" numOfKeyFrames="1">
+							<!-- e8 -->
+							<HighlightSegment id="key_frame_I">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:09:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+						<HighlightChild level="2" fidelity="0.8" numOfKeyFrames="1">
+							<!-- e9 -->
+							<HighlightSegment id="key_frame_J">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:10:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+					</HighlightChild>
+					<HighlightChild level="1" fidelity="0.2" numOfKeyFrames="1">
+						<!-- e3 -->
+						<HighlightSegment id="key_frame_D">
+							<KeyFrame>
+								<MediaTimePoint>T14:13:11:0F30</MediaTimePoint>
+							</KeyFrame>
+						</HighlightSegment>
+						<HighlightChild level="2" fidelity="0.3" numOfKeyFrames="1">
+							<!-- e10 -->
+							<HighlightSegment id="key_frame_K">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:12:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+						<HighlightChild level="2" fidelity="0.4" numOfKeyFrames="1">
+							<!-- e11 -->
+							<HighlightSegment id="key_frame_L">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:13:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+						<HighlightChild level="2" fidelity="0.1" numOfKeyFrames="1">
+							<!-- e12 -->
+							<HighlightSegment id="key_frame_M">
+								<KeyFrame>
+									<MediaTimePoint>T14:13:14:0F30</MediaTimePoint>
+								</KeyFrame>
+							</HighlightSegment>
+						</HighlightChild>
+					</HighlightChild>
+				</HighlightSummary>
+			</Summary>
+			<!-- #####################################################  -->
+			<!-- ###        SequentialSummaryType Description      ###  -->
+			<!-- #####################################################  -->
+			<!-- Example from subclause 13.1.10.3 -->
+			<Summary id="MSB4" xsi:type="SequentialSummaryType">
+				<!-- FastAudio_with_Table of Content -->
+				<AudioSummaryLocator>
+					<MediaUri>http://www.mywebsite.com/CueVideo/classAudio.mp3</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>0</MediaTimePoint>
+						<MediaDuration>PT12M</MediaDuration>
+					</MediaTime>
+				</AudioSummaryLocator>
+				<FrameProperty>
+					<!-- Location of Frame 1 in summary video -->
+					<ImageLocator>
+						<MediaUri>http://www.mywebsite.com/CueVideo/speaker1.jpg</MediaUri>
+					</ImageLocator>
+					<!-- Duration of Frame 1 in summary video = 1 min -->
+					<SyncTime>
+						<MediaTimePoint>0</MediaTimePoint>
+						<MediaDuration>PT01M</MediaDuration>
+					</SyncTime>
+				</FrameProperty>
+				<FrameProperty>
+					<!-- Location of Frame 2 in summary video -->
+					<ImageLocator>
+						<MediaUri>http://www.mywebsite.com/CueVideo/speaker2.jpg</MediaUri>
+					</ImageLocator>
+					<!-- Duration of Frame 2 in summary video = 4 min -->
+					<SyncTime>
+						<MediaTimePoint>1</MediaTimePoint>
+						<MediaDuration>PT04M</MediaDuration>
+					</SyncTime>
+				</FrameProperty>
+				<FrameProperty>
+					<!-- Location of Frame 3 in summary video -->
+					<ImageLocator>
+						<MediaUri>http://www.mywebsite.com/CueVideo/speaker3.jpg</MediaUri>
+					</ImageLocator>
+					<!-- Duration of Frame 3 in summary video = 1 min -->
+					<SyncTime>
+						<MediaTimePoint>5</MediaTimePoint>
+						<MediaDuration>PT01M</MediaDuration>
+					</SyncTime>
+				</FrameProperty>
+				<TextProperty>
+					<FreeText xml:lang="en">Introduction</FreeText>
+					<SyncTime>
+						<MediaRelTimePoint>PT01N30F</MediaRelTimePoint>
+						<MediaDuration>PT01M</MediaDuration>
+					</SyncTime>
+				</TextProperty>
+				<TextProperty>
+					<FreeText xml:lang="en">Business Model</FreeText>
+					<SyncTime>
+						<MediaRelTimePoint>PT01S01N</MediaRelTimePoint>
+						<MediaDuration>PT02M</MediaDuration>
+					</SyncTime>
+				</TextProperty>
+				<TextProperty>
+					<FreeText xml:lang="en">Stock Options</FreeText>
+					<SyncTime>
+						<MediaRelTimePoint>PT03S01N</MediaRelTimePoint>
+						<MediaDuration>PT02M</MediaDuration>
+					</SyncTime>
+				</TextProperty>
+				<TextProperty>
+					<FreeText xml:lang="en">Get Rich Quick</FreeText>
+					<SyncTime>
+						<MediaRelTimePoint>PT05S01N</MediaRelTimePoint>
+						<MediaDuration>PT01M</MediaDuration>
+					</SyncTime>
+				</TextProperty>
+			</Summary>
+		</Summarization>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###                View  Description              ###  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="ViewDescriptionType">
+		<View>
+			<Target>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer1.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Target>
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+		</View>
+		<!-- #####################################################  -->
+		<!-- ###           SpaceView  Description              ###  -->
+		<!-- #####################################################  -->
+		<View xsi:type="SpaceViewType">
+			<Target>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer-upperleft.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Target>
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<SpacePartition>
+				<Origin xOrigin="left" yOrigin="top"/>
+				<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+				<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+			</SpacePartition>
+		</View>
+		<!-- #####################################################  -->
+		<!-- ###             SpaceView  Description            ###  -->
+		<!-- #####################################################  -->
+		<View xsi:type="SpaceViewType">
+			<Target>
+				<Audio>
+					<MediaLocator>
+						<MediaUri>file://soccer-music-intro.mp3</MediaUri>
+					</MediaLocator>
+				</Audio>
+			</Target>
+			<Source>
+				<Audio>
+					<MediaLocator>
+						<MediaUri>file://soccer-music.mp3</MediaUri>
+					</MediaLocator>
+				</Audio>
+			</Source>
+			<SpacePartition>
+				<Start t="0" xsi:type="SignalPlaneFractionType"/>
+				<End t="16384" xsi:type="SignalPlaneFractionType"/>
+			</SpacePartition>
+		</View>
+		<!-- #####################################################  -->
+		<!-- ###         FrequencyView  Description            ###  -->
+		<!-- #####################################################  -->
+		<View xsi:type="FrequencyViewType">
+			<Target>
+				<Audio>
+					<MediaLocator>
+						<MediaUri>file://soccer-music-intro-coarse.mp3</MediaUri>
+					</MediaLocator>
+				</Audio>
+			</Target>
+			<Source>
+				<Audio>
+					<MediaLocator>
+						<MediaUri>file://soccer-music-intro.mp3</MediaUri>
+					</MediaLocator>
+				</Audio>
+			</Source>
+			<FrequencyPartition>
+				<Start t="0" xsi:type="SignalPlaneFractionType"/>
+				<End t="0.25" xsi:type="SignalPlaneFractionType"/>
+			</FrequencyPartition>
+			<DownSamplingFactor t="4"/>
+		</View>
+		<!-- #####################################################  -->
+		<!-- ###       SpaceFrequencyView Description          ###  -->
+		<!-- #####################################################  -->
+		<View order="spaceFrequency" xsi:type="SpaceFrequencyViewType">
+			<Target>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer-ul-ll.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Target>
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<SpacePartition>
+				<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+				<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+			</SpacePartition>
+			<FrequencyPartition>
+				<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+				<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+			</FrequencyPartition>
+			<DownSamplingFactor x="2" y="2"/>
+		</View>
+		<View xsi:type="ResolutionViewType">
+			<Target>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer-coarse.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Target>
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<DownSamplingFactor x="4" y="4"/>
+		</View>
+		<!-- #####################################################  -->
+		<!-- ###       SpaceResolutionView Description         ###  -->
+		<!-- #####################################################  -->
+		<View order="spaceFrequency" xsi:type="SpaceResolutionViewType">
+			<Target>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer-ul-ll.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Target>
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<SpacePartition>
+				<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+				<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+			</SpacePartition>
+			<DownSamplingFactor x="2" y="2"/>
+		</View>
+		<!-- #####################################################  -->
+		<!-- ###            ViewSet Description                ###  -->
+		<!-- #####################################################  -->
+		<ViewSet complete="false" setProperty="space" nonRedundant="true">
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<View xsi:type="SpaceViewType">
+				<Target>
+					<Image>
+						<MediaLocator>
+							<MediaUri>file://soccer-upper-left.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Target>
+				<SpacePartition>
+					<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+					<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+				</SpacePartition>
+			</View>
+			<View xsi:type="SpaceViewType">
+				<Target>
+					<Image>
+						<MediaLocator>
+							<MediaUri>file://soccer-upper-right.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Target>
+				<SpacePartition>
+					<Start x="0.5" y="0" xsi:type="SignalPlaneFractionType"/>
+					<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+				</SpacePartition>
+			</View>
+		</ViewSet>
+		<!-- #####################################################  -->
+		<!-- ###              SpaceTree Description            ###  -->
+		<!-- #####################################################  -->
+		<ViewDecomposition complete="false" xsi:type="SpaceTreeType" branching="2" nonRedundant="true">
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<Child branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-00.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<SpacePartition>
+						<Start x="0.5" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+					</SpacePartition>
+				</View>
+			</Child>
+			<Child branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-01.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<SpacePartition>
+						<Start x="0.5" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+					</SpacePartition>
+				</View>
+			</Child>
+		</ViewDecomposition>
+		<!-- #####################################################  -->
+		<!-- ###           FrequencyTree Description           ###  -->
+		<!-- #####################################################  -->
+		<ViewDecomposition complete="false" xsi:type="FrequencyTreeType" branching="2" 
+			nonRedundant="true">
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<Child branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-ll.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<FrequencyPartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</Child>
+			<Child branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-lh.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<FrequencyPartition>
+						<Start x="0" y="0.5" xsi:type="SignalPlaneFractionType"/>
+						<End x="0.5" y="1" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</Child>
+		</ViewDecomposition>
+		<!-- #####################################################  -->
+		<!-- ###         SpaceFrequencyGraph Description       ###  -->
+		<!-- #####################################################  -->
+		<ViewDecomposition complete="false" xsi:type="SpaceFrequencyGraphType" 
+			branching="2" nonRedundant="true">
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<SpaceChild branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-0.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<SpacePartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="0.5" y="1" xsi:type="SignalPlaneFractionType"/>
+					</SpacePartition>
+					<FrequencyPartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="1" y="1" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</SpaceChild>
+			<SpaceChild branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-1.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<SpacePartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="1" y="0.5" xsi:type="SignalPlaneFractionType"/>
+					</SpacePartition>
+					<FrequencyPartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="1" y="1" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</SpaceChild>
+			<FrequencyChild branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-ll.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<SpacePartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="1" y="1" xsi:type="SignalPlaneFractionType"/>
+					</SpacePartition>
+					<FrequencyPartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</FrequencyChild>
+			<FrequencyChild branching="0">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-lh.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<SpacePartition>
+						<Start x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End x="1" y="1" xsi:type="SignalPlaneFractionType"/>
+					</SpacePartition>
+					<FrequencyPartition>
+						<Start x="0" y="0.5" xsi:type="SignalPlaneFractionType"/>
+						<End x="0.5" y="1" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</FrequencyChild>
+		</ViewDecomposition>
+		<!-- #####################################################  -->
+		<!-- ###            VideoViewGraph Description         ###  -->
+		<!-- #####################################################  -->
+		<ViewDecomposition complete="true" xsi:type="VideoViewGraphType" branching="2" 
+			nonRedundant="false">
+			<Source>
+				<Video>
+					<MediaLocator>
+						<MediaUri>file://video.mpg</MediaUri>
+					</MediaLocator>
+				</Video>
+			</Source>
+			<SpaceFrequencyChild complete="false" branching="0" nonRedundant="true">
+				<View>
+					<Target>
+						<Video>
+							<MediaLocator>
+								<MediaUri>soccer-s0.mpg</MediaUri>
+							</MediaLocator>
+						</Video>
+					</Target>
+					<FrequencyPartition>
+						<Start t="0" x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End t="0.5" x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</SpaceFrequencyChild>
+			<SpaceFrequencyChild complete="false" branching="0" nonRedundant="true">
+				<View>
+					<Target>
+						<Video>
+							<MediaLocator>
+								<MediaUri>soccer-s1.mpg</MediaUri>
+							</MediaLocator>
+						</Video>
+					</Target>
+					<FrequencyPartition>
+						<Start t="0" x="0.5" y="0.5" xsi:type="SignalPlaneFractionType"/>
+						<End t="1" x="1" y="1" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</SpaceFrequencyChild>
+			<TimeFrequencyChild complete="false" branching="0" nonRedundant="true">
+				<View>
+					<Target>
+						<Video>
+							<MediaLocator>
+								<MediaUri>soccer-t0.mpg</MediaUri>
+							</MediaLocator>
+						</Video>
+					</Target>
+					<FrequencyPartition>
+						<Start t="0" x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End t="0.5" x="1" y="1" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</TimeFrequencyChild>
+			<TimeFrequencyChild complete="false" branching="0" nonRedundant="true">
+				<View>
+					<Target>
+						<Video>
+							<MediaLocator>
+								<MediaUri>soccer-t1.mpg</MediaUri>
+							</MediaLocator>
+						</Video>
+					</Target>
+					<FrequencyPartition>
+						<Start t="0.5" x="0" y="0" xsi:type="SignalPlaneFractionType"/>
+						<End t="1" x="1" y="1" xsi:type="SignalPlaneFractionType"/>
+					</FrequencyPartition>
+				</View>
+			</TimeFrequencyChild>
+		</ViewDecomposition>
+		<!-- #####################################################  -->
+		<!-- ###        MultiResolutionPyramid Description     ###  -->
+		<!-- #####################################################  -->
+		<ViewDecomposition level="1" xsi:type="MultiResolutionPyramidType">
+			<Source>
+				<Image>
+					<MediaLocator>
+						<MediaUri>soccer.jpg</MediaUri>
+					</MediaLocator>
+				</Image>
+			</Source>
+			<Child level="1">
+				<View>
+					<Target>
+						<Image>
+							<MediaLocator>
+								<MediaUri>soccer-1.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Target>
+					<DownSamplingFactor x="2" y="2"/>
+				</View>
+				<Child level="2">
+					<View>
+						<Target>
+							<Image>
+								<MediaLocator>
+									<MediaUri>soccer-2.jpg</MediaUri>
+								</MediaLocator>
+							</Image>
+						</Target>
+						<DownSamplingFactor x="4" y="4"/>
+					</View>
+				</Child>
+			</Child>
+		</ViewDecomposition>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###              Variation Description            ###  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="VariationDescriptionType">
+		<VariationSet>
+			<Source>
+				<Video>
+					<MediaLocator>
+						<MediaUri>file://soccer-A.mpg</MediaUri>
+					</MediaLocator>
+				</Video>
+			</Source>
+			<Variation fidelity="0.85" priority="1">
+				<Image>
+					<MediaLocator>
+						<MediaUri>file://soccer-B.mpg</MediaUri>
+					</MediaLocator>
+				</Image>
+				<VariationRelationship>extraction</VariationRelationship>
+			</Variation>
+			<Variation fidelity="0.75" priority="3">
+				<Audio>
+					<MediaLocator>
+						<MediaUri>file://soccer-C.mpg</MediaUri>
+					</MediaLocator>
+				</Audio>
+				<VariationRelationship>extraction</VariationRelationship>
+				<VariationRelationship>languageTranslation</VariationRelationship>
+			</Variation>
+			<Variation fidelity="0.5" priority="2" timeScale="0.5" timeOffset="PT10S">
+				<Video>
+					<MediaLocator>
+						<MediaUri>file://soccer-E.mpg</MediaUri>
+					</MediaLocator>
+				</Video>
+				<VariationRelationship>spatialReduction</VariationRelationship>
+				<VariationRelationship>compression</VariationRelationship>
+				<VariationRelationship>alternativeMediaProfile</VariationRelationship>
+			</Variation>
+		</VariationSet>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###   MultimediaCollection - ContentCollection    ###  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="MultimediaCollectionType">
+			<ContentCollection name="Album - Live from Pisa">
+				<Collection name="Side 1" xsi:type="ContentCollectionType">
+					<CreationInformation>
+						<Creation>
+							<Title type="popular">Live from Pisa</Title>
+							<Creator>
+								<Role href="RoleCS">
+									<Name>Artist</Name>
+								</Role>
+								<Agent xsi:type="PersonType">
+									<Name>
+										<GivenName>John</GivenName>
+										<FamilyName>Smith</FamilyName>
+									</Name>
+								</Agent>
+							</Creator>
+						</Creation>
+					</CreationInformation>
+					<TextAnnotation>
+						<FreeTextAnnotation>Collection of songs that accompany soccer game
+						</FreeTextAnnotation>
+					</TextAnnotation>
+					<Content xsi:type="AudioType">
+						<Audio>
+							<MediaLocator>
+								<MediaUri>pompodor.mid</MediaUri>
+							</MediaLocator>
+							<CreationInformation>
+								<Creation>
+									<Title>Pompodor</Title>
+								</Creation>
+							</CreationInformation>
+						</Audio>
+					</Content>
+					<Content xsi:type="AudioType">
+						<Audio>
+							<MediaLocator>
+								<MediaUri>wheel.mid</MediaUri>
+							</MediaLocator>
+							<CreationInformation>
+								<Creation>
+									<Title>Wheel of Misfortune</Title>
+								</Creation>
+							</CreationInformation>
+						</Audio>
+					</Content>
+					<Content xsi:type="AudioType">
+						<Audio>
+							<MediaLocator>
+								<MediaUri>berreta.mid</MediaUri>
+							</MediaLocator>
+							<CreationInformation>
+								<Creation>
+									<Title>Red Berreta</Title>
+								</Creation>
+							</CreationInformation>
+						</Audio>
+					</Content>
+				</Collection>
+				<Collection name="Side 2" xsi:type="ContentCollectionType">
+					<Content xsi:type="AudioType">
+						<Audio>
+							<MediaLocator>
+								<MediaUri>brow.mid</MediaUri>
+							</MediaLocator>
+							<CreationInformation>
+								<Creation>
+									<Title>Browbeater</Title>
+								</Creation>
+							</CreationInformation>
+						</Audio>
+					</Content>
+					<Content xsi:type="AudioType">
+						<Audio>
+							<MediaLocator>
+								<MediaUri>sunshine.mid</MediaUri>
+							</MediaLocator>
+							<CreationInformation>
+								<Creation>
+									<Title>Sunshine</Title>
+								</Creation>
+							</CreationInformation>
+						</Audio>
+					</Content>
+					<Content xsi:type="AudioType">
+						<Audio>
+							<MediaLocator>
+								<MediaUri>corner.mid</MediaUri>
+							</MediaLocator>
+							<CreationInformation>
+								<Creation>
+									<Title>Down on the Corner</Title>
+								</Creation>
+							</CreationInformation>
+						</Audio>
+					</Content>
+				</Collection>
+			</ContentCollection>
+		</MultimediaContent>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###    MultimediaCollection - ContentCollection    ##  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="MultimediaCollectionType">
+			<ContentCollection>
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer1.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer2.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+			</ContentCollection>
+		</MultimediaContent>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###    MultimediaCollection - MixedCollection      ##  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="MultimediaCollectionType">
+			<MixedCollection>
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer1.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer2.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+				<Concept xsi:type="ObjectType">
+					<Label>
+						<Name>Ball</Name>
+					</Label>
+				</Concept>
+				<Concept xsi:type="ObjectType">
+					<Label>
+						<Name>Goal</Name>
+					</Label>
+				</Concept>
+			</MixedCollection>
+		</MultimediaContent>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###   MultimediaCollection - StructuredCollection ###  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="MultimediaCollectionType">
+			<StructuredCollection>
+				<!-- Describes a Collection of two images -->
+				<Collection id="collection1" xsi:type="ContentCollectionType">
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer1.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer2.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+				</Collection>
+				<!-- Describes a Collection of two images -->
+				<Collection id="collection2" xsi:type="ContentCollectionType">
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer3.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer4.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+				</Collection>
+				<!-- Describes the relationships among the above Collections using the Graph DS -->
+				<Graph>
+					<Node id="source" idref="collection1"/>
+					<Node id="target1" idref="collection2"/>
+					<Relation xsi:type="RelationType" name="Similar-to" source="source" target="target1"/>
+				</Graph>
+			</StructuredCollection>
+		</MultimediaContent>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###     Model - CollectionModel Description       ###  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="ModelDescriptionType">
+		<Model function="described" xsi:type="CollectionModelType" confidence="0.75" reliability="0.5">
+			<Label>
+				<Name>Soccer shots on goal</Name>
+			</Label>
+			<Collection xsi:type="ContentCollectionType">
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer1.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer2.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer3.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+				<Content xsi:type="ImageType">
+					<Image>
+						<MediaLocator xsi:type="ImageLocatorType">
+							<MediaUri>soccer4.jpg</MediaUri>
+						</MediaLocator>
+					</Image>
+				</Content>
+			</Collection>
+		</Model>
+	</ContentDescription>
+	<ContentDescription xsi:type="ModelDescriptionType">
+		<Model function="describing" xsi:type="CollectionModelType" confidence="0.75" reliability="0.5">
+			<Label>
+				<Name>Soccer stadium objects</Name>
+			</Label>
+			<Collection xsi:type="ConceptCollectionType">
+				<Concept xsi:type="ObjectType">
+					<Label>
+						<Name>Ball</Name>
+					</Label>
+				</Concept>
+				<Concept xsi:type="ObjectType">
+					<Label>
+						<Name>Goal</Name>
+					</Label>
+				</Concept>
+				<Concept xsi:type="ObjectType">
+					<Label>
+						<Name>Seats</Name>
+					</Label>
+				</Concept>
+				<Concept xsi:type="ObjectType">
+					<Label>
+						<Name>Water bucket</Name>
+					</Label>
+				</Concept>
+			</Collection>
+		</Model>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ### Model - ClusterClassificationMode Description ###  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="ModelDescriptionType">
+		<Model complete="true" xsi:type="ClusterClassificationModelType" 
+			redundant="false" confidence="0.9" reliability="0.8">
+			<ClusterModel confidence="0.75" reliability="0.5">
+				<Label>
+					<Name>Soccer shots on goal</Name>
+				</Label>
+				<Collection xsi:type="ContentCollectionType">
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer1.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer2.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+				</Collection>
+			</ClusterModel>
+			<ClusterModel confidence="0.9" reliability="0.75">
+				<Label>
+					<Name>Goal scores</Name>
+				</Label>
+				<Collection xsi:type="ContentCollectionType">
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer3.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+					<Content xsi:type="ImageType">
+						<Image>
+							<MediaLocator xsi:type="ImageLocatorType">
+								<MediaUri>soccer4.jpg</MediaUri>
+							</MediaLocator>
+						</Image>
+					</Content>
+				</Collection>
+			</ClusterModel>
+		</Model>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###      WorldDescription - ConceptCollection      ##  -->
+	<!-- #####################################################  -->
+	<ContentDescription xsi:type="WorldDescriptionType">
+		<ConceptCollection>
+			<Concept xsi:type="ObjectType">
+				<Label>
+					<Name>Ball</Name>
+				</Label>
+			</Concept>
+			<Concept xsi:type="ObjectType">
+				<Label>
+					<Name>Goal</Name>
+				</Label>
+			</Concept>
+			<Concept xsi:type="ObjectType">
+				<Label>
+					<Name>Seats</Name>
+				</Label>
+			</Concept>
+			<Concept xsi:type="ObjectType">
+				<Label>
+					<Name>Water bucket</Name>
+				</Label>
+			</Concept>
+		</ConceptCollection>
+	</ContentDescription>
+	<ContentDescription xsi:type="WorldDescriptionType">
+		<!-- #####################################################  -->
+		<!-- ###             Semantics Description             ###  -->
+		<!-- #####################################################  -->
+		<Semantics>
+			<Label>
+				<Name>Semantics associated with the soccer game</Name>
+			</Label>
+			<SemanticBase id="soccerball" xsi:type="ObjectType">
+				<Label>
+					<Name>Soccer ball</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>Black and white ball</FreeTextAnnotation>
+				</Definition>
+				<MediaOccurrence>
+					<MediaLocator xsi:type="TemporalSegmentLocatorType">
+						<MediaTime>
+							<MediaTimePoint>T00:00:00:0F00</MediaTimePoint>
+						</MediaTime>
+					</MediaLocator>
+				</MediaOccurrence>
+			</SemanticBase>
+			<SemanticBase id="goal" xsi:type="ObjectType">
+				<Label>
+					<Name>Soccer ball</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>Rectangular goal with netting</FreeTextAnnotation>
+				</Definition>
+				<MediaOccurrence>
+					<MediaLocator xsi:type="TemporalSegmentLocatorType">
+						<MediaTime>
+							<MediaTimePoint>T00:00:00:0F00</MediaTimePoint>
+						</MediaTime>
+					</MediaLocator>
+				</MediaOccurrence>
+			</SemanticBase>
+			<SemanticBase id="Morientes-object" xsi:type="AgentObjectType">
+				<Label href="...">
+					<Name>Soccer player</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>
+			Spanish soccer player named Javier Morientes</FreeTextAnnotation>
+				</Definition>
+				<Relation name="agentOf" target="#Goal-event" xsi:type="ObjectEventRelationType"/>
+				<Agent xsi:type="PersonType">
+					<Name>
+						<GivenName>Javier</GivenName>
+						<FamilyName>Morientes</FamilyName>
+					</Name>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase id="Goalie-object" xsi:type="AgentObjectType">
+				<Label>
+					<Name>Soccer player</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>
+			Spanish soccer player named Javier Morientes</FreeTextAnnotation>
+				</Definition>
+				<Agent xsi:type="PersonType">
+					<Name>
+						<GivenName>Goal keeper</GivenName>
+					</Name>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase id="team-agent" xsi:type="AgentObjectType">
+				<Label>
+					<Name>Team</Name>
+				</Label>
+				<ObjectRef idref="Morientes-object"/>
+				<ObjectRef idref="Goalie-object"/>
+			</SemanticBase>
+			<SemanticBase id="Play-event" xsi:type="EventType">
+				<Label>
+					<Name>Soccer play</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="Goal-event" xsi:type="EventType">
+				<Label>
+					<Name>Goal</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>
+			The act or action of causing a ball or puck to go
+			through or into such a goal</FreeTextAnnotation>
+				</Definition>
+				<Relation name="resultOf" target="#Play-event" xsi:type="EventEventRelationType"/>
+				<Relation name="hasMediaPerceptionOf" target="#Seg0" 
+					xsi:type="SegmentSemanticBaseRelationType"/>
+			</SemanticBase>
+			<SemanticBase id="stadium-location" xsi:type="SemanticPlaceType">
+				<Label>
+					<Name>Soccer stadium</Name>
+				</Label>
+				<Place>
+					<Name>Santiago Bernabeu</Name>
+					<Country>es</Country>
+					<PostalAddress>
+						<AddressLine>Concha Espina s/n., Madrid</AddressLine>
+						<PostingIdentifier>E-28036</PostingIdentifier>
+					</PostalAddress>
+				</Place>
+			</SemanticBase>
+			<SemanticBase id="field-width-place" xsi:type="SemanticPlaceType">
+				<Label>
+					<Name>100 meters</Name>
+				</Label>
+				<SemanticPlaceInterval>
+					<Extent unit="meters" value="100" measurementType="length"/>
+				</SemanticPlaceInterval>
+			</SemanticBase>
+			<SemanticBase id="game-time" xsi:type="SemanticTimeType">
+				<Label>
+					<Name>
+			Game time for soccer playoff game</Name>
+				</Label>
+				<Time>
+					<TimePoint>1987-10-03T14:13+01:00</TimePoint>
+					<Duration>PT10S</Duration>
+				</Time>
+			</SemanticBase>
+		</Semantics>
+		<!-- #####################################################  -->
+		<!-- ###              Semantics Description            ###  -->
+		<!-- #####################################################  -->
+		<Semantics id="SoccerGoal">
+			<Label>
+				<Name>goal</Name>
+			</Label>
+			<SemanticBase id="Morientes-ob" xsi:type="AgentObjectType">
+				<Label href="....">
+					<Name>Forward player</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>
+			Forward player for the Spanish soccer team whose name is Morientes</FreeTextAnnotation>
+				</Definition>
+				<MediaOccurrence>
+					<MediaLocator xsi:type="TemporalSegmentLocatorType">
+						<MediaTime>
+							<MediaTimePoint>T00:00:00:0F00</MediaTimePoint>
+						</MediaTime>
+					</MediaLocator>
+				</MediaOccurrence>
+				<Agent xsi:type="PersonType">
+					<Name>
+						<FamilyName>Morientes</FamilyName>
+					</Name>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase id="Ball-ob" xsi:type="ObjectType">
+				<Label href="....">
+					<Name>Soccer Ball</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="Svensoon-ob" xsi:type="AgentObjectType">
+				<Label href="....">
+					<Name>Goalkeeper player</Name>
+				</Label>
+				<Agent xsi:type="PersonType">
+					<Name>
+						<FamilyName>Svensson</FamilyName>
+					</Name>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase id="GoalArea-ob" xsi:type="ObjectType">
+				<Label href="....">
+					<Name>Goal area</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="SpanishTeam-ob" xsi:type="AgentObjectType">
+				<Label href="....">
+					<Name>Soccer team</Name>
+				</Label>
+				<Agent xsi:type="PersonGroupType">
+					<Name>Spanish soccer team</Name>
+					<!--  People in the team  -->
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 1</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 2</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 3</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 4</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 5</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 6</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 7</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 8</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 9</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Spanish Player 10</GivenName>
+						</Name>
+					</Member>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase id="SwedishTeam-ob" xsi:type="AgentObjectType">
+				<Label href="....">
+					<Name>Soccer team</Name>
+				</Label>
+				<Agent xsi:type="PersonGroupType">
+					<Name>Swedish soccer team</Name>
+					<!--  People in the team  -->
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 1</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 2</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 3</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 4</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 5</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 6</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 7</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 8</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 9</GivenName>
+						</Name>
+					</Member>
+					<Member>
+						<Name>
+							<GivenName>Swedish Player 10</GivenName>
+						</Name>
+					</Member>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase id="Goal-ev" xsi:type="EventType">
+				<Label href="....">
+					<Name>Goal</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>Soccer goal</FreeTextAnnotation>
+				</Definition>
+				<MediaOccurrence>
+					<MediaLocator xsi:type="TemporalSegmentLocatorType">
+						<MediaTime>
+							<MediaTimePoint>T00:00:00:0F20</MediaTimePoint>
+						</MediaTime>
+					</MediaLocator>
+				</MediaOccurrence>
+				<Event id="Kick-ev">
+					<Label>
+						<Name>Kick</Name>
+					</Label>
+				</Event>
+				<Event id="Error-ev">
+					<Label>
+						<Name>Makes an error</Name>
+					</Label>
+				</Event>
+			</SemanticBase>
+			<SemanticBase id="Santberna-ob" xsi:type="SemanticPlaceType">
+				<Label>
+					<Name>Santiago Bernabeu</Name>
+				</Label>
+				<Definition>
+					<FreeTextAnnotation>
+			Soccer stadium of Santiago Bernabeu at Madrid, Spain</FreeTextAnnotation>
+				</Definition>
+				<Place>
+					<Name>Santiago Bernabeu</Name>
+					<Country>es</Country>
+					<PostalAddress>
+						<AddressLine>C/Fabregas No. 26, Madrid</AddressLine>
+						<PostingIdentifier>E-64200</PostingIdentifier>
+					</PostalAddress>
+				</Place>
+			</SemanticBase>
+			<SemanticBase id="goal1-time" xsi:type="SemanticTimeType">
+				<Label>
+					<Name>Saturday</Name>
+				</Label>
+				<Time>
+					<TimePoint>2000-03-20T14:13+01:00</TimePoint>
+					<Duration>PT10S</Duration>
+				</Time>
+			</SemanticBase>
+			<Graph>
+				<!--  Morientes kicks the ball towards the goal -->
+				<Relation name="agentOf" source="#Morientes-ob" target="#Kick-ev" 
+					xsi:type="ObjectEventRelationType"/>
+				<Relation name="patientOf" source="#Ball-ob" target="#Kick-ev" 
+					xsi:type="ObjectEventRelationType"/>
+				<Relation name="destinationOf" source="#GoalArea-ob" target="#Kick-ev" 
+					xsi:type="ObjectEventRelationType"/>
+				<!--  Goalkeeper makes an error  -->
+				<Relation name="agentOf" source="#Svensoon-ob" target="#Error-ev" 
+					xsi:type="ObjectEventRelationType"/>
+				<!--  Morientes is a player of the Spanish soccer team  -->
+				<Relation name="memberOf" source="#Morientes-ob" target="#SpanishTeam-ob" 
+					xsi:type="ObjectObjectRelationType"/>
+				<!--  The goalkeeper is a player of the Swedish team  -->
+				<Relation name="memberOf" source="#Svensoon-ob" target="#SwedishTeam-ob" 
+					xsi:type="ObjectObjectRelationType"/>
+				<!--  Location and time of the goal event  -->
+				<Relation name="hasLocationOf" source="#Goal-ev" target="#Santberna-ob" 
+					xsi:type="SemanticPlaceSemanticBaseRelationType"/>
+				<Relation name="hasTimeOf" source="#Goal-ev" target="#goal1-time" 
+					xsi:type="SemanticTimeSemanticBaseRelationType"/>
+			</Graph>
+		</Semantics>
+		<!-- #####################################################  -->
+		<!-- ###           Semantics Description               ###  -->
+		<!-- #####################################################  -->
+		<!--  Formal abstraction: AbstractionLevel = 1 -->
+		<Semantics id="soccergame-sem" xsi:type="SemanticType">
+			<Label>
+				<Name>Soccer game</Name>
+			</Label>
+			<!--  Events  -->
+			<SemanticBase id="soccergame-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer game</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="arbiter-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Arbiter</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="period1-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>First period</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="halftime-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Half time</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="period2-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Second period</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="extratime-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Extra time</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="penaltyperiod-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Penalty period</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="timelost-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Time lost</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="soccerplay-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer play</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="score-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Score</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="freekick-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Free kick</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="fault-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Fault</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="offside-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Off-side</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="cornerkick-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Corner kick</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="goalkick-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Goal kick</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="throwin-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Throw in</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="penaltykick-eve" xsi:type="EventType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Penalty kick</Name>
+				</Label>
+			</SemanticBase>
+			<!--  Objects  -->
+			<SemanticBase id="soccergame-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer game</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="soccerball-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer ball</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="soccerteam-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer team</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="player-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Player</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="coach-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Coach</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="staff-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Staff</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="playingteam-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Playing team</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="hometeam-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Home team</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="visitingteam-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Visiting team</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="goalkeeper-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Goalkeeper</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="player1-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Player 1</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="player10-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Player 10</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="refereeteam-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Referee team</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="principalreferee-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Principal referee</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="assistantreferee1-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Assistant referee 1</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="assistantreferee2-obj" xsi:type="AgentObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Assistant referee 2</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="soccerstadium-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer stadium</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="soccerfield-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer field</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="goal-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Goal</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="goalarea-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Goal area</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="penaltyarea-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Penalty area</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="centercircle-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Center circle</Name>
+				</Label>
+			</SemanticBase>
+			<SemanticBase id="spectatorseats-obj" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Spectator seats</Name>
+				</Label>
+			</SemanticBase>
+			<!--  Semantic places  -->
+			<SemanticBase id="soccerfield-pla" xsi:type="ObjectType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>Soccer field</Name>
+				</Label>
+			</SemanticBase>
+			<!--  Semantic times  -->
+			<SemanticBase id="minutes45-tim" xsi:type="SemanticTimeType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>45 minutes</Name>
+				</Label>
+				<SemanticTimeInterval>
+					<Duration unit="minutes" value="45" measurementType="length"/>
+				</SemanticTimeInterval>
+			</SemanticBase>
+			<SemanticBase id="minutes15-tim" xsi:type="SemanticTimeType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>15 minutes</Name>
+				</Label>
+				<SemanticTimeInterval>
+					<Duration unit="minutes" value="15" measurementType="length"/>
+				</SemanticTimeInterval>
+			</SemanticBase>
+			<SemanticBase id="minutes30-tim" xsi:type="SemanticTimeType">
+				<AbstractionLevel dimension="1"/>
+				<Label>
+					<Name>15 minutes</Name>
+				</Label>
+				<SemanticTimeInterval>
+					<Duration unit="minutes" value="15" measurementType="length"/>
+				</SemanticTimeInterval>
+			</SemanticBase>
+			<Graph>
+				<!--  Soccer game event relations  -->
+				<Relation name="hasAgentOf" source="#soccergame-eve" target="#hometeam-obj" 
+					xsi:type="ObjectEventRelationType"/>
+				<Relation name="hasAccompaniertOf" source="#soccergame-eve" 
+					target="#visitingteam-obj" 
+					xsi:type="ObjectEventRelationType"/>
+				<Relation name="hasInstrumentOf" source="#soccergame-eve" target="#ball-obj" 
+					xsi:type="ObjectEventRelationType"/>
+				<Relation name="hasLocationOf" source="#soccergame-eve" 
+					target="#soccerfield-pla" 
+					xsi:type="ObjectEventRelationType"/>
+				<Relation name="identifiedWith" source="#soccergame-eve" 
+					target="#soccergame-obj" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="hasPartOf" source="#soccergame-eve" target="#period1-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="hasPartOf" source="#soccergame-eve" target="#halftime-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="hasPartOf" source="#soccergame-eve" target="#period2-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="hasPartOf" source="#soccergame-eve" target="#extratime-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="hasPartOf" source="#soccergame-eve" 
+					target="#penaltyperiod-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="hasPartOf" source="#soccergame-eve" target="#timelost-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<!--  Arbiter event relations  -->
+				<Relation name="hasAgentOf" source="#arbiter-eve" target="#refereeteam-obj" 
+					xsi:type="ObjectEventRelationType"/>
+				<Relation name="hasPatientOf" source="#arbiter-eve" target="#soccergame-obj" 
+					xsi:type="ObjectEventRelationType"/>
+				<!--  Soccer play event relations  -->
+				<Relation name="partOf" source="#soccerplay-eve" target="#period1-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="partOf" source="#soccerplay-eve" target="#period2-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="partOf" source="#soccerplay-eve" target="#extratime-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#score-eve" target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#freekick-eve" 
+					target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#fault-eve" target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#offside-eve" 
+					target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#cornerkick-eve" 
+					target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#goalkick-eve" 
+					target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#goalkick-eve" 
+					target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#throwin-eve" 
+					target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#penaltykick-eve" 
+					target="#soccerplay-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="hasPartOf" source="#penaltyperiod-eve" 
+					target="#penaltykick-eve" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<!--  Semantic times relations  -->
+				<Relation name="hasTimeOf" source="#period1-eve" target="#minutes45-tim" 
+					xsi:type="SemanticTimeSemanticBaseRelationType"/>
+				<Relation name="hasTimeOf" source="#period2-eve" target="#minutes45-tim" 
+					xsi:type="SemanticTimeSemanticBaseRelationType"/>
+				<Relation name="hasTimeOf" source="#halftime-eve" target="#minutes15-tim" 
+					xsi:type="SemanticTimeSemanticBaseRelationType"/>
+				<Relation name="hasTimeOf" source="#extratime-eve" target="#minutes15-tim" 
+					xsi:type="SemanticTimeSemanticBaseRelationType"/>
+				<!--  Soccer team object relations  -->
+				<Relation name="hasMemberOf" source="#soccerteam-obj" target="#player-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasMemberOf" source="#soccerteam-obj" target="#coach-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasMemberOf" source="#soccerteam-obj" target="#staff-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasComponentOf" source="#soccerteam-obj" 
+					target="#playingteam-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasMemberOf" source="#playingteam-obj" 
+					target="#goalkeeper-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasMemberOf" source="#playingteam-obj" target="#player1-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasMemberOf" source="#playingteam-obj" target="#player10-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="specializationOf" source="#goalkeeper-obj" 
+					target="#player-obj" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#player1-obj" target="#player-obj" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#player10-obj" target="#player-obj" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#hometeam-obj" 
+					target="#playingteam-obj" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<Relation name="specializationOf" source="#vistingteam-obj" 
+					target="#playingteam-obj" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<!--  Soccer stadium object relations  -->
+				<Relation name="hasComponentOf" source="#soccerstadium-obj" 
+					target="#soccerfield-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasComponentOf" source="#soccerfield-obj" target="#goal-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasComponentOf" source="#soccerfield-obj" 
+					target="#goalarea-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasComponentOf" source="#soccerfield-obj" 
+					target="#penaltyarea-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasComponentOf" source="#soccerfield-obj" 
+					target="#centercircle-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasComponentOf" source="#soccerstadium-obj"
+					 target="#spectatorseats-obj" xsi:type="ObjectObjectRelationType"/>
+				<Relation name="identifiedWith" source="#soccerfield-obj" 
+					target="#soccerfield-pla" 
+					xsi:type="SemanticBaseSemanticBaseRelationType"/>
+				<!--  Referee team object relations  -->
+				<Relation name="hasMemberOf" source="#refereeteam-obj" 
+					target="#principalreferee-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasMemberOf" source="#refereeteam-obj" 
+					target="#assistantreferee1-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+				<Relation name="hasMemberOf" source="#refereeteam-obj" 
+					target="#assistantreferee2-obj" 
+					xsi:type="ObjectObjectRelationType"/>
+			</Graph>
+		</Semantics>
+	</ContentDescription>
+	<!-- #####################################################  -->
+	<!-- ###             User Description                 ###  -->
+	<!-- #####################################################  -->
+	<ContentManagement xsi:type="UserDescriptionType">
+		<User>
+			<Name>
+				<GivenName>Jane User</GivenName>
+			</Name>
+			<Affiliation>
+				<Organization>
+					<Name>HAL inc.</Name>
+				</Organization>
+			</Affiliation>
+		</User>
+		<!-- #####################################################  -->
+		<!-- ###           User Preferences Description        ###  -->
+		<!-- #####################################################  -->
+		<UserPreferences>
+			<UserIdentifier protected="true">
+				<UserName>Jane</UserName>
+			</UserIdentifier>
+			<!-- #####################################################  -->
+			<!-- ###          Usage Preferences Description        ###  -->
+			<!-- #####################################################  -->
+			<UsagePreferences allowAutomaticUpdate="false">
+				<FilteringAndSearchPreferences protected="true">
+					<ClassificationPreferences>
+						<Genre href="urn:mpeg:GenreCS" preferenceValue="-10">
+							<Name>News</Name>
+						</Genre>
+						<Genre href="urn:mpeg:GenreCS" preferenceValue="10">
+							<Name>Sports</Name>
+						</Genre>
+					</ClassificationPreferences>
+				</FilteringAndSearchPreferences>
+				<!-- #####################################################  -->
+				<!-- ###   FilteringAndSearchPreferences Description   ###  -->
+				<!-- #####################################################  -->
+				<FilteringAndSearchPreferences preferenceValue="90">
+					<SourcePreferences>
+						<PublicationSource>KBS1</PublicationSource>
+					</SourcePreferences>
+					<FilteringAndSearchPreferences preferenceValue="80">
+						<ClassificationPreferences>
+							<Genre href="urn:mpeg:GenreCS">
+								<Name>News</Name>
+							</Genre>
+						</ClassificationPreferences>
+						<FilteringAndSearchPreferences>
+							<CreationPreferences>
+								<Creator preferenceValue="70">
+									<Role href="creatorCS">
+										<Name>Presenter</Name>
+									</Role>
+									<Agent xsi:type="PersonType">
+										<Name>
+											<GivenName>Tom Brokite</GivenName>
+										</Name>
+									</Agent>
+								</Creator>
+								<Creator preferenceValue="90">
+									<Role href="creatorCS">
+										<Name>Presenter</Name>
+									</Role>
+									<Agent xsi:type="PersonType">
+										<Name>
+											<GivenName>Jerry Pack</GivenName>
+										</Name>
+									</Agent>
+								</Creator>
+							</CreationPreferences>
+						</FilteringAndSearchPreferences>
+					</FilteringAndSearchPreferences>
+					<FilteringAndSearchPreferences preferenceValue="70">
+						<ClassificationPreferences>
+							<Genre href="urn:mpeg:GenreCS">
+								<Name>Documentary</Name>
+							</Genre>
+						</ClassificationPreferences>
+					</FilteringAndSearchPreferences>
+					<FilteringAndSearchPreferences preferenceValue="60">
+						<ClassificationPreferences>
+							<Genre href="urn:mpeg:GenreCS">
+								<Name>Sports</Name>
+							</Genre>
+						</ClassificationPreferences>
+						<FilteringAndSearchPreferences>
+							<ClassificationPreferences>
+								<Genre href="urn:mpeg:GenreCS" preferenceValue="60">
+									<Name>Soccer</Name>
+								</Genre>
+								<Genre href="urn:mpeg:GenreCS" preferenceValue="50">
+									<Name>Baseball</Name>
+								</Genre>
+							</ClassificationPreferences>
+						</FilteringAndSearchPreferences>
+					</FilteringAndSearchPreferences>
+				</FilteringAndSearchPreferences>
+				<FilteringAndSearchPreferences>
+					<!-- #####################################################  -->
+					<!-- ###        CreationPreferences Description        ###  -->
+					<!-- #####################################################  -->
+					<CreationPreferences>
+						<Creator preferenceValue="18">
+							<Role href="creatorCS">
+								<Name>Actor</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Meg</GivenName>
+									<FamilyName>Ryan</FamilyName>
+								</Name>
+							</Agent>
+						</Creator>
+						<Creator preferenceValue="19">
+							<Role href="creatorCS">
+								<Name>Actor</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Cameron</GivenName>
+									<FamilyName>Diaz</FamilyName>
+								</Name>
+							</Agent>
+						</Creator>
+						<Creator preferenceValue="20">
+							<Role href="creatorCS">
+								<Name>Actor</Name>
+							</Role>
+							<Agent xsi:type="PersonType">
+								<Name>
+									<GivenName>Harrison</GivenName>
+									<FamilyName>Ford</FamilyName>
+								</Name>
+							</Agent>
+						</Creator>
+						<DatePeriod>
+							<TimePoint>1995-01-01</TimePoint>
+							<Duration>P1825D</Duration>
+						</DatePeriod>
+					</CreationPreferences>
+				</FilteringAndSearchPreferences>
+				<FilteringAndSearchPreferences>
+					<!-- #####################################################  -->
+					<!-- ###      ClassificationPreferences Description    ###  -->
+					<!-- #####################################################  -->
+					<ClassificationPreferences preferenceValue="10">
+						<Language>en</Language>
+						<Genre href="urn:mpeg:GenreCS">
+							<Name>News</Name>
+						</Genre>
+					</ClassificationPreferences>
+					<ClassificationPreferences preferenceValue="12">
+						<Genre href="urn:mpeg:GenreCS">
+							<Name>Movie</Name>
+						</Genre>
+						<MediaReview>
+							<Rating>
+								<RatingValue>10</RatingValue>
+								<RatingScheme best="10" style="higherBetter" worst="1"/>
+							</Rating>
+							<Reviewer xsi:type="PersonType">
+								<Name>
+									<FamilyName>Ebert</FamilyName>
+									<GivenName>Roger</GivenName>
+								</Name>
+							</Reviewer>
+						</MediaReview>
+						<ParentalGuidance>
+							<ParentalRating href="urn:mpeg:MPAAParentalRatingCS:PG-13">
+								<Name>PG-13</Name>
+							</ParentalRating>
+							<Country>us</Country>
+						</ParentalGuidance>
+					</ClassificationPreferences>
+					<PreferenceCondition>
+						<Place>
+							<Name xml:lang="en">Tokyo</Name>
+							<Country>jp</Country>
+						</Place>
+					</PreferenceCondition>
+				</FilteringAndSearchPreferences>
+				<FilteringAndSearchPreferences>
+					<CreationPreferences>
+						<Title type="original">Star Trek</Title>
+					</CreationPreferences>
+					<SourcePreferences>
+						<PublicationType href="urn:mpeg:MPEG7PublicationTypeCS:1">
+							<Name>Terrestrial</Name>
+						</PublicationType>
+						<PublicationSource>BBC 1</PublicationSource>
+						<PublicationDate>
+							<TimePoint>2000-05-23</TimePoint>
+						</PublicationDate>
+					</SourcePreferences>
+				</FilteringAndSearchPreferences>
+				<FilteringAndSearchPreferences>
+					<!-- #####################################################  -->
+					<!-- ###          SourcePreferencesDescription         ###  -->
+					<!-- #####################################################  -->
+					<SourcePreferences>
+						<MediaFormat preferenceValue="15">
+							<Content>audiovisual</Content>
+							<FileFormat href="urn:mpeg:MPEG7FileFormatCS:3">
+								<Name>MPEG</Name>
+							</FileFormat>
+							<VisualCoding>
+								<Format href="urn:mpeg:MPEG7FileFormatCS:3">
+									<Name>MPEG</Name>
+								</Format>
+								<Frame aspectRatio="2.35"/>
+							</VisualCoding>
+							<AudioCoding>
+								<Format href="urn:mpeg:MPEG7AudioCodingFormatCS:2">
+									<Name>DTS</Name>
+								</Format>
+							</AudioCoding>
+						</MediaFormat>
+						<MediaFormat preferenceValue="12">
+							<Content>audiovisual</Content>
+							<FileFormat href="urn:mpeg:MPEG7FileFormatCS:3">
+								<Name>MPEG</Name>
+							</FileFormat>
+							<VisualCoding>
+								<Format href="urn:mpeg:MPEG7FileFormatCS:3">
+									<Name>MPEG</Name>
+								</Format>
+								<Frame aspectRatio="1.33"/>
+							</VisualCoding>
+							<AudioCoding>
+								<Format href="urn:mpeg:MPEG7AudioCodingFormatCS:1">
+									<Name>AC-3</Name>
+								</Format>
+							</AudioCoding>
+						</MediaFormat>
+					</SourcePreferences>
+				</FilteringAndSearchPreferences>
+				<!-- #####################################################  -->
+				<!-- ###         BrowsingPreferences Description       ###  -->
+				<!-- #####################################################  -->
+				<BrowsingPreferences protected="true">
+					<!-- #####################################################  -->
+					<!-- ###           SummaryPreferencesDescription       ###  -->
+					<!-- #####################################################  -->
+					<SummaryPreferences>
+						<!-- Summary preference elements -->
+					</SummaryPreferences>
+					<PreferenceCondition>
+						<Place>
+							<Name xml:lang="en">Seoul</Name>
+						</Place>
+						<Time>
+							<TimePoint>T21:00+09:00</TimePoint>
+							<Duration>PT1H</Duration>
+						</Time>
+						<Genre href="urn:mpeg:GenreCS">
+							<Name>News</Name>
+						</Genre>
+					</PreferenceCondition>
+				</BrowsingPreferences>
+				<BrowsingPreferences protected="true">
+					<SummaryPreferences>
+						<SummaryTypePreference>visual/keyVideoClips</SummaryTypePreference>
+						<MinSummaryDuration>PT5M</MinSummaryDuration>
+						<MaxSummaryDuration>PT10M</MaxSummaryDuration>
+					</SummaryPreferences>
+					<PreferenceCondition>
+						<Place>
+							<Name xml:lang="en">Office</Name>
+						</Place>
+						<Time>
+							<TimePoint>T08:00+01:00</TimePoint>
+							<Duration>PT8H</Duration>
+						</Time>
+					</PreferenceCondition>
+				</BrowsingPreferences>
+				<BrowsingPreferences protected="true">
+					<SummaryPreferences>
+						<SummaryTypePreference>visual/keyFrames</SummaryTypePreference>
+						<MaxNumOfKeyFrames>50</MaxNumOfKeyFrames>
+					</SummaryPreferences>
+					<PreferenceCondition>
+						<Place>
+							<Name xml:lang="en">Train</Name>
+						</Place>
+					</PreferenceCondition>
+					<PreferenceCondition>
+						<Place>
+							<Name xml:lang="en">Car</Name>
+						</Place>
+					</PreferenceCondition>
+				</BrowsingPreferences>
+			</UsagePreferences>
+		</UserPreferences>
+		<!-- #####################################################  -->
+		<!-- ###           UsageHistory Description            ###  -->
+		<!-- #####################################################  -->
+		<UsageHistory id="usage-history-001" allowCollection="true">
+			<UserIdentifier protected="true">
+				<UserName>John Doe</UserName>
+			</UserIdentifier>
+			<UserActionHistory id="useraction-history-001" protected="false">
+				<ObservationPeriod>
+					<TimePoint>2000-10-09T18:00-08:00</TimePoint>
+					<Duration>PT6H</Duration>
+				</ObservationPeriod>
+				<ObservationPeriod>
+					<TimePoint>2000-10-10T18:00-08:00</TimePoint>
+					<Duration>PT6H</Duration>
+				</ObservationPeriod>
+				<UserActionList>
+					<!-- user action list description (sequence of user actions) -->
+				</UserActionList>
+			</UserActionHistory>
+			<!-- #####################################################  -->
+			<!-- ###         UserActionHistory Description         ###  -->
+			<!-- #####################################################  -->
+			<UserActionHistory id="useraction-history-001a" protected="false">
+				<ObservationPeriod>
+					<TimePoint>2000-10-09T18:00-08:00</TimePoint>
+					<Duration>PT6H</Duration>
+				</ObservationPeriod>
+				<ObservationPeriod>
+					<TimePoint>2000-10-10T18:00-08:00</TimePoint>
+					<Duration>PT6H</Duration>
+				</ObservationPeriod>
+				<UserActionList id="ua-list-001" numInstances="2" totalDuration="PT2H30M">
+					<ActionType href="urn:mpeg:MPEG7ActionTypeCS:1.3">
+						<Name>Record</Name>
+					</ActionType>
+					<UserAction>
+						<!-- user action description -->
+					</UserAction>
+					<UserAction>
+						<!-- user action description -->
+					</UserAction>
+				</UserActionList>
+				<UserActionList id="ua-list-002" numInstances="25" totalDuration="PT7H02M">
+					<ActionType href="urn:mpeg:MPEG7ActionTypeCS:1.2">
+						<Name>PlayStream</Name>
+					</ActionType>
+					<UserAction>
+						<ProgramIdentifier type="MyIDType" organization="MyIDOrg">
+					01-mnf-100900</ProgramIdentifier>
+					</UserAction>
+					<UserAction>
+						<ProgramIdentifier type="MyIDType" organization="MyIDOrg">
+					02-mnf-100900</ProgramIdentifier>
+						<ActionDataItem 
+							href="www.abc.com/content/mnf/100900/mnf-stream.xml#segment_145"/>
+					</UserAction>
+					<!-- more user actions . . . -->
+				</UserActionList>
+				<UserActionList id="ual-003" numInstances="3" totalDuration="PT4M10S">
+					<ActionType href="urn:mpeg:MPEG7ActionTypeCS:1.6">
+						<Name>FastForward</Name>
+					</ActionType>
+					<UserAction>
+						<ActionTime>
+							<ActionMediaTime>
+								<MediaTimePoint>2000-10-09T19:10:12</MediaTimePoint>
+								<MediaDuration>PT1M45S</MediaDuration>
+							</ActionMediaTime>
+							<ActionGeneralTime>
+								<TimePoint>2000-10-09T19:10:12-08:00</TimePoint>
+								<Duration>PT8S</Duration>
+							</ActionGeneralTime>
+						</ActionTime>
+						<ProgramIdentifier type="MyIDType" organization="MyIDOrg">
+					02-mnf-100900</ProgramIdentifier>
+						<ActionDataItem 
+							href="www.abc.com/content/mnf/100900/mnf-stream.xml#comm_break_17"/>
+					</UserAction>
+					<UserAction>
+						<ActionTime>
+							<ActionMediaTime>
+								<MediaTimePoint>2000-10-10T18:16:08</MediaTimePoint>
+								<MediaDuration>PT1M35S</MediaDuration>
+							</ActionMediaTime>
+							<ActionGeneralTime>
+								<TimePoint>2000-10-10T18:16:08-08:00</TimePoint>
+								<Duration>PT7S</Duration>
+							</ActionGeneralTime>
+						</ActionTime>
+						<ProgramIdentifier type="MyIDType" organization="MyIDOrg">	
+					01-wnpj-101000</ProgramIdentifier>
+						<ActionDataItem href="www.abc.com/content/news/101000/wnpj.xml#news-item-8"/>
+					</UserAction>
+					<UserAction>
+						<ActionTime>
+							<ActionMediaTime>
+								<MediaTimePoint>2000-10-10T20:05:34</MediaTimePoint>
+								<MediaDuration>PT1M</MediaDuration>
+							</ActionMediaTime>
+							<ActionGeneralTime>
+								<TimePoint>2000-10-10T20:05:34-08:00</TimePoint>
+								<Duration>PT5S</Duration>
+							</ActionGeneralTime>
+						</ActionTime>
+						<ProgramIdentifier type="MyIDType" organization="MyIDOrg">
+					03-tss-000063</ProgramIdentifier>
+						<ActionDataItem href="www.fox.com/xml/that70sshow/063/tss-063.xml#break_2"/>
+					</UserAction>
+				</UserActionList>
+				<UserActionList id="ual-004" numInstances="1">
+					<ActionType href="urn:mpeg:MPEG7ActionTypeCS:3.1">
+						<Name>ClickThrough</Name>
+					</ActionType>
+					<UserAction>
+						<ActionTime>
+							<ActionGeneralTime>
+								<TimePoint>2000-10-09T18:48:01-08:00</TimePoint>
+							</ActionGeneralTime>
+						</ActionTime>
+						<ProgramIdentifier type="MyIDType" organization="MyIDOrg">
+					02-mnf-100900</ProgramIdentifier>
+						<ActionDataItem 
+							href="www.abc.com/content/mnf/100900/mnf-stream.xml#rel_media_12"/>
+					</UserAction>
+				</UserActionList>
+			</UserActionHistory>
+		</UsageHistory>
+	</ContentManagement>
+</Mpeg7>
+
+

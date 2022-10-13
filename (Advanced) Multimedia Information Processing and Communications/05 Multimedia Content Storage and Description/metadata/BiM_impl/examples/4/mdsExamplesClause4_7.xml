@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<MdsExampleTest xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema" xsi:schemaLocation="http://www.mpeg7.org/2001/MPEG-7_Schema .\MdsExampleTestClause4-7.xsd">
+	<DummyForIdref id="acme-address"/>
+	<DummyForIdref id="Goalkeeper-id"/>
+	<DummyForIdref id="Forward-id"/>
+	<!-- 4.2.1.3 Mpeg7 Root Element examples (informative) -->
+	<Mpeg7 xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema">
+		<DescriptionMetadata>
+			<Version>1.0</Version>
+			<PrivateIdentifier>myUnitDescription</PrivateIdentifier>
+		</DescriptionMetadata>
+		<!--
+		<DescriptionUnit xsi:type="DominantColorType">
+		-->
+		<DescriptionUnit xsi:type="DummyType">
+		<!--	:	-->
+		</DescriptionUnit>
+	</Mpeg7>
+	<Mpeg7 xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xml:lang="jp" type="complete">
+		<DescriptionMetadata>
+			<Confidence>1.0</Confidence>
+			<Version>1.1</Version>
+			<LastUpdate>2001-01-24T03:20:25+09:00</LastUpdate>
+			<Comment>
+				<FreeTextAnnotation>
+				This is a description example of "Mpeg7" with full
+				"DescriptionMetadata" description.
+			</FreeTextAnnotation>
+			</Comment>
+			<PublicIdentifier type="UUID" organization="ISO" >
+				098f2470-bae0-11cd-b579-08002b30bfeb
+			</PublicIdentifier>
+			<PrivateIdentifier>myImageDescription</PrivateIdentifier>
+			<Creator>
+				<Role href="creatorCS">
+					<Name> Creator </Name>
+				</Role>
+				<Agent xsi:type="PersonType">
+					<Name>
+						<GivenName>Yoshiaki</GivenName>
+						<FamilyName>Shibata</FamilyName>
+					</Name>
+				</Agent>
+			</Creator>
+			<CreationLocation>
+				<Country>jp</Country>
+				<AdministrativeUnit>Tokyo</AdministrativeUnit>
+			</CreationLocation>
+			<CreationTime>2000-10-10T19:45:00+09:00</CreationTime>
+			<Instrument>
+				<Tool>
+					<Name> ... </Name>
+				</Tool>
+				<Setting name="sensitivity" value="0.5"/>
+			</Instrument>
+			<Rights>
+				<RightsId> ... </RightsId>
+			</Rights>
+		</DescriptionMetadata>
+		<ContentDescription xsi:type="ContentEntityType">
+		<!--
+			<MultimediaContent xsi:type="ImageType">
+		-->
+			<MultimediaContent xsi:type="DummyImageType">
+				<Image>
+					:
+				</Image>
+			</MultimediaContent>
+		</ContentDescription>
+	</Mpeg7>
+	<!-- 4.3.2.3 ContentDescription examples (informative) -->
+	<Mpeg7 xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xml:lang="en" type="complete">
+		<ContentDescription xsi:type="ContentEntityType">
+		<!--
+			<MultimediaContent xsi:type="ImageType">
+		-->
+			<MultimediaContent xsi:type="DummyImageType">
+				<Image>
+					:
+				</Image>
+			</MultimediaContent>
+		</ContentDescription>
+	</Mpeg7>
+	<Mpeg7 xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xml:lang="en" type="complete">
+		<ContentDescription xsi:type="SummaryDescriptionType">
+			<Summarization>
+			<!--
+				<Summary xsi:type="HierarchicalSummaryType">
+			-->
+				<Summary xsi:type="DummyHierarchicalSummaryType">
+					<!-- : -->
+				</Summary>
+			</Summarization>
+		</ContentDescription>
+	</Mpeg7>
+	<!-- 4.3.3.3 ContentManagement example (informative) -->
+	<Mpeg7 xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xml:lang="en" type="complete">
+		<ContentManagement xsi:type="UserDescriptionType">
+			<User>
+				<Name xml:lang="en">
+					<GivenName> John </GivenName>
+					<FamilyName> Smith </FamilyName>
+				</Name>
+			</User>
+			<UserPreferences>
+				<UserIdentifier>
+					<UserName> jrsmith </UserName>
+				</UserIdentifier>
+				<UsagePreferences>
+          			<!-- : --> 
+    				</UsagePreferences>
+			</UserPreferences>
+		</ContentManagement>
+	</Mpeg7>
+	<!-- 4.4.1.3 MultimediaContent DS examples (informative) -->
+	<Mpeg7 xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xml:lang="jp" type="complete">
+		<DescriptionMetadata>
+			<Version>1.0</Version>
+			<Rights>
+				<RightsId> ... </RightsId>
+			</Rights>
+		</DescriptionMetadata>
+		<ContentDescription xsi:type="ContentEntityType">
+			<MultimediaContent xsi:type="VideoType">
+				<Video>
+					<CreationInformation>
+						<Creation>
+							<Title> Soccer goal score </Title>
+						</Creation>
+					</CreationInformation>
+				</Video>
+			</MultimediaContent>
+		</ContentDescription>
+	</Mpeg7>
+	<!-- 4.5.1.3 Package DS examples (informative) -->
+	<!-- non-normative element "Package"  -->
+	<Package name="Content Organization">
+		<Package name="Collections">
+			<Scheme name="ContentCollectionType"/>
+			<Scheme name="DescriptorCollectionType"/>
+			<Scheme name="ConceptCollectionType"/>
+			<Scheme name="MixedCollectionType"/>
+			<Scheme name="StructuredCollectionType"/>
+		</Package>
+		<Package name="Models">
+			<Package name="Probability Models">
+				<Package name="Probability Distributions">
+					<Package name="Discrete Probability Distributions">
+						<Scheme name="HistogramProbabilityType"/>
+						<Scheme name="BinomialDistributionType"/>
+						<Scheme name="PoissonDistributionType"/>
+					</Package>
+					<Package name="Continuous Probability Distributions">
+						<Scheme name="GaussianDistributionType"/>
+						<Scheme name="GeneralizedGaussianDsitributionType"/>
+					</Package>
+				</Package>
+				<Package name="Finite State Models">
+					<Scheme name="StateTransitionModelType"/>
+					<Scheme name="HiddenMarkovModelType"/>
+				</Package>
+			</Package>
+		</Package>
+	</Package>
+	<!-- 4.6.1.3 DescriptionMetadata DS examples (informative) -->
+	<!-- non-normative element "VideoSegment"  -->
+	<VideoSegment>
+		<Header xsi:type="DescriptionMetadataType">
+			<Creator>
+				<Role href="creatorCS">
+					<Name>Creator</Name>
+				</Role>
+				<Agent xsi:type="OrganizationType">
+					<Name> MDS Group </Name>
+				</Agent>
+			</Creator>
+			<CreationTime>2001-01-13T21:30</CreationTime>
+		</Header>
+		<TemporalDecomposition gap="false" overlap="false">
+			<VideoSegment id="NarrationVS">
+				<Header xsi:type="DescriptionMetadataType">
+					<Creator>
+						<Role href="creatorCS">
+							<Name>creator</Name>
+						</Role>
+						<Agent xsi:type="PersonType">
+							<Name xml:lang="fr">
+								<GivenName>John</GivenName>
+								<FamilyName>Smith</FamilyName>
+							</Name>
+						</Agent>
+					</Creator>
+				</Header>
+				<!-- : -->
+		</VideoSegment>
+		<!-- : -->
+	</TemporalDecomposition >
+	<!-- : -->
+</VideoSegment>
+	<!-- 5.3.4.3 Matrix datatypes examples (informative) -->
+	<!-- non-normative element "DoubleMatrix"  -->
+	<DoubleMatrix mpeg7:dim="4 4">
+  	1.0 12.0 0.0 0.1
+  	0.0 2.0 0.0 0.0
+   	13.0 0.0 -1. 0.0
+   	4.0 0.0 0.0 1.2
+</DoubleMatrix>
+	<!-- non-normative element "IntegerMatrix"  -->
+	<IntegerMatrix mpeg7:dim="3 4 2">
+		<!-- The order of elements is
+  		(1,1,1), (1,1,2),
+  		(1,2,1), (1,2,2), 
+  		(1,3,1), (1,3,2),
+  		(1,4,1), (1,4,2),
+ 			...
+ 		(2,1,1), (2,1,2),
+			...
+ 		(3,1,1), (3,1,2),
+			...
+ 		(3,4,1), (3,4,2),  -->
+	-4  1  5  2 -2  5 -6  3
+ 	 2  4  5  1 12  4 -3  8
+	19  2  8  5  3 -1  7  5
+</IntegerMatrix>
+	<!-- 5.3.5.3 Diagonal matrix datatypes examples (informative) -->
+	<!-- non-normative element "DoubleDiagonalMatrix"  -->
+	<DoubleDiagonalMatrix mpeg7:dim="4">
+	1.0 2.0 -1.0 1.2
+</DoubleDiagonalMatrix>
+	<!-- 5.4.2.3 ProbabilityMatrix datatype examples (informative) -->
+	<!-- non-normative element "ProbabilityMatrix"  -->
+	<ProbabilityMatrix mpeg7:dim="2 2 2">
+	1.0		0.0		<!-- P(W=false|R=false,S=false), P(W=true|R=false,S=false) -->
+	0.1  	0.9		<!-- P(W=false|R=false,S=true), P(W=true|R=false,S=true) -->
+	0.8  	0.2		<!-- P(W=false|R=true,S=false), P(W=true|R=true,S=false) -->
+	0.01 	0.99	<!-- P(W=false|R=true,S=true), P(W=true|R=true,S=true) -->
+	</ProbabilityMatrix>
+	<!-- 5.5.2.3 countryCode Datatype Example (informative) -->
+	<!-- non-normative element "Place"  -->
+	<Place>
+		<!-- : -->
+		<Country>es</Country>
+		<!-- : -->
+	</Place>
+	<!-- 5.5.3.3 regionCode Datatype Example (informative) -->
+	<!-- non-normative element "Place"  -->
+	<Place>
+		<Name>Italian province of Milano</Name>
+		<Country>IT</Country>
+		<Region>IT-MI</Region>
+	</Place>
+	<!-- non-normative element "Place"  -->
+	<Place>
+		<Name>Danish county Roskilde</Name>
+		<Country>dk</Country>
+		<Region>AA-AA</Region>
+	</Place>
+	<!--  This example purposely uses mixed case to show case-insensitivity 
+of country/region codes -->
+	<!-- non-normative element "Place"  -->
+	<Place>
+		<Name>Antananarivo province in Madagascar</Name>
+		<Country>mG</Country>
+		<Region>AA-123</Region>
+	</Place>
+	<!-- 6.1.1.3 Reference Datatype Examples (informative) -->
+	<!-- non-normative element "MyElement"  -->
+<!--	:	-->
+<MyElement href="www.example.com/another-description.mp7#id1"/>
+<!--	:	-->
+<MyElement idref="id3"/>
+<!--	:	-->
+<!-- XML Spy v3.5 bug
+<MyElement xpath="../../../MyTargetElement[1]"/>
+-->
+<MyElement xpath="../../../"/>
+<!--	:	-->
+
+<!-- 6.2.1.3 UniqueID Datatype Examples (informative) -->
+<!-- non-normative element "MyID"  -->
+	<MyID type="ISBN">0-7803-5610-1</MyID>
+	<MyID organization="ISO" type="ISWC">T-034.524.680-1</MyID>
+	<MyID>urn:ietf:std:50</MyID>
+	<!-- 6.3.8 Time Datatype Examples (informative) -->
+	<!-- non-normative element "Time"  -->
+	<Time>
+		<TimePoint>1987-10-03T14:13+01:00</TimePoint>
+		<Duration>P10D</Duration>
+	</Time>
+	<Time>
+	<!-- XML Spy v3.5 bug
+		<RelIncrTimePoint timeUnit="P1D" timeBase="/Time[1]">3</RelIncrTimePoint>
+	-->
+		<RelIncrTimePoint timeUnit="P1D" timeBase="/">3</RelIncrTimePoint>
+	</Time>
+	<Time>
+	<!-- XML Spy v3.5 bug
+		<RelIncrTimePoint timeUnit="P1D" timeBase="/Time[1]">0</RelIncrTimePoint>
+	-->
+		<RelIncrTimePoint timeUnit="P1D" timeBase="/">0</RelIncrTimePoint>
+		<IncrDuration timeUnit="P1D">5</IncrDuration>
+	</Time>
+	<Time>
+	<!-- XML Spy v3.5 bug
+		<RelTimePoint timeBase="/Time[1]">PT2H20M-01:00Z</RelTimePoint>
+	-->
+		<RelTimePoint timeBase="/">PT2H20M-01:00Z</RelTimePoint>
+	</Time>
+	<!-- 6.3.16 MediaTime Datatype Examples (informative) -->
+	<!-- non-normative element "MediaLocator" and "MediaTime"  -->
+	<!-- Specification of the video location -->
+	<MediaLocator>
+		<MediaUri>http://www.mpeg7.org/the_video.mpg</MediaUri>
+	</MediaLocator>
+	<!-- MediaTime for Segment1(0-0.1sec) -->
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT0S</MediaRelTimePoint>
+	-->
+		<MediaRelTimePoint timeBase="../../">PT0S</MediaRelTimePoint>
+		<MediaDuration>PT1N10F</MediaDuration>
+	</MediaTime>
+	<!-- MediaTime for Segment2(0.1-1sec) -->
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT1N10F</MediaRelTimePoint>
+	-->
+		<MediaRelTimePoint timeBase="../../">PT1N10F</MediaRelTimePoint>
+		<MediaDuration>PT9N10F</MediaDuration>
+	</MediaTime>
+	<!-- MediaTime for Segment3(1-10sec) -->
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../MediaLocator[1]">30</MediaRelIncrTimePoint>
+	-->
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../">30</MediaRelIncrTimePoint>
+		<MediaIncrDuration timeUnit="PT1N30F">270</MediaIncrDuration>
+	</MediaTime>
+<!--	:	-->
+
+<!-- MediaTime for Segment4(10-20sec) -->
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../MediaLocator[1]">300</MediaRelIncrTimePoint>
+	-->
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../">300</MediaRelIncrTimePoint>
+		<MediaIncrDuration timeUnit="PT1N30F">300</MediaIncrDuration>
+	</MediaTime>
+<!--	:	-->
+<!-- MediaTime for Segment5(20-1000sec) -->
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT20S</MediaRelTimePoint>
+	-->
+		<MediaRelTimePoint timeBase="../../">PT20S</MediaRelTimePoint>
+		<MediaDuration>PT16M20S</MediaDuration>
+	</MediaTime>
+	<MediaIncrDuration timeUnit="PT1S">980</MediaIncrDuration>
+	<MediaTime>
+		<MediaTimePoint>1989-10-03T14:13:02:0F30</MediaTimePoint>
+		<MediaIncrDuration timeUnit="PT1N30F">1340</MediaIncrDuration>
+	</MediaTime>
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../MediaTime[1]">561</MediaRelIncrTimePoint>
+	-->
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../">561</MediaRelIncrTimePoint>
+	</MediaTime>
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelTimePoint timeBase="../../MediaTime[1]">PT18S21N</MediaRelTimePoint>
+	-->
+		<MediaRelTimePoint timeBase="../../">PT18S21N</MediaRelTimePoint>
+	</MediaTime>
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../MediaTime[1]">500</MediaRelIncrTimePoint>
+	-->
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../">500</MediaRelIncrTimePoint>
+		<MediaIncrDuration timeUnit="PT1N30F">100</MediaIncrDuration>
+	</MediaTime>
+	<MediaTime>
+	<!-- XML Spy v3.5 bug
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../../MediaTime">61</MediaRelIncrTimePoint>
+	-->
+		<MediaRelIncrTimePoint timeUnit="PT1N30F" timeBase="../../../">61</MediaRelIncrTimePoint>
+	</MediaTime>
+	<!-- 6.4.2.3 InlineMedia Datatype Examples (informative) -->
+	<!-- non-normative element "MyInlineMedia"  -->
+	<MyInlineMedia type="image/jpeg">
+		<MediaData16>98A34F10C5094538AB9387362522DA3</MediaData16>
+	</MyInlineMedia>
+	<!-- 6.4.5.3 MediaLocator Datatype Examples (informative) -->
+	<!-- non-normative element "MyTemporalSegmentLocator"  -->
+	<MyTemporalSegmentLocator>
+		<MediaUri>http://www.mpeg7.org/demo.mpg</MediaUri>
+		<MediaTime>
+		<!-- XML Spy v3.5 bug
+			<MediaRelTimePoint timeBase="../../MediaUri">PT3S</MediaRelTimePoint>
+		-->
+			<MediaRelTimePoint timeBase="../../">PT3S</MediaRelTimePoint>
+			<MediaDuration>PT10S</MediaDuration>
+		</MediaTime>
+	</MyTemporalSegmentLocator>
+	<!-- non-normative element "MyMediaLocator"  -->
+	<MyMediaLocator>
+		<MediaUri>http://www.mpeg7.org/demo.mp4</MediaUri>
+		<StreamID>1</StreamID>
+	</MyMediaLocator>
+	<!-- non-normative element "MyImageLocator"  -->
+	<MyImageLocator>
+		<MediaUri>http://www.mpeg7.org/demo.ppm</MediaUri>
+		<BytePosition offset="1024"/>
+	</MyImageLocator>
+	<!-- 7.1.1.3 xml:lang attribute examples (informative) -->
+	<!-- non-normative element "FreeTextAnnotation"  -->
+	<FreeTextAnnotation xml:lang="en-us"> 
+	This is a nice apartment. 
+</FreeTextAnnotation>
+	<FreeTextAnnotation xml:lang="en-uk"> 
+	This is a nice flat. 
+</FreeTextAnnotation>
+	<!-- 7.1.2.3 xsd:language datatype examples (informative) -->
+	<!-- non-normative element "PreferredLanguage"  -->
+	<PreferredLanguage>en</PreferredLanguage>
+	<!-- 7.2.1.2 Textual datatype semantics -->
+	<!-- non-normative element "TextAnnotation"  -->
+	<TextAnnotation>
+		<KeywordAnnotation>
+			<Keyword xml:lang="fr"> chien </Keyword>
+			<Keyword> dog </Keyword>
+		</KeywordAnnotation>
+	</TextAnnotation>
+	<!-- 7.2.2.3 TextAnnotation datatype examples (informative) -->
+	<!-- non-normative element "TextAnnotation"  -->
+	<TextAnnotation>
+		<FreeTextAnnotation xml:lang="en">
+		Tanaka throws a small ball to Yamada.
+		Yamada catches the ball with his left hand.
+		</FreeTextAnnotation>
+		<StructuredAnnotation>
+			<Who href=":PersonDic.com:TANAKA100">
+				<Name xml:lang="en">Tanaka</Name>
+			</Who>
+			<Who>
+				<Name xml:lang="en">Yamada</Name>
+			</Who>
+			<WhatObject>
+				<Name xml:lang="en">A small ball </Name>
+			</WhatObject>
+			<WhatAction>
+				<Name xml:lang="en">Tanaka throws a small ball to Yamada.</Name>
+			</WhatAction>
+			<WhatAction>
+				<Name xml:lang="en">Yamada catches the ball with his left hand.</Name>
+			</WhatAction>
+		</StructuredAnnotation>
+	</TextAnnotation>
+	<!-- 7.2.4.3 KeywordAnnotation datatype examples (informative) -->
+	<!-- non-normative element "KeywordAnnotation"  -->
+	<KeywordAnnotation xml:lang="en">
+		<Keyword>election</Keyword>
+		<Keyword>United States of America</Keyword>
+		<Keyword>President</Keyword>
+	</KeywordAnnotation>
+	<!-- 7.2.5.2 DependencyStructure datatype semantics -->
+	<!-- non-normative element "Sentence"  -->
+	<Sentence>
+		<Phrase operator="subject">
+			<Head>Tom</Head>
+		</Phrase>
+		<Phrase particle="to">
+			<Head>to Mary</Head>
+		</Phrase>
+		<Head baseForm="talk">talks</Head>
+	</Sentence>
+	<Sentence>
+		<Phrase operator="subject" synthesis="coordination">
+			<Head>Tom</Head>
+			<Head type="conjunction">and</Head>
+			<Head>Mary</Head>
+		</Phrase>
+		<Head>walk</Head>
+	</Sentence>
+	<!-- 7.2.5.3 DependencyStructure datatype examples (informative) -->
+	<!-- non-normative element "DependencyStructure"  -->
+	<DependencyStructure xml:lang="en">
+		<Sentence>
+			<Phrase operator="subject">
+				<Head type="noun">Tanaka</Head>
+			</Phrase>
+			<Phrase operator="object">
+				<Phrase>
+					<Head type="adjective">small</Head>
+				</Phrase>
+				<Head type="article noun" identifier="BALL">a ball</Head>
+			</Phrase>
+			<Phrase particle="to">
+				<Head type="preposition noun" identifier="YAMADA">to Yamada</Head>
+			</Phrase>
+			<Head type="verb" baseForm="throw">throws</Head>
+		</Sentence>
+		<Sentence>
+			<Phrase operator="subject">
+				<Head type="noun" equal="YAMADA">Yamada</Head>
+			</Phrase>
+			<Phrase operator="object">
+				<Head type="article noun" equal="BALL">the ball</Head>
+			</Phrase>
+			<Head type="verb" baseForm="catch">catches</Head>
+		</Sentence>
+	</DependencyStructure>
+	<!-- 7.3.1.3.1 Classification Scheme for Audio Domain -->
+	<!-- non-normative element "ClassificationScheme"  -->
+	<!-- XML Spy v3.5 bug
+	<ClassificationScheme uri="urn:mpeg:AudioDomainCS" domain="//MediaInformation/MediaProfile/MediaIdentification/AudioDomain">
+	-->
+	<ClassificationScheme uri="urn:mpeg:AudioDomainCS" domain="//">
+		<Header xsi:type="DescriptionMetadataType">
+			<Version>1.0</Version>
+			<Rights>
+				<RightsId>urn:rights:x0d01d</RightsId>
+			</Rights>
+		</Header>
+		<Term termId="1">
+			<Name xml:lang="en">Source</Name>
+			<Definition xml:lang="en">Type of audio source</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">Synthetic</Name>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">Natural</Name>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Acquisition</Name>
+			<Definition xml:lang="en">Type of Content</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Music</Name>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Speech</Name>
+				<Name xml:lang="jp">Onsei</Name>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Mixed</Name>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">Multi-track</Name>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Use</Name>
+			<Definition xml:lang="en">Original usage domain</Definition>
+			<Term termId="3.1">
+				<Name xml:lang="en">Scientific</Name>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Medical</Name>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">Security</Name>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">Broadcast</Name>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">CD-A distribution</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 7.3.1.3.2 Classification Scheme for Genre -->
+	<!-- non-normative element "ClassificationScheme"  -->
+	<!-- XML Spy v3.5 bug
+	<ClassificationScheme uri="urn:Escort2_4:Content" domain="//CreationInformation/Classification/Genre">
+	-->
+	<ClassificationScheme uri="urn:Escort2_4:Content" domain="//">
+		<Import href="http://www.tvid.org/TVE/Drama/"/>
+		<Import href="http://www.ioc.org/IOC/Sports/"/>
+		<Term termId="information">
+			<Name xml:lang="en">Information</Name>
+			<Definition xml:lang="en">Generic news</Definition>
+			<!-- This narrower term comes from the imported IOC Sports scheme -->
+			<Term termId="sports"/>
+		</Term>
+		<Term termId="drama">
+			<!-- This narrower term comes from the imported drama scheme -->
+		</Term>
+		<Term termId="music">
+			<Term termId="rock">
+				<Name xml:lang="en">Rock</Name>
+			</Term>
+			<Term termId="pop">
+				<Name xml:lang="en">Pop</Name>
+			</Term>
+			<Term termId="jazz">
+				<Name xml:lang="en">Jazz</Name>
+			</Term>
+			<Term termId="classical">
+				<Name xml:lang="en">Classical</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 7.3.3.3 TermUse datatype examples (informative) -->
+	<!-- non-normative element "Genre"  -->
+	<!-- Referring to a term using a URN -->
+	<Genre href="urn:mpeg:GenreCS:alternativeJazz"/>
+	<!-- Referring to a term using a HTTP URI -->
+	<Genre href="aaa"/>
+	<!-- Referring to a term using a classification scheme alias -->
+	<!-- Define schema aliases                                   -->
+	<!-- non-normative element "ClassifiationSchemeAlias"  -->
+	<ClassifiationSchemeAlias alias="s1" href="urn:mpeg:GenreCS"/>
+	<ClassifiationSchemeAlias alias="s2" href="http:://www.mpeg.org/GenreCS.xml"/>
+	<!-- Refer to the term using the two schema aliases          -->
+	<Genre href=":s1:alternativeJazz"/>
+	<Genre href=":s2:alternativeJazz"/>
+	<Genre href="urn:AISF:Sports:1.4.9">
+		<Name xml:lang="en">Basketball</Name>
+		<Definition xml:lang="en">Basket Description</Definition>
+		<Term relation="BT" termId="1.4">
+			<Name xml:lang="en">Sport</Name>
+			<Definition xml:lang="en">Sports news</Definition>
+			<Term relation="BT" termId="1">
+				<Name xml:lang="en">Information</Name>
+				<Definition xml:lang="en">Generic news</Definition>
+			</Term>
+		</Term>
+	</Genre>
+	<Genre>
+		<Name>My genre</Name>
+	</Genre>
+	<!-- 7.3.4.3 ControlledTermUse datatype examples (informative) -->
+	<!-- non-normative element "ControlledTermUse"  -->
+	<ControlledTermUse href="www:getty:edu:aat:21150">
+		<Name xml:lang="en">High Baroque</Name>
+		<Definition>The fully Baroque style that emerged in ...</Definition>
+	</ControlledTermUse>
+	<!-- non-normative element "TermUse"  -->
+	<TermUse href="urn:dewey:630">
+		<Name xml:lang="en">Agriculture</Name>
+	</TermUse>
+	<!-- 7.3.7.3 GraphicalClassificationScheme DS Examples (informative) -->
+	<!-- non-normative element "GraphicalClassificationScheme"  -->
+	<GraphicalClassificationScheme uri="urn:mpeg:Graph1">
+		<GraphicalTerm termId="1">
+			<alphabetGraph id="agObject">
+				<Node id="unknownObject"/>
+				<Relation xsi:type="RelationType" source="unknownObject" target="unknownObject" name="ObjectObject" />
+			</alphabetGraph>
+		</GraphicalTerm>
+		<GraphicalTerm termId="2">
+			<alphabetGraph id="agEvent">
+				<Node id="unknownEvent"/>
+				<Relation xsi:type="RelationType" source="unknownEvent" target="unknownEvent" name="EventEvent"/>
+			</alphabetGraph>
+		</GraphicalTerm>
+	</GraphicalClassificationScheme>
+	<!-- 7.3.8.3 GraphicalTerm DS Examples (informative) -->
+	<!-- non-normative element "GraphicalClassificationScheme"  -->
+	<GraphicalClassificationScheme uri="urn:mpeg:BasicGraphRules">
+		<GraphicalTerm termId="1">
+			<alphabetGraph id="someAlphabetGraph">
+				<Node id="context1"/>
+				<Node id="interfaceEvent1"/>
+				<Node id="interfaceObject2"/>
+				<Node id="unknownObject1"/>
+				<Relation xsi:type="RelationType" id="icedge1" name="???" source="interfaceEvent1" target="context1"/>
+				<Relation xsi:type="RelationType" id="icedge2" name="???" source="interfaceObject2" target="context1"/>
+				<Relation xsi:type="RelationType" id="ciedge1" name="???" source="context1" target="interfaceEvent1"/>
+				<Relation xsi:type="RelationType" id="ciedge2" name="???" source="context1" target="interfaceObject2"/>
+				<Relation xsi:type="RelationType" id="iuedge1" name="???" source="interface1" target="unknownObject1"/>
+				<Relation xsi:type="RelationType" id="iuedge2" name="???" source="interface2" target="unknownObject2"/>
+			</alphabetGraph>
+		</GraphicalTerm>
+		<GraphicalTerm termId="2">
+			<ruleGraph id="someRuleGraph">
+				<Node id="object1"/>
+				<Node id="object2"/>
+				<Node id="context"/>
+				<Relation xsi:type="RelationType" name="???" id="edge1" source="object1" target="context"/>
+				<Relation xsi:type="RelationType" name="???" id="edge2" source="object1" target="object2"/>
+				<Relation xsi:type="RelationType" name="???" id="edge3" source="object1" target="object3"/>
+			</ruleGraph>
+			<alphabetGraphRef href="urn:mpeg:BasicGraphRules:1"/>
+			<morphismGraph>
+				<Relation xsi:type="RelationType" source="context" target="context1" name="ruleMorphism"/>
+				<Relation xsi:type="RelationType" source="object1" target="interfaceObject2" name="ruleMorphism"/>
+				<Relation xsi:type="RelationType" source="object2" target="unknownObject1" name="ruleMorphism"/>
+				<Relation xsi:type="RelationType" source="edge1" target="icedge2" name="ruleMorphism"/>
+				<Relation xsi:type="RelationType" source="edge2" target="iuedge2" name="ruleMorphism"/>
+				<Relation xsi:type="RelationType" source="edge3" target="iuedge2" name="ruleMorphism"/>
+			</morphismGraph>
+		</GraphicalTerm>
+	</GraphicalClassificationScheme>
+	<!-- 7.4.2.3 Person DS examples (informative) -->
+	<!-- non-normative element "Person"  -->
+	<Person>
+		<Name xml:lang="en">
+			<GivenName>John</GivenName>
+			<FamilyName>Smith</FamilyName>
+		</Name>
+		<Name xml:lang="fr">
+			<GivenName>Jean</GivenName>
+			<FamilyName>Smith</FamilyName>
+		</Name>
+		<Affiliation>
+			<Organization>
+				<Name>International Standards Organization</Name>
+			</Organization>
+		</Affiliation>
+		<ElectronicAddress>
+			<Email>john.smith@iso.ch</Email>
+		</ElectronicAddress>
+	</Person>
+	<!-- 7.4.3.3 PersonGroup DS examples (informative) -->
+	<!-- non-normative element "PersonGroup"  -->
+	<PersonGroup>
+		<Name>Rolling Stones</Name>
+		<Kind>
+			<Name>Rock band</Name>
+		</Kind>
+		<Member>
+			<Name>
+				<GivenName initial="M">Mick</GivenName>
+				<FamilyName>Jagger</FamilyName>
+			</Name>
+		</Member>
+		<Member>
+			<Name>
+				<GivenName>Keith</GivenName>
+				<FamilyName>Richard</FamilyName>
+			</Name>
+		</Member>
+		<Member>
+			<Name>
+				<GivenName>Ron</GivenName>
+				<FamilyName>Wood</FamilyName>
+			</Name>
+		</Member>
+		<Member>
+			<Name>
+				<GivenName>Charly</GivenName>
+				<FamilyName>Watts</FamilyName>
+			</Name>
+		</Member>
+	</PersonGroup>
+	<!-- 7.4.4.3 Organization DS examples (informative) -->
+	<!-- non-normative element "Organization"  -->
+	<Organization id="ORG1">
+		<Name type="main" xml:lang="en">Acme Inc.</Name>
+		<Name type="variant" xml:lang="en">ACME</Name>
+		<Kind>
+			<Name>company</Name>
+		</Kind>
+		<Contact xsi:type="PersonType">
+			<Name>
+				<GivenName>John</GivenName>
+				<FamilyName>Smith</FamilyName>
+			</Name>
+			<ElectronicAddress>
+				<Email>jsmith@acme.org</Email>
+			</ElectronicAddress>
+		</Contact>
+		<Jurisdiction>
+			<Country>us</Country>
+		</Jurisdiction>
+		<AddressRef idref="acme-address"/>
+		<ElectronicAddress>
+			<URL>www.acme.com</URL>
+		</ElectronicAddress>
+	</Organization>
+	<!-- 7.4.5.3 PersonName datatype examples (informative) -->
+	<!-- non-normative element "Name"  -->
+	<Name>
+		<GivenName>Edwina J. Hoover</GivenName>
+	</Name>
+	<Name>
+		<GivenName>Edwina</GivenName>
+		<GivenName initial="J"/>
+		<FamilyName>Hoover</FamilyName>
+	</Name>
+	<Name>
+		<Title>Professor</Title>
+		<GivenName>Edwina</GivenName>
+		<GivenName initial="J">Jermina</GivenName>
+		<FamilyName>Hoover</FamilyName>
+		<FamilyName>van Blumen</FamilyName>
+		<FamilyName initial="Jr.">Junior</FamilyName>
+		<Title>F.R.S.</Title>
+	</Name>
+	<Name>
+		<GivenName>Dinesh</GivenName>
+	</Name>
+	<Name xml:lang="es">
+		<GivenName initial="J.M">José María</GivenName>
+		<FamilyName>Garcia</FamilyName>
+		<FamilyName>Sßnchez</FamilyName>
+	</Name>
+	<!-- 7.5.1.3 Place DS examples (informative) -->
+	<!-- non-normative element "Place"  -->
+	<Place>
+		<Name xml:lang="en">Madrid</Name>
+		<Role>
+			<Name>shooting location</Name>
+		</Role>
+		<GeographicPosition datum="itrf">
+			<Point longitude="135.75" latitude="35.5" altitude="100"/>
+		</GeographicPosition>
+		<Country>es</Country>
+		<Region>es-cam</Region>
+		<AdministrativeUnit type="city">Madrid</AdministrativeUnit>
+		<PostalAddress>
+			<AddressLine>E.T.S.Ing. Telecomunicación</AddressLine>
+			<AddressLine>Universidad Politécnica de Madrid</AddressLine>
+			<AddressLine>Ciudad Universitaria s/n</AddressLine>
+			<PostingIdentifier>E-28040</PostingIdentifier>
+		</PostalAddress>
+		<InternalCoordinates>C-306</InternalCoordinates>
+	</Place>
+	<!-- 7.6.1.2 Graph DS semantics -->
+	<!-- non-normative element "Graph"  -->
+	<Graph>
+		<Node id="n1" idref="a"/>
+		<Node id="n2" idref="b"/>
+		<Relation xsi:type="RelationType" name="R" source="n1" target="n2"/>
+	</Graph>
+	<Graph>
+		<Relation xsi:type="RelationType" name="R" source="n1" target="n2"/>
+	</Graph>
+	<!-- 7.6.1.3 Graph DS examples (informative) -->
+	<!-- non-normative element "Graph"  -->
+	<!-- a->b c->d -->
+	<Graph id="graph1">
+		<Node id="a"/>
+		<Node id="b"/>
+		<Node id="c"/>
+		<Node id="d"/>
+		<!-- "edge1", "edge2" alreaded used elsewhere -->
+		<Relation xsi:type="RelationType" name="rel" id="edge1a" source="#a" target="#b"/>
+		<Relation xsi:type="RelationType" name="rel" id="edge2a" source="#b" target="#d"/>
+	</Graph>
+	<!-- e->f -->
+	<Graph id="graph2">
+		<Node id="e"/>
+		<Node id="f"/>
+		<!-- "edge3" alreaded used elsewhere -->
+		<Relation xsi:type="RelationType" name="rel" id="edge3a" source="#e" target="#f"/>
+	</Graph>
+	<Graph id="morph1">
+		<Relation xsi:type="RelationType" name="morph" source="#a" target="#e"/>
+		<Relation xsi:type="RelationType" name="morph" source="#b" target="#f"/>
+		<Relation xsi:type="RelationType" name="morph" source="#c" target="#e"/>
+		<Relation xsi:type="RelationType" name="morph" source="#d" target="#f"/>
+		<Relation xsi:type="RelationType" name="morph" source="#graph1" target="#graph2"/>
+		<Relation xsi:type="RelationType" name="morph" source="#edge1" target="#edge3"/>
+		<Relation xsi:type="RelationType" name="morph" source="#edge2" target="#edge4"/>
+	</Graph>
+	<!-- 7.6.3.3 Relation DS examples (informative) -->
+	<!-- non-normative element "Graph"  -->
+	<Graph>
+		<Node id="nodeA" idref="segmentA"/>
+		<Node id="nodeB" idref="segmentB"/>
+		<!-- Edge from a->b -->
+		<Relation xsi:type="RelationType" name="leftOf">
+			<Argument idref="nodeA"/>
+			<Argument idref="nodeB"/>
+		</Relation>
+	</Graph>
+	<Graph>
+		<!-- "nodeA", "nodeB" alreaded used elsewhere -->
+		<Node id="nodeAa" idref="segmentA"/>
+		<Node id="nodeBa" idref="segmentB"/>
+		<!-- Edge from a->b -->
+		<Relation xsi:type="RelationType" name="leftOf" source="nodeA" target="nodeB"/>
+	</Graph>
+	<!-- non-normative element "VideoSegment "  -->
+	<VideoSegment id="segmentA">
+		<Relation xsi:type="RelationType" name="leftOf" properties="partialOrder" target="#segmentB"/>
+	</VideoSegment>
+	<VideoSegment id="segmentB"/>
+		<!-- "segmentA", alreaded used elsewhere -->
+	<VideoSegment id="segmentAa">
+		<Relation xsi:type="RelationType" name="equivalentTo" properties="equivalence" target="#segmentB"/>
+	</VideoSegment>
+	<!-- 7.7.1.3 Ordering Key DS Examples (informative) -->
+	<!-- non-normative element "VideoSegment "  -->
+	<VideoSegment id="id1">
+		<!-- <MediaTime> ... </MediaTime> -->
+		<TemporalDecomposition>
+			<VideoSegment id="id2">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<VisualDescriptor xsi:type="CameraMotionType">
+					<Segment xsi:type="MixtureCameraMotionSegmentType">
+						<Time>
+							<MediaTimePoint/>
+						</Time>
+						<FractionalPresence>
+							<TRACK_LEFT>23</TRACK_LEFT>
+							<ZOOM_IN>56</ZOOM_IN>
+						</FractionalPresence>
+						<AmountOfMotion><!-- ... --></AmountOfMotion>
+					</Segment>
+				</VisualDescriptor >
+			</VideoSegment >
+			<VideoSegment id="id3">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<VisualDescriptor xsi:type="CameraMotionType">
+					<Segment xsi:type="MixtureCameraMotionSegmentType">
+						<Time>
+							<MediaTimePoint/>
+						</Time>
+						<FractionalPresence>
+							<TRACK_LEFT>10</TRACK_LEFT>
+							<ZOOM_IN>80</ZOOM_IN>
+						</FractionalPresence>
+						<AmountOfMotion><!-- ... --></AmountOfMotion>
+					</Segment >
+				</VisualDescriptor>
+			</VideoSegment >
+			<VideoSegment xsi:type="VideoSegmentType" id="id4">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<VisualDescriptor xsi:type="CameraMotionType">
+					<Segment xsi:type="MixtureCameraMotionSegmentType">
+						<Time>
+							<MediaTimePoint/>
+						</Time>
+						<FractionalPresence>
+							<TRACK_LEFT>67</TRACK_LEFT>
+						</FractionalPresence>
+						<AmountOfMotion><!-- ... --></AmountOfMotion>
+					</Segment>
+				</VisualDescriptor>
+			</VideoSegment >
+		</TemporalDecomposition>
+	</VideoSegment>
+	<OrderingKey name="ActionOrdering" semantics="The shots containing more action">
+	<!-- XML Spy v3.5 bug (but value are still invalid)
+		<Selector>/VideoSegment/SegmentDecomposition/Segment</Selector>
+		<Field>CameraMotion/CameraMotionSegment/FractionalPresence@TRACK_LEFT_F</Field>
+	-->
+		<Selector>/../..</Selector>
+		<Field>/../..</Field>
+	</OrderingKey>
+	<OrderingKey name="Close-up Ordering" semantics="The shots containing close-up of a player">
+	<!-- XML Spy v3.5 bug (but value are still invalid)
+		<Selector>/VideoSegment/SegmentDecomposition/Segment</Selector>
+		<Field>CameraMotion/CameraMotionSegment/FractionalPresence@ZOOM_IN_F</Field>
+	-->
+		<Selector>/../..</Selector>
+		<Field>/../..</Field>
+	</OrderingKey>
+	<!-- 7.8.1.3 Affective DS Examples (informative) -->
+	<Mpeg7 type="complete">
+		<ContentDescription xsi:type="ContentEntityType">
+			<!--
+				Story Shape description by Affective DS.
+				Note: Story shape is defined in the informative classification scheme
+				identified by "AffectTypeCS".
+			-->
+			<Affective id="affective1">
+				<Header xsi:type="DescriptionMetadataType">
+					<Confidence>0.85</Confidence>
+					<Version>1.0</Version>
+					<Comment>
+						<FreeTextAnnotation>
+							Confidence is measured using a certain statistical technique.
+							Noticeable experimental conditions are used to describe
+							the creation information.
+						</FreeTextAnnotation>
+					</Comment>
+					<PrivateIdentifier>example1</PrivateIdentifier>
+					<Creator>
+						<Role href="AffectBasedContentAnalysisCS">
+							<Name>experimentalSubject</Name>
+						</Role>
+						<Agent xsi:type="PersonGroupType">
+							<Name>StudentsInN.Univ.</Name>
+						</Agent>
+					</Creator>
+					<Creator>
+						<Role href="AffectBasedContentAnalysisCS">
+							<Name> organizer </Name>
+						</Role>
+						<Agent xsi:type="PersonType">
+							<Name>
+								<GivenName>Yoshiaki</GivenName>
+								<FamilyName>Shibata</FamilyName>
+							</Name>
+						</Agent>
+					</Creator>
+					<CreationLocation>
+						<Country>jp</Country>
+						<AdministrativeUnit>Tokyo</AdministrativeUnit>
+					</CreationLocation>
+					<CreationTime>1999-09-12T13:45:00+09:00</CreationTime>
+					<Instrument>
+						<Tool>
+							<Name>SemanticScoreMethod</Name>
+						</Tool>
+					</Instrument>
+				</Header>
+				<Type href="AffectTypeCS">
+					<Name> storyShape </Name>
+				</Type>
+				<Score idref="scene1">0.00360117</Score>
+				<Score idref="scene2">0.00720234</Score>
+					<!-- : -->
+ 				<Score idref="scene222">0.825006</Score>
+			</Affective>
+			<!--  
+			Description of AudioVisualSegment Decomposition
+			-->
+			<MultimediaContent xsi:type="AudioVisualType">
+				<AudioVisual id="program">
+				<!-- XML Spy v3.5 bug
+					<Header xsi:type="MediaTimeHeaderType" timeBase="/MediaLocator" timeUnit="PT1N30F"/>
+				-->
+					<Header xsi:type="MediaTimeHeaderType" timeBase="../" timeUnit="PT1N30F"/>
+					<!-- 0.0 .. 7669.5 sec for "program" -->
+					<MediaTime>
+						<MediaRelTimePoint>PT0S</MediaRelTimePoint>
+						<MediaDuration>PT2H7M49S5N10F</MediaDuration>
+					</MediaTime>
+					<!-- Segmentation into scenes -->
+					<TemporalDecomposition>
+						<AudioVisualSegment id="scene1">
+							<!-- 0.0 .. 48.9 sec for "scene1" -->
+							<MediaTime>
+								<MediaRelTimePoint>PT0S</MediaRelTimePoint>
+								<MediaDuration>PT48S9N10F</MediaDuration>
+							</MediaTime>
+						</AudioVisualSegment>
+						<AudioVisualSegment id="scene2">
+							<!-- 48.9 .. 81.0 sec for "scene2" -->
+							<MediaTime>
+								<MediaRelTimePoint>PT48S9N10F</MediaRelTimePoint>
+								<MediaDuration>PT32S1N10F</MediaDuration>
+							</MediaTime>
+						</AudioVisualSegment>
+							<!-- : -->
+						<AudioVisualSegment id="scene222">
+							<!-- 7639.8 .. 7669.5 sec for "scene222" -->
+							<MediaTime>
+								<MediaRelTimePoint>PT2H7M19S8N10F</MediaRelTimePoint>
+								<MediaDuration>PT29S7N10F</MediaDuration>
+							</MediaTime>
+						</AudioVisualSegment>
+					</TemporalDecomposition>
+				</AudioVisual>
+			</MultimediaContent>
+		</ContentDescription>
+	</Mpeg7>
+	<!-- non-normative element "Affective"  -->
+	<Affective>
+		<Type href="AffectTypeCS">
+			<Name> anger </Name>
+		</Type>
+		<Score idref="Goalkeeper-id">0.8</Score>
+		<Score idref="Forward-id">0.2</Score>
+	</Affective>
+</MdsExampleTest>

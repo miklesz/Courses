@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- *********************************************************************
+
+  This XML document was originally developed in the course of development 
+  of the ISO/IEC 15938 standard (MPEG-7). This XML document contains 
+  either a part of the MPEG-7 schema implementation for one or more MPEG-7 
+  tools as specified by the MPEG-7 Requirements or MPEG-7 description 
+  examples conformant to the MPEG-7 schema.
+
+  ISO/IEC gives users of MPEG-7 free license to this XML document or 
+  modifications thereof for use in hardware or software products claiming 
+  conformance to MPEG-7.
+
+  Those intending to use this XML document in hardware or software products 
+  are advised that its use may infringe existing patents. The original 
+  developers of this XML document and his/her company, the subsequent 
+  editors and their companies, and ISO/IEC have no liability for use of
+  this XML document or modifications thereof in an implementation.
+
+  Copyright is not released for non MPEG-7 conforming products. The 
+  organizations who contributed to this XML document retain the full right 
+  to use the code for their own purpose,
+  assign or donate their contribution to a third party and inhibit third 
+  parties from using their contribution for non MPEG-7 conforming products.
+
+  Copyright (c) 1999-2001 ISO/IEC. 
+
+  This XML document is provided for informative purposes only. If any parts 
+  of this XML document contradict the normative part of the corresponding 
+  standard document then the normative part should be used as the definitive 
+  specification.
+
+  This notice must be included in all copies or derivative works.
+  
+************************************************************************** -->
+
+<!-- ##################################################################### -->
+<!-- ISO/IEC 15938 Information Technology - Multimedia Content Description -->
+<!-- Interface MPEG-7 Description Example developed by MPEG MDS Sub-group, -->
+<!-- ##################################################################### -->
+<schema targetNamespace="urn:mpeg:mpeg7:schema:2001" 
+        xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001" 
+        xmlns="http://www.w3.org/2001/XMLSchema" 
+          elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<annotation>
+		<documentation>
+			This document contains visual tools defined in ISO/IEC 15938-3
+		</documentation>
+	</annotation>
+	<!-- ########################################################### -->
+	<!-- Definition of GridLayout Datatype                           -->
+	<!-- ########################################################### -->
+	<complexType name="GridLayoutType" final="#all">
+		<sequence>
+<!-- Wo Chang, March 27, 03 -->
+<!--
+			<element name="Descriptor" type="mpeg7:VisualDType" minOccurs="1" maxOccurs="65025"/>
+-->
+			<element name="Descriptor" type="mpeg7:VisualDType" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+		<attribute name="numOfPartX" type="mpeg7:unsigned8" use="required"/>
+		<attribute name="numOfPartY" type="mpeg7:unsigned8" use="required"/>
+		<attribute name="descriptorMask" use="optional">
+			<simpleType>
+				<restriction base="string">
+					<pattern value="(0|1)*"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of VisualTimeSeries Datatypes                    -->
+	<!-- ########################################################### -->
+	<!-- Definition of VisualTimeSeries Datatype -->
+	<complexType name="VisualTimeSeriesType" abstract="true">
+		<sequence>
+			<element name="TimeIncr" type="mpeg7:mediaDurationType"/>
+		</sequence>
+		<attribute name="offset" type="mpeg7:mediaDurationType" use="optional" default="PT0S"/>
+	</complexType>
+	<!-- Definition of RegularVisualTimeSeries Datatype -->
+	<complexType name="RegularVisualTimeSeriesType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualTimeSeriesType">
+				<sequence>
+					<element name="Descriptor" type="mpeg7:VisualDType" minOccurs="1" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- Definition of IrregularVisualTimeSeries Datatype -->
+	<complexType name="IrregularVisualTimeSeriesType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualTimeSeriesType">
+				<sequence minOccurs="1" maxOccurs="unbounded">
+					<element name="Descriptor" type="mpeg7:VisualDType"/>
+					<element name="Interval" type="mpeg7:unsigned32"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of MultipleView Datatypes                        -->
+	<!-- ########################################################### -->
+	<complexType name="MultipleViewType" final="#all">
+		<sequence minOccurs="1" maxOccurs="16">
+			<element name="IsVisible" type="boolean"/>
+			<element name="Descriptor" type="mpeg7:VisualDType"/>
+		</sequence>
+		<attribute name="fixedViewsFlag" type="boolean" use="required"/>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of Spatial2DCoordinateSystem Header              -->
+	<!-- ########################################################### -->
+	<complexType name="Spatial2DCoordinateSystemType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:HeaderType">
+				<sequence>
+					<element name="Unit" minOccurs="0">
+						<simpleType>
+							<restriction base="string">
+								<enumeration value="pixel"/>
+								<enumeration value="meter"/>
+								<enumeration value="pictureHeight"/>
+								<enumeration value="pictureWidth"/>
+								<enumeration value="pictureWidthAndHeight"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<element name="LocalCoordinateSystem" minOccurs="0">
+						<complexType>
+							<sequence>
+								<choice>
+									<sequence minOccurs="1" maxOccurs="3">
+										<element name="Pixel">
+											<simpleType>
+												<restriction base="mpeg7:integerVector">
+													<length value="2"/>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="CoordPoint">
+											<simpleType>
+												<restriction base="mpeg7:floatVector">
+													<length value="2"/>
+												</restriction>
+											</simpleType>
+										</element>
+									</sequence>
+									<sequence minOccurs="1" maxOccurs="3">
+										<element name="CurrPixel">
+											<simpleType>
+												<restriction base="mpeg7:integerVector">
+													<length value="2"/>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="SrcPixel">
+											<simpleType>
+												<restriction base="mpeg7:integerVector">
+													<length value="2"/>
+												</restriction>
+											</simpleType>
+										</element>
+									</sequence>
+								</choice>
+								<element name="MappingFunct" type="string" minOccurs="0" maxOccurs="2"/>
+							</sequence>
+							<attribute name="name" type="string" use="required"/>
+							<attribute name="dataSet" type="anyURI" use="optional"/>
+						</complexType>
+					</element>
+					<element name="IntegratedCoordinateSystem" minOccurs="0">
+						<complexType>
+							<sequence minOccurs="0" maxOccurs="65535">
+								<element name="TimeIncr" type="mpeg7:MediaIncrDurationType"/>
+								<element name="MotionParams" type="float" minOccurs="2" maxOccurs="12"/>
+							</sequence>
+							<attribute name="modelType" use="required">
+								<simpleType>
+									<restriction base="string">
+										<enumeration value="translational"/>
+										<enumeration value="rotationAndScaling"/>
+										<enumeration value="affine"/>
+										<enumeration value="perspective"/>
+										<enumeration value="quadratic"/>
+									</restriction>
+								</simpleType>
+							</attribute>
+							<attribute name="xOrigin" type="float" use="required"/>
+							<attribute name="yOrigin" type="float" use="required"/>
+						</complexType>
+					</element>
+				</sequence>
+				<attribute name="xRepr" type="mpeg7:unsigned8" use="required"/>
+				<attribute name="yRepr" type="mpeg7:unsigned8" use="required"/>
+				<attribute name="xSrcSize" type="positiveInteger" use="optional"/>
+				<attribute name="ySrcSize" type="positiveInteger" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of TemporalInterpolation Datatype                -->
+	<!-- ########################################################### -->
+	<complexType name="TemporalInterpolationType" final="#all">
+		<sequence>
+			<choice>
+				<element name="WholeInterval">
+					<complexType>
+						<choice>
+							<element name="MediaDuration" type="mpeg7:mediaDurationType"/>
+							<element name="MediaIncrDuration" type="mpeg7:MediaIncrDurationType"/>
+						</choice>
+					</complexType>
+				</element>
+				<element name="KeyTimePoint">
+					<complexType>
+						<choice>
+<!-- Wo Chang, 03/31/03 -->
+<!--
+							<element name="MediaTimePoint" type="mpeg7:mediaTimePointType" minOccurs="2" maxOccurs="65535"/>
+-->
+							<element name="MediaTimePoint" type="mpeg7:mediaTimePointType" minOccurs="2" maxOccurs="unbounded"/>
+<!--
+							<element name="MediaRelTimePoint" type="mpeg7:MediaRelTimePointType" minOccurs="2" maxOccurs="65535"/>
+-->
+							<element name="MediaRelTimePoint" type="mpeg7:MediaRelTimePointType" minOccurs="2" maxOccurs="unbounded"/>
+<!--
+							<element name="MediaRelIncrTimePoint" type="mpeg7:MediaRelIncrTimePointType" minOccurs="2" maxOccurs="65535"/>
+-->
+							<element name="MediaRelIncrTimePoint" type="mpeg7:MediaRelIncrTimePointType" minOccurs="2" maxOccurs="unbounded"/>
+						</choice>
+					</complexType>
+				</element>
+			</choice>
+			<element name="InterpolationFunctions" minOccurs="1" maxOccurs="15">
+				<complexType>
+					<sequence>
+<!-- WC - Xcerces 2b4 cannot handle maxOccurs (only this case?!) > 2832 -->
+<!--
+						<element name="KeyValue" minOccurs="2" maxOccurs="65535">
+-->
+						<element name="KeyValue" minOccurs="2" maxOccurs="200">
+							<complexType>
+								<simpleContent>
+									<extension base="float">
+										<attribute name="type" use="optional" default="firstOrder">
+											<simpleType>
+												<restriction base="string">
+													<enumeration value="startPoint"/>
+													<enumeration value="firstOrder"/>
+													<enumeration value="secondOrder"/>
+													<enumeration value="notDetermined"/>
+												</restriction>
+											</simpleType>
+										</attribute>
+										<attribute name="param" type="float" use="optional" default="0.0"/>
+									</extension>
+								</simpleContent>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of ColorSpace Datatype                           -->
+	<!-- ########################################################### -->
+	<complexType name="ColorSpaceType" final="#all">
+		<sequence>
+			<element name="ColorTransMat" minOccurs="0">
+				<simpleType>
+					<restriction>
+						<simpleType>
+							<list itemType="mpeg7:unsigned16"/>
+						</simpleType>
+						<length value="9"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+		<attribute name="colorReferenceFlag" type="boolean" use="optional" default="false"/>
+		<attribute name="type" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="RGB"/>
+					<enumeration value="YCbCr"/>
+					<enumeration value="HSV"/>
+					<enumeration value="HMMD"/>
+					<enumeration value="LinearMatrix"/>
+					<enumeration value="Monochrome"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of ColorQuantization Datatype                                      -->
+	<!-- ########################################################### -->
+	<complexType name="ColorQuantizationType" final="#all">
+		<sequence minOccurs="1" maxOccurs="3">
+			<element name="Component">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="R"/>
+						<enumeration value="G"/>
+						<enumeration value="B"/>
+						<enumeration value="Y"/>
+						<enumeration value="Cb"/>
+						<enumeration value="Cr"/>
+						<enumeration value="H"/>
+						<enumeration value="S"/>
+						<enumeration value="V"/>
+						<enumeration value="Max"/>
+						<enumeration value="Min"/>
+						<enumeration value="Diff"/>
+						<enumeration value="Sum"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="NumOfBins" type="mpeg7:unsigned12"/>
+		</sequence>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of DominantColor D                               -->
+	<!-- ########################################################### -->
+	<complexType name="DominantColorType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="ColorSpace" type="mpeg7:ColorSpaceType" minOccurs="0"/>
+					<element name="ColorQuantization" type="mpeg7:ColorQuantizationType" minOccurs="0"/>
+					<element name="SpatialCoherency" type="mpeg7:unsigned5"/>
+					<element name="Value" minOccurs="1" maxOccurs="8">
+						<complexType>
+							<sequence>
+								<element name="Percentage" type="mpeg7:unsigned5"/>
+								<element name="Index">
+									<simpleType>
+										<restriction>
+											<simpleType>
+												<list itemType="mpeg7:unsigned12"/>
+											</simpleType>
+											<length value="3"/>
+										</restriction>
+									</simpleType>
+								</element>
+								<element name="ColorVariance" minOccurs="0">
+									<simpleType>
+										<restriction>
+											<simpleType>
+												<list itemType="mpeg7:unsigned1"/>
+											</simpleType>
+											<length value="3"/>
+										</restriction>
+									</simpleType>
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of ScalableColor D                               -->
+	<!-- ########################################################### -->
+	<complexType name="ScalableColorType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Coeff" type="mpeg7:integerVector"/>
+				</sequence>
+				<attribute name="numOfCoeff" use="required">
+					<simpleType>
+						<restriction base="integer">
+							<enumeration value="16"/>
+							<enumeration value="32"/>
+							<enumeration value="64"/>
+							<enumeration value="128"/>
+							<enumeration value="256"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+				<attribute name="numOfBitplanesDiscarded" use="required">
+					<simpleType>
+						<restriction base="integer">
+							<enumeration value="0"/>
+							<enumeration value="1"/>
+							<enumeration value="2"/>
+							<enumeration value="3"/>
+							<enumeration value="4"/>
+							<enumeration value="6"/>
+							<enumeration value="8"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of ColorLayout D                                 -->
+	<!-- ########################################################### -->
+	<complexType name="ColorLayoutType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="YDCCoeff" type="mpeg7:unsigned6"/>
+					<element name="CbDCCoeff" type="mpeg7:unsigned6"/>
+					<element name="CrDCCoeff" type="mpeg7:unsigned6"/>
+					<choice>
+						<element name="YACCoeff2">
+							<simpleType>
+								<restriction>
+									<simpleType>
+										<list itemType="mpeg7:unsigned5"/>
+									</simpleType>
+									<length value="2"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="YACCoeff5">
+							<simpleType>
+								<restriction>
+									<simpleType>
+										<list itemType="mpeg7:unsigned5"/>
+									</simpleType>
+									<length value="5"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="YACCoeff9">
+							<simpleType>
+								<restriction>
+									<simpleType>
+										<list itemType="mpeg7:unsigned5"/>
+									</simpleType>
+									<length value="9"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="YACCoeff14">
+							<simpleType>
+								<restriction>
+									<simpleType>
+										<list itemType="mpeg7:unsigned5"/>
+									</simpleType>
+									<length value="14"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="YACCoeff20">
+							<simpleType>
+								<restriction>
+									<simpleType>
+										<list itemType="mpeg7:unsigned5"/>
+									</simpleType>
+									<length value="20"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="YACCoeff27">
+							<simpleType>
+								<restriction>
+									<simpleType>
+										<list itemType="mpeg7:unsigned5"/>
+									</simpleType>
+									<length value="27"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="YACCoeff63">
+							<simpleType>
+								<restriction>
+									<simpleType>
+										<list itemType="mpeg7:unsigned5"/>
+									</simpleType>
+									<length value="63"/>
+								</restriction>
+							</simpleType>
+						</element>
+					</choice>
+					<choice>
+						<sequence>
+							<element name="CbACCoeff2">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="2"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CrACCoeff2">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="2"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+						<sequence>
+							<element name="CbACCoeff5">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="5"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CrACCoeff5">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="5"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+						<sequence>
+							<element name="CbACCoeff9">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="9"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CrACCoeff9">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="9"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+						<sequence>
+							<element name="CbACCoeff14">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="14"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CrACCoeff14">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="14"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+						<sequence>
+							<element name="CbACCoeff20">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="20"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CrACCoeff20">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="20"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+						<sequence>
+							<element name="CbACCoeff27">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="27"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CrACCoeff27">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="27"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+						<sequence>
+							<element name="CbACCoeff63">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="63"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CrACCoeff63">
+								<simpleType>
+									<restriction>
+										<simpleType>
+											<list itemType="mpeg7:unsigned5"/>
+										</simpleType>
+										<length value="63"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+					</choice>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of ColorStructure D                              -->
+	<!-- ########################################################### -->
+	<complexType name="ColorStructureType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Values">
+						<simpleType>
+							<restriction>
+								<simpleType>
+									<list itemType="mpeg7:unsigned8"/>
+								</simpleType>
+								<minLength value="1"/>
+								<maxLength value="256"/>
+							</restriction>
+						</simpleType>
+					</element>
+				</sequence>
+				<attribute name="colorQuant" type="mpeg7:unsigned3" use="required"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of GoFGoPColor D                                 -->
+	<!-- ########################################################### -->
+	<complexType name="GoFGoPColorType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="ScalableColor" type="mpeg7:ScalableColorType"/>
+				</sequence>
+				<attribute name="aggregation" use="required">
+					<simpleType>
+						<restriction base="string">
+							<enumeration value="Average"/>
+							<enumeration value="Median"/>
+							<enumeration value="Intersection"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of HomogeneousTexture D                          -->
+	<!-- ########################################################### -->
+	<!-- Definition of HomogeneousTexture D -->
+	<complexType name="HomogeneousTextureType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Average" type="mpeg7:unsigned8"/>
+					<element name="StandardDeviation" type="mpeg7:unsigned8"/>
+					<element name="Energy" type="mpeg7:textureListType"/>
+					<element name="EnergyDeviation" type="mpeg7:textureListType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- Definition of textureList datatype -->
+	<simpleType name="textureListType">
+		<restriction>
+			<simpleType>
+				<list itemType="mpeg7:unsigned8"/>
+			</simpleType>
+			<length value="30"/>
+		</restriction>
+	</simpleType>
+	<!-- ########################################################### -->
+	<!-- Definition of TextureBrowsing D                             -->
+	<!-- ########################################################### -->
+	<complexType name="TextureBrowsingType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Regularity">
+						<simpleType>
+							<restriction base="string">
+								<enumeration value="irregular"/>
+								<enumeration value="slightlyRegular"/>
+								<enumeration value="regular"/>
+								<enumeration value="highlyRegular"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<sequence minOccurs="1" maxOccurs="2">
+						<element name="Direction">
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="noDirectionality"/>
+									<enumeration value="0Degree"/>
+									<enumeration value="30Degree"/>
+									<enumeration value="60Degree"/>
+									<enumeration value="90Degree"/>
+									<enumeration value="120Degree"/>
+									<enumeration value="150Degree"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="Scale">
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="fine"/>
+									<enumeration value="medium"/>
+									<enumeration value="coarse"/>
+									<enumeration value="veryCoarse"/>
+								</restriction>
+							</simpleType>
+						</element>
+					</sequence>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of EdgeHistogram D                               -->
+	<!-- ########################################################### -->
+	<complexType name="EdgeHistogramType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="BinCounts">
+						<simpleType>
+							<restriction>
+								<simpleType>
+									<list itemType="mpeg7:unsigned3"/>
+								</simpleType>
+								<length value="80"/>
+							</restriction>
+						</simpleType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of RegionShape D                                 -->
+	<!-- ########################################################### -->
+	<complexType name="RegionShapeType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="MagnitudeOfART">
+						<simpleType>
+							<restriction>
+								<simpleType>
+									<list itemType="mpeg7:unsigned4"/>
+								</simpleType>
+								<length value="35"/>
+							</restriction>
+						</simpleType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of ContourShape D                                -->
+	<!-- ########################################################### -->
+	<!-- Definition of ContourShape D -->
+	<complexType name="ContourShapeType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="GlobalCurvature" type="mpeg7:curvatureType"/>
+					<element name="PrototypeCurvature" type="mpeg7:curvatureType" minOccurs="0"/>
+					<element name="HighestPeakY" type="mpeg7:unsigned7"/>
+					<element name="Peak" minOccurs="1" maxOccurs="62">
+						<complexType>
+							<attribute name="peakX" type="mpeg7:unsigned6"/>
+							<attribute name="peakY" type="mpeg7:unsigned3"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- Definition of curvature datatype -->
+	<simpleType name="curvatureType">
+		<restriction>
+			<simpleType>
+				<list itemType="mpeg7:unsigned6"/>
+			</simpleType>
+			<length value="2"/>
+		</restriction>
+	</simpleType>
+	<!-- ########################################################### -->
+	<!-- Definition of Shape3D D                                     -->
+	<!-- ########################################################### -->
+	<complexType name="Shape3DType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Spectrum">
+						<simpleType>
+							<restriction>
+								<simpleType>
+									<list itemType="mpeg7:unsigned12"/>
+								</simpleType>
+								<maxLength value="255"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<element name="PlanarSurfaces" type="mpeg7:unsigned12"/>
+					<element name="SingularSurfaces" type="mpeg7:unsigned12"/>
+				</sequence>
+				<attribute name="bitsPerBin" type="mpeg7:unsigned4" use="optional" default="12"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of CameraMotion D                                -->
+	<!-- ########################################################### -->
+	<!-- Definition of CameraMotion D -->
+	<complexType name="CameraMotionType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Segment" type="mpeg7:CameraMotionSegmentType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- Definition of CameraMotionSegment Datatype -->
+	<complexType name="CameraMotionSegmentType" abstract="true">
+		<sequence>
+			<element name="MediaTime" type="mpeg7:MediaTimeType"/>
+			<element name="FocusOfExpansion" type="mpeg7:FocusOfExpansionType" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<!-- Definition of MixtureCameraMotionSegment Datatype -->
+	<complexType name="MixtureCameraMotionSegmentType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:CameraMotionSegmentType">
+				<sequence>
+					<element name="FractionalPresence" type="mpeg7:FractionalPresenceType"/>
+					<element name="AmountOfMotion" type="mpeg7:MixtureAmountOfMotionType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- Definition of NonMixtureCameraMotionSegment Datatype -->
+	<complexType name="NonMixtureCameraMotionSegmentType">
+		<complexContent>
+			<extension base="mpeg7:CameraMotionSegmentType">
+				<sequence>
+					<element name="AmountOfMotion" type="mpeg7:NonMixtureAmountOfMotionType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- Definition of FocusOfExpansion Datatype -->
+	<complexType name="FocusOfExpansionType">
+		<sequence>
+			<element name="HorizontalPosition" type="float"/>
+			<element name="VerticalPosition" type="float"/>
+		</sequence>
+	</complexType>
+	<!-- Definition of FractionalPresence Datatype -->
+	<complexType name="FractionalPresenceType" final="#all">
+		<sequence>
+			<element name="TrackLeft" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="TrackRight" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="BoomDown" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="BoomUp" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="DollyForward" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="DollyBackward" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="PanLeft" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="PanRight" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="TiltDown" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="TiltUp" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="RollClockwise" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="RollAnticlockwise" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="ZoomIn" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="ZoomOut" type="mpeg7:unsigned7" minOccurs="0"/>
+			<element name="Fixed" type="mpeg7:unsigned7" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<!-- Definition of MixtureAmountOfMotion Datatype -->
+	<complexType name="MixtureAmountOfMotionType" final="#all">
+		<sequence>
+			<element name="TrackLeft" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="TrackRight" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="BoomDown" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="BoomUp" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="DollyForward" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="DollyBackward" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="PanLeft" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="PanRight" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="TiltDown" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="TiltUp" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="RollClockwise" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="RollAnticlockwise" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="ZoomIn" type="mpeg7:unsigned11" minOccurs="0"/>
+			<element name="ZoomOut" type="mpeg7:unsigned11" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<!-- Definition of NonMixtureAmountOfMotion Datatype -->
+	<complexType name="NonMixtureAmountOfMotionType">
+		<choice>
+			<element name="TrackLeft" type="mpeg7:unsigned11"/>
+			<element name="TrackRight" type="mpeg7:unsigned11"/>
+			<element name="BoomDown" type="mpeg7:unsigned11"/>
+			<element name="BoomUp" type="mpeg7:unsigned11"/>
+			<element name="DollyForward" type="mpeg7:unsigned11"/>
+			<element name="DollyBackward" type="mpeg7:unsigned11"/>
+			<element name="PanLeft" type="mpeg7:unsigned11"/>
+			<element name="PanRight" type="mpeg7:unsigned11"/>
+			<element name="TiltDown" type="mpeg7:unsigned11"/>
+			<element name="TiltUp" type="mpeg7:unsigned11"/>
+			<element name="RollClockwise" type="mpeg7:unsigned11"/>
+			<element name="RollAnticlockwise" type="mpeg7:unsigned11"/>
+			<element name="ZoomIn" type="mpeg7:unsigned11"/>
+			<element name="ZoomOut" type="mpeg7:unsigned11"/>
+			<element name="Fixed">
+				<complexType/>
+			</element>
+		</choice>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of MotionTrajectory D                            -->
+	<!-- ########################################################### -->
+	<complexType name="MotionTrajectoryType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<choice>
+						<element name="CoordRef">
+							<complexType>
+								<attribute name="ref" type="IDREF" use="required"/>
+								<attribute name="spatialRef" type="boolean" use="required"/>
+							</complexType>
+						</element>
+						<element name="CoordDef">
+							<complexType>
+								<sequence>
+									<element name="Repr" minOccurs="0">
+										<complexType>
+											<attribute name="x" type="mpeg7:unsigned8" use="required"/>
+											<attribute name="y" type="mpeg7:unsigned8" use="required"/>
+										</complexType>
+									</element>
+								</sequence>
+								<attribute name="units" use="required">
+									<simpleType>
+										<restriction base="string">
+											<enumeration value="pictureHeight"/>
+											<enumeration value="pictureWidth"/>
+											<enumeration value="pictureWidthAndHeight"/>
+											<enumeration value="meter"/>
+										</restriction>
+									</simpleType>
+								</attribute>
+							</complexType>
+						</element>
+					</choice>
+					<element name="Params" type="mpeg7:TemporalInterpolationType"/>
+				</sequence>
+				<attribute name="cameraFollows" type="boolean" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of ParametricMotion D                            -->
+	<!-- ########################################################### -->
+	<complexType name="ParametricMotionType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<choice>
+						<element name="CoordRef">
+							<complexType>
+								<attribute name="ref" type="IDREF" use="required"/>
+								<attribute name="spatialRef" type="boolean" use="required"/>
+							</complexType>
+						</element>
+						<element name="CoordDef">
+							<complexType>
+								<attribute name="originX" type="float" use="required"/>
+								<attribute name="originY" type="float" use="required"/>
+							</complexType>
+						</element>
+					</choice>
+					<element name="MediaDuration" type="mpeg7:MediaIncrDurationType"/>
+					<element name="Parameters">
+						<simpleType>
+							<restriction base="mpeg7:floatVector">
+								<maxLength value="12"/>
+							</restriction>
+						</simpleType>
+					</element>
+				</sequence>
+				<attribute name="motionModel" use="required">
+					<simpleType>
+						<restriction base="string">
+							<enumeration value="translational"/>
+							<enumeration value="rotationOrScaling"/>
+							<enumeration value="affine"/>
+							<enumeration value="perspective"/>
+							<enumeration value="quadratic"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of MotionActivity D                              -->
+	<!-- ########################################################### -->
+	<complexType name="MotionActivityType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Intensity">
+						<simpleType>
+							<restriction base="mpeg7:unsigned3">
+								<minInclusive value="1"/>
+								<maxInclusive value="5"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<element name="DominantDirection" type="mpeg7:unsigned3" minOccurs="0"/>
+					<element name="SpatialDistributionParams" minOccurs="0">
+						<complexType>
+							<attribute name="numOfShortRuns" type="mpeg7:unsigned6" use="required"/>
+							<attribute name="numOfMediumRuns" type="mpeg7:unsigned5" use="required"/>
+							<attribute name="numOfLongRuns" type="mpeg7:unsigned5" use="required"/>
+						</complexType>
+					</element>
+					<element name="SpatialLocalizationParams" minOccurs="0">
+						<complexType>
+							<choice>
+								<element name="Vector4">
+									<simpleType>
+										<restriction>
+											<simpleType>
+												<list itemType="mpeg7:unsigned3"/>
+											</simpleType>
+											<length value="4"/>
+										</restriction>
+									</simpleType>
+								</element>
+								<element name="Vector16">
+									<simpleType>
+										<restriction>
+											<simpleType>
+												<list itemType="mpeg7:unsigned3"/>
+											</simpleType>
+											<length value="16"/>
+										</restriction>
+									</simpleType>
+								</element>
+								<element name="Vector64">
+									<simpleType>
+										<restriction>
+											<simpleType>
+												<list itemType="mpeg7:unsigned3"/>
+											</simpleType>
+											<length value="64"/>
+										</restriction>
+									</simpleType>
+								</element>
+								<element name="Vector256">
+									<simpleType>
+										<restriction>
+											<simpleType>
+												<list itemType="mpeg7:unsigned3"/>
+											</simpleType>
+											<length value="256"/>
+										</restriction>
+									</simpleType>
+								</element>
+							</choice>
+						</complexType>
+					</element>
+					<element name="TemporalParams" minOccurs="0">
+						<simpleType>
+							<restriction>
+								<simpleType>
+									<list itemType="mpeg7:unsigned6"/>
+								</simpleType>
+								<length value="5"/>
+							</restriction>
+						</simpleType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of RegionLocator Datatype                        -->
+	<!-- ########################################################### -->
+	<!-- Definition of RegionLocator Datatype -->
+	<complexType name="RegionLocatorType" final="#all">
+		<sequence>
+			<element name="CoordRef" minOccurs="0">
+				<complexType>
+					<attribute name="ref" type="IDREF" use="required"/>
+					<attribute name="spatialRef" type="boolean" use="optional" default="false"/>
+				</complexType>
+			</element>
+			<element name="Box" minOccurs="0" maxOccurs="unbounded">
+				<complexType>
+					<simpleContent>
+						<extension base="mpeg7:BoxListType">
+							<attribute name="unlocatedRegion" type="boolean" use="optional" default="false"/>
+						</extension>
+					</simpleContent>
+				</complexType>
+			</element>
+			<element name="Polygon" minOccurs="0" maxOccurs="unbounded">
+				<complexType>
+					<sequence>
+						<element name="Coords" type="mpeg7:IntegerMatrixType"/>
+					</sequence>
+					<attribute name="unlocatedRegion" type="boolean" use="optional" default="false"/>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<!-- Definition of BoxList Datatype -->
+	<complexType name="BoxListType">
+		<simpleContent>
+			<restriction base="mpeg7:IntegerMatrixType">
+				<minLength value="4"/>
+				<maxLength value="6"/>
+			</restriction>
+		</simpleContent>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of SpatioTemporalLocator Datatype                -->
+	<!-- ########################################################### -->
+	<!-- Definition of SpatioTemporalLocator Datatype -->
+	<complexType name="SpatioTemporalLocatorType" final="#all">
+		<sequence>
+			<element name="CoordRef" minOccurs="0">
+				<complexType>
+					<attribute name="ref" type="IDREF" use="required"/>
+					<attribute name="spatialRef" type="boolean" use="required"/>
+				</complexType>
+			</element>
+			<choice minOccurs="1" maxOccurs="unbounded">
+				<element name="FigureTrajectory" type="mpeg7:FigureTrajectoryType"/>
+				<element name="ParameterTrajectory" type="mpeg7:ParameterTrajectoryType"/>
+				<element name="MediaTime" type="mpeg7:MediaTimeType"/>
+			</choice>
+		</sequence>
+	</complexType>
+	<!-- Definition of FigureTrajectory Datatype -->
+	<complexType name="FigureTrajectoryType" final="#all">
+		<sequence>
+			<element name="MediaTime" type="mpeg7:MediaTimeType"/>
+			<element name="Vertex" type="mpeg7:TemporalInterpolationType" minOccurs="3" maxOccurs="unbounded"/>
+			<element name="Depth" type="mpeg7:TemporalInterpolationType" minOccurs="0"/>
+		</sequence>
+		<attribute name="type" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="rectangle"/>
+					<enumeration value="ellipse"/>
+					<enumeration value="polygon"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+	<!-- Definition of ParameterTrajectory Datatype -->
+	<complexType name="ParameterTrajectoryType" final="#all">
+		<sequence>
+			<element name="MediaTime" type="mpeg7:MediaTimeType"/>
+			<element name="InitialRegion" type="mpeg7:RegionLocatorType"/>
+			<element name="Params" type="mpeg7:TemporalInterpolationType" minOccurs="0"/>
+			<element name="Depth" type="mpeg7:TemporalInterpolationType" minOccurs="0"/>
+		</sequence>
+		<attribute name="motionModel" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="still"/>
+					<enumeration value="translation"/>
+					<enumeration value="rotationAndScaling"/>
+					<enumeration value="affine"/>
+					<enumeration value="perspective"/>
+					<enumeration value="parabolic"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="ellipseFlag" type="boolean" use="optional" default="false"/>
+	</complexType>
+	<!-- ########################################################### -->
+	<!-- Definition of FaceRecognition D                             -->
+	<!-- ########################################################### -->
+	<complexType name="FaceRecognitionType" final="#all">
+		<complexContent>
+			<extension base="mpeg7:VisualDType">
+				<sequence>
+					<element name="Feature">
+						<simpleType>
+							<restriction>
+								<simpleType>
+									<list itemType="mpeg7:unsigned5"/>
+								</simpleType>
+								<length value="48"/>
+							</restriction>
+						</simpleType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

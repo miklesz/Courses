@@ -1,0 +1,27 @@
+
+PARSER=xerces.jar
+
+##
+# The list of files to be compiled is created each time with the 'find' command (all the .java files).
+
+all:
+	(find . -name "*.java" > Sources; javac -classpath "../classes:../lib/gnu-regexp-1.1.3.jar:../lib/jcraft.jar:../lib/jaxp.jar:../lib/$(PARSER):../lib/jmf.jar:../lib/awt.jar" -sourcepath "." -g -d "../classes" @Sources)
+	rm -f Sources
+
+clean:
+	find ../classes -name "*.class" -exec rm -rf '{}' \;
+
+##
+# The list of packages contained in the file 'packages' must be kept up-to-date!
+
+apidoc:
+	javadoc -classpath "../classes:../lib/gnu-regexp-1.1.3.jar:../lib/$(PARSER)" -d "../doc/apidoc" -sourcepath "." -private @packages
+
+j2hdoc:
+	(export J2HROOT=../tools/java2html ; $$J2HROOT/j2h -d ../doc/j2hdoc/ -js .   )
+
+jar:
+	(cd ../classes ; jar cf ../lib/bim.jar com data/logompeg7.jpg)
+
+tags:
+	find . -name "*.java" -print | etags -
