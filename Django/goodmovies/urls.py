@@ -20,4 +20,6 @@ from movies import views  # NOWE
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('hello/', views.hello_world),  # NOWE
+    # http://127.0.0.1:8000/filmy
+    path("filmy", views.list_movies),  # NOWE
 ]
