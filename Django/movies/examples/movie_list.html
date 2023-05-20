@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>p {color: green;}</style>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+    {% for movie in movies %}
+    <p>
+        <b>Film</b>: {{ movie }}, premiera: <i>{{ movie.published_at }}</i>
+    </p>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
