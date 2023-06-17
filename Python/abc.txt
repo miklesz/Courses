@@ -4,3 +4,4 @@ White
 Black
 Pink
 Yellow
+Ćwiczenia z Pythona
