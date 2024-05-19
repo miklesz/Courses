@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<MdsExampleTest xmlns="urn:mpeg:mpeg7:schema:2001"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001"
+                xsi:schemaLocation="urn:mpeg:mpeg7:schema:2001 .\examples.xsd">
+
+   <MediaTime>
+      <MediaTimePoint>T10:11:30:5F10</MediaTimePoint>
+      <MediaDuration>P3DT4H6M10S5N10F</MediaDuration>
+   </MediaTime>
+   <MediaTime>
+      <MediaRelTimePoint mediaTimeBase="..\..\jakies\URI\X\Path">PT10H11S</MediaRelTimePoint>
+      <MediaIncrDuration mediaTimeUnit="PT1N10F">987654</MediaIncrDuration>
+   </MediaTime>
+   <MediaTime>
+      <MediaRelIncrTimePoint mediaTimeUnit="-P1D" mediaTimeBase="..\inne\URI">365</MediaRelIncrTimePoint>
+      <MediaDuration>-PT2H1M55S1N10F</MediaDuration>
+   </MediaTime>
+   <MediaTime>
+      <MediaRelTimePoint>PT1N10F</MediaRelTimePoint>
+      <MediaIncrDuration>10</MediaIncrDuration>
+   </MediaTime>
+   <MediaTime>
+      <MediaRelIncrTimePoint mediaTimeUnit="PT2H">542</MediaRelIncrTimePoint>
+      <MediaDuration>-P4DT10M2N5F</MediaDuration>
+   </MediaTime>
+   <MediaTime>
+      <MediaRelIncrTimePoint mediaTimeBase="PT2H">542</MediaRelIncrTimePoint>
+      <MediaIncrDuration mediaTimeUnit="PT1S">235</MediaIncrDuration>
+   </MediaTime>
+   <MediaTime>
+      <MediaRelIncrTimePoint>412</MediaRelIncrTimePoint>
+   </MediaTime>
+   <MediaTime>
+      <MediaRelTimePoint>PT1H5N10F</MediaRelTimePoint>
+   </MediaTime>
+
+
+</MdsExampleTest>

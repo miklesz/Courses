@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--
+		Include MPEG-7 schema
+	-->
+	<include schemaLocation="Mpeg7Ver3a.xsd"/>
+	
+	<element name="VisualExampleTest">
+		<complexType>
+			<sequence>
+				<element name="GridLayout" type="mpeg7:GridLayoutType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="VisualTimeSeries" type="mpeg7:VisualTimeSeriesType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="MultipleView" type="mpeg7:MultipleViewType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="Spatial2DcoordinateSystem" type="mpeg7:Spatial2DcoordinateSystemType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="TemporalInterpolation" type="mpeg7:TemporalInterpolationType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="ColorSpace" type="mpeg7:ColorSpaceType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="ColorQuantization" type="mpeg7:ColorQuantizationType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="DominantColor" type="mpeg7:DominantColorType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="ScalableColor" type="mpeg7:ScalableColorType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="ColorLayout" type="mpeg7:ColorLayoutType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="ColorStructure" type="mpeg7:ColorStructureType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="GofGopColor" type="mpeg7:GofGopColorType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="HomogeneousTexture" type="mpeg7:HomogeneousTextureType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="TextureBrowsing" type="mpeg7:TextureBrowsingType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="EdgeHistogram" type="mpeg7:EdgeHistogramType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="RegionShape" type="mpeg7:RegionShapeType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="ContourShape" type="mpeg7:ContourShapeType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="Shape3D" type="mpeg7:Shape3DType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="CameraMotion" type="mpeg7:CameraMotionType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="MotionTrajectory" type="mpeg7:MotionTrajectoryType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="ParametricMotion" type="mpeg7:ParametricMotionType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="MotionActivity" type="mpeg7:MotionActivityType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="RegionLocator" type="mpeg7:RegionLocatorType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="SpatioTemporalLocator" type="mpeg7:SpatioTemporalLocatorType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="FaceRecognition" type="mpeg7:FaceRecognitionType" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

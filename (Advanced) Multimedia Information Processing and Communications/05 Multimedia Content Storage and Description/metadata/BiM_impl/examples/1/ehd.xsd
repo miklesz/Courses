@@ -1,0 +1,56 @@
+<schema 
+targetNamespace="http://www.mpeg7.org/2001/MPEG-7_Schema"
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
+xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema"
+xmlns="http://www.w3.org/2001/XMLSchema"
+>
+
+<simpleType name="unsigned3">
+<restriction base="nonNegativeInteger">
+<minInclusive value="0"/>
+<maxInclusive value="7"/>
+</restriction>
+</simpleType>
+
+<simpleType name="unsigned3Vector">
+<list itemType="mpeg7:unsigned3"/>
+</simpleType>
+
+<complexType name="Mpeg7Type" abstract="true">
+<complexContent>
+<extension base="anyType"/>
+</complexContent>
+</complexType>
+
+<complexType name="DType" abstract="true">
+<complexContent>
+<extension base="mpeg7:Mpeg7Type"/>
+</complexContent>
+</complexType>
+
+<complexType name="VisualDType" abstract="true">
+<complexContent>
+<extension base="mpeg7:DType"/>
+</complexContent>
+</complexType>
+
+<element name="EdgeHistogram" type="mpeg7:EdgeHistogramType" minOccurs="0" maxOccurs="unbounded"/>
+
+<complexType name="EdgeHistogramType" final="#all">
+	<complexContent>
+		<extension base="mpeg7:VisualDType">
+			<sequence>
+				<element name="BinCounts">
+					<simpleType>
+						<restriction base="mpeg7:unsigned3Vector">
+							<length value="80"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</sequence>
+		</extension>
+	</complexContent>
+</complexType>
+</schema>
+
+

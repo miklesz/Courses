@@ -1,0 +1,3 @@
+images/Ordekler.jpg
+images\ari-cicek2.jpg
+images\agustos_bocegi.jpg

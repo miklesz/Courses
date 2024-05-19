@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################################### -->
+<!-- ISO/IEC 15938 Information Technology - Multimedia Content             -->
+<!-- Description Interface                                                 -->
+<!-- Part 2: Description Definition Language (ISO/IEC 15938-2)             -->
+<!-- ##################################################################### -->
+<schema targetNamespace="urn:mpeg:mpeg7:schema:2001" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<annotation>
+		<documentation>
+			This document contains tools defined as MPEG-7 specific extention of
+			XML Schema in ISO/IEC 15938-2
+		</documentation>
+	</annotation>
+	<!-- ################################################## -->
+	<!-- Definition of 'mpeg7:dim" for Matrix Datatype      -->
+	<!-- ################################################## -->
+	<!-- definition of listOfPositiveIntegerForDim datatype -->
+	<simpleType name="listOfPositiveIntegerForDim">
+		<list itemType="positiveInteger"/>
+	</simpleType>
+	<!-- definition of mpeg7:dim attribute -->
+	<attribute name="dim">
+		<simpleType>
+			<restriction base="mpeg7:listOfPositiveIntegerForDim">
+				<minLength value="1"/>
+			</restriction>
+		</simpleType>
+	</attribute>
+	<!-- ################################################## -->
+	<!-- Definition of MPEG-7 Datatype Extensions           -->
+	<!-- ################################################## -->
+	<!-- definition of basicTimePoint dataype -->
+	<simpleType name="basicTimePointType">
+		<restriction base="string">
+			<pattern value="\-?(\d+(\-\d{2}(\-\d{2})?)?)?(T\d{2}(:\d{2}(:\d{2}(:\d+(\.\d{2})?)?)?)?)?(F\d+)?((\-|\+)\d{2}:\d{2})?"/>
+		</restriction>
+	</simpleType>
+	<!-- definition of basicDuration dataype -->
+	<simpleType name="basicDurationType">
+		<restriction base="string">
+			<pattern value="\-?P(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?(\d+N)?(\d{2}f)?)?(\d+F)?((\-|\+)\d{2}:\d{2}Z)?"/>
+		</restriction>
+	</simpleType>
+</schema>

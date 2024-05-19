@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<MdsExampleTest xmlns="urn:mpeg:mpeg7:schema:2001"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001"
+                xsi:schemaLocation="urn:mpeg:mpeg7:schema:2001 .\examples.xsd">
+<MotionTrajectory>
+   <CoordRef ref="jakas_referencja" spatialRef="true" />
+   <Params>
+      <WholeInterval>
+         <MediaDuration>PT5S</MediaDuration>
+      </WholeInterval>
+      <InterpolationFunctions>
+         <KeyValue type="startPoint">23.9</KeyValue>
+         <KeyValue type="firstOrder">20.1</KeyValue>
+         <KeyValue>14.2</KeyValue>
+         <KeyValue type="secondOrder" param="1.2">10.2</KeyValue>
+         <KeyValue type="notDetermined">10</KeyValue>
+      </InterpolationFunctions>
+      <InterpolationFunctions>
+         <KeyValue>10</KeyValue>
+         <KeyValue>11</KeyValue>
+         <KeyValue>12</KeyValue>
+         <KeyValue>13</KeyValue>
+         <KeyValue>14</KeyValue>
+      </InterpolationFunctions>
+   </Params>
+</MotionTrajectory>
+<MotionTrajectory cameraFollows="false">
+   <CoordDef units="pictureWidthAndHeight">
+      <Repr x="20" y="19"/>
+   </CoordDef>
+   <Params>
+      <KeyTimePoint>
+         <MediaTimePoint>T10:11:12:05F10</MediaTimePoint>
+         <MediaTimePoint>T10:11:13</MediaTimePoint>
+      </KeyTimePoint>
+      <InterpolationFunctions>
+         <KeyValue type="startPoint">23.9</KeyValue>
+         <KeyValue>14.2</KeyValue>
+      </InterpolationFunctions>
+      <InterpolationFunctions>
+         <KeyValue>10</KeyValue>
+         <KeyValue>14</KeyValue>
+      </InterpolationFunctions>
+   </Params>
+</MotionTrajectory>
+</MdsExampleTest>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--
+		Include MPEG-7 schema
+	-->
+	<include schemaLocation="Mpeg7Ver3.xsd"/>
+	<!--
+		Dummy for Test
+	-->
+	<complexType name="DummyType">
+		<complexContent>
+			<extension base="mpeg7:Mpeg7RootType"/>
+		</complexContent>
+	</complexType>
+	<complexType name="DummyImageType">
+		<complexContent>
+			<extension base="mpeg7:MultimediaContentType">
+				<sequence>
+					<element name="Image" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DummyHierarchicalSummaryType">
+		<complexContent>
+			<extension base="mpeg7:SummaryType"/>
+		</complexContent>
+	</complexType>
+	<!--
+		Test schema for MdsExample
+	-->
+	<element name="MdsExampleTest">
+		<complexType>
+			<sequence>
+				<element name="DummyForIdref" maxOccurs="unbounded">
+					<complexType>
+						<attribute name="id" type="ID"/>
+					</complexType>
+				</element>
+				<element name="Summarization" type="mpeg7:SummarizationType" maxOccurs="unbounded"/>
+				<element name="HierarchicalSummary" type="mpeg7:HierarchicalSummaryType" maxOccurs="unbounded"/>
+				<element name="SummaryThemeList" type="mpeg7:SummaryThemeListType" maxOccurs="unbounded"/>
+				<element name="HierarchicalSummary" type="mpeg7:HierarchicalSummaryType" maxOccurs="unbounded"/>
+				<element name="SequentialSummary" type="mpeg7:SequentialSummaryType" maxOccurs="unbounded"/>
+				<element name="Partition" type="mpeg7:PartitionType" maxOccurs="unbounded"/>
+				<element name="Filter1D" type="mpeg7:Filter1DType" maxOccurs="unbounded"/>
+				<element name="Filter2D" type="mpeg7:Filter2DType" maxOccurs="unbounded"/>
+				<element name="FilterSeparable" type="mpeg7:FilterSeparableType" maxOccurs="unbounded"/>
+				<element name="Filter2D" type="mpeg7:Filter2DType" maxOccurs="unbounded"/>
+				<element name="Filtering" type="mpeg7:FilteringType" maxOccurs="unbounded"/>
+				<element name="View" type="mpeg7:ViewType" maxOccurs="unbounded"/>
+				<element name="SpaceView" type="mpeg7:SpaceViewType" maxOccurs="unbounded"/>
+				<element name="FrequencyView" type="mpeg7:FrequencyViewType" maxOccurs="unbounded"/>
+				<element name="SpaceFrequencyView" type="mpeg7:SpaceFrequencyViewType" maxOccurs="unbounded"/>
+				<element name="ResolutionView" type="mpeg7:ResolutionViewType" maxOccurs="unbounded"/>
+				<element name="SpaceResolutionView" type="mpeg7:SpaceResolutionViewType" maxOccurs="unbounded"/>
+				<element name="ViewSet" type="mpeg7:ViewSetType" maxOccurs="unbounded"/>
+				<element name="SpaceTree" type="mpeg7:SpaceTreeType" maxOccurs="unbounded"/>
+				<element name="FrequencyTree" type="mpeg7:FrequencyTreeType" maxOccurs="unbounded"/>
+				<element name="SpaceFrequencyGraph" type="mpeg7:SpaceFrequencyGraphType" maxOccurs="unbounded"/>
+				<element name="VideoViewGraph" type="mpeg7:VideoViewGraphType" maxOccurs="unbounded"/>
+				<element name="MultiResolutionPyramid" type="mpeg7:MultiResolutionPyramidType" maxOccurs="unbounded"/>
+				<element name="VariationSet" type="mpeg7:VariationSetType" maxOccurs="unbounded"/>
+				<element name="ContentCollection" type="mpeg7:ContentCollectionType" maxOccurs="unbounded"/>
+				<element name="SegmentCollection" type="mpeg7:SegmentCollectionType" maxOccurs="unbounded"/>
+				<element name="DescriptorCollection" type="mpeg7:DescriptorCollectionType" maxOccurs="unbounded"/>
+				<element name="ConceptCollection" type="mpeg7:ConceptCollectionType" maxOccurs="unbounded"/>
+				<element name="MixedCollection" type="mpeg7:MixedCollectionType" maxOccurs="unbounded"/>
+				<element name="StructuredCollection" type="mpeg7:StructuredCollectionType" maxOccurs="unbounded"/>
+				<element name="ProbabilityDistribution" type="mpeg7:ProbabilityDistributionType" maxOccurs="unbounded"/>
+				<element name="HistogramProbability" type="mpeg7:HistogramProbabilityType" maxOccurs="unbounded"/>
+				<element name="BinomialDistribution" type="mpeg7:BinomialDistributionType" maxOccurs="unbounded"/>
+				<element name="HyperGeometricDistribution" type="mpeg7:HypergeometricDistributionType" maxOccurs="unbounded"/>
+				<element name="PoissonDistribution" type="mpeg7:PoissonDistributionType" maxOccurs="unbounded"/>
+				<element name="GeometricDistribution" type="mpeg7:GeometricDistributionType" maxOccurs="unbounded"/>
+				<element name="DiscreteUniformDistribution" type="mpeg7:DiscreteUniformDistributionType" maxOccurs="unbounded"/>
+				<element name="GaussianDistribution" type="mpeg7:GaussianDistributionType" maxOccurs="unbounded"/>
+				<element name="GeneralizedGaussianDistribution" type="mpeg7:GeneralizedGaussianDistributionType" maxOccurs="unbounded"/>
+				<element name="ExponentialDistribution" type="mpeg7:ExponentialDistributionType" maxOccurs="unbounded"/>
+				<element name="GammaDistribution" type="mpeg7:GammaDistributionType" maxOccurs="unbounded"/>
+				<element name="ContinuousUniformDistribution" type="mpeg7:ContinuousUniformDistributionType" maxOccurs="unbounded"/>
+				<element name="LognormalDistribution" type="mpeg7:LognormalDistributionType" maxOccurs="unbounded"/>
+				<element name="StateTransitionModel" type="mpeg7:StateTransitionModelType" maxOccurs="unbounded"/>
+				<element name="DiscreteHiddenMarkovModel" type="mpeg7:DiscreteHiddenMarkovModelType" maxOccurs="unbounded"/>
+				<element name="ContinuousHiddenMarkovModel" type="mpeg7:ContinuousHiddenMarkovModelType" maxOccurs="unbounded"/>
+				<element name="ModelState" type="mpeg7:ModelStateType" maxOccurs="unbounded"/>
+				<element name="CollectionModel" type="mpeg7:CollectionModelType" maxOccurs="unbounded"/>
+				<element name="DescriptorModel" type="mpeg7:DescriptorModelType" maxOccurs="unbounded"/>
+				<element name="ProbabilityModelClass" type="mpeg7:ProbabilityModelClassType" maxOccurs="unbounded"/>
+				<element name="ClusterModel" type="mpeg7:ClusterModelType" maxOccurs="unbounded"/>
+				<element name="ClassificationModel" type="mpeg7:ClassificationModelType" maxOccurs="unbounded"/>
+				<element name="ClusterClassificationModel" type="mpeg7:ClusterClassificationModelType" maxOccurs="unbounded"/>
+				<element name="ProbabilityClassificationModel" type="mpeg7:ProbabilityClassificationModelType" maxOccurs="unbounded"/>
+				<element name="UserPreferences" type="mpeg7:UserPreferencesType" maxOccurs="unbounded"/>
+				<element name="FilteringAndSearchPreferences" type="mpeg7:FilteringAndSearchPreferencesType" maxOccurs="unbounded"/>
+				<element name="UsagePreferences" type="mpeg7:UsagePreferencesType" maxOccurs="unbounded"/>
+				<element name="UserPreferences" type="mpeg7:UserPreferencesType" maxOccurs="unbounded"/>
+				<element name="SummaryPreferences" type="mpeg7:SummaryPreferencesType" maxOccurs="unbounded"/>
+				<element name="UserPreferences" type="mpeg7:UserPreferencesType" maxOccurs="unbounded"/>
+				<element name="UsageHistory" type="mpeg7:UsageHistoryType" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

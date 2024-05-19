@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--
+		Include MPEG-7 schema
+	-->
+	<include schemaLocation="Mpeg7Ver3.xsd"/>
+	<!--
+		Dummy for Test
+	-->
+	<complexType name="DummyType">
+		<complexContent>
+			<extension base="mpeg7:Mpeg7RootType"/>
+		</complexContent>
+	</complexType>
+	<complexType name="DummyImageType">
+		<complexContent>
+			<extension base="mpeg7:MultimediaContentType">
+				<sequence>
+					<element name="Image" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DummyHierarchicalSummaryType">
+		<complexContent>
+			<extension base="mpeg7:SummaryType"/>
+		</complexContent>
+	</complexType>
+	<!--
+		Test schema for MdsExample
+	-->
+	<element name="MdsExampleTest">
+		<complexType>
+			<sequence>
+				<element name="StillRegion" type="mpeg7:StillRegionType" maxOccurs="unbounded"/>
+				<element name="ImageText" type="mpeg7:ImageTextType" maxOccurs="unbounded"/>
+				<element name="Mosaic" type="mpeg7:MosaicType" maxOccurs="unbounded"/>
+				<element name="VideoSegment" type="mpeg7:VideoSegmentType" maxOccurs="unbounded"/>
+				<element name="MovingRegion" type="mpeg7:MovingRegionType" maxOccurs="unbounded"/>
+				<element name="VideoText" type="mpeg7:VideoTextType" maxOccurs="unbounded"/>
+				<element name="InkSegment" type="mpeg7:InkSegmentType" maxOccurs="unbounded"/>
+				<element name="AudioVisualSegment" type="mpeg7:AudioVisualSegmentType" maxOccurs="unbounded"/>
+				<element name="VideoEditing" type="mpeg7:VideoEditingType" maxOccurs="unbounded"/>
+				<element name="MultimediaContent" type="mpeg7:MultimediaContentType" maxOccurs="unbounded"/>
+				<element name="EditedVideoSegment" type="mpeg7:EditedVideoSegmentType" maxOccurs="unbounded"/>
+				<element name="AnalyticClip" type="mpeg7:AnalyticClipType" maxOccurs="unbounded"/>
+				<element name="SceneGraphMask" type="mpeg7:SceneGraphMaskType" maxOccurs="unbounded"/>
+				<element name="MediaSpaceMask" type="mpeg7:MediaSpaceMaskType" maxOccurs="unbounded"/>
+				<element name="OrderedGroupDataSetMask" type="mpeg7:OrderedGroupDataSetMaskType" maxOccurs="unbounded"/>
+				<element name="StillRegion" type="mpeg7:StillRegionType" maxOccurs="unbounded"/>
+				<element name="AudioVisualSegment" type="mpeg7:AudioVisualSegmentType" maxOccurs="unbounded"/>
+				<element name="InkMediaInfo" type="mpeg7:InkMediaInfoType" maxOccurs="unbounded"/>
+				<element name="HandWritingRecogInfo" type="mpeg7:HandWritingRecogInfoType" maxOccurs="unbounded"/>
+				<element name="HandWritingRecogResult" type="mpeg7:HandWritingRecogResultType" maxOccurs="unbounded"/>
+				<element name="BinaryTemporalSegmentRelation" type="mpeg7:BinaryTemporalSegmentRelationType" maxOccurs="unbounded"/>
+				<element name="NAryTemporalSegmentRelation" type="mpeg7:NAryTemporalSegmentRelationType" maxOccurs="unbounded"/>
+				<element name="DirectionalSpatialSegmentRelation" type="mpeg7:DirectionalSpatialSegmentRelationType" maxOccurs="unbounded"/>
+				<element name="TopologicalSpatialSegmentRelation" type="mpeg7:TopologicalSpatialSegmentRelationType" maxOccurs="unbounded"/>
+				<element name="NArySpatioTemporalSegmentRelation" type="mpeg7:NArySpatioTemporalSegmentRelationType" maxOccurs="unbounded"/>
+				<element name="BinaryOtherSegmentRelation" type="mpeg7:BinaryOtherSegmentRelationType" maxOccurs="unbounded"/>
+				<element name="Graph" type="mpeg7:GraphType" maxOccurs="unbounded"/>
+				<element name="VideoSegment" type="mpeg7:VideoSegmentType" maxOccurs="unbounded"/>
+				<element name="MovingRegion" type="mpeg7:MovingRegionType" maxOccurs="unbounded"/>
+				<element name="Graph" type="mpeg7:GraphType" maxOccurs="unbounded"/>
+				<element name="SemanticBase" type="mpeg7:SemanticBaseType" maxOccurs="unbounded"/>
+				<element name="Object" type="mpeg7:ObjectType" maxOccurs="unbounded"/>
+				<element name="AgentObject" type="mpeg7:AgentObjectType" maxOccurs="unbounded"/>
+				<element name="Event" type="mpeg7:EventType" maxOccurs="unbounded"/>
+				<element name="Concept" type="mpeg7:Concept" maxOccurs="unbounded"/>
+				<element name="Semantic" type="mpeg7:SemanticType" maxOccurs="unbounded"/>
+				<element ref="mpeg7:Mpeg7" maxOccurs="unbounded"/>
+				<element name="SemanticPlace" type="mpeg7:SemanticPlaceType" maxOccurs="unbounded"/>
+				<element name="Semantic" type="mpeg7:SemanticType" maxOccurs="unbounded"/>
+				<element name="SemanticTime" type="mpeg7:SemanticTimeType" maxOccurs="unbounded"/>
+				<element name="Semantic" type="mpeg7:SemanticType" maxOccurs="unbounded"/>
+				<element name="NArySemanticBaseRelation" type="mpeg7:NArySemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticBaseSemanticBaseRelation" type="mpeg7:SemanticBaseSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticSemanticBaseRelation" type="mpeg7:SemanticSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticSemanticRelation" type="mpeg7:SemanticSemanticRelationType" maxOccurs="unbounded"/>
+				<element name="ObjectObjectRelation" type="mpeg7:ObjectObjectRelationType" maxOccurs="unbounded"/>
+				<element name="ObjectEventRelation" type="mpeg7:ObjectEventRelationType" maxOccurs="unbounded"/>
+				<element name="EventEventRelation" type="mpeg7:EventEventRelationType" maxOccurs="unbounded"/>
+				<element name="ConceptSemanticBaseRelation" type="mpeg7:ConceptSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticStateSemanticBaseRelation" type="mpeg7:SemanticStateSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticStateSemanticStateRelation" type="mpeg7:SemanticStateSemanticStateRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticPlaceSemanticBaseRelation" type="mpeg7:SemanticPlaceSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticPlaceSemanticPlaceRelation" type="mpeg7:SemanticPlaceSemanticPlaceRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticTimeSemanticBaseRelation" type="mpeg7:SemanticTimeSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticTimeSemanticTimeRelation" type="mpeg7:SemanticTimeSemanticTimeRelationType" maxOccurs="unbounded"/>
+				<element name="SemanticRelationSemanticStateRelation" type="mpeg7:SemanticRelationSemanticStateRelationType" maxOccurs="unbounded"/>
+				<element name="SegmentSemanticBaseRelation" type="mpeg7:SegmentSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="AnalyticModelSemanticBaseRelation" type="mpeg7:AnalyticModelSemanticBaseRelationType" maxOccurs="unbounded"/>
+				<element name="Semantic" type="mpeg7:SemanticType" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

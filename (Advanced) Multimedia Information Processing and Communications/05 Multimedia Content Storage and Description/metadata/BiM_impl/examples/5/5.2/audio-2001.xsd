@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- *********************************************************************
+
+  This XML document was originally developed in the course of development 
+  of the ISO/IEC 15938 standard (MPEG-7). This XML document contains 
+  either a part of the MPEG-7 schema implementation for one or more MPEG-7 
+  tools as specified by the MPEG-7 Requirements or MPEG-7 description 
+  examples conformant to the MPEG-7 schema.
+
+  ISO/IEC gives users of MPEG-7 free license to this XML document or 
+  modifications thereof for use in hardware or software products claiming 
+  conformance to MPEG-7.
+
+  Those intending to use this XML document in hardware or software products 
+  are advised that its use may infringe existing patents. The original 
+  developers of this XML document and his/her company, the subsequent 
+  editors and their companies, and ISO/IEC have no liability for use of
+  this XML document or modifications thereof in an implementation.
+
+  Copyright is not released for non MPEG-7 conforming products. The 
+  organizations who contributed to this XML document retain the full right 
+  to use the code for their own purpose,
+  assign or donate their contribution to a third party and inhibit third 
+  parties from using their contribution for non MPEG-7 conforming products.
+
+  Copyright (c) 1999-2001 ISO/IEC. 
+
+  This XML document is provided for informative purposes only. If any parts 
+  of this XML document contradict the normative part of the corresponding 
+  standard document then the normative part should be used as the definitive 
+  specification.
+
+  This notice must be included in all copies or derivative works.
+  
+************************************************************************** -->
+<!-- ##################################################################### -->
+<!-- ISO/IEC 15938 Information Technology - Multimedia Content Description -->
+<!-- Interface MPEG-7 Description Example developed by MPEG MDS Sub-group, -->
+<!-- ##################################################################### -->
+<schema targetNamespace="urn:mpeg:mpeg7:schema:2001" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<annotation>
+		<documentation>
+			This document contains Audio tools defined in ISO/IEC 15938-4
+		 </documentation>
+	</annotation>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioLLDScalar D                                -->
+	<!-- ############################################################# -->
+	<complexType name="AudioLLDScalarType" abstract="true">
+		<complexContent>
+			<extension base="mpeg7:AudioDType">
+				<choice>
+					<element name="Scalar" type="float"/>
+					<element name="SeriesOfScalar" maxOccurs="unbounded">
+						<complexType>
+							<complexContent>
+								<extension base="mpeg7:SeriesOfScalarType">
+									<attribute name="hopSize" type="mpeg7:mediaDurationType" default="PT10N1000F"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</choice>
+				<attribute name="confidence" type="mpeg7:zeroToOneType" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioLLDVector D                                -->
+	<!-- ############################################################# -->
+	<complexType name="AudioLLDVectorType" abstract="true">
+		<complexContent>
+			<extension base="mpeg7:AudioDType">
+				<choice>
+					<element name="Vector" type="mpeg7:floatVector"/>
+					<element name="SeriesOfVector" maxOccurs="unbounded">
+						<complexType>
+							<complexContent>
+								<extension base="mpeg7:SeriesOfVectorType">
+									<attribute name="hopSize" type="mpeg7:mediaDurationType" default="PT10N1000F"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</choice>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioWaveform D                                 -->
+	<!-- ############################################################# -->
+	<complexType name="AudioWaveformType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType">
+				<attribute name="minRange" type="float" use="optional"/>
+				<attribute name="maxRange" type="float" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of audioSpectrumAttributeGrp                       -->
+	<!-- ############################################################# -->
+	<attributeGroup name="audioSpectrumAttributeGrp">
+		<attribute name="loEdge" type="float" default="62.5"/>
+		<attribute name="hiEdge" type="float" default="16000"/>
+		<attribute name="octaveResolution" use="optional">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="1/16"/>
+					<enumeration value="1/8"/>
+					<enumeration value="1/4"/>
+					<enumeration value="1/2"/>
+					<enumeration value="1"/>
+					<enumeration value="2"/>
+					<enumeration value="4"/>
+					<enumeration value="8"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+		<!-- Edge values are in Hertz                              -->
+	</attributeGroup>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioSpectrumEnvelope D                         -->
+	<!-- ############################################################# -->
+	<complexType name="AudioSpectrumEnvelopeType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDVectorType">
+				<attributeGroup ref="mpeg7:audioSpectrumAttributeGrp"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioPower D                                    -->
+	<!-- ############################################################# -->
+	<complexType name="AudioPowerType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioSpectrumCentroid D                         -->
+	<!-- ############################################################# -->
+	<complexType name="AudioSpectrumCentroidType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioSpectrumSpread D                           -->
+	<!-- ############################################################# -->
+	<complexType name="AudioSpectrumSpreadType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioFundamentalFrequency D                     -->
+	<!-- ############################################################# -->
+	<complexType name="AudioFundamentalFrequencyType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType">
+				<attribute name="loLimit" type="float" default="25"/>
+				<attribute name="hiLimit" type="float" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioHarmonicity D                              -->
+	<!-- ############################################################# -->
+	<complexType name="AudioHarmonicityType">
+		<complexContent>
+			<extension base="mpeg7:AudioDType">
+				<sequence>
+					<element name="HarmonicRatio" type="mpeg7:AudioLLDScalarType"/>
+					<element name="UpperLimitOfHarmonicity" type="mpeg7:AudioLLDScalarType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioSpectrumFlatness D                         -->
+	<!-- ############################################################# -->
+	<complexType name="AudioSpectrumFlatnessType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDVectorType">
+				<attribute name="loEdge" type="float" default="250"/>
+				<attribute name="hiEdge" type="float" default="16000"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioSpectrumBasis D                            -->
+	<!-- ############################################################# -->
+	<complexType name="AudioSpectrumBasisType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDVectorType">
+				<attributeGroup ref="mpeg7:audioSpectrumAttributeGrp"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioSpectrumProjection D                       -->
+	<!-- ############################################################# -->
+	<complexType name="AudioSpectrumProjectionType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDVectorType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of LogAttackTime D                                 -->
+	<!-- ############################################################# -->
+	<complexType name="LogAttackTimeType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of HarmonicSpectralCentroid D                      -->
+	<!-- ############################################################# -->
+	<complexType name="HarmonicSpectralCentroidType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of HarmonicSpectralDeviation D                     -->
+	<!-- ############################################################# -->
+	<complexType name="HarmonicSpectralDeviationType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of HarmonicSpectralSpread D                        -->
+	<!-- ############################################################# -->
+	<complexType name="HarmonicSpectralSpreadType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of HarmonicSpectralVariation D                     -->
+	<!-- ############################################################# -->
+	<complexType name="HarmonicSpectralVariationType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SpectralCentroid D                              -->
+	<!-- ############################################################# -->
+	<complexType name="SpectralCentroidType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of TemporalCentroid D                              -->
+	<!-- ############################################################# -->
+	<complexType name="TemporalCentroidType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType"/>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of ScalableSeries Datatype                         -->
+	<!-- ############################################################# -->
+	<complexType name="ScalableSeriesType" abstract="true">
+		<sequence>
+			<element name="Scaling" minOccurs="0" maxOccurs="unbounded">
+				<complexType>
+					<attribute name="ratio" type="positiveInteger" use="required"/>
+					<attribute name="numOfElements" type="positiveInteger" use="required"/>
+				</complexType>
+			</element>
+		</sequence>
+		<attribute name="totalNumOfSamples" type="positiveInteger" use="required"/>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SeriesOfScalar Datatype                         -->
+	<!-- ############################################################# -->
+	<complexType name="SeriesOfScalarType">
+		<complexContent>
+			<extension base="mpeg7:ScalableSeriesType">
+				<sequence>
+					<element name="Raw" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Min" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Max" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Mean" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Random" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="First" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Last" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Variance" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Weight" type="mpeg7:floatVector" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SeriesOfScalarBinary Datatype                   -->
+	<!-- ############################################################# -->
+	<complexType name="SeriesOfScalarBinaryType">
+		<complexContent>
+			<extension base="mpeg7:SeriesOfScalarType">
+				<sequence>
+					<element name="VarianceScalewise" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SeriesOfVector Datatype                         -->
+	<!-- ############################################################# -->
+	<complexType name="SeriesOfVectorType">
+		<complexContent>
+			<extension base="mpeg7:ScalableSeriesType">
+				<sequence>
+					<element name="Raw" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="Min" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="Max" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="Mean" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="Random" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="First" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="Last" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="Variance" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="Covariance" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+					<element name="VarianceSummed" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="MaxSqDist" type="mpeg7:floatVector" minOccurs="0"/>
+					<element name="Weight" type="mpeg7:floatVector" minOccurs="0"/>
+				</sequence>
+				<attribute name="vectorSize" type="positiveInteger" default="1"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SeriesOfVectorBinary Ddattype                   -->
+	<!-- ############################################################# -->
+	<complexType name="SeriesOfVectorBinaryType">
+		<complexContent>
+			<extension base="mpeg7:SeriesOfVectorType">
+				<sequence>
+					<element name="VarianceScalewise" type="mpeg7:FloatMatrixType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SilenceHeader Header                            -->
+	<!-- ############################################################# -->
+	<complexType name="SilenceHeaderType">
+		<complexContent>
+			<extension base="mpeg7:HeaderType">
+				<attribute name="minDuration" type="mpeg7:mediaDurationType" use="required"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of Silence D                                       -->
+	<!-- ############################################################# -->
+	<complexType name="SilenceType">
+		<complexContent>
+			<extension base="mpeg7:AudioDType">
+				<attribute name="confidence" type="mpeg7:zeroToOneType" default="1.0"/>
+				<attribute name="minDurationRef" type="anyURI" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of AudioSignature DS                               -->
+	<!-- ############################################################# -->
+	<complexType name="AudioSignatureType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="Flatness" type="mpeg7:AudioSpectrumFlatnessType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of InstrumentTimbre DS                             -->
+	<!-- ############################################################# -->
+	<complexType name="InstrumentTimbreType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="LogAttackTime" type="mpeg7:LogAttackTimeType" minOccurs="0"/>
+					<element name="HarmonicSpectralCentroid" type="mpeg7:HarmonicSpectralCentroidType" minOccurs="0"/>
+					<element name="HarmonicSpectralDeviation" type="mpeg7:HarmonicSpectralDeviationType" minOccurs="0"/>
+					<element name="HarmonicSpectralSpread" type="mpeg7:HarmonicSpectralSpreadType" minOccurs="0"/>
+					<element name="HarmonicSpectralVariation" type="mpeg7:HarmonicSpectralVariationType" minOccurs="0"/>
+					<element name="SpectralCentroid" type="mpeg7:SpectralCentroidType" minOccurs="0"/>
+					<element name="TemporalCentroid" type="mpeg7:TemporalCentroidType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of HarmonicInstrumentTimbre DS                     -->
+	<!-- ############################################################# -->
+	<complexType name="HarmonicInstrumentTimbreType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="LogAttackTime" type="mpeg7:LogAttackTimeType"/>
+					<element name="HarmonicSpectralCentroid" type="mpeg7:HarmonicSpectralCentroidType"/>
+					<element name="HarmonicSpectralDeviation" type="mpeg7:HarmonicSpectralDeviationType"/>
+					<element name="HarmonicSpectralSpread" type="mpeg7:HarmonicSpectralSpreadType"/>
+					<element name="HarmonicSpectralVariation" type="mpeg7:HarmonicSpectralVariationType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of PercussiveInstrumentTimbre DS                   -->
+	<!-- ############################################################# -->
+	<complexType name="PercussiveInstrumentTimbreType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="LogAttackTime" type="mpeg7:LogAttackTimeType"/>
+					<element name="SpectralCentroid" type="mpeg7:SpectralCentroidType"/>
+					<element name="TemporalCentroid" type="mpeg7:TemporalCentroidType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SpokenContentHeader Header                      -->
+	<!-- ############################################################# -->
+	<complexType name="SpokenContentHeaderType">
+		<complexContent>
+			<extension base="mpeg7:HeaderType">
+				<sequence>
+					<choice maxOccurs="unbounded">
+						<element name="WordLexicon" type="mpeg7:WordLexiconType"/>
+						<element name="PhoneLexicon" type="mpeg7:PhoneLexiconType"/>
+						<!-- Information about the word and phone lexicons used to       -->
+						<!-- represent the speech                                        -->
+					</choice>
+					<element name="ConfusionInfo" type="mpeg7:ConfusionCountType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="DescriptionMetadata" type="mpeg7:DescriptionMetadataType" minOccurs="0"/>
+					<element name="SpeakerInfo" type="mpeg7:SpeakerInfoType" maxOccurs="unbounded"/>
+					<!-- Information about the speakers in the audio                   -->
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SpeakerInfo Header                              -->
+	<!-- ############################################################# -->
+	<complexType name="SpeakerInfoType">
+		<complexContent>
+			<extension base="mpeg7:HeaderType">
+				<sequence>
+					<element name="SpokenLanguage" type="language"/>
+					<element name="Person" type="mpeg7:PersonType" minOccurs="0"/>
+					<element name="WordIndex" minOccurs="0">
+						<complexType>
+							<sequence>
+								<element name="WordIndexEntry" maxOccurs="unbounded">
+									<complexType>
+										<sequence>
+											<element name="IndexEntry" type="mpeg7:SpokenContentIndexEntryType" maxOccurs="unbounded"/>
+										</sequence>
+										<attribute name="key" use="required">
+											<simpleType>
+												<list itemType="mpeg7:WordLexiconIndexType"/>
+											</simpleType>
+										</attribute>
+									</complexType>
+								</element>
+							</sequence>
+							<attribute name="defaultLattice" type="anyURI" use="required"/>
+						</complexType>
+					</element>
+					<element name="PhoneIndex" minOccurs="0">
+						<complexType>
+							<sequence>
+								<element name="PhoneIndexEntry" maxOccurs="unbounded">
+									<complexType>
+										<sequence>
+											<element name="IndexEntry" type="mpeg7:SpokenContentIndexEntryType" maxOccurs="unbounded"/>
+										</sequence>
+										<attribute name="key" use="required">
+											<simpleType>
+												<list itemType="mpeg7:PhoneLexiconIndexType"/>
+											</simpleType>
+										</attribute>
+									</complexType>
+								</element>
+							</sequence>
+							<attribute name="defaultLattice" type="anyURI" use="required"/>
+						</complexType>
+					</element>
+				</sequence>
+				<attribute name="phoneLexiconRef" type="anyURI" use="optional"/>
+				<attribute name="wordLexiconRef" type="anyURI" use="optional"/>
+				<attribute name="confusionInfoRef" type="anyURI" use="optional"/>
+				<attribute name="descriptionMetadataRef" type="anyURI" use="optional"/>
+				<attribute name="provenance" use="required">
+					<simpleType>
+						<restriction base="NMTOKEN">
+							<enumeration value="unknown"/>
+							<enumeration value="ASR"/>
+							<enumeration value="manual"/>
+							<enumeration value="keyword"/>
+							<enumeration value="parsing"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SpokenContentIndexEntry Datatype                -->
+	<!-- ############################################################# -->
+	<complexType name="SpokenContentIndexEntryType">
+		<attribute name="node" type="mpeg7:unsigned16" use="required"/>
+		<attribute name="block" type="mpeg7:unsigned16" use="required"/>
+		<attribute name="lattice" type="anyURI" use="optional"/>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definitions of SpokenContent Word and Phone datatypes         -->
+	<!-- ############################################################# -->
+	<!-- Definition of Word datatype -->
+	<simpleType name="WordType">
+		<restriction base="string"/>
+	</simpleType>
+	<!-- Definition of Phone datatype -->
+	<simpleType name="PhoneType">
+		<restriction base="string"/>
+	</simpleType>
+	<!-- Definition of WordLexiconIndex datatype -->
+	<simpleType name="WordLexiconIndexType">
+		<restriction base="mpeg7:unsigned32"/>
+	</simpleType>
+	<!-- Definition of PhoneLexiconIndex datatype -->
+	<simpleType name="PhoneLexiconIndexType">
+		<restriction base="mpeg7:unsigned16"/>
+	</simpleType>
+	<!-- ############################################################# -->
+	<!-- Definition of Lexicon Header                                  -->
+	<!-- ############################################################# -->
+	<complexType name="LexiconType" abstract="true">
+		<complexContent>
+			<extension base="mpeg7:HeaderType">
+				<attribute name="numOfOriginalEntries" type="positiveInteger" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of WordLexicon Header                              -->
+	<!-- ############################################################# -->
+	<complexType name="WordLexiconType">
+		<complexContent>
+			<extension base="mpeg7:LexiconType">
+				<sequence>
+					<element name="Token" type="mpeg7:WordType" maxOccurs="unbounded"/>
+					<!-- The maxOccurs is the upper limit of WordLexiconIndexType      -->
+					<!-- REVISED
+					<element name="Token" type="mpeg7:WordType" minOccurs="1" maxOccurs="4294967296"/>
+					-->
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of phoneticAlphabet datatype                       -->
+	<!-- ############################################################# -->
+	<simpleType name="phoneticAlphabetType">
+		<restriction base="NMTOKEN">
+			<enumeration value="sampa"/>
+			<enumeration value="ipaSymbol"/>
+			<enumeration value="ipaNumber"/>
+			<enumeration value="other"/>
+		</restriction>
+		<!-- This defines an [enumerated] type covering the phone sets. It       -->
+		<!-- essentially distinguishes between IPA based systems and everything  -->
+		<!-- else.                                                               -->
+	</simpleType>
+	<!-- ############################################################# -->
+	<!-- Definition of PhoneLexicon Header                             -->
+	<!-- ############################################################# -->
+	<complexType name="PhoneLexiconType">
+		<complexContent>
+			<extension base="mpeg7:LexiconType">
+				<sequence>
+					<element name="Token" type="mpeg7:PhoneType" maxOccurs="65536"/>
+					<!-- The maxOccurs is the upper limit of WordLexiconIndexType      -->
+				</sequence>
+				<attribute name="phoneticAlphabet" type="mpeg7:phoneticAlphabetType" default="sampa"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of ConfusionCount Header                           -->
+	<!-- ############################################################# -->
+	<complexType name="ConfusionCountType">
+		<complexContent>
+			<extension base="mpeg7:HeaderType">
+				<sequence>
+					<element name="Insertion" type="mpeg7:integerVector"/>
+					<element name="Deletion" type="mpeg7:integerVector"/>
+					<element name="Substitution" type="mpeg7:IntegerMatrixType"/>
+				</sequence>
+				<attribute name="numOfDimensions" type="positiveInteger" use="required"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of the SpokenContentLattice DS                     -->
+	<!-- ############################################################# -->
+	<complexType name="SpokenContentLatticeType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="Block" maxOccurs="200">
+						<complexType>
+							<sequence>
+								<element name="MediaTime" type="mpeg7:MediaTimeType"/>
+								<element name="Node" maxOccurs="200">
+									<complexType>
+										<sequence>
+											<element name="WordLink" minOccurs="0" maxOccurs="127">
+												<complexType>
+													<complexContent>
+														<extension base="mpeg7:SpokenContentLinkType">
+															<attribute name="word" type="mpeg7:WordLexiconIndexType" use="required"/>
+														</extension>
+													</complexContent>
+												</complexType>
+											</element>
+											<element name="PhoneLink" minOccurs="0" maxOccurs="127">
+												<complexType>
+													<complexContent>
+														<extension base="mpeg7:SpokenContentLinkType">
+															<attribute name="phone" type="mpeg7:PhoneLexiconIndexType" use="required"/>
+														</extension>
+													</complexContent>
+												</complexType>
+											</element>
+										</sequence>
+										<attribute name="num" type="mpeg7:unsigned16" use="required"/>
+										<attribute name="timeOffset" type="mpeg7:unsigned16" use="required"/>
+										<attribute name="speakerInfoRef" type="anyURI" use="optional"/>
+									</complexType>
+								</element>
+								<!--
+								<element name="Node" minOccurs="1" maxOccurs="65536">
+-->
+							</sequence>
+							<attribute name="defaultSpeakerInfoRef" type="anyURI" use="required"/>
+							<attribute name="num" type="mpeg7:unsigned16" use="required"/>
+							<attribute name="audio" default="speech">
+								<simpleType>
+									<restriction base="NMTOKEN">
+										<enumeration value="unknown"/>
+										<enumeration value="speech"/>
+										<enumeration value="noise"/>
+										<enumeration value="noisySpeech"/>
+									</restriction>
+									<!-- This gives an approximate measure of how noisy the    -->
+									<!-- speech signal is with respect to the speech           -->
+								</simpleType>
+							</attribute>
+						</complexType>
+					</element>
+					<!--
+					<element name="Block" minOccurs="1" maxOccurs="65536">
+-->
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SpokenContentLink Datatype                      -->
+	<!-- ############################################################# -->
+	<complexType name="SpokenContentLinkType">
+		<attribute name="probability" type="mpeg7:zeroToOneType" default="1.0"/>
+		<attribute name="nodeOffset" type="mpeg7:unsigned16" default="1"/>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SoundModel DS                                   -->
+	<!-- ############################################################# -->
+	<complexType name="SoundModelType">
+		<complexContent>
+			<extension base="mpeg7:ContinuousHiddenMarkovModelType">
+				<sequence minOccurs="0">
+					<element name="SoundClassLabel" type="mpeg7:TermUseType"/>
+					<element name="DescriptionMetadata" type="mpeg7:DescriptionMetadataType" minOccurs="0"/>
+					<element name="SpectrumBasis" type="mpeg7:AudioSpectrumBasisType"/>
+				</sequence>
+				<attribute name="SoundModelRef" type="anyURI" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SoundModelStatePath DS                          -->
+	<!-- ############################################################# -->
+	<complexType name="SoundModelStatePathType">
+		<complexContent>
+			<extension base="mpeg7:AudioLLDScalarType">
+				<sequence>
+					<element name="SoundModelRef" type="anyURI"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SoundModelStateHistogram D                      -->
+	<!-- ############################################################# -->
+	<complexType name="SoundModelStateHistogramType">
+		<complexContent>
+			<extension base="mpeg7:AudioDType">
+				<sequence>
+					<sequence maxOccurs="unbounded">
+						<element name="StateRef" type="anyURI"/>
+						<element name="RelativeFrequency" type="mpeg7:nonNegativeReal"/>
+					</sequence>
+					<element name="SoundModelRef" type="anyURI"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of SoundClassificationModel DS                     -->
+	<!-- ############################################################# -->
+	<complexType name="SoundClassificationModelType">
+		<complexContent>
+			<restriction base="mpeg7:ProbabilityClassificationModelType">
+				<sequence maxOccurs="unbounded">
+					<element name="SoundModel" type="mpeg7:SoundModelType"/>
+				</sequence>
+			</restriction>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of Melody DS                                       -->
+	<!-- ############################################################# -->
+	<complexType name="MelodyType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="Meter" type="mpeg7:MeterType" minOccurs="0"/>
+					<element name="Scale" type="mpeg7:scaleType" minOccurs="0"/>
+					<element name="Key" type="mpeg7:KeyType" minOccurs="0"/>
+					<choice>
+						<element name="MelodyContour" type="mpeg7:MelodyContourType"/>
+						<element name="MelodySequence" type="mpeg7:MelodySequenceType" maxOccurs="unbounded"/>
+					</choice>
+					<!-- REVISED
+					<element name="Scale" type="mpeg7:ScaleType" minOccurs="0"/>
+					-->
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of MelodyContour DS                                -->
+	<!-- ############################################################# -->
+	<complexType name="MelodyContourType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="Contour" type="mpeg7:contourType"/>
+					<element name="Beat" type="mpeg7:beatType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of Meter D                                         -->
+	<!-- ############################################################# -->
+	<complexType name="MeterType">
+		<complexContent>
+			<extension base="mpeg7:AudioDType">
+				<sequence>
+					<element name="Numerator">
+						<simpleType>
+							<restriction base="integer">
+								<minInclusive value="1"/>
+								<maxInclusive value="128"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<element name="Denominator">
+						<simpleType>
+							<restriction base="integer">
+								<enumeration value="1"/>
+								<enumeration value="2"/>
+								<enumeration value="4"/>
+								<enumeration value="8"/>
+								<enumeration value="16"/>
+								<enumeration value="32"/>
+								<enumeration value="64"/>
+								<enumeration value="128"/>
+							</restriction>
+						</simpleType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ############################################################# -->
+	<!-- Definition of contour datatype                                -->
+	<!-- ############################################################# -->
+	<simpleType name="contourType">
+		<list>
+			<simpleType>
+				<restriction base="integer">
+					<minInclusive value="-2"/>
+					<maxInclusive value="+2"/>
+				</restriction>
+			</simpleType>
+		</list>
+	</simpleType>
+	<!-- ############################################################# -->
+	<!-- Definition of beat datatype                                   -->
+	<!-- ############################################################# -->
+	<simpleType name="beatType">
+		<list itemType="integer"/>
+	</simpleType>
+	<!-- ############################################################# -->
+	<!-- Definition of MelodyScale Datatype                                                           -->
+	<!-- ############################################################# -->
+	<!-- Information about a scale array                               -->
+	<!-- of a repeatable span of notes, in semitones from base pitch   -->
+	<!-- REVISED
+	<complexType name="ScaleType">
+		<simpleContent>
+			<restriction base="mpeg7:floatVector"/>
+		</simpleContent>
+	</complexType>
+	-->
+	<simpleType name="scaleType">
+		<restriction base="mpeg7:floatVector"/>
+	</simpleType>
+	<!-- ############################################################# -->
+	<!-- Definition of MelodyKey DS                                    -->
+	<!-- ############################################################# -->
+	<!-- Information about the key                                     -->
+	<complexType name="KeyType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="KeyNote">
+						<complexType>
+							<simpleContent>
+								<extension base="mpeg7:degreeNoteType">
+									<attribute name="display" type="string" use="optional"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+				<attribute name="accidental" type="mpeg7:degreeAccidentalType" default="natural"/>
+				<attribute name="mode" type="mpeg7:termReferenceType" use="optional"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- degreeNote datatype -->
+	<simpleType name="degreeNoteType">
+		<restriction base="string">
+			<enumeration value="C"/>
+			<enumeration value="D"/>
+			<enumeration value="E"/>
+			<enumeration value="F"/>
+			<enumeration value="G"/>
+			<enumeration value="A"/>
+			<enumeration value="B"/>
+		</restriction>
+	</simpleType>
+	<!-- degreeAccidental datatype -->
+	<simpleType name="degreeAccidentalType">
+		<restriction base="string">
+			<enumeration value="flat"/>
+			<enumeration value="natural"/>
+			<enumeration value="sharp"/>
+			<enumeration value="doubleSharp"/>
+			<enumeration value="doubleFlat"/>
+		</restriction>
+	</simpleType>
+	<!-- ############################################################# -->
+	<!-- Definition of MelodySequence DS                               -->
+	<!-- ############################################################# -->
+	<complexType name="MelodySequenceType">
+		<complexContent>
+			<extension base="mpeg7:AudioDSType">
+				<sequence>
+					<element name="StartingNote" minOccurs="0">
+						<complexType>
+							<sequence>
+								<element name="StartingFrequency" type="float" minOccurs="0"/>
+								<element name="StartingPitch" minOccurs="0">
+									<complexType>
+										<sequence>
+											<element name="PitchNote">
+												<complexType>
+													<simpleContent>
+														<extension base="mpeg7:degreeNoteType">
+															<attribute name="display" type="string" use="optional"/>
+														</extension>
+													</simpleContent>
+												</complexType>
+											</element>
+										</sequence>
+										<attribute name="accidental" type="mpeg7:degreeAccidentalType" default="natural"/>
+										<attribute name="height" type="integer" use="optional"/>
+									</complexType>
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="NoteArray" maxOccurs="unbounded">
+						<complexType>
+							<complexContent>
+								<extension base="mpeg7:AudioDSType">
+									<sequence>
+										<element name="Note" maxOccurs="unbounded">
+											<complexType>
+												<sequence>
+													<element name="Interval" type="float"/>
+													<element name="NoteRelDuration" type="float"/>
+													<element name="Lyric" type="mpeg7:TextualType" minOccurs="0"/>
+												</sequence>
+											</complexType>
+										</element>
+									</sequence>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

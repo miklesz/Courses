@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<MdsExampleTest xmlns="urn:mpeg:mpeg7:schema:2001"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001"
+                xsi:schemaLocation="urn:mpeg:mpeg7:schema:2001 ./examples.xsd">
+
+   <ColorLayout>
+      <YDCCoeff>  63 </YDCCoeff>
+      <CbDCCoeff> 11 </CbDCCoeff>
+      <CrDCCoeff> 12 </CrDCCoeff>
+
+      <YACCoeff5>  31 22 23 24 25 </YACCoeff5>
+      <CbACCoeff9> 31 2 3 4 5 6 7 8 9 </CbACCoeff9>
+      <CrACCoeff9> 31 30 29 28 27 26 25 24 23 </CrACCoeff9>
+   </ColorLayout>
+
+   <ColorLayout>
+      <YDCCoeff>  63 </YDCCoeff>
+      <CbDCCoeff> 21 </CbDCCoeff>
+      <CrDCCoeff> 22 </CrDCCoeff>
+
+      <YACCoeff5>  31 2 3 4 5 </YACCoeff5>
+      <CbACCoeff2> 31 3 </CbACCoeff2>
+      <CrACCoeff2> 4 2 </CrACCoeff2>
+   </ColorLayout>
+
+   <ColorLayout>
+      <YDCCoeff>  63 </YDCCoeff>
+      <CbDCCoeff> 61 </CbDCCoeff>
+      <CrDCCoeff> 62 </CrDCCoeff>
+
+      <YACCoeff5>  31 12 13 14 15 </YACCoeff5>
+      <CbACCoeff5> 31 12 13 14 15 </CbACCoeff5>
+      <CrACCoeff5> 1 2 3 4 5 </CrACCoeff5>
+   </ColorLayout>
+
+</MdsExampleTest>

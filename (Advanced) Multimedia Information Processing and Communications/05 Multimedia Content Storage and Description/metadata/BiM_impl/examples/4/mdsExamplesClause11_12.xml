@@ -1,0 +1,4255 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<MdsExampleTest xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema" xsi:schemaLocation="http://www.mpeg7.org/2001/MPEG-7_Schema .\MdsExampleTestClause11-12.xsd">
+	<!-- 11.1.2.3 StillRegion DS examples (informative) -->
+	<!-- non-normative element "StillRegion"  -->
+	<StillRegion id="ImageSR">
+		<VisualDescriptor xsi:type="ContourShapeType" numberOfPeaks="54">
+			<GlobalCurvatureVector> 63 63 </GlobalCurvatureVector>
+			<PrototypeCurvatureVector> 63 63 </PrototypeCurvatureVector>
+			<HighestPeak>127</HighestPeak>
+			<Peak>
+				<xpeak>63</xpeak>
+				<ypeak>7</ypeak>
+			</Peak>
+			<Peak>
+				<xpeak>63</xpeak>
+				<ypeak>7</ypeak>
+			</Peak>
+			<Peak>
+				<xpeak>63</xpeak>
+				<ypeak>7</ypeak>
+			</Peak>
+			<Peak>
+				<xpeak>63</xpeak>
+				<ypeak>7</ypeak>
+			</Peak>
+			<Peak>
+				<xpeak>63</xpeak>
+				<ypeak>7</ypeak>
+			</Peak>
+			<Peak>
+				<xpeak>63</xpeak>
+				<ypeak>7</ypeak>
+			</Peak>
+			<!--  Other ContoutPeak elements -->
+			<!-- : -->
+		</VisualDescriptor>
+		<SpatialDecomposition gap="true" overlap="false">
+			<StillRegion id="InterviewerSR">
+				<TextAnnotation>
+					<FreeTextAnnotation>Interviewer</FreeTextAnnotation>
+				</TextAnnotation>
+				<!-- <VisualDescriptor xsi:type="ContourShapeType"> ... </VisualDescriptor>	-->
+			</StillRegion>
+			<StillRegion id="CoachSR">
+				<TextAnnotation>
+					<FreeTextAnnotation> Coach </FreeTextAnnotation>
+				</TextAnnotation>
+				<!-- <VisualDescriptor xsi:type="ContourShapeType"> ... </VisualDescriptor>	-->
+			</StillRegion>
+		</SpatialDecomposition>
+	</StillRegion>
+	<StillRegion id="SR0">
+		<SpatialMask>
+			<SubRegion>
+				<!-- Bottom region -->
+				<Poly>
+					<Coords mpeg7:dim="2 5"> 5 25 10 20 15 15 10 10 5 15 </Coords>
+				</Poly>
+			</SubRegion>
+			<SubRegion>
+				<!-- Middle region -->
+				<Poly>
+					<Coords mpeg7:dim="2 6"> 7 24 15 24 20 27 18 25 15 22 7 22 </Coords>
+				</Poly>
+			</SubRegion>
+			<SubRegion>
+				<!-- Top region -->
+				<Poly>
+					<Coords mpeg7:dim="2 4"> 7 30 15 30 15 25 7 25</Coords>
+				</Poly>
+			</SubRegion>
+		</SpatialMask>
+	</StillRegion>
+	<!-- 11.3.3 ImageText DS examples (informative) -->
+	<!-- non-normative element "ImageText"  -->
+	<!--  Image Text 1  -->
+	<ImageText id="ImageText1" textType="scene">
+		<!-- <SpatialLocator> ... </SpatialLocator> -->
+		<Text xml:lang="fr"> Cherie, je suis la </Text>
+	</ImageText>
+	<!--  Image Text 2  -->
+	<ImageText id="ImageText2" textType="superimposed" fontSize="40" fontType="Arial">
+		<!-- <SpatialLocator> ... </SpatialLocator> -->
+		<Text xml:lang="fr"> En direct du state DE-KUIP Rotterdam Jean-Francois DEVELEY </Text>
+	</ImageText>
+	<!--  Image Text 3  -->
+	<ImageText id="ImageText3" textType="superimposed" fontSize="30" fontType="Times New Roman">
+		<!-- <SpatialLocator> ... </SpatialLocator> -->
+		<Text xml:lang="fr"> Nous allons assister a un match fantastique </Text>
+	</ImageText>
+	<!-- 11.1.4.3 Mosaic DS examples (informative) -->
+	<!-- non-normative element "Mosaic"  -->
+	<Mosaic>
+		<!--  Affine model, Center of Source -->
+		<WarpingParam modelType="6" sourceSequenceWidth="352" sourceSequenceHeight="288" xOffset="2" yOffset="7" xOrigin="176" yOrigin="144">
+			<MediaTimePoint><!-- ... --></MediaTimePoint>
+			<MotionParam> 0.0 0.0 0.0 0.0 0.0 0.0 </MotionParam>
+			<MediaTimePoint><!--  ... --></MediaTimePoint>
+			<MotionParam> -3.60 0.73 0.03 0.01 0.01 0.51 </MotionParam>
+			<!-- : -->
+	</WarpingParam>
+	</Mosaic>
+	<!-- 11.1.6.3 VideoSegment DS examples (informative) -->
+	<!-- non-normative element "VideoSegment"  -->
+	<VideoSegment id="RootVS">
+		<!--  MediaTime description:
+		  The video segment is connected of a temporal component:
+			start = 0:0:00, duration = 1 minutes and 30 seconds
+	-->
+		<MediaTime>
+			<MediaTimePoint>T00:00:00</MediaTimePoint>
+			<MediaDuration>PT1M30S</MediaDuration>
+		</MediaTime>
+		<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+		<!--  TemporalDecomposition description:
+		  RootVS is decomposed in time into two segments with no gaps or overlaps:
+			* NarrationVS: start = 0:0:00, duration = 0 minutes, 15 seconds
+			* CaptureVS: start = 0:0:15, duration = 1 minute, 15 seconds
+	-->
+		<TemporalDecomposition gap="false" overlap="false">
+		<!-- "NarrationVS" already used elsewhere -->
+			<VideoSegment id="NarrationVSa">
+				<TextAnnotation>
+					<FreeTextAnnotation> Narration </FreeTextAnnotation>
+				</TextAnnotation>
+				<MediaTime>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+					<MediaDuration>PT0M15S</MediaDuration>
+				</MediaTime>
+				<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+			</VideoSegment>
+			<VideoSegment id="CaptureVS">
+				<TextAnnotation>
+					<FreeTextAnnotation> Capture </FreeTextAnnotation>
+				</TextAnnotation>
+				<MediaTime>
+					<MediaTimePoint>T00:00:15</MediaTimePoint>
+					<MediaDuration>PT1M15S</MediaDuration>
+				</MediaTime>
+				<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+			</VideoSegment>
+		</TemporalDecomposition>
+	</VideoSegment>
+	<VideoSegment id="VS1">
+		<MediaTime>
+			<MediaTimePoint>T00:00:00</MediaTimePoint>
+			<MediaDuration>PT10M</MediaDuration>
+		</MediaTime>
+		<!--  TemporalMask description:
+		  The video segment is composed of two connected temporal components:
+			* First component:  start = 0:0:00, duration = 6 minutes
+			* Second component: start = 0:7:00, duration = 3 minutes
+		  There is a gap of 1 minute between the two components.
+	-->
+		<TemporalMask>
+			<SubInterval>
+				<MediaTimePoint>T00:00:00</MediaTimePoint>
+				<MediaDuration>PT6M</MediaDuration>
+			</SubInterval>
+			<SubInterval>
+				<MediaTimePoint>T00:07:00</MediaTimePoint>
+				<MediaDuration>PT3M</MediaDuration>
+			</SubInterval>
+		</TemporalMask>
+		<!--  TemporalDecomposition description:
+		  VS1 is decomposed in time into four segments with no gaps or overlaps:
+			* Video segment VS2: start = 0:0:00, duration = 5 minutes
+			* Video segment VS3: start = 0:5:00, duration = 1 minute
+			* Video segment VS4: start = 0:7:00, duration = 2 minutes
+			* Video segment VS5: start = 0:9:00, duration = 1 minute
+	-->
+		<TemporalDecomposition gap="false" overlap="false">
+			<VideoSegment id="VS2">
+				<MediaTime>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+					<MediaDuration>PT5M</MediaDuration>
+				</MediaTime>
+				<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+			</VideoSegment>
+			<VideoSegment id="VS3">
+				<MediaTime>
+					<MediaTimePoint>T00:05:00</MediaTimePoint>
+					<MediaDuration>PT1M</MediaDuration>
+				</MediaTime>
+				<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+			</VideoSegment>
+			<VideoSegment id="VS4">
+				<MediaTime>
+					<MediaTimePoint>T00:07:00</MediaTimePoint>
+					<MediaDuration>PT2M</MediaDuration>
+				</MediaTime>
+				<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+			</VideoSegment>
+			<VideoSegment id="VS5">
+				<MediaTime>
+					<MediaTimePoint>T00:09:00</MediaTimePoint>
+					<MediaDuration>PT1M</MediaDuration>
+				</MediaTime>
+				<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+			</VideoSegment>
+		</TemporalDecomposition>
+	</VideoSegment>
+	<!-- 11.1.7.3 MovingRegion DS examples (informative) -->
+	<!-- non-normative element "VideoSegment"  -->
+	<!-- "CaptureVS" already used elsewhere -->
+	<VideoSegment id="CaptureVSa">
+		<TextAnnotation>
+			<FreeTextAnnotation> Capture </FreeTextAnnotation>
+		</TextAnnotation>
+		<!--  MediaTime description:
+		  The video segment is a connected temporal component:
+			start = 0:0:15, duration = 1 minutes, 15 seconds
+	-->
+		<MediaTime>
+			<MediaTimePoint>T00:00:15</MediaTimePoint>
+			<MediaDuration>PT1M15S</MediaDuration>
+		</MediaTime>
+		<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+		<!--  SpatioTemporalDecomposition description:
+		  CaptureVS is decomposed spatio-temporally into two moving regions with 
+		  gaps and overlaps
+	-->
+		<SpatioTemporalDecomposition gap="true" overlap="true">
+			<MovingRegion id="RabbitMR">
+				<TextAnnotation>
+					<FreeTextAnnotation> Rabbit </FreeTextAnnotation>
+				</TextAnnotation>
+				<!--  MediaTime description:
+				  The moving region is a connected temporal component:
+					start = 0:0:15, duration = 1 minutes, 15 seconds
+				-->
+				<SpatioTemporalLocator>
+					<!--  Spatio-temporal component 1  -->
+					<FigureTrajectory type="1">
+						<Time>
+							<MediaTimePoint>T00:00:15</MediaTimePoint>
+							<MediaDuration>PT1M15S</MediaDuration>
+						</Time>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>-3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>-3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>-3.14159</KeyValue>
+						</Vertices>
+						<!-- : -->
+					</FigureTrajectory>
+				</SpatioTemporalLocator>
+				<!-- <VisualDescriptor xsi:type="ParametricMotionType"> ... </VisualDescriptor>	-->
+				<SpatioTemporalDecomposition gap="false" overlap="false">
+					<MovingRegion id="MR1"> <!-- ... --> </MovingRegion>
+					<MovingRegion id="MR2"> <!-- ... --></MovingRegion>
+				</SpatioTemporalDecomposition>
+			</MovingRegion>
+			<MovingRegion id="EagleMR">
+				<TextAnnotation>
+					<FreeTextAnnotation> Eagle </FreeTextAnnotation>
+				</TextAnnotation>
+				<!--  MediaTime description:
+				  The moving region is a connected temporal component:
+					start = 0:0:15, duration = 1 minutes, 15 seconds
+			-->
+				<SpatioTemporalLocator>
+					<!--  Spatio-temporal component 1  -->
+					<FigureTrajectory type="1">
+						<Time>
+							<MediaTimePoint>T00:00:15</MediaTimePoint>
+							<MediaDuration>PT1M15S</MediaDuration>
+						</Time>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>-3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>-3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>-3.14159</KeyValue>
+						</Vertices>
+						<!-- : -->
+					</FigureTrajectory>
+				</SpatioTemporalLocator>
+				<!-- <VisualDescriptor xsi:type="ParametricMotionType"> ... </VisualDescriptor>	-->
+			</MovingRegion>
+		</SpatioTemporalDecomposition>
+	</VideoSegment>
+	<!-- non-normative element "MovingRegion"  -->
+	<!-- "SR0" already used elsewhere -->
+	<MovingRegion id="SR0a">
+		<SpatioTemporalMask>
+			<SubRegion>
+				<!--  Spatio-temporal component 1  -->
+				<FigureTrajectory type="1">
+					<Time>
+						<MediaTimePoint>T00:00:00</MediaTimePoint>
+						<MediaDuration>PT13M17S</MediaDuration>
+					</Time>
+					<Vertices>
+						<WholeInterval>
+							<MediaDuration>PT0S</MediaDuration>
+						</WholeInterval>
+						<KeyValue>3.14159</KeyValue>
+						<KeyValue>3.14159</KeyValue>
+					</Vertices>
+					<Vertices>
+						<WholeInterval>
+							<MediaDuration>PT0S</MediaDuration>
+						</WholeInterval>
+						<KeyValue>3.14159</KeyValue>
+						<KeyValue>3.14159</KeyValue>
+					</Vertices>
+					<Vertices>
+						<WholeInterval>
+							<MediaDuration>PT0S</MediaDuration>
+						</WholeInterval>
+						<KeyValue>3.14159</KeyValue>
+						<KeyValue>3.14159</KeyValue>
+					</Vertices>
+					<!-- : -->
+				</FigureTrajectory>
+			</SubRegion>
+			<SubRegion>
+				<!--  Spatio-temporal component 2  -->
+				<FigureTrajectory type="2">
+					<Time>
+						<MediaTimePoint>T00:14:00</MediaTimePoint>
+						<MediaDuration>PT1M7S</MediaDuration>
+					</Time>
+					<Vertices>
+						<WholeInterval>
+							<MediaDuration>PT0S</MediaDuration>
+						</WholeInterval>
+						<KeyValue>3.14159</KeyValue>
+						<KeyValue>3.14159</KeyValue>
+					</Vertices>
+					<Vertices>
+						<WholeInterval>
+							<MediaDuration>PT0S</MediaDuration>
+						</WholeInterval>
+						<KeyValue>3.14159</KeyValue>
+						<KeyValue>3.14159</KeyValue>
+					</Vertices>
+					<Vertices>
+						<WholeInterval>
+							<MediaDuration>PT0S</MediaDuration>
+						</WholeInterval>
+						<KeyValue>3.14159</KeyValue>
+						<KeyValue>3.14159</KeyValue>
+					</Vertices>
+					<!-- : -->
+				</FigureTrajectory>
+			</SubRegion>
+		</SpatioTemporalMask>
+	</MovingRegion>
+	<!-- 11.1.8.3 VideoText DS examples (informative) -->
+	<!-- non-normative element "VideoText"  -->
+	<VideoText id="VideoText1" textType="superimposed" fontSize="40" fontType="Courier New">
+		<SpatioTemporalLocator>
+			<!--  Spatio-temporal component 1  -->
+			<FigureTrajectory type="1">
+				<Time>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+					<MediaDuration>PT6S</MediaDuration>
+				</Time>
+				<Vertices>
+					<WholeInterval>
+						<MediaDuration>PT0S</MediaDuration>
+					</WholeInterval>
+					<KeyValue>3.14159</KeyValue>
+					<KeyValue>3.14159</KeyValue>
+				</Vertices>
+				<Vertices>
+					<WholeInterval>
+						<MediaDuration>PT0S</MediaDuration>
+					</WholeInterval>
+					<KeyValue>3.14159</KeyValue>
+					<KeyValue>3.14159</KeyValue>
+				</Vertices>
+				<Vertices>
+					<WholeInterval>
+						<MediaDuration>PT0S</MediaDuration>
+					</WholeInterval>
+					<KeyValue>3.14159</KeyValue>
+					<KeyValue>3.14159</KeyValue>
+				</Vertices>
+				<!-- : -->
+			</FigureTrajectory>
+		</SpatioTemporalLocator>
+		<!-- <VisualDescriptor xsi:type="ParametricMotionType"> ... </VisualDescriptor>	-->
+		<Text> Victory </Text>
+	</VideoText>
+	<!-- 11.1.9.3 InkSegment DS examples (informative) -->
+	<!-- non-normative element "InkSegment"  -->
+	<InkSegment id="ElecDoc1" type="mixed">
+		<MediaLocator>
+			<MediaUri>http://www...</MediaUri>
+		</MediaLocator>
+		<InkMediaInfo>
+			<InputDevice>
+				<Name> PenDevice </Name>
+				<PointsPerSecond>133</PointsPerSecond>
+			</InputDevice>
+			<Handedness>left</Handedness>
+			<Style>mixed</Style>
+		</InkMediaInfo>
+		<MediaTime>
+		<!-- XML Spy v3.5 bug
+			<MediaRelTimePoint timeBase="../../MediaLocator[1]">
+		-->
+			<MediaRelTimePoint timeBase="../../">PT0S</MediaRelTimePoint>
+			<MediaDuration>PT5S</MediaDuration>
+		</MediaTime>
+		<TemporalDecomposition>
+			<InkSegment id="WordAna" type="content">
+				<Relation xsi:type="BinaryOtherSegmentRelationType" name="hasMetaStrokeOf" target="#KeywordGesture"/>
+				<MediaTime>
+				<!-- XML Spy v3.5 bug
+					<MediaRelTimePoint timeBase="../../../../MediaLocator[1]">PT0S
+				-->
+					<MediaRelTimePoint timeBase="../../../../">PT0S</MediaRelTimePoint>
+					<MediaDuration>PT3S</MediaDuration>
+				</MediaTime>
+				<OrderedGroupDataSetMask>
+					<SubInterval>
+						<SetName>Paragraph-1</SetName>
+						<StartComponent>1731</StartComponent>
+						<StartUnit>36</StartUnit>
+						<EndComponent>1742</EndComponent>
+						<EndUnit>47</EndUnit>
+					</SubInterval>
+				</OrderedGroupDataSetMask>
+				<HandWritingRecogResult>
+					<Quality>0.6</Quality>
+					<Result>
+						<Text>Ana</Text>
+						<Score>0.7</Score>
+					</Result>
+					<Result>
+						<Text>Ann</Text>
+						<Score>0.54</Score>
+					</Result>
+				</HandWritingRecogResult>
+			</InkSegment>
+			<InkSegment id="KeywordGesture" type="meta">
+				<MediaTime>
+				<!-- XML Spy v3.5 bug
+					<MediaRelTimePoint timeBase="../../../../MediaLocator[1]">PT3S
+				-->
+					<MediaRelTimePoint timeBase="../../../../">PT3S</MediaRelTimePoint>
+					<MediaDuration>PT2S</MediaDuration>
+				</MediaTime>
+			</InkSegment>
+		</TemporalDecomposition>
+	</InkSegment>
+	<InkSegment id="Paragraph-1">
+		<MediaLocator>
+			<MediaUri>http://www.mpeg7.org/demo.stk</MediaUri>
+		</MediaLocator>
+		<MediaTime>
+		<!-- XML Spy v3.5 bug
+			<MediaRelTimePoint timeBase="../../MediaLocator[1]">PT3S
+		-->
+			<MediaRelTimePoint timeBase="../../">PT3S</MediaRelTimePoint>
+			<MediaDuration>PT50S</MediaDuration>
+		</MediaTime>
+		<TemporalDecomposition gap="true" overlap="false">
+			<InkSegment id="Line-7">
+				<InkMediaInfo>
+					<InputDevice>
+						<PointsPerSecond>120</PointsPerSecond>
+					</InputDevice>
+				</InkMediaInfo>
+				<MediaTime>
+				<!-- XML Spy v3.5 bug
+					<MediaRelTimePoint timeBase="../../../../MediaLocator[1]">PT12S
+				-->
+					<MediaRelTimePoint timeBase="../../../../">PT12S</MediaRelTimePoint>
+					<MediaDuration>PT10S</MediaDuration>
+				</MediaTime>
+				<OrderedGroupDataSetMask>
+					<SubInterval>
+						<SetName>Paragraph-1</SetName>
+						<StartComponent>1699</StartComponent>
+						<StartUnit>43</StartUnit>
+						<EndComponent>1748</EndComponent>
+						<EndUnit>90</EndUnit>
+					</SubInterval>
+				</OrderedGroupDataSetMask>
+				<HandWritingRecogResult>
+					<Quality>0.9</Quality>
+					<Result>
+						<Text> causes. In 1988 it was determined that the </Text>
+						<Score>1.0</Score>
+					</Result>
+				</HandWritingRecogResult>
+				<TemporalDecomposition gap="true" overlap="false">
+					<InkSegment id="WORD-6">
+						<MediaTime>
+						<!-- XML Spy v3.5 bug
+							<MediaRelTimePoint timeBase="../../../../../../MediaLocator[1]">
+						-->
+							<MediaRelTimePoint timeBase="../../../../../../">PT15S</MediaRelTimePoint>
+							<MediaDuration>PT3S</MediaDuration>
+						</MediaTime>
+						<OrderedGroupDataSetMask>
+							<SubInterval>
+								<SetName>Paragraph-1</SetName>
+								<StartComponent>1731</StartComponent>
+								<StartUnit>36</StartUnit>
+								<EndComponent>1742</EndComponent>
+								<EndUnit>47</EndUnit>
+							</SubInterval>
+						</OrderedGroupDataSetMask>
+						<HandWritingRecogResult>
+							<Quality>0.9</Quality>
+							<Result>
+								<Text>determined</Text>
+								<Score>1.0</Score>
+							</Result>
+						</HandWritingRecogResult>
+					</InkSegment>
+				</TemporalDecomposition>
+			</InkSegment>
+		</TemporalDecomposition>
+	</InkSegment>
+	<InkSegment>
+		<StructuralUnit href="...">
+			<Name> Page </Name>
+		</StructuralUnit>
+		<MediaTime>
+			<MediaRelTimePoint timeBase="..">PT0S</MediaRelTimePoint>
+		</MediaTime>
+		<TemporalDecomposition>
+			<InkSegment>
+				<StructuralUnit href="...">
+					<Name> Paragraph </Name>
+				</StructuralUnit>
+				<MediaTime>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+					<MediaDuration>PT1M30S</MediaDuration>
+				</MediaTime>
+			</InkSegment>
+			<InkSegment>
+				<StructuralUnit href="...">
+					<Name> Paragraph </Name>
+				</StructuralUnit>
+				<MediaTime>
+					<MediaTimePoint>T00:01:30</MediaTimePoint>
+					<MediaDuration>PT1M04S</MediaDuration>
+				</MediaTime>
+			</InkSegment>
+		</TemporalDecomposition>
+	</InkSegment>
+	<!-- 11.1.11.3 AudioVisualSegment DS examples (informative) -->
+	<!-- non-normative element "AudioVisualSegment"  -->
+	<AudioVisualSegment id="EagleDocumentaryAVS">
+		<TextAnnotation>
+			<FreeTextAnnotation> Eagle Documentary </FreeTextAnnotation>
+		</TextAnnotation>
+		<MediaTime>
+			<MediaTimePoint>T00:00:00</MediaTimePoint>
+			<MediaDuration>PT1M30S</MediaDuration>
+		</MediaTime>
+		<!--  MediaSourceDecomposition description:
+		  EagleDocumentaryAVS is mediaSource decomposed into audio and video segment:
+			* EagleDocumentaryVS: start = 0:0:0, duration = 1 mins, 30 secs
+			* EagleDocumentaryAS: start = 0:0:0, duration = 1 mins, 30 secs
+	-->
+		<MediaSourceDecomposition gap="false" overlap="false">
+			<VideoSegment id="EagleDocumentaryVS">
+				<MediaTime>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+					<MediaDuration>PT1M30S</MediaDuration>
+				</MediaTime>
+				<!-- <VisualDescriptor xsi:type="GoFGoPColorType"> ... </VisualDescriptor>	-->
+			</VideoSegment>
+			<AudioSegment id="EagleDocumentaryTrack1AS">
+				<MediaTime>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+					<MediaDuration>PT1M30S</MediaDuration>
+				</MediaTime>
+			</AudioSegment>
+			<AudioSegment id="EagleDocumentaryTrack2AS">
+				<MediaTime>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+					<MediaDuration>PT1M30S</MediaDuration>
+				</MediaTime>
+			</AudioSegment>
+		</MediaSourceDecomposition>
+	</AudioVisualSegment>
+	<!-- 11.1.12.3 AudioVisualRegion DS examples (informative) -->
+	<!-- non-normative element "AudioVisualSegment"  -->
+	<!-- "EagleDocumentaryAVS" already used elsewhere -->
+	<AudioVisualSegment id="EagleDocumentaryAVSa">
+		<TextAnnotation>
+			<FreeTextAnnotation> Eagle Documentary </FreeTextAnnotation>
+		</TextAnnotation>
+		<MediaTime>
+			<MediaTimePoint>T00:00:00</MediaTimePoint>
+			<MediaDuration>PT1M30S</MediaDuration>
+		</MediaTime>
+		<!--  SpatioTemporalDecomposition description:
+		   EagleDocumentaryAVS is decomposed in space and time into 
+		   and AV region:
+			* NarratorAVR
+	-->
+		<SpatioTemporalDecomposition gap="true" overlap="false">
+			<AudioVisualRegion id="NarratorMS">
+				<AudioMediaTime>
+					<MediaTimePoint>T00:00:00</MediaTimePoint>
+				</AudioMediaTime>
+				<!--  MediaSourceDecomposition description:
+				   NarratorMS is decomposed in media source into a 
+			       moving region and audio segment:
+					* NarratorMR: start = 0:0:0, duration = 0 mins, 20 secs
+					* NarratorAS: start = 0:0:0, duration = 1 mins, 30 secs
+			-->
+				<MediaSourceDecomposition gap="false" overlap="false">
+					<MovingRegion id="NarratorMR">
+						<SpatioTemporalLocator>
+							<FigureTrajectory type="1">
+								<Time>
+									<MediaTimePoint>T00:00:00</MediaTimePoint>
+									<MediaDuration>PT00M20S</MediaDuration>
+								</Time>
+								<Vertices>
+									<WholeInterval>
+										<MediaDuration>PT0S</MediaDuration>
+									</WholeInterval>
+									<KeyValue>3.14159</KeyValue>
+									<KeyValue>3.14159</KeyValue>
+								</Vertices>
+								<Vertices>
+									<WholeInterval>
+										<MediaDuration>PT0S</MediaDuration>
+									</WholeInterval>
+									<KeyValue>3.14159</KeyValue>
+									<KeyValue>3.14159</KeyValue>
+								</Vertices>
+								<Vertices>
+									<WholeInterval>
+										<MediaDuration>PT0S</MediaDuration>
+									</WholeInterval>
+									<KeyValue>3.14159</KeyValue>
+									<KeyValue>3.14159</KeyValue>
+								</Vertices>
+								<!-- : -->
+							</FigureTrajectory>
+						</SpatioTemporalLocator>
+					</MovingRegion>
+					<AudioSegment id="NarratorAS">
+						<MediaTime>
+							<MediaTimePoint>T00:00:00</MediaTimePoint>
+							<MediaDuration>PT01M30S</MediaDuration>
+						</MediaTime>
+					</AudioSegment>
+				</MediaSourceDecomposition>
+			</AudioVisualRegion>
+		</SpatioTemporalDecomposition>
+	</AudioVisualSegment>
+	<!-- 11.1.14.5.1 Description of a sequence of composition shots and internal transitions -->
+	<!-- non-normative element "VideoEditing"  -->
+	<VideoEditing>
+		<EditedVideoSegment>
+			<!-- : -->
+			<VideoEditingDecomposition xsi:type="AnalyticEditedVideoSegmentTemporalDecompositionType" gap="false" overlap="false">
+				<!--  Description of Eyexam  -->
+				<AnalyticClip id="Clip_3" locationReliability="0.9" editingLevelReliability="0.5" clipEditingLevel="shot">
+					<SpatioTemporalLocator>
+						<FigureTrajectory type="1">
+							<Time>
+							<!-- XML Spy v3.5 bug
+								<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">35
+							-->
+								<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">35</MediaRelIncrTimePoint>
+								<MediaDuration>PT6S</MediaDuration>
+							</Time>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<!-- : -->
+						</FigureTrajectory>
+					</SpatioTemporalLocator>
+					<EditingTemporalDecomposition gap="false" overlap="false">
+						<AnalyticClip id="CS_1" locationReliability="0.9" editingLevelReliability="0.5" clipType="simple" clipEditingLevel="compositionShot">
+							<SpatioTemporalLocator>
+								<FigureTrajectory type="1">
+									<Time>
+									<!-- XML Spy v3.5 bug
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">35
+									-->
+										<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">35</MediaRelIncrTimePoint>
+										<MediaIncrDuration timeUnit="PT1N25F">55</MediaIncrDuration>
+									</Time>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<!-- : -->
+								</FigureTrajectory>
+							</SpatioTemporalLocator>
+						</AnalyticClip>
+						<AnalyticTransition id="CT_1" locationReliability="0.9" editingLevelReliability="0.5" evolutionReliability="0.5" transitionEditingLevel="composition">
+							<SpatioTemporalLocator>
+								<FigureTrajectory type="1">
+									<Time>
+									<!-- XML Spy v3.5 bug
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">90
+									-->
+										<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">90</MediaRelIncrTimePoint>
+										<MediaIncrDuration timeUnit="PT1N25F">10</MediaIncrDuration>
+									</Time>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<!-- : -->
+								</FigureTrajectory>
+							</SpatioTemporalLocator>
+							<EvolutionType href="...">
+								<Name>IrisOpen</Name>
+							</EvolutionType>
+						</AnalyticTransition>
+						<AnalyticClip id="CS_2" locationReliability="0.9" editingLevelReliability="0.5" clipEditingLevel="compositionShot">
+							<SpatioTemporalLocator>
+								<FigureTrajectory type="1">
+									<Time>
+									<!-- XML Spy v3.5 bug
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">101
+									-->
+										<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">344</MediaRelIncrTimePoint>
+										<MediaIncrDuration timeUnit="PT1N25F">101</MediaIncrDuration>
+									</Time>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<!-- : -->
+								</FigureTrajectory>
+							</SpatioTemporalLocator>
+							<EditingTemporalDecomposition gap="false" overlap="false">
+								<AnalyticClip id="ITS_1" locationReliability="0.9" editingLevelReliability="0.5" clipType="simple" clipEditingLevel="compositionShot">
+									<SpatioTemporalLocator>
+										<FigureTrajectory type="1">
+											<Time>
+											<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">101
+											-->
+												<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">101</MediaRelIncrTimePoint>
+												<MediaIncrDuration timeUnit="PT1N25F">75</MediaIncrDuration>
+											</Time>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<!-- : -->
+										</FigureTrajectory>
+									</SpatioTemporalLocator>
+								</AnalyticClip>
+								<AnalyticTransition id="IT_1" locationReliability="0.9" editingLevelReliability="0.5" evolutionReliability="0.5" transitionEditingLevel="internal">
+									<SpatioTemporalLocator>
+										<FigureTrajectory type="1">
+											<Time>
+											<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">176
+											-->
+												<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">176</MediaRelIncrTimePoint>
+												<MediaIncrDuration timeUnit="PT1N25F">8</MediaIncrDuration>
+											</Time>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<!-- : -->
+										</FigureTrajectory>
+									</SpatioTemporalLocator>
+									<EvolutionType href="...">
+										<Name xml:lang="en">crossdissolve</Name>
+									</EvolutionType>
+								</AnalyticTransition>
+								<AnalyticClip id="ICS_2" locationReliability="0.9" editingLevelReliability="0.5" clipType="simple" clipEditingLevel="intracompositionShot">
+									<SpatioTemporalLocator>
+										<FigureTrajectory type="1">
+											<Time>
+											<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">185
+											-->
+												<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">101</MediaRelIncrTimePoint>
+												<MediaIncrDuration timeUnit="PT1N25F">65</MediaIncrDuration>
+											</Time>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<!-- : -->
+										</FigureTrajectory>
+									</SpatioTemporalLocator>
+								</AnalyticClip>
+							</EditingTemporalDecomposition>
+						</AnalyticClip>
+					</EditingTemporalDecomposition>
+				</AnalyticClip>
+			</VideoEditingDecomposition>
+			<!-- : -->
+		</EditedVideoSegment>
+	</VideoEditing>
+	<!-- 11.1.14.5.2 Description of a shot associated to a composite clip -->
+	<!-- non-normative element "VideoEditing"  -->
+	<!--  First case  -->
+	<VideoEditing>
+		<EditedVideoSegment>
+			<!-- : -->
+			<VideoEditingDecomposition xsi:type="AnalyticEditedVideoSegmentTemporalDecompositionType" gap="false" overlap="false">
+				<AnalyticClip id="EVS_3" locationReliability="0.9" editingLevelReliability="0.5" clipType="composite" clipEditingLevel="shot">
+					<SpatioTemporalLocator>
+						<FigureTrajectory type="1">
+							<Time>
+							<!-- XML Spy v3.5 bug
+							<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">35
+							-->
+								<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">35</MediaRelIncrTimePoint>
+								<MediaIncrDuration timeUnit="PT1N25F">413</MediaIncrDuration>
+							</Time>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<!-- : -->
+						</FigureTrajectory>
+					</SpatioTemporalLocator>
+				</AnalyticClip>
+			</VideoEditingDecomposition>
+			<!-- : -->
+		</EditedVideoSegment>
+	</VideoEditing>
+	<!--  First case  -->
+	<MultimediaContent xsi:type="VideoEditingType">
+		<EditedVideoSegment>
+			<!-- : -->
+			<VideoEditingDecomposition xsi:type="AnalyticEditedVideoSegmentTemporalDecompositionType" gap="false" overlap="false">
+				<!--Description of Eyexam-->
+				<!-- "EVS_3" already used elsewhere -->
+				<AnalyticClip id="EVS_3a" locationReliability="0.9" editingLevelReliability="0.5" clipEditingLevel="shot" clipType="composite">
+					<SpatioTemporalLocator>
+						<FigureTrajectory type="1">
+							<Time>
+							<!-- XML Spy v3.5 bug
+							<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">35
+							-->
+								<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">35</MediaRelIncrTimePoint>
+								<MediaIncrDuration timeUnit="PT1N25F">413</MediaIncrDuration>
+							</Time>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<Vertices>
+								<WholeInterval>
+									<MediaDuration>PT0S</MediaDuration>
+								</WholeInterval>
+								<KeyValue>3.14159</KeyValue>
+								<KeyValue>3.14159</KeyValue>
+							</Vertices>
+							<!-- : -->
+						</FigureTrajectory>
+					</SpatioTemporalLocator>
+					<EditingTemporalDecomposition gap="false" overlap="false">
+						<!-- "CS_1" already used elsewhere -->
+						<AnalyticClip id="CS_1a" locationReliability="0.9" editingLevelReliability="0.5" clipType="simple" clipEditingLevel="compositionShot">
+							<SpatioTemporalLocator>
+								<FigureTrajectory type="1">
+									<Time>
+									<!-- XML Spy v3.5 bug
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">35
+									-->
+										<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">35</MediaRelIncrTimePoint>
+										<MediaIncrDuration timeUnit="PT1N25F">55</MediaIncrDuration>
+									</Time>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<!-- : -->
+								</FigureTrajectory>
+							</SpatioTemporalLocator>
+						</AnalyticClip>
+						<!-- "CT_1" already used elsewhere -->
+						<AnalyticTransition id="CT_1a" locationReliability="0.9" editingLevelReliability="0.5" evolutionReliability="0.5" transitionEditingLevel="composition">
+							<SpatioTemporalLocator>
+								<FigureTrajectory type="1">
+									<Time>
+									<!-- XML Spy v3.5 bug
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">90
+									-->
+										<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">90</MediaRelIncrTimePoint>
+										<MediaIncrDuration timeUnit="PT1N25F">10</MediaIncrDuration>
+									</Time>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<!-- : -->
+								</FigureTrajectory>
+							</SpatioTemporalLocator>
+							<EvolutionType href="...">
+								<Name xml:lang="en">IrisOpen</Name>
+							</EvolutionType>
+						</AnalyticTransition>
+						<!-- "CS_2" already used elsewhere -->
+						<AnalyticClip id="CS_2a" locationReliability="0.9" editingLevelReliability="0.5" clipEditingLevel="compositionShot" clipType="composite">
+							<SpatioTemporalLocator>
+								<FigureTrajectory type="1">
+									<Time>
+									<!-- XML Spy v3.5 bug
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">101
+									-->
+										<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">101</MediaRelIncrTimePoint>
+										<MediaIncrDuration timeUnit="PT1N25F">344</MediaIncrDuration>
+									</Time>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<Vertices>
+										<WholeInterval>
+											<MediaDuration>PT0S</MediaDuration>
+										</WholeInterval>
+										<KeyValue>3.14159</KeyValue>
+										<KeyValue>3.14159</KeyValue>
+									</Vertices>
+									<!-- : -->
+								</FigureTrajectory>
+							</SpatioTemporalLocator>
+							<EditingSpatioTemporalDecomposition gap="false" overlap="false" criteria="editing area">
+								<AnalyticClip id="editArea_1">
+									<TextAnnotation>
+										<FreeTextAnnotation>
+										CenteredCercle
+									</FreeTextAnnotation>
+									</TextAnnotation>
+									<!-- <VisualDescriptor xsi:type="ContourShapeType> ... </VisualDescriptor>	-->
+								</AnalyticClip>
+							</EditingSpatioTemporalDecomposition>
+							<EditingTemporalDecomposition gap="false" overlap="true">
+								<!-- "ITS_1a" already used elsewhere -->
+								<AnalyticClip id="ITS_1a" locationReliability="0.9" editingLevelReliability="0.5" clipType="simple" clipEditingLevel="intracompositionShot">
+									<SpatioTemporalLocator>
+										<FigureTrajectory type="1">
+											<Time>
+											<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime	[1]">101
+											-->
+												<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">101</MediaRelIncrTimePoint>
+												<MediaIncrDuration timeUnit="PT1N25F">75</MediaIncrDuration>
+											</Time>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<!-- : -->
+										</FigureTrajectory>
+									</SpatioTemporalLocator>
+								</AnalyticClip>
+								<!-- "IT_1" already used elsewhere -->
+								<AnalyticTransition id="IT_1a" locationReliability="0.9" editingLevelReliability="0.5" evolutionReliability="0.5" transitionEditingLevel="internal">
+									<SpatioTemporalLocator>
+										<FigureTrajectory type="1">
+											<Time>
+											<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime	[1]">101
+											-->
+												<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">176</MediaRelIncrTimePoint>
+												<MediaIncrDuration timeUnit="PT1N25F">1</MediaIncrDuration>
+											</Time>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<!-- : -->
+										</FigureTrajectory>
+									</SpatioTemporalLocator>
+								</AnalyticTransition>
+								<!-- "ICS_2" already used elsewhere -->
+								<AnalyticClip id="ICS_2a" locationReliability="0.9" editingLevelReliability="0.5" clipType="simple" clipEditingLevel="intracompositionShot">
+									<SpatioTemporalLocator>
+										<FigureTrajectory type="1">
+											<Time>
+											<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">177
+											-->
+												<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">177</MediaRelIncrTimePoint>
+												<MediaIncrDuration timeUnit="PT1N25F">65</MediaIncrDuration>
+											</Time>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<Vertices>
+												<WholeInterval>
+													<MediaDuration>PT0S</MediaDuration>
+												</WholeInterval>
+												<KeyValue>3.14159</KeyValue>
+												<KeyValue>3.14159</KeyValue>
+											</Vertices>
+											<!-- : -->
+										</FigureTrajectory>
+									</SpatioTemporalLocator>
+								</AnalyticClip>
+							</EditingTemporalDecomposition>
+						</AnalyticClip>
+					</EditingTemporalDecomposition>
+				</AnalyticClip>
+			</VideoEditingDecomposition>
+			<!-- : -->
+		</EditedVideoSegment>
+	</MultimediaContent>
+	<!-- 11.1.14.5.3 Description of a TV channel with a logo -->
+	<!-- non-normative element "EditedVideoSegment"  -->
+	<EditedVideoSegment>
+		<VideoEditingDecomposition xsi:type="AnalyticEditedVideoSegmentTemporalDecompositionType" gap="false" overlap="false">
+			<AnalyticClip id="EVS_1" clipEditingLevel="shot" clipType="composite">
+				<SpatioTemporalLocator>
+					<FigureTrajectory type="1">
+						<Time>
+							<MediaRelIncrTimePoint timeUnit="PT1N25F">0</MediaRelIncrTimePoint>
+							<MediaIncrDuration timeUnit="PT1N25F">15328</MediaIncrDuration>
+						</Time>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<!-- : -->
+					</FigureTrajectory>
+				</SpatioTemporalLocator>
+				<EditingSpatioTemporalDecomposition gap="false" overlap="true" criteria="editing areas">
+					<!-- "editArea_1" already used elsewhere -->
+					<AnalyticClip id="editArea_1a">
+						<TextAnnotation>
+							<FreeTextAnnotation> logo </FreeTextAnnotation>
+						</TextAnnotation>
+						<!-- <VisualDescriptor xsi:type="ContourShapeType"> ... </VisualDescriptor> -->
+					</AnalyticClip>
+					<AnalyticClip id="editArea_2">
+						<TextAnnotation>
+							<FreeTextAnnotation> background </FreeTextAnnotation>
+						</TextAnnotation>
+						<!-- <VisualDescriptor xsi:type="ContourShapeType"> ... </VisualDescriptor> -->
+					</AnalyticClip>
+				</EditingSpatioTemporalDecomposition>
+				<EditingTemporalDecomposition gap="false" overlap="false">
+					<!-- "CS_1" already used elsewhere -->
+					<AnalyticClip id="CS_1b" clipEditingLevel="compositionShot">
+						<SpatioTemporalLocator>
+							<FigureTrajectory type="1">
+								<Time>
+								<!-- XML Spy v3.5 bug
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">0
+								-->
+									<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">0</MediaRelIncrTimePoint>
+									<MediaIncrDuration timeUnit="PT1N25F">15328</MediaIncrDuration>
+								</Time>
+								<Vertices>
+									<WholeInterval>
+										<MediaDuration>PT0S</MediaDuration>
+									</WholeInterval>
+									<KeyValue>3.14159</KeyValue>
+									<KeyValue>3.14159</KeyValue>
+								</Vertices>
+								<Vertices>
+									<WholeInterval>
+										<MediaDuration>PT0S</MediaDuration>
+									</WholeInterval>
+									<KeyValue>3.14159</KeyValue>
+									<KeyValue>3.14159</KeyValue>
+								</Vertices>
+								<Vertices>
+									<WholeInterval>
+										<MediaDuration>PT0S</MediaDuration>
+									</WholeInterval>
+									<KeyValue>3.14159</KeyValue>
+									<KeyValue>3.14159</KeyValue>
+								</Vertices>
+								<!-- : -->
+							</FigureTrajectory>
+						</SpatioTemporalLocator>
+						<EditingTemporalDecomposition gap="false" overlap="true">
+							<!-- "ITS_1" already used elsewhere -->
+							<AnalyticClip id="ITS_1b" clipType="simple" clipEditingLevel="intracompositionShot">
+								<SpatioTemporalLocator>
+									<FigureTrajectory type="1">
+										<Time>
+										<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime	[1]">0
+										-->
+
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">0</MediaRelIncrTimePoint>
+											<MediaIncrDuration timeUnit="PT1N25F">75</MediaIncrDuration>
+										</Time>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<!-- : -->
+									</FigureTrajectory>
+								</SpatioTemporalLocator>
+							</AnalyticClip>
+							<!-- "IT_1" already used elsewhere -->
+							<AnalyticTransition id="IT_1b" transitionEditingLevel="internal">
+								<SpatioTemporalLocator>
+									<FigureTrajectory type="1">
+										<Time>
+										<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime	[1]">76
+										-->
+
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">76</MediaRelIncrTimePoint>
+											<MediaIncrDuration timeUnit="PT1N25F">1</MediaIncrDuration>
+										</Time>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<!-- : -->
+									</FigureTrajectory>
+								</SpatioTemporalLocator>
+							</AnalyticTransition>
+							<!-- "ICS_2" already used elsewhere -->
+							<AnalyticClip id="ICS_2b" clipType="simple" clipEditingLevel="intracompositionShot">
+								<SpatioTemporalLocator>
+									<FigureTrajectory type="1">
+										<Time>
+										<!-- XML Spy v3.5 bug
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime	[1]">77
+										-->
+
+											<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">77</MediaRelIncrTimePoint>
+											<MediaIncrDuration timeUnit="PT1N25F">65</MediaIncrDuration>
+										</Time>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<Vertices>
+											<WholeInterval>
+												<MediaDuration>PT0S</MediaDuration>
+											</WholeInterval>
+											<KeyValue>3.14159</KeyValue>
+											<KeyValue>3.14159</KeyValue>
+										</Vertices>
+										<!-- : -->
+									</FigureTrajectory>
+								</SpatioTemporalLocator>
+							</AnalyticClip>
+							<!-- : -->
+						</EditingTemporalDecomposition>
+					</AnalyticClip>
+				</EditingTemporalDecomposition>
+			</AnalyticClip>
+		</VideoEditingDecomposition>
+	</EditedVideoSegment>
+	<!-- non-normative element "TransitionClip"  -->
+	<AnalyticClip>
+		<MediaInformation>
+			<MediaIdentification>
+				<EntityIdentifier type="CD_N" organization="MPEG-7">news1</EntityIdentifier>
+			</MediaIdentification>
+			<MediaProfile/>
+		</MediaInformation>
+		<EditingSpatioTemporalDecomposition gap="false" overlap="true" criteria="editing areas">
+			<!-- "editArea_1" already used elsewhere -->
+			<AnalyticClip id="editArea_1b">
+				<TextAnnotation>
+					<FreeTextAnnotation>logo</FreeTextAnnotation>
+				</TextAnnotation>
+				<!-- <VisualDescriptor xsi:type="ContourShapeType"> ... </VisualDescriptor> -->
+			</AnalyticClip >
+			<!-- "editArea_2" already used elsewhere -->
+			<AnalyticClip id="editArea_2a">
+				<TextAnnotation>
+					<FreeTextAnnotation>background</FreeTextAnnotation>
+				</TextAnnotation>
+				<!-- <VisualDescriptor xsi:type="ContourShapeType"> ... </VisualDescriptor> -->
+			</AnalyticClip >
+		</EditingSpatioTemporalDecomposition>
+		<EditingTemporalDecomposition gap="false" overlap="true">
+			<!-- "EVS_1" already used elsewhere -->
+			<AnalyticClip id="EVS_1a" clipType="simple" clipEditingLevel="shot">
+				<SpatioTemporalLocator>
+					<FigureTrajectory type="1">
+						<Time>
+							<MediaRelIncrTimePoint timeUnit="PT1N25F">0</MediaRelIncrTimePoint>
+							<MediaIncrDuration timeUnit="PT1N25F">75</MediaIncrDuration>
+						</Time>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<!-- : -->
+					</FigureTrajectory>
+				</SpatioTemporalLocator>
+			</AnalyticClip>
+			<AnalyticTransition id="GT_1" transitionEditingLevel="global">
+				<SpatioTemporalLocator>
+					<FigureTrajectory type="1">
+						<Time>
+						<!-- XML Spy v3.5 bug
+							<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">76
+							-->
+
+							<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">76</MediaRelIncrTimePoint>
+							<MediaIncrDuration timeUnit="PT1N25F">1</MediaIncrDuration>
+						</Time>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<!-- : -->
+					</FigureTrajectory>
+				</SpatioTemporalLocator>
+			</AnalyticTransition>
+			<AnalyticClip id="EVS_2" clipType="simple" clipEditingLevel="shot">
+				<SpatioTemporalLocator>
+					<FigureTrajectory type="1">
+						<Time>
+						<!-- XML Spy v3.5 bug
+							<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="MediaTime[1]">77
+							-->
+
+							<MediaRelIncrTimePoint timeUnit="PT1N25F" timeBase="..">77</MediaRelIncrTimePoint>
+							<MediaIncrDuration timeUnit="PT1N25F">65</MediaIncrDuration>
+						</Time>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<Vertices>
+							<WholeInterval>
+								<MediaDuration>PT0S</MediaDuration>
+							</WholeInterval>
+							<KeyValue>3.14159</KeyValue>
+							<KeyValue>3.14159</KeyValue>
+						</Vertices>
+						<!-- : -->
+					</FigureTrajectory>
+				</SpatioTemporalLocator>
+			</AnalyticClip>
+			<!-- : -->
+		</EditingTemporalDecomposition>
+	</AnalyticClip>
+	<!-- 11.2.4.3 SceneGraphMask D examples (informative) -->
+	<!-- non-normative element "SceneGraphMask"  -->
+	<SceneGraphMask>
+		<SubGraph>1</SubGraph>
+		<SubGraph>10</SubGraph>
+	</SceneGraphMask>
+	<!-- 11.2.5.3 MediaSpaceMask D examples (informative) -->
+	<!-- non-normative element "MediaSpaceMask"  -->
+	<MediaSpaceMask>
+		<SubInterval>
+			<ByteOffset>105</ByteOffset>
+			<Length>34</Length>
+		</SubInterval>
+		<SubInterval>
+			<ByteOffset>167</ByteOffset>
+			<Length>50</Length>
+		</SubInterval>
+	</MediaSpaceMask>
+	<!-- 11.1.2.6.3 OrderedGroupDataSetMask D example (informative) -->
+	<!-- non-normative element "OrderedGroupDataSetMask"  -->
+	<OrderedGroupDataSetMask>
+		<SubInterval>
+			<SetName>1</SetName>
+			<StartComponent>0</StartComponent>
+			<StartUnit>0</StartUnit>
+			<EndComponent>0</EndComponent>
+			<EndUnit>0</EndUnit>
+		</SubInterval>
+	</OrderedGroupDataSetMask>
+	<!-- 11.2.7.3 MatchingHint D examples (informative) -->
+	<!-- non-normative element "StillRegion"  -->
+	<StillRegion id="IMG0001">
+		<MatchingHint reliability="0.900000">
+		<!-- XML Spy v3.5 bug
+			<Hint value="0.455" xpath="../../../ColorStructure"/>
+			<Hint value="0.265" xpath="../../../DominantColor"/>
+			<Hint value="0.280" xpath="../../../HomogeneousTexture"/>
+		-->
+			<Hint value="0.455" xpath="../../../"/>
+			<Hint value="0.265" xpath="../../../"/>
+			<Hint value="0.280" xpath="../../../"/>
+		</MatchingHint>
+		<!-- <VisualDescriptor xsi:type="DominantColorType"> ... </VisualDescriptor> -->
+		<!-- <VisualDescriptor xsi:type="ColorStructureType"> ... </VisualDescriptor> -->
+		<!-- <VisualDescriptor xsi:type="HomogeneousTextureType"> ... </VisualDescriptor> -->
+		<!-- : -->
+	</StillRegion>
+	<!-- 11.2.8.3 PointOfView D examples (informative) -->
+	<!-- Description of PointOfView D: nested form -->
+	<!-- non-normative element "AudioVisualSegment"  -->
+	<AudioVisualSegment id="FootBallGame">
+		<!-- <MediaTime> ... </MediaTime> -->
+		<TemporalDecomposition>
+			<AudioVisualSegment id="seg1">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<PointOfView viewpoint="Team A">
+					<Importance>
+						<Value>0.3</Value>
+					</Importance>
+				</PointOfView>
+				<PointOfView viewpoint="Team B">
+					<Importance>
+						<Value>0.7</Value>
+					</Importance>
+				</PointOfView>
+			</AudioVisualSegment>
+			<AudioVisualSegment id="seg2">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<PointOfView viewpoint="Team A">
+					<Importance>
+						<Value>0.5</Value>
+					</Importance>
+				</PointOfView>
+			</AudioVisualSegment>
+			<!-- : -->
+			<AudioVisualSegment id="seg20">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<PointOfView viewpoint="Team A">
+					<Importance>
+						<Value>0.8</Value>
+					</Importance>
+				</PointOfView>
+				<PointOfView viewpoint="Team B">
+					<Importance>
+						<Value>0.2</Value>
+					</Importance>
+				</PointOfView>
+			</AudioVisualSegment>
+			<!-- : -->
+		</TemporalDecomposition>
+		<TemporalDecomposition>
+			<AudioVisualSegment id="seg1_2">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<PointOfView viewpoint="Team A">
+					<Importance>
+						<Value>0.3</Value>
+					</Importance>
+				</PointOfView>
+			</AudioVisualSegment>
+			<AudioVisualSegment id="seg2_2">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<PointOfView viewpoint="Team A">
+					<Importance>
+						<Value>0.5</Value>
+					</Importance>
+				</PointOfView>
+			</AudioVisualSegment>
+			<!-- : -->
+			<AudioVisualSegment id="seg20_2">
+				<!-- <MediaTime> ... </MediaTime> -->
+				<PointOfView viewpoint="Team A">
+					<Importance>
+						<Value>0.8</Value>
+					</Importance>
+				</PointOfView>
+			</AudioVisualSegment>
+			<!-- : -->
+		</TemporalDecomposition>
+	</AudioVisualSegment>
+	<!-- "FootBallGame" already used elsewhere -->
+	<AudioVisualSegment id="FootBallGamea">
+		<!-- <MediaTime> ... </MediaTime> -->
+		<!-- Description of PointOfView D: separated form -->
+		<PointOfView viewpoint="Team A">
+			<Importance>
+				<Value>0.3</Value>
+				<SegmentRef href="#seg1"/>
+			</Importance>
+			<Importance>
+				<Value>0.5</Value>
+				<SegmentRef href="#seg2"/>
+			</Importance>
+			<!-- : -->
+			<Importance>
+				<Value>0.8</Value>
+				<SegmentRef href="#seg20"/>
+			</Importance>
+			<!-- : -->
+		</PointOfView>
+		<PointOfView viewpoint="Team B">
+			<Importance>
+				<Value>0.7</Value>
+				<SegmentRef href="#seg1"/>
+			</Importance>
+			<!-- : -->
+			<Importance>
+				<Value>0.2</Value>
+				<SegmentRef href="#seg20"/>
+			</Importance>
+			<!-- : -->
+		</PointOfView>
+		<!-- Description of AV segment tree -->
+		<TemporalDecomposition>
+			<!-- "seg1" already used elsewhere -->
+			<AudioVisualSegment id="seg1a">
+				<!-- <MediaTime> ... </MediaTime> -->
+			</AudioVisualSegment>
+			<!-- "seg2" already used elsewhere -->
+			<AudioVisualSegment id="seg2a">
+				<!-- <MediaTime> ... </MediaTime> -->
+			</AudioVisualSegment>
+			<!-- : -->
+			<!-- "seg2a" already used elsewhere -->
+			<AudioVisualSegment id="seg20a">
+				<!-- <MediaTime> ... </MediaTime> -->
+			</AudioVisualSegment>
+			<!-- : -->
+		</TemporalDecomposition>
+	</AudioVisualSegment>
+	<!-- 11.2.9.3 InkMediaInfo DS examples (informative) -->
+	<!-- non-normative element "InkMediaInfo"  -->
+	<InkMediaInfo>
+		<InputDevice>
+			<Name>PenDevice</Name>
+			<PointsPerSecond>120</PointsPerSecond>
+		</InputDevice>
+		<Handedness>right</Handedness>
+	</InkMediaInfo>
+	<!-- 11.2.10.3 HandWritingRecogInfo DS examples (informative) -->
+	<!-- non-normative element "HandWritingRecogInfo"  -->
+	<HandWritingRecogInfo>
+		<Recognizer>
+			<Name>Super Recog 1</Name>
+		</Recognizer>
+		<InkLexicon>
+			<Entry>
+				<Index>0</Index>
+				<Text>
+					<Name>Ann</Name>
+				</Text>
+				<InkSegment>
+					<MediaLocator>
+						<MediaUri>http://www...</MediaUri>
+					</MediaLocator>
+					<MediaTime>
+						<!-- XML Spy v3.5 bug
+						<MediaRelTimePoint timeBase="../../../../MediaLocator[1]">PT0S
+						-->
+						<MediaRelTimePoint timeBase="../../../../">PT0S</MediaRelTimePoint>
+						<MediaDuration>PT3S</MediaDuration>
+					</MediaTime>
+				</InkSegment>
+			</Entry>
+			<Entry>
+				<Index>1</Index>
+				<Text>
+					<Name>Juan</Name>
+				</Text>
+				<InkSegmentRef href="#Electro1"/>
+			</Entry>
+			<!-- : -->
+			<Entry>
+				<Index>20</Index>
+				<Text>
+					<Name>Beatriz</Name>
+				</Text>
+				<InkSegmentRef href="#Electro2"/>
+			</Entry>
+		</InkLexicon>
+	</HandWritingRecogInfo>
+	<!-- 11.2.11.3 HandWritingRecogResult DS examples (informative) -->
+	<!-- non-normative element "HandWritingRecogInfo"  -->
+	<HandWritingRecogResult>
+		<Quality>0.6</Quality>
+		<Result>
+			<Text>Ana</Text>
+			<Score>0.7</Score>
+		</Result>
+		<Result>
+			<LexiconIndex>0</LexiconIndex>
+			<Score>0.54</Score>
+		</Result>
+	</HandWritingRecogResult>
+	<!-- 11.4.3.2.2 BinaryTemporalSegmentRelation DS semantics -->
+	<!-- non-normative element "BinaryTemporalSegmentRelation"  -->
+	<BinaryTemporalSegmentRelation name="before" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="after" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="meets" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="metBy" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="overlaps" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="overlappedBy" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="during" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="contains" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="strictDuring" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="strictContains" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="starts" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="startedBy" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="finishes" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="finishedBy" source="#B" target="#C"/>
+	<BinaryTemporalSegmentRelation name="equal" source="#B" target="#C"/>
+	<!-- 11.4.3.3 NAryTemporalSegmentRelation DS -->
+	<!-- non-normative element "NAryTemporalSegmentRelation"  -->
+	<NAryTemporalSegmentRelation name="sequential">
+		<Argument href="A1"/>
+		<Argument href="A2"/>
+		<!-- : -->
+		<Argument href="An"/>
+	</NAryTemporalSegmentRelation>
+	<NAryTemporalSegmentRelation name="parallel">
+		<Argument href="A1"/>
+		<Argument href="A2"/>
+		<!-- : -->
+		<Argument href="An"/>
+	</NAryTemporalSegmentRelation>
+	<!-- 11.4.4.2 DirectionalSpatialSegmentRelation DS -->
+	<!-- non-normative element "DirectionalSpatialSegmentRelation"  -->
+	<DirectionalSpatialSegmentRelation name="south" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="north" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="west" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="east" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="northwest" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="northeast" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="southwest" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="southeast" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="left" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="right" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="below" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="above" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="onTopOf" source="#B" target="#C"/>
+	<DirectionalSpatialSegmentRelation name="under" source="#B" target="#C"/>
+	<!-- 11.4.4.3 TopologicalSpatialSegmentRelation DS -->
+	<!-- non-normative element "TopologicalSpatialSegmentRelation"  -->
+	<TopologicalSpatialSegmentRelation name="equal" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="inside" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="contains" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="covers" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="coveredBy" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="overlaps" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="touches" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="disjoint" source="#B" target="#C"/>
+	<TopologicalSpatialSegmentRelation name="separated" source="#E" target="#O"/>
+	<!-- 11.4.5.2 NArySpatioTemporalSegmentRelation DS -->
+	<!-- non-normative element "NArySpatioTemporalSegmentRelation"  -->
+	<NArySpatioTemporalSegmentRelation name="union">
+		<Argument href="A0"/>
+		<Argument href="A1"/>
+		<Argument href="A2"/>
+		<!-- : -->
+	<Argument href="An"/>
+	</NArySpatioTemporalSegmentRelation>
+	<NArySpatioTemporalSegmentRelation name="intersection">
+		<Argument href="A0"/>
+		<Argument href="A1"/>
+		<Argument href="A2"/>
+		<!-- : -->
+		<Argument href="An"/>
+	</NArySpatioTemporalSegmentRelation>
+	<!-- 11.4.6.2.2 BinaryOtherSegmentRelation DS semantics -->
+	<!-- non-normative element "BinaryOtherSegmentRelation"  -->
+	<BinaryOtherSegmentRelation name="keyFor" source="#B" target="#C"/>
+	<BinaryOtherSegmentRelation name="annotates" source="#B" target="#C"/>
+	<BinaryOtherSegmentRelation name="metaStrokeOf" source="#B" target="#C"/>
+	<!-- 11.4.7 SegmentRelations DS examples (informative) -->
+	<!-- non-normative element "Graph"  -->
+	<Graph>
+		<!-- "nodeA/B" already used elsewhere -->
+		<Node id="nodeAb" href="#segmentA"/>
+		<Node id="nodeBb" href="#segmentB"/>
+		<!-- Edge from a->b -->
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="before" source="#nodeA" target="#nodeB"/>
+	</Graph>
+	<!-- non-normative element "VideoSegment"  -->
+	<!-- "segmentA/B" already used elsewhere -->
+	<VideoSegment id="segmentAb"><!-- ... --></VideoSegment>
+	<VideoSegment id="segmentBb"><!-- ... --></VideoSegment>
+	<VideoSegment id="segmentAc">
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="before" target="#segmentB"/>
+		<!-- <MediaTime> ... </MediaTime>	-->
+	</VideoSegment>
+	<VideoSegment id="segmentBc">
+		<!-- <MediaTime> ... </MediaTime> -->
+	</VideoSegment>
+	<!-- 11.4.7.1 Documentary video -->
+	<!-- non-normative element "MovingRegion"  -->
+	<MovingRegion id="sun-movreg">
+		<!-- <SpatioTemporalLocator>...</SpatioTemporalLocator> -->
+	</MovingRegion>
+	<MovingRegion id="narrator-movreg">
+		<!-- <SpatioTemporalLocator>...</SpatioTemporalLocator> -->
+	</MovingRegion>
+	<MovingRegion id="rabbit-movreg">
+		<!-- <SpatioTemporalLocator>...</SpatioTemporalLocator> -->
+	</MovingRegion>
+	<!-- First variation of Temporal Graph -->
+	<!-- non-normative element "Graph"  -->
+	<Graph>
+		<Node id="node1" href="#sun-movreg"/>
+		<Node id="node2" href="#rabbit-movreg"/>
+		<Node id="node3" href="#narrator-movreg"/>
+		<Node id="node4" href="#sun-movreg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="starts" source="#node1" target="#node2"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="before" source="#node3" target="#node4"/>
+	</Graph>
+	<!-- Second variation of Temporal Graph -->
+	<!-- non-normative element "Graph"  -->
+	<Graph>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="starts" source="#sun-movreg" target="#rabbit-movreg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="before" source="#narrator-movreg" target="#sun-movreg"/>
+	</Graph>
+	<!-- 11.4.7.2 Goal shot in a video of a soccer game -->
+	<!--  Description of Graph 1  -->
+	<!-- non-normative element "Graph"  -->
+	<Graph>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="contains" source="#Goal-sg" target="#Goal-rg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="contains" source="#Goal-sg" target="#Kick-sg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="contains" source="#Goal-sg" target="#Not-Catch-sg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="before" source="#Kick-sg" target="#Not-Catch-sg"/>
+	</Graph>
+	<!--  Description of Graph 2  -->
+	<Graph>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="contains" source="#Kick-sg" target="#Forward-rg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="contains" source="#kick-sg" target="#Ball-rg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="contains" source="#Not-Catch-sg" target="#Ball-rg"/>
+		<Relation xsi:type="BinaryTemporalSegmentRelationType" name="before" source="#Not-Catch-sg" target="#Goalkeeper-rg"/>
+		<Relation xsi:type="DirectionalSpatialSegmentRelationType" name="northeast" source="#Forward-rg" target="#Goalkeeper-rg"/>
+		<Relation xsi:type="RelationType" name="movesToward" source="#Ball-rg" target="#Goal-rg"/>
+	</Graph>
+	<!-- 11.4.7.3 2D-String -->
+	<!-- 2D String rabbit<cloud<car=airplane, rabbit=car<airplane<cloud -->
+	<Graph>
+		<Relation xsi:type="DirectionalSpatialSegmentRelationType" properties="antisymmetric" name="left" source="#rabbit-rg" target="#cloud-rg"/>
+		<Relation xsi:type="DirectionalSpatialSegmentRelationType" properties="antisymmetric" name="left" source="#cloud-rg" target="#car-rg"/>
+		<Relation xsi:type="RelationType" name="sameX" properties="reflexive antisymmetric" source="#car-rg" target="#airplane-rg"/>
+		<Relation xsi:type="RelationType" name="sameY" properties="reflexive antisymmetric" source="#rabbit-rg" target="#car-rg"/>
+		<Relation xsi:type="DirectionalSpatialSegmentRelationType" properties="reflexive" name="below" source="#car-rg" target="#airplane-rg"/>
+		<Relation xsi:type="DirectionalSpatialSegmentRelationType" properties="reflexive" name="below" source="#airplane-rg" target="#cloud-rg"/>
+	</Graph>
+	<!-- 12.2.1.3 SemanticBase DS examples (informative) -->
+	<!-- non-normative element "SemanticBase"  -->
+	<SemanticBase id="apple">
+		<Label>
+			<Name> Apple </Name>
+		</Label>
+		<Definition>
+			<FreeTextAnnotation>
+			The fleshy usually rounded and red, yellow, or green edible pome fruit of
+			a tree (genus Malus) of the rose family
+		</FreeTextAnnotation>
+		</Definition>
+		<MediaOccurrence>
+			<MediaLocator>
+				<MediaUri>http://www.mpeg-7.com/..</MediaUri>
+			</MediaLocator>
+		</MediaOccurrence>
+	</SemanticBase>
+	<!-- 12.4.3.3 Object DS examples (informative) -->
+	<!-- non-normative element "Object"  -->
+	<Object id="table-object">
+		<Label>
+			<Name> Table </Name>
+		</Label>
+		<Definition>
+			<FreeTextAnnotation>
+			Piece of furniture consisting of a smooth flat slab 
+			fixed on legs
+		</FreeTextAnnotation>
+		</Definition>
+		<MediaOccurrence>
+			<MediaLocator>
+				<MediaUri>http://www.table.gif</MediaUri>
+			</MediaLocator>
+			<!-- <VisualDescriptor xsi:type="DominantColorType"> ... </VisualDescriptor> -->
+			<!-- <VisualDescriptor> ... </VisualDescriptor> -->
+		</MediaOccurrence>
+		<Object id="tabletop-object">
+			<Label>
+				<Name> Table top </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>..</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask>	-->
+			</MediaOccurrence>
+		</Object>
+		<Object id="Leg1-object">
+			<Label>
+				<Name> Leg </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>..</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask> -->
+			</MediaOccurrence>
+		</Object>
+		<Object id="Leg2-object">
+			<Label>
+				<Name> Leg </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>..</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask> -->
+			</MediaOccurrence>
+		</Object>
+		<Object id="Leg3-object">
+			<Label>
+				<Name> Leg </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>..</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask> -->
+			</MediaOccurrence>
+		</Object>
+		<Object id="Leg4-object">
+			<Label>
+				<Name> Leg </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>..</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask> -->
+			</MediaOccurrence>
+		</Object>
+	</Object>
+	<!-- 12.4.4.3 AgentObject DS examples (informative) -->
+	<!-- non-normative element "AgentObject"  -->
+	<AgentObject id="Morientes-object">
+		<Label href="...">
+			<Name> Soccer player </Name>
+		</Label>
+		<Definition>
+			<FreeTextAnnotation>
+			Spanish soccer player named Javier Morientes
+			</FreeTextAnnotation>
+		</Definition>
+		<Relation xsi:type="ObjectEventRelationType" name="agentOf" target="#Goal-event"/>
+		<Agent xsi:type="PersonType">
+			<Name>
+				<GivenName> Javier </GivenName>
+				<FamilyName> Morientes </FamilyName>
+			</Name>
+		</Agent>
+	</AgentObject>
+	<AgentObject id="team-agent">
+		<Label>
+			<Name> Team </Name>
+		</Label>
+		<Object xsi:type="AgentObjectType" id="player1-object">
+			<Label href="....">
+				<Name> Soccer player </Name>
+			</Label>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName> Javier </GivenName>
+					<FamilyName> Morientes </FamilyName>
+				</Name>
+			</Agent>
+		</Object>
+		<!-- <Object xsi:type="AgentObjectType" id="player2-object"> ... </Object> -->
+		<!-- <Object xsi:type="AgentObjectType" id="player3-object"> ... </Object> -->
+	</AgentObject>
+	<!-- 12.4.5.3 Event DS examples (informative) -->
+	<!-- non-normative element "Event"  -->
+	<Event id="Goal-event">
+		<Label href="....">
+			<Name> Goal </Name>
+		</Label>
+		<Definition>
+			<FreeTextAnnotation>
+			The act or action of causing a ball or puck to go
+			through or into such a goal
+		</FreeTextAnnotation>
+		</Definition>
+		<Relation xsi:type="EventEventRelationType" name="resultOf" target="#Play-event"/>
+		<Relation xsi:type="SegmentSemanticBaseRelationType" name="hasMediaPerceptionOf" target="#videosegment"/>
+	</Event>
+	<Event id="Play-event">
+		<Label>
+			<Name> Soccer play </Name>
+		</Label>
+	</Event>
+	<!-- 12.4.6.3 Concept DS examples (informative) -->
+	<!-- non-normative element "Concept"  -->
+	<Concept id="freedom">
+		<Label>
+			<Name> Freedom </Name>
+		</Label>
+		<Property>
+			<Name> Open </Name>
+		</Property>
+		<Property>
+			<Name> Outspoken </Name>
+		</Property>
+		<Property>
+			<Name> Frank </Name>
+		</Property>
+		<MediaOccurrence type="symbol">
+			<MediaLocator>
+				<MediaUri>http:://wwww.Statue.Of.Liberty.gif</MediaUri>
+			</MediaLocator>
+		</MediaOccurrence>
+	</Concept>
+	<Concept id="happiness">
+		<Label>
+			<Name> Happiness </Name>
+		</Label>
+		<Property>
+			<Name> Well being </Name>
+		</Property>
+		<Property>
+			<Name> Contentment </Name>
+		</Property>
+		<Property>
+			<Name> Pleasure </Name>
+		</Property>
+		<Property>
+			<Name> Satisfaction </Name>
+		</Property>
+	</Concept>
+	<!-- 12.4.7.3.1 Color state of a sunset -->
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="state-example">
+		<Label>
+			<Name> Sunset </Name>
+		</Label>
+		<SemanticBase xsi:type="EventType" id="sunset-event">
+			<Label>
+				<Name> Sunset </Name>
+			</Label>
+			<Definition>
+				<FreeTextAnnotation xml:lang="en-us">
+				Phenomenon of the sun setting
+				</FreeTextAnnotation>
+			</Definition>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticStateType" id="sunset-state">
+			<Label>
+				<Name> State of sunset </Name>
+			</Label>
+			<AttributeValuePair>
+				<Attribute>
+					<Name> Blue </Name>
+				</Attribute>
+				<IntegerValue>90</IntegerValue>
+			</AttributeValuePair>
+			<AttributeValuePair>
+				<Attribute>
+					<Name> Pink </Name>
+				</Attribute>
+				<IntegerValue>9</IntegerValue>
+			</AttributeValuePair>
+			<AttributeValuePair>
+				<Attribute>
+					<Name> Orange </Name>
+				</Attribute>
+				<IntegerValue>50</IntegerValue>
+			</AttributeValuePair>
+			<AttributeValuePair>
+				<Attribute>
+					<Name> Yellow </Name>
+				</Attribute>
+				<IntegerValue>45</IntegerValue>
+			</AttributeValuePair>
+		</SemanticBase>
+		<Graph>
+			<!--  Relate event sunset-event and state sunset-state  -->
+			<Relation xsi:type="SemanticStateSemanticBaseRelationType" name="stateOf" source="#sunset-state" target="#sunset-event"/>
+		</Graph>
+	</Semantic>
+	<!-- 12.4.7.3.2 Place and time for a person -->
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="state2-example">
+		<Label>
+			<Name> Place and time for a person </Name>
+		</Label>
+		<SemanticBase xsi:type="AgentObjectType" id="agent-person">
+			<Label>
+				<Name> John </Name>
+			</Label>
+			<Relation xsi:type="SemanticStateSemanticBaseRelationType" name="hasStateOf" target="#position-state"/>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticStateType" id="position-state">
+			<Label>
+				<Name> Position </Name>
+			</Label>
+			<AttributeValuePair>
+				<Attribute>
+					<Name> Position </Name>
+				</Attribute>
+				<IntegerValue>1</IntegerValue>
+			</AttributeValuePair>
+			<SemanticTime>
+				<Label>
+					<Name> today </Name>
+				</Label>
+			</SemanticTime>
+			<SemanticPlace>
+				<Label>
+					<Name> Singapore </Name>
+				</Label>
+			</SemanticPlace>
+		</SemanticBase>
+	</Semantic>
+	<!-- 12.4.7.3.3 Ripeness of a banana -->
+	<Mpeg7 xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xml:lang="en" type="complete">
+		<!--  Semantic entities: objects, states, and concept  -->
+		<ContentDescription xsi:type="WorldDescriptionType">
+			<Semantics xsi:type="SemanticType" id="RipeBanana-sem">
+				<Label>
+					<Name/>
+				</Label>
+				<SemanticBase xsi:type="ObjectType" id="banana-obj">
+					<Label>
+						<Name> Banana </Name>
+					</Label>
+				</SemanticBase>
+				<SemanticBase xsi:type="Concept" id="ripe-con">
+					<Label>
+						<Name> Ripeness</Name>
+					</Label>
+					<Property>
+						<Name> Aged </Name>
+					</Property>
+					<Property>
+						<Name> Matured </Name>
+					</Property>
+					<Property>
+						<Name> Mellow </Name>
+					</Property>
+					<Property>
+						<Name> Ripened </Name>
+					</Property>
+				</SemanticBase>
+				<SemanticBase xsi:type="SemanticStateType" id="has-sta">
+					<Label>
+						<Name> Has </Name>
+					</Label>
+					<AttributeValuePair>
+						<Attribute>
+							<Name/>
+						</Attribute>
+						<IntegerValue>0</IntegerValue>
+					</AttributeValuePair>
+				</SemanticBase>
+				<SemanticBase xsi:type="SemanticStateType" id="color-sta">
+					<Label>
+						<Name> Color </Name>
+					</Label>
+					<AttributeValuePair>
+						<Attribute>
+							<Name> Color </Name>
+						</Attribute>
+						<IntegerMatrixValue mpeg7:dim="2 2">1 2 3 4</IntegerMatrixValue>
+					</AttributeValuePair>
+				</SemanticBase>
+				<SemanticBase xsi:type="SemanticStateType" id="sim1-sta">
+					<Label>
+						<Name> Similar </Name>
+					</Label>
+					<AttributeValuePair>
+						<Attribute>
+							<Name> MembershipFunction </Name>
+						</Attribute>
+						<TextValue> ExpectedValue </TextValue>
+					</AttributeValuePair>
+					<AttributeValuePair>
+						<Attribute>
+							<Name> MembershipFunctionValue </Name>
+						</Attribute>
+						<FloatValue>0.56</FloatValue>
+					</AttributeValuePair>
+				</SemanticBase>
+				<SemanticBase xsi:type="SemanticStateType" id="sim2-sta">
+					<Label>
+						<Name> Similar </Name>
+					</Label>
+					<AttributeValuePair>
+						<Attribute>
+							<Name> MembershipFunction </Name>
+						</Attribute>
+						<TextValue> ExpectedValue </TextValue>
+					</AttributeValuePair>
+					<AttributeValuePair>
+						<Attribute>
+							<Name> MembershipFunctionValue </Name>
+						</Attribute>
+						<FloatValue>0.96</FloatValue>
+					</AttributeValuePair>
+				</SemanticBase>
+				<SemanticBase xsi:type="SemanticStateType" id="sim3-sta">
+					<Label>
+						<Name> Similar </Name>
+					</Label>
+					<AttributeValuePair>
+						<Attribute>
+							<Name> MembershipFunction </Name>
+						</Attribute>
+						<TextValue> ExpectedValue </TextValue>
+					</AttributeValuePair>
+					<AttributeValuePair>
+						<Attribute>
+							<Name> MembershipFunctionValue </Name>
+						</Attribute>
+						<FloatValue>0.38</FloatValue>
+					</AttributeValuePair>
+				</SemanticBase>
+				<Graph>
+					<!--  State of object  -->
+					<Relation xsi:type="SemanticStateSemanticBaseRelationType" name="stateOf" source="#color-sta" target="#banana-obj"/>
+					<!--  Property of object  -->
+					<Relation xsi:type="ConceptSemanticBaseRelationType" id="has-rel" name="hasPropertyOf" source="#banana-obj" target="#ripe-con"/>
+					<!--  Comparisons between the Sate Color and the analytic models  -->
+					<Relation xsi:type="AnalyticModelSemanticBaseRelationType" name="similarTo" source="#color-sta" target="#brown-mod" id="sim1-rel"/>
+					<Relation xsi:type="AnalyticModelSemanticBaseRelationType" name="similarTo" source="#color-sta" target="#yellow-mod" id="sim2-rel"/>
+					<Relation xsi:type="AnalyticModelSemanticBaseRelationType" name="similarTo" source="#color-sta" target="#yellow-mod" id="sim3-rel"/>
+					<!--  Dependencies between State Has and States Similar  -->
+					<Relation xsi:type="SemanticStateSemanticStateRelationType" name="dependsOn" source="#has-sta" target="#sim1-sta"/>
+					<Relation xsi:type="SemanticStateSemanticStateRelationType" name="dependsOn" source="#has-sta" target="#sim2-sta"/>
+					<Relation xsi:type="SemanticStateSemanticStateRelationType" name="dependsOn" source="#has-sta" target="#sim3-sta"/>
+					<!--  Membership relationships  -->
+					<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="membershipIn" source="#sim1-sta" target="#sim1-rel"/>
+					<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="membershipIn" source="#sim2-sta" target="#sim2-rel"/>
+					<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="membershipIn" source="#sim3-sta" target="#sim3-rel"/>
+					<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="membershipIn" source="#has-sta" target="#has-rel"/>
+				</Graph>
+			</Semantics>
+		</ContentDescription>
+		<!--  Anaylitical models of each one of the three cognitive colors:
+		   brown, yellow, and green  -->
+		<ContentDescription xsi:type="ModelDescriptionType">
+			<Model xsi:type="CollectionModelType" id="Brown-mod" function="described">
+				<Label>
+					<Name>Brown</Name> 
+				</Label>
+				<Collection xsi:type="DescriptorCollectionType">
+					<Descriptor xsi:type="ScalableColorType" numberOfCoefficients="7" numberOfBitplanesDiscarded="0">
+						<Coefficients> 1 2 16 </Coefficients>
+					</Descriptor>
+				</Collection>
+			</Model>
+		</ContentDescription>
+		<ContentDescription xsi:type="ModelDescriptionType">
+			<Model xsi:type="CollectionModelType" id="Yellow-mod" function="described">
+				<Label>
+					<Name>Yellow</Name> 
+				</Label>
+				<Collection xsi:type="DescriptorCollectionType">
+					<Descriptor xsi:type="ScalableColorType" numberOfCoefficients="7" numberOfBitplanesDiscarded="0">
+						<Coefficients> 8 5 21 </Coefficients>
+					</Descriptor>
+				</Collection>
+			</Model>
+		</ContentDescription>
+		<ContentDescription xsi:type="ModelDescriptionType">
+			<Model xsi:type="CollectionModelType" id="Green-mod" function="described">
+				<Label>
+					<Name>Green</Name>
+				</Label>
+				<Collection xsi:type="DescriptorCollectionType">
+					<Descriptor xsi:type="ScalableColorType" numberOfCoefficients="7" numberOfBitplanesDiscarded="0">
+						<Coefficients> 4 6 1 </Coefficients>
+					</Descriptor>
+				</Collection>
+			</Model>
+		</ContentDescription>
+	</Mpeg7>
+	<!-- 12.4.8.3 SemanticPlace DS examples (informative) -->
+	<!-- non-normative element "SemanticPlace"  -->
+	<SemanticPlace id="stadium-location">
+		<Label>
+			<Name> Soccer stadium </Name>
+		</Label>
+		<Place>
+			<Name xml:lang="en"> Santiago Bernabeu </Name>
+			<Country> es </Country>
+			<PostalAddress>
+				<AddressLine> Concha Espina s/n., Madrid </AddressLine>
+				<PostingIdentifier> E-28036 </PostingIdentifier>
+			</PostalAddress>
+		</Place>
+	</SemanticPlace>
+	<SemanticPlace id="miles4-place">
+		<Label>
+			<Name> 4 miles </Name>
+		</Label>
+		<SemanticPlaceInterval>
+			<Extent measurementType="length" unit="mile" value="4"/>
+		</SemanticPlaceInterval>
+	</SemanticPlace>
+	<SemanticPlace id="miles4NYC-place">
+		<Label>
+			<Name> Within 4 miles around New York City </Name>
+		</Label>
+		<SemanticPlaceInterval>
+			<Location origin="New York City"/>
+			<Extent measurementType="area" unit="square miles" value="16*pi"/>
+		</SemanticPlaceInterval>
+	</SemanticPlace>
+	<SemanticPlace id="NYCBoston-place">
+		<Label>
+			<Name>
+			5 kilometers north of York City and 40 kilometers east of Boston
+		</Name>
+		</Label>
+		<SemanticPlaceInterval>
+			<Location origin="New York City">
+				<Displacement measurementType="length" unit="kilometers" value="5"/>
+				<Direction measurementType="direction" unit="direction" value="north"/>
+			</Location>
+		</SemanticPlaceInterval>
+		<SemanticPlaceInterval>
+			<Location origin="Boston">
+				<Displacement measurementType="length" unit="kilometers" value="40"/>
+				<Direction measurementType="direction" unit="direction" value="east"/>
+			</Location>
+		</SemanticPlaceInterval>
+	</SemanticPlace>
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="Semantic2">
+		<Label>
+			<Name/>
+		</Label>
+		<SemanticBase xsi:type="SemanticPlaceType" id="sem2-loc">
+			<Label>
+				<Name> Location </Name>
+			</Label>
+			<!--  Possibility one  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" target="#Eiffel-loc"/>
+			<!--  Possibility two  -->
+			<Relation xsi:type="SemanticPlaceSemanticBaseRelationType" name="locationOf" target="#engagement-event"/>
+		</SemanticBase>
+	</Semantic>
+	<Semantic id="Semantic1">
+		<Label>
+			<Name/>
+		</Label>
+		<SemanticBase xsi:type="EventType" id="engagement-event">
+			<Label>
+				<Name> Engagement </Name>
+			</Label>
+			<Definition>
+				<FreeTextAnnotation>
+				Engagement of two lovers, Cri and Ale, 
+				at the Eiffel Tower in Paris
+			</FreeTextAnnotation>
+			</Definition>
+			<Relation xsi:type="SemanticPlaceSemanticBaseRelationType" name="hasLocationOf" target="#Eiffel-loc"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" target="#lastyear-time"/>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticPlaceType" id="Eiffel-loc">
+			<Label>
+				<Name> Spot at the Eiffel Tower </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticTimeType" id="lastyear-time">
+			<Label>
+				<Name> Last year </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "lastyear-time" already used elsewhere -->
+		<SemanticBase xsi:type="SemanticTimeType" id="lastyear-timea">
+			<Label>
+				<Name> Last year </Name>
+			</Label>
+			<SemanticTimeInterval>
+				<TimePoint origin="now">
+					<Displacement measurementType="length" unit="year" value="1"/>
+					<Direction measurementType="direction" unit="direction" value="before"/>
+				</TimePoint>
+			</SemanticTimeInterval>
+		</SemanticBase>
+	</Semantic>
+	<!-- 12.4.9.3 SemanticTime DS examples (informative) -->
+	<!-- non-normative element "SemanticTime"  -->
+	<SemanticTime id="m3_1899-time">
+		<Label>
+			<Name> 
+			3 minutes starting at 14:13:00 hours, 12 November, 1899
+		</Name>
+		</Label>
+		<Time>
+			<TimePoint>1899-11-12T14:13+01:00</TimePoint>
+			<Duration>PT3M</Duration>
+		</Time>
+	</SemanticTime>
+	<SemanticTime id="weeks4-time">
+		<Label>
+			<Name> 4 weeks </Name>
+		</Label>
+		<SemanticTimeInterval>
+			<Duration measurementType="length" unit="week" value="4"/>
+		</SemanticTimeInterval>
+	</SemanticTime>
+	<SemanticTime id="during1997-time">
+		<Label>
+			<Name> During 1997 </Name>
+		</Label>
+		<SemanticTimeInterval>
+			<TimePoint origin="January 1, 1997">
+				<Displacement measurementType="length" unit="year" value="1"/>
+				<Direction measurementType="during" unit="direction" value="after"/>
+			</TimePoint>
+		</SemanticTimeInterval>
+	</SemanticTime>
+	<!-- "lastyear-time" already used elsewhere -->
+	<SemanticTime id="lastyear-timeb">
+		<Label>
+			<Name> Last year </Name>
+		</Label>
+		<SemanticTimeInterval>
+			<TimePoint origin="now">
+				<Displacement measurementType="length" unit="year" value="1"/>
+				<Direction measurementType="direction" unit="direction" value="before"/>
+			</TimePoint>
+		</SemanticTimeInterval>
+	</SemanticTime>
+	<SemanticTime id="April4-time">
+		<Label>
+			<Name> The third and fourth day in April </Name>
+		</Label>
+		<SemanticTimeInterval>
+			<TimePoint origin="April">
+				<Displacement measurementType="length" unit="day" value="3"/>
+				<Direction measurementType="direction" unit="direction" value="after"/>
+			</TimePoint>
+			<Duration measurementType="length" unit="day" value="2"/>
+		</SemanticTimeInterval>
+	</SemanticTime>
+	<SemanticTime id="MonFri_9am_5pm-time">
+		<Label>
+			<Name> Monday through Friday from 9am to 5pm </Name>
+		</Label>
+		<SemanticTimeInterval>
+			<TimePoint origin="Monday">
+				<Displacement measurementType="length" unit="hour" value="9"/>
+				<Direction measurementType="direction" unit="direction" value="after"/>
+			</TimePoint>
+			<Duration measurementType="length" unit="hour" value="8"/>
+		</SemanticTimeInterval>
+		<SemanticTimeInterval>
+			<TimePoint origin="Monday">
+				<Displacement measurementType="length" unit="hour" value="9"/>
+				<Direction measurementType="direction" unit="direction" value="after"/>
+			</TimePoint>
+			<Duration measurementType="length" unit="hour" value="8"/>
+		</SemanticTimeInterval>
+		<SemanticTimeInterval>
+			<TimePoint origin="Tuesday">
+				<Displacement measurementType="length" unit="hour" value="9"/>
+				<Direction measurementType="direction" unit="direction" value="after"/>
+			</TimePoint>
+			<Duration measurementType="length" unit="hour" value="8"/>
+		</SemanticTimeInterval>
+		<SemanticTimeInterval>
+			<TimePoint origin="Wednesday">
+				<Displacement measurementType="length" unit="hour" value="9"/>
+				<Direction measurementType="direction" unit="direction" value="after"/>
+			</TimePoint>
+			<Duration measurementType="length" unit="hour" value="8"/>
+		</SemanticTimeInterval>
+		<SemanticTimeInterval>
+			<TimePoint origin="Thursday">
+				<Displacement measurementType="length" unit="hour" value="9"/>
+				<Direction measurementType="direction" unit="direction" value="after"/>
+			</TimePoint>
+			<Duration measurementType="length" unit="hour" value="8"/>
+		</SemanticTimeInterval>
+		<SemanticTimeInterval>
+			<TimePoint origin="Friday">
+				<Displacement measurementType="length" unit="hour" value="9"/>
+				<Direction measurementType="direction" unit="direction" value="after"/>
+			</TimePoint>
+			<Duration measurementType="length" unit="hour" value="8"/>
+		</SemanticTimeInterval>
+	</SemanticTime>
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="semantic1">
+		<Label>
+			<Name/>
+		</Label>
+		<SemanticBase xsi:type="SemanticTimeType" id="sem3-time">
+			<Label>
+				<Name> Time </Name>
+			</Label>
+			<!--  Possibility one  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" target="#m3_1899-time"/>
+			<!--  Possibility two  -->
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="timeOf" target="#earthquake-event"/>
+		</SemanticBase>
+	</Semantic>
+	<Semantic id="semantic2">
+		<Label>
+			<Name/>
+		</Label>
+		<SemanticBase xsi:type="EventType" id="earthquake-event">
+			<Label>
+				<Name> Earthquake </Name>
+			</Label>
+			<Definition>
+				<FreeTextAnnotation> The big earthquake in San Francisco </FreeTextAnnotation>
+			</Definition>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" target="#m3_1899-time"/>
+			<Relation xsi:type="SemanticPlaceSemanticBaseRelationType" name="hasLocationOf" target="#sanfran-loc"/>
+		</SemanticBase>
+		<!-- "m3_1899-time" already used elsewhere -->
+		<SemanticBase xsi:type="SemanticTimeType" id="m3_1899-timea">
+			<Label>
+				<Name> 
+				3 minutes starting at 14:13:00 hours, 12 November, 1899
+			</Name>
+			</Label>
+			<Time>
+				<TimePoint>1899-11-12T14:13:00</TimePoint>
+				<Duration>PT3M</Duration>
+			</Time>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticPlaceType" id="sanfran-loc">
+			<Label>
+				<Name> San Francisco </Name>
+			</Label>
+		</SemanticBase>
+	</Semantic>
+	<!-- 12.4.10.1 Narration and capture scenes -->
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="S1">
+		<Label>
+			<Name> Capture </Name>
+		</Label>
+		<!--  Narrator object   -->
+		<SemanticBase xsi:type="AgentObjectType" id="narrator-ob">
+			<Label>
+				<Name> Narrator </Name>
+			</Label>
+			<Relation xsi:type="SegmentSemanticBaseRelationType" name="hasMediaPerceptionOf" target="#NarratorMR"/>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName>Peter</GivenName>
+					<FamilyName>GreenHead</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<!--  Eagle object   -->
+		<SemanticBase xsi:type="ObjectType" id="eagle-ob">
+			<Label>
+				<Name> Eagle </Name>
+			</Label>
+			<Relation xsi:type="SegmentSemanticBaseRelationType" name="hasMediaPerceptionOf" target="#EagleMR"/>
+		</SemanticBase>
+		<!--  Rabbit object   -->
+		<SemanticBase xsi:type="ObjectType" id="rabbit-ob">
+			<Label>
+				<Name> Rabbit </Name>
+			</Label>
+			<Relation xsi:type="SegmentSemanticBaseRelationType" name="hasMediaPerceptionOf" target="#RabbitMR"/>
+		</SemanticBase>
+		<!--  Narration place  -->
+		<SemanticBase xsi:type="SemanticPlaceType" id="narration-pl">
+			<Label>
+				<Name> TV Studio </Name>
+			</Label>
+			<Place>
+				<Name> Fox 5 Studios </Name>
+				<Country> us </Country>
+				<PostalAddress>
+					<AddressLine>500 West 120th Street</AddressLine>
+					<PostingIdentifier> U-10027 </PostingIdentifier>
+				</PostalAddress>
+			</Place>
+		</SemanticBase>
+		<!--  Capture place  -->
+		<SemanticBase xsi:type="SemanticPlaceType" id="capture-pl">
+			<Label>
+				<Name> Tundra </Name>
+			</Label>
+			<Place>
+				<Name>Kola Lappish Tundra </Name>
+				<Country> RU </Country>
+			</Place>
+		</SemanticBase>
+		<!--  Narration time  -->
+		<SemanticBase xsi:type="SemanticTimeType" id="narration-tm">
+			<Label>
+				<Name> Saturday </Name>
+			</Label>
+			<Time>
+				<TimePoint>1995-07-13T10:33+01:00</TimePoint>
+				<Duration>PT15S</Duration>
+			</Time>
+		</SemanticBase>
+		<!--  Capture time  -->
+		<!-- "narration-tm" already used elsewhere -->
+		<SemanticBase xsi:type="SemanticTimeType" id="narration-tma">
+			<Label>
+				<Name> Saturday </Name>
+			</Label>
+			<Time>
+				<TimePoint>1993-06-23T15:06+01:00</TimePoint>
+				<Duration>PT1M30S</Duration>
+			</Time>
+		</SemanticBase>
+		<!--  Narration action   -->
+		<SemanticBase xsi:type="EventType" id="narration-ev">
+			<Label>
+				<Name> Narrate </Name>
+			</Label>
+			<Relation xsi:type="SegmentSemanticBaseRelationType" name="hasMediaPerceptionOf" target="#NarrationVS"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" target="#narration-tm"/>
+			<Relation xsi:type="SemanticPlaceSemanticBaseRelationType" name="hasPlaceOf" target="#narration-pl"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" target="#narrator-ob"/>
+		</SemanticBase>
+		<!--  Capture action   -->
+		<SemanticBase xsi:type="EventType" id="capture-ev">
+			<Label>
+				<Name> Capture </Name>
+			</Label>
+			<Relation xsi:type="SegmentSemanticBaseRelationType" name="hasMediaPerceptionOf" target="#CaptureVS"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" target="#capture-tm"/>
+			<Relation xsi:type="SemanticPlaceSemanticBaseRelationType" name="hasPlaceOf" target="#capture-pl"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" target="#eagle-ob"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasPatientOf" target="#rabbit-ob"/>
+		</SemanticBase>
+	</Semantic>
+	<!-- 12.4.10.2 Soccer goal -->
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="S2">
+		<Label>
+			<Name> goal </Name>
+		</Label>
+		<SemanticBase xsi:type="AgentObjectType" id="Morientes-ob">
+			<Label href="....">
+				<Name> Forward player </Name>
+			</Label>
+			<Definition>
+				<FreeTextAnnotation>
+			Forward player for the Spanish soccer team whose name is Morientes
+				</FreeTextAnnotation>
+			</Definition>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+					<MediaTime>
+						<!-- XML Spy v3.5 bug
+						<MediaRelTimePoint timeBase="../MediaUri">
+						-->
+						<MediaRelTimePoint timeBase="../">PT9M54S</MediaRelTimePoint>
+						<MediaDuration>PT2S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+				<!-- <VisualDescriptor xsi:type="DominantColorType"> ...</VisualDescriptor> -->
+			</MediaOccurrence>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<FamilyName>Morientes</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="Ball-ob">
+			<Label href="....">
+				<Name> Soccer Ball </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="Svensoon-ob">
+			<Label href="....">
+				<Name> Goalkeeper player </Name>
+			</Label>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<FamilyName>Svensson</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="GoalArea-ob">
+			<Label href="....">
+				<Name> Goal area </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="SpanishTeam-ob">
+			<Label href="....">
+				<Name> Soccer team </Name>
+			</Label>
+			<Agent xsi:type="PersonGroupType">
+				<Name> Spanish soccer team </Name>
+				<!--  People in the team  -->
+				<!-- <Member> ... </Member> -->
+				<!-- <MemberRef> ... </MemberRef> -->
+				<!-- : -->
+		</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="SwedishTeam-ob">
+			<Label href="....">
+				<Name> Soccer team </Name>
+			</Label>
+			<Agent xsi:type="PersonGroupType">
+				<Name> Swedish soccer team </Name>
+				<!--  People in the team  -->
+				<!-- <Member> ... </Member> -->
+				<!-- <MemberRef> ... </MemberRef> -->
+				<!-- : -->
+		</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="Goal-ev">
+			<Label href="....">
+				<Name> Goal </Name>
+			</Label>
+			<Definition>
+				<FreeTextAnnotation> Soccer goal </FreeTextAnnotation>
+			</Definition>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaTime>
+					<!-- XML Spy v3.5 bug
+						<MediaRelTimePoint timeBase="../../../../../SemanticBase/MediaOcurrence/MediaLocator/MediaUri[1]">
+					-->
+						<MediaRelTimePoint timeBase="../../../../../">PT9M45S</MediaRelTimePoint>
+						<MediaDuration>PT2S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+				<!-- <VisualDescriptor xsi:type="DominantColorType"> ...</VisualDescriptor> -->
+			</MediaOccurrence>
+			<Event id="Kick-ev">
+				<Label>
+					<Name> Kick </Name>
+				</Label>
+			</Event>
+			<Event id="Error-ev">
+				<Label>
+					<Name> Makes an error </Name>
+				</Label>
+			</Event>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticPlaceType" id="Santberna-ob">
+			<Label>
+				<Name> Santiago Bernabeu </Name>
+			</Label>
+			<Definition>
+				<FreeTextAnnotation>
+			Soccer stadium of Santiago Bernabeu at Madrid, Spain
+			</FreeTextAnnotation>
+			</Definition>
+			<Place>
+				<Name xml:lang="en"> Santiago Bernabeu </Name>
+				<Country> es </Country>
+				<PostalAddress>
+					<AddressLine>C/Fabregas No. 26, Madrid</AddressLine>
+					<PostingIdentifier> E-64200 </PostingIdentifier>
+				</PostalAddress>
+			</Place>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticTimeType" id="goal1-time">
+			<Label>
+				<Name> Saturday </Name>
+			</Label>
+			<Time>
+				<TimePoint>2000-03-20T20:33+01:00</TimePoint>
+				<Duration>PT2S</Duration>
+			</Time>
+		</SemanticBase>
+		<Graph>
+			<!--  Morientes kicks the ball towards the goal -->
+			<Relation xsi:type="ObjectEventRelationType" name="agentOf" source="#Morientes-ob" target="#Kick-ev"/>
+			<Relation xsi:type="ObjectEventRelationType" name="patientOf" source="#Ball-ob" target="#Kick-ev"/>
+			<Relation xsi:type="ObjectEventRelationType" name="destinationOf" source="#GoalArea-ob" target="#Kick-ev"/>
+			<!--  Goalkeeper makes an error  -->
+			<Relation xsi:type="ObjectEventRelationType" name="agentOf" source="#Svensoon-ob" target="#Error-ev"/>
+			<!--  Morientes is a player of the Spanish soccer team  -->
+			<Relation xsi:type="ObjectObjectRelationType" name="memberOf" source="#Morientes-ob" target="#SpanishTeam-ob"/>
+			<!--  The goalkeeper is a player of the Swedish team  -->
+			<Relation xsi:type="ObjectObjectRelationType" name="memberOf" source="#Svensoon-ob" target="#SwedishTeam-ob"/>
+			<!--  Location and time of the goal event  -->
+			<Relation xsi:type="SemanticPlaceSemanticBaseRelationType" name="hasLocationOf" source="#Goal-ev" target="#Santberna-ob"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" source="#Goal-ev" target="#goal1-time"/>
+		</Graph>
+	</Semantic>
+	<!-- 12.4.10.3 Multiple narrative worlds: music album CD -->
+	<!-- non-normative element "Semantic"  -->
+	<!--  Narrative world: Album  -->
+	<Semantic id="album-sem">
+		<Label>
+			<Name> Album CD </Name>
+		</Label>
+		<SemanticBase xsi:type="ObjectType" id="album-ob">
+			<Label>
+				<Name> Album CD </Name>
+			</Label>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#cover-ob"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#booklet-ob"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#disc-ob"/>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="cover-ob">
+			<Label>
+				<Name> Album cover </Name>
+			</Label>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#frontcover-ob"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#backcover-ob"/>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="frontcover-ob">
+			<Label>
+				<Name> Album cover </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/frontcover.jpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="backcover-ob">
+			<Label>
+				<Name> Album cover </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/backcover.jpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="booklet-ob">
+			<Label>
+				<Name> Album booklet </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/booklet.jpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="disc-ob">
+			<Label>
+				<Name> Disc </Name>
+			</Label>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#discbackside-ob"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#discfrontside-ob"/>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="discfrontside-ob">
+			<Label>
+				<Name> Disc side </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/discfrontside.jpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#discbacksidelabel-ob"/>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="discbackside-ob">
+			<Label>
+				<Name> Disc side </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/discbackside.jpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#discbacksidelabel-ob"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#discbacksidecut2-ob"/>
+			<!-- : -->
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" target="#discbacksidecut13-ob"/>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="discbacksidecut1-ob">
+			<Label>
+				<Name> Cut on disc side </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/discbackside.jpg</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask> -->
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="discbacksidecut2-ob">
+			<Label>
+				<Name> Cut on disc side </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/discbackside.jpg</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask> -->
+			</MediaOccurrence>
+		</SemanticBase>
+		<!-- : -->
+		<SemanticBase xsi:type="ObjectType" id="discbacksidecut13-ob">
+			<Label>
+				<Name> Cut on disc side </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/discbackside.jpg</MediaUri>
+				</MediaLocator>
+				<!-- <SpatialMask> ... </SpatialMask> -->
+			</MediaOccurrence>
+		</SemanticBase>
+		<!--  Narrative world: Front cover  -->
+		<SemanticBase xsi:type="SemanticType" id="frontcover-sem">
+			<Label>
+				<Name> Front Cover </Name>
+			</Label>
+			<!--  This semantic world corresponds to the contents of the front cover  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" target="#frontcover-obj"/>
+			<!--  Proposed implementation  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="depicts" target="#frontcover-obj"/>
+			<SemanticBase xsi:type="AgentObjectType" id="romeo-obj">
+				<Label>
+					<Name> Romeo </Name>
+				</Label>
+				<MediaOccurrence>
+					<MediaLocator>
+						<MediaUri>http://www.mpeg7.org/frontcover.jpg</MediaUri>
+					</MediaLocator>
+					<!-- <SpatialMask> ... </SpatialMask> -->
+				</MediaOccurrence>
+				<Agent xsi:type="PersonType">
+					<Name>
+						<GivenName> Romeo </GivenName>
+						<FamilyName> Montague </FamilyName>
+					</Name>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase xsi:type="AgentObjectType" id="juliet-obj">
+				<Label>
+					<Name> Juliet </Name>
+				</Label>
+				<MediaOccurrence>
+					<MediaLocator>
+						<MediaUri>http://www.mpeg7.org/frontcover.jpg</MediaUri>
+					</MediaLocator>
+					<!-- <SpatialMask> ... </SpatialMask> -->
+				</MediaOccurrence>
+				<Agent xsi:type="PersonType">
+					<Name>
+						<GivenName> Juliet </GivenName>
+						<FamilyName> Capulet </FamilyName>
+					</Name>
+				</Agent>
+			</SemanticBase>
+			<SemanticBase xsi:type="EventType" id="kiss-eve">
+				<Label>
+					<Name> Kiss </Name>
+				</Label>
+				<MediaOccurrence>
+					<MediaLocator>
+						<MediaUri>http://www.mpeg7.org/frontcover.jpg</MediaUri>
+					</MediaLocator>
+				</MediaOccurrence>
+				<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" target="#romeo-obj"/>
+				<Relation xsi:type="ObjectEventRelationType" name="hasAccompanierOf" target="#juliet-obj"/>
+			</SemanticBase>
+			<SemanticBase xsi:type="Concept" id="love-con">
+				<Label>
+					<Name> Love </Name>
+				</Label>
+				<Property>
+					<Name> Devoted </Name>
+				</Property>
+				<Property>
+					<Name> Attracted </Name>
+				</Property>
+				<Property>
+					<Name> Enthusiastic </Name>
+				</Property>
+				<Property>
+					<Name> Admired </Name>
+				</Property>
+				<MediaOccurrence type="symbol">
+					<MediaLocator>
+						<MediaUri>http://www.mpeg7.org/frontcover.jpg</MediaUri>
+					</MediaLocator>
+				</MediaOccurrence>
+			</SemanticBase>
+		</SemanticBase>
+		<!--  Narrative world: Disc's front side   -->
+		<SemanticBase xsi:type="SemanticType" id="discfrontside-sem">
+			<Label>
+				<Name/>
+			</Label>
+		<!-- : -->
+		<!--  This semantic world corresponds to the contents of the disc's 
+		      front side  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" target="#discfrontside-obj"/>
+			<!--  Proposed implementation  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="depicts" target="#discfrontside-obj"/>
+		<!-- : -->
+		</SemanticBase>
+		<!--  Narrative world: Song 1   -->
+		<SemanticBase xsi:type="SemanticType" id="discbacksidecut1-sem">
+			<Label>
+				<Name> Song </Name>
+			</Label>
+			<!--  This semantic world corresponds to the contents of cut 1  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="depicts" target="#discfrontsidecut1-obj"/>
+			<SemanticBase xsi:type="EventType" id="sacrifice-eve">
+				<Label>
+					<Name> Sacrifice </Name>
+				</Label>
+				<MediaOccurrence type="symbol">
+					<MediaLocator>
+						<MediaUri>http://www.mpeg7.org/song1.mp3</MediaUri>
+					</MediaLocator>
+				</MediaOccurrence>
+				<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasBeneficiaryOf" target="#lover-obj"/>
+			</SemanticBase>
+			<SemanticBase xsi:type="ObjectType" id="lover-obj">
+				<Label>
+					<Name> Lover </Name>
+				</Label>
+				<MediaOccurrence type="symbol">
+					<MediaLocator>
+						<MediaUri>http://www.mpeg7.org/song1.mp3</MediaUri>
+					</MediaLocator>
+				</MediaOccurrence>
+			</SemanticBase>
+		</SemanticBase>
+		<!-- : -->
+	<!--  Narrative world: Song 13   -->
+		<SemanticBase xsi:type="SemanticType" id="discbacksidecut13-sem">
+			<Label>
+				<Name/>
+			</Label>
+		<!-- : -->
+		<!--  This semantic world corresponds to the contents of cut 13  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="depicts" target="#discfrontsidecut13-obj"/>
+		<!-- : -->
+		</SemanticBase>
+	</Semantic>
+	<!-- 12.5.1.3.1 From concrete to abstract description: Jane and Jim -->
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="ConcreteDescription">
+		<!--  Description of multimedia content: no usage label  -->
+		<Label>
+			<Name> 
+		Jane and Jim know eath other. Jane and Jim walk to high school together.
+			</Name>
+		</Label>
+		<SemanticBase xsi:type="AgentObjectType" id="Jane">
+			<Label>
+				<Name> Jane </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.video.mpg</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>T00:00:00</MediaTimePoint>
+						<MediaDuration>PT10S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName>Jane</GivenName>
+					<FamilyName>Wood</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="Jim">
+			<Label>
+				<Name> Jim </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.video.mpg</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>T00:00:00</MediaTimePoint>
+						<MediaDuration>PT10S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName>Jim</GivenName>
+					<FamilyName>Sky</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="highschool">
+			<Label>
+				<Name> High School </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.video.mpg</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>T00:00:08</MediaTimePoint>
+						<MediaDuration>PT2S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="know1">
+			<Label>
+				<Name> Jane knows Jim </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.video.mpg</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>T00:00:00</MediaTimePoint>
+						<MediaDuration>PT10S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="know2">
+			<Label>
+				<Name> Jim knows Jane </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.video.mpg</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>T00:00:00</MediaTimePoint>
+						<MediaDuration>PT10S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="walk">
+			<Label>
+				<Name>
+			Jim and Jane walk to high school together
+				</Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.video.mpg</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>T00:00:00</MediaTimePoint>
+						<MediaDuration>PT10S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<Graph>
+			<!--  Jane and Jim know eath other  -->
+			<Relation xsi:type="ObjectEventRelationType" name="experiencerOf" source="#jane" target="#know1"/>
+			<Relation xsi:type="ObjectEventRelationType" name="stimulusOf" source="#jim" target="#know1"/>
+			<Relation xsi:type="ObjectEventRelationType" name="experiencerOf" source="#jim" target="#know2"/>
+			<Relation xsi:type="ObjectEventRelationType" name="stimulusOf" source="#jane" target="#know2"/>
+			<!--  Jane and Jim walk to high school together  -->
+			<Relation xsi:type="ObjectEventRelationType" name="agentOf" source="#jane" target="#walk"/>
+			<Relation xsi:type="ObjectEventRelationType" name="accompanierOf" source="#jim" target="#walk"/>
+			<Relation xsi:type="ObjectEventRelationType" name="destinationOf" source="#highschool" target="#walk"/>
+		</Graph>
+	</Semantic>
+	<Semantic id="MediaAbstractionDescription">
+		<!--  Abstraction of media: usage label = 0  -->
+		<AbstractionLevel dimension="0"/>
+		<Label>
+			<Name> 
+		Jane and Jim know each other. Jane and Jim walk to high school together.
+			</Name>
+		</Label>
+		<!-- "Jane" already used elsewhere -->
+		<SemanticBase xsi:type="AgentObjectType" id="Janea">
+			<Label>
+				<Name> Jane </Name>
+			</Label>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName>Jane</GivenName>
+					<FamilyName>Wood</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<!-- "Jim" already used elsewhere -->
+		<SemanticBase xsi:type="AgentObjectType" id="Jima">
+			<Label>
+				<Name> Jim </Name>
+			</Label>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName>Jim</GivenName>
+					<FamilyName>Sky</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<!-- "highschool" already used elsewhere -->
+		<SemanticBase xsi:type="ObjectType" id="highschoola">
+			<Label>
+				<Name> High School </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "know1" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="know1a">
+			<Label>
+				<Name> Jane knows Jim </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "know2" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="know2a">
+			<Label>
+				<Name> Jim knows Jane </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "walk" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="walka">
+			<Label>
+				<Name>
+			Jim and Jane walk to high school together
+				</Name>
+			</Label>
+		</SemanticBase>
+		<Graph>
+			<!--  Jane and Jim know eath other  -->
+			<Relation xsi:type="ObjectEventRelationType" name="experiencerOf" source="#jane" target="#know1"/>
+			<Relation xsi:type="ObjectEventRelationType" name="stimulusOf" source="#jim" target="#know1"/>
+			<Relation xsi:type="ObjectEventRelationType" name="experiencerOf" source="#jim" target="#know2"/>
+			<Relation xsi:type="ObjectEventRelationType" name="stimulusOf" source="#jane" target="#know2"/>
+			<!--  Jane and Jim walk to high school together  -->
+			<Relation xsi:type="ObjectEventRelationType" name="agentOf" source="#jane" target="#walk"/>
+			<Relation xsi:type="ObjectEventRelationType" name="accompanierOf" source="#jim" target="#walk"/>
+			<Relation xsi:type="ObjectEventRelationType" name="destinationOf" source="#highschool" target="#walk"/>
+		</Graph>
+	</Semantic>
+	<Semantic id="FormalAbstractionDescription">
+		<!--  Formal abstraction: usage label = 1 -->
+		<AbstractionLevel dimension="1"/>
+		<Label>
+			<Name> 
+		Woman and Jim know eath other. Woman and Jim walk to high school together.
+			</Name>
+		</Label>
+		<SemanticBase xsi:type="AgentObjectType" id="woman">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Woman </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "Jim" already used elsewhere -->
+		<SemanticBase xsi:type="AgentObjectType" id="Jimb">
+			<Label>
+				<Name> Jim </Name>
+			</Label>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName>Jim</GivenName>
+					<FamilyName>Sky</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<!-- "highschool" already used elsewhere -->
+		<SemanticBase xsi:type="ObjectType" id="highschoolb">
+			<Label>
+				<Name> High School </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "know1" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="know1b">
+			<Label>
+				<Name> Woman knows Jim </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "know2" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="know2b">
+			<Label>
+				<Name> Jim knows woman </Name>
+			</Label>
+		</SemanticBase>
+		<!-- "walk" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="walkb">
+			<Label>
+				<Name>
+			Jim and Jane walk to high school together
+				</Name>
+			</Label>
+		</SemanticBase>
+		<Graph>
+			<!--  Woman and Jim know eath other  -->
+			<Relation xsi:type="ObjectEventRelationType" name="experiencerOf" source="#woman" target="#know1"/>
+			<Relation xsi:type="ObjectEventRelationType" name="stimulusOf" source="#jim" target="#know1"/>
+			<Relation xsi:type="ObjectEventRelationType" name="experiencerOf" source="#jim" target="#know2"/>
+			<Relation xsi:type="ObjectEventRelationType" name="stimulusOf" source="#woman" target="#know2"/>
+			<!--  Woman and Jim walk to high school together  -->
+			<Relation xsi:type="ObjectEventRelationType" name="agentOf" source="#woman" target="#walk"/>
+			<Relation xsi:type="ObjectEventRelationType" name="accompanierOf" source="#jim" target="#walk"/>
+			<Relation xsi:type="ObjectEventRelationType" name="destinationOf" source="#highschool" target="#walk"/>
+		</Graph>
+	</Semantic>
+	<Semantic id="sem1">
+		<Label>
+			<Name> man </Name>
+		</Label>
+		<SemanticBase xsi:type="AgentObjectType" id="man">
+			<!--  Formal abstraction: usage label = 1  -->
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> man </Name>
+			</Label>
+		</SemanticBase>
+	</Semantic>
+	<Semantic id="sem2">
+		<Label>
+			<Name> Jim </Name>
+		</Label>
+		<!-- "Jim" already used elsewhere -->
+		<SemanticBase xsi:type="AgentObjectType" id="Jimc">
+			<!--  Description of media: no usage label  -->
+			<Label>
+				<Name> Jim </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.video.mpg</MediaUri>
+					<MediaTime>
+						<MediaTimePoint>T00:00:00</MediaTimePoint>
+						<MediaDuration>PT10S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+			<!--  Jim is instance of Man: using relation exampleOf  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" target="#man"/>
+			<Agent xsi:type="PersonType">
+				<Name>
+					<GivenName>Jim</GivenName>
+					<FamilyName>Sky</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+	</Semantic>
+	<!-- 12.5.1.3.2 From abstract to concrete description: soccer game -->
+	<!-- non-normative element "Semantic"  -->
+	<!--  Formal abstraction: AbstractionLevel = 1 -->
+	<Semantic xsi:type="SemanticType" id="soccergame-sem">
+		<Label>
+			<Name> Soccer game </Name>
+		</Label>
+		<!--  Events  -->
+		<SemanticBase xsi:type="EventType" id="soccergame-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer game </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="arbiter-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Arbiter </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="period1-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> First period </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="halftime-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Half time </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="period2-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Second period </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="extratime-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Extra time </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="penaltyperiod-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Penalty period </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="timelost-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Time lost </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="soccerplay-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer play </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="score-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Score </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="freekick-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Free kick </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="fault-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Fault </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="offside-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Off-side </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="cornerkick-evev">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Corner kick </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="goalkick-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Goal kick </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="throwin-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Throw in </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="penaltykick-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Penalty kick </Name>
+			</Label>
+		</SemanticBase>
+		<!--  Objects  -->
+		<SemanticBase xsi:type="ObjectType" id="soccergame-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer game </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="soccerball-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer ball </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="soccerteam-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer team </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="player-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Player </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="coach-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Coach </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="staff-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Staff </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="playingteam-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Playing team </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="hometeam-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Home team </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="visitingteam-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Visiting team </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="goalkeeper-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Goalkeeper </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="player1-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Player 1 </Name>
+			</Label>
+		</SemanticBase>
+		<!-- : -->
+		<SemanticBase xsi:type="AgentObjectType" id="player10-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Player 10 </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="refereeteam-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Referee team </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="principalreferee-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Principal referee </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="assistantreferee1-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Assistant referee 1 </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="assistantreferee2-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Assistant referee 2 </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="soccerstadium-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer stadium </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="soccerfield-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer field </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="goal-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Goal </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="goalarea-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Goal area </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="penaltyarea-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Penalty area </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="centercircle-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Center circle </Name>
+			</Label>
+		</SemanticBase>
+		<!-- : -->
+		<SemanticBase xsi:type="ObjectType" id="spectatorseats-obj">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Spectator seats </Name>
+			</Label>
+		</SemanticBase>
+		<!--  Semantic places  -->
+		<SemanticBase xsi:type="ObjectType" id="soccerfield-pla">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Soccer field </Name>
+			</Label>
+		</SemanticBase>
+		<!--  Semantic times  -->
+		<SemanticBase xsi:type="SemanticTimeType" id="minutes45-tim">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> 45 minutes </Name>
+			</Label>
+			<SemanticTimeInterval>
+				<Duration measurementType="length" unit="minutes" value="45"/>
+			</SemanticTimeInterval>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticTimeType" id="minutes15-tim">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> 15 minutes </Name>
+			</Label>
+			<SemanticTimeInterval>
+				<Duration measurementType="length" unit="minutes" value="15"/>
+			</SemanticTimeInterval>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticTimeType" id="minutes30-tim">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> 15 minutes </Name>
+			</Label>
+			<SemanticTimeInterval>
+				<Duration measurementType="length" unit="minutes" value="15"/>
+			</SemanticTimeInterval>
+		</SemanticBase>
+		<Graph>
+			<!--  Soccer game event relations  -->
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" source="#soccergame-eve" target="#hometeam-obj"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasAccompaniertOf" source="#soccergame-eve" target="#visitingteam-obj"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasInstrumentOf" source="#soccergame-eve" target="#ball-obj"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasLocationOf" source="#soccergame-eve" target="#soccerfield-pla"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" source="#soccergame-eve" target="#soccergame-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame-eve" target="#period1-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame-eve" target="#halftime-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame-eve" target="#period2-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame-eve" target="#extratime-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame-eve" target="#penaltyperiod-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame-eve" target="#timelost-eve"/>
+			<!--  Arbiter event relations  -->
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" source="#arbiter-eve" target="#refereeteam-obj"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasPatientOf" source="#arbiter-eve" target="#soccergame-obj"/>
+			<!--  Soccer play event relations  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="partOf" source="#soccerplay-eve" target="#period1-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="partOf" source="#soccerplay-eve" target="#period2-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="partOf" source="#soccerplay-eve" target="#extratime-evev"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#score-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#freekick-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#fault-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#offside-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#cornerkick-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#goalkick-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#goalkick-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#throwin-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#penaltykick-eve" target="#soccerplay-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf " source="#penaltyperiod-eve" target="#penaltykick-eve"/>
+			<!--  Semantic times relations  -->
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" source="#period1-eve" target="#minutes45-tim"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" source="#period2-eve" target="#minutes45-tim"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" source="#halftime-eve" target="#minutes15-tim"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" source="#extratime-eve" target="#minutes15-tim"/>
+			<!--  Soccer team object relations  -->
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#soccerteam-obj" target="#player-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#soccerteam-obj" target="#coach-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#soccerteam-obj" target="#staff-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerteam-obj" target="#playingteam-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#playingteam-obj" target="#goalkeeper-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#playingteam-obj" target="#player1-obj"/>
+		<!-- : -->
+		<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#playingteam-obj" target="#player10-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#goalkeeper-obj" target="#player-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#player1-obj" target="#player-obj"/>
+		<!-- : -->
+		<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#player10-obj" target="#player-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#hometeam-obj" target="#playingteam-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="specializationOf" source="#vistingteam-obj" target="#playingteam-obj"/>
+			<!--  Soccer stadium object relations  -->
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerstadium-obj" target="#soccerfield-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerfield-obj" target="#goal-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerfield-obj" target="#goalarea-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerfield-obj" target="#penaltyarea-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerfield-obj" target="#centercircle-obj"/>
+		<!-- : -->
+		<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerstadium-obj" target="#spectatorseats-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" source="#soccerfield-obj" target="#soccerfield-pla"/>
+			<!--  Referee team object relations  -->
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#refereeteam-obj" target="#principalreferee-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#refereeteam-obj" target="#assistantreferee1-obj"/>
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#refereeteam-obj" target="#assistantreferee2-obj"/>
+		</Graph>
+	</Semantic>
+	<!--  Concrete instance: No AbstractionLevel  -->
+	<Semantic id="soccergame_ins-sem">
+		<Label>
+			<Name> Soccer game between Spanish and Swedish soccer teams </Name>
+		</Label>
+		<!--  Events  -->
+		<SemanticBase xsi:type="EventType" id="soccergame_ins-eve">
+			<Label>
+				<Name> Soccer game </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<!-- "period1-eve" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="period1-evea">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> First period </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="period1_ins-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> First period </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+					<MediaTime>
+						<!-- XML Spy v3.5 bug
+						<MediaRelTimePoint timeBase="../MediaUri">
+						-->
+						<MediaRelTimePoint timeBase="../">PT8M</MediaRelTimePoint>
+						<MediaDuration>PT48M56S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="period2_ins-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Second period </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+					<MediaTime>
+						<!-- XML Spy v3.5 bug
+						<MediaRelTimePoint timeBase="../MediaUri">
+						-->
+						<MediaRelTimePoint timeBase="../">PT56S</MediaRelTimePoint>
+						<MediaDuration>PT47M6S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="score1_ins-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Score </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+					<MediaTime>
+						<!-- XML Spy v3.5 bug
+						<MediaRelTimePoint timeBase="../MediaUri">
+						-->
+						<MediaRelTimePoint timeBase="../">PT9M54S</MediaRelTimePoint>
+						<MediaDuration>PT2S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="score2_ins-eve">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Score </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+					<MediaTime>
+						<!-- XML Spy v3.5 bug
+						<MediaRelTimePoint timeBase="../MediaUri">
+						-->
+						<MediaRelTimePoint timeBase="../">PT20M42S</MediaRelTimePoint>
+						<MediaDuration>PT5S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<!--  Objects  -->
+		<SemanticBase xsi:type="AgentObjectType" id="spanishteam_ins-obj">
+			<Label>
+				<Name> Spanish soccer team </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+			<Agent xsi:type="PersonGroupType">
+				<Name> Spanish soccer team </Name>
+				<MemberRef href="#morientes-per"/>
+				<!-- : -->
+			</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="Swedishteam_ins-obj">
+			<Label>
+				<Name> Swedish soccer team </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+			<Agent xsi:type="PersonGroupType">
+				<Name> Swedish soccer team </Name>
+				<!--  People in the team  -->
+				<!-- <Member> ... </Member> -->
+				<!-- : -->
+			</Agent>
+		</SemanticBase>
+		<SemanticBase xsi:type="AgentObjectType" id="morientes_ins-obj">
+			<Label>
+				<Name> Soccer player </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+					<MediaTime>
+						<!-- XML Syp v3.5 bug
+						<MediaRelTimePoint timeBase="../MediaUri">
+						-->
+						<MediaRelTimePoint timeBase="../">PT9M54S</MediaRelTimePoint>
+						<MediaDuration>PT2S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+			<MediaOccurrence>
+				<MediaLocator xsi:type="TemporalSegmentLocatorType">
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+					<MediaTime>
+						<!-- XML Syp v3.5 bug
+						<MediaRelTimePoint timeBase="../MediaUri">
+						-->
+						<MediaRelTimePoint timeBase="../">PT20M42S</MediaRelTimePoint>
+						<MediaDuration>PT5S</MediaDuration>
+					</MediaTime>
+				</MediaLocator>
+			</MediaOccurrence>
+			<Agent xsi:type="PersonType" id="morientes-per">
+				<Name>
+					<FamilyName>Morientes</FamilyName>
+				</Name>
+			</Agent>
+		</SemanticBase>
+		<!-- "soccerstadium-obj" already used elsewhere -->
+		<SemanticBase xsi:type="ObjectType" id="soccerstadium-obja">
+			<Label>
+				<Name> Soccer stadium </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<!-- "soccerfield-obj" already used elsewhere -->
+		<SemanticBase xsi:type="ObjectType" id="soccerfield-obja">
+			<Label>
+				<Name> Soccer field </Name>
+			</Label>
+			<MediaOccurrence>
+				<MediaLocator>
+					<MediaUri>http://www.mpeg7.org/game.mpg</MediaUri>
+				</MediaLocator>
+			</MediaOccurrence>
+		</SemanticBase>
+		<!--  Semantic places  -->
+		<SemanticBase xsi:type="ObjectType" id="soccerfield_ins-pla">
+			<Label>
+				<Name> Soccer field </Name>
+			</Label>
+		</SemanticBase>
+		<SemanticBase xsi:type="ObjectType" id="soccerstadium_ins-pla">
+			<Label>
+				<Name> Soccer stadium </Name>
+			</Label>
+		</SemanticBase>
+		<!--  Semantic times  -->
+		<SemanticBase xsi:type="SemanticTimeType" id="period1_ins-tim">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Start time of 1st period </Name>
+			</Label>
+			<Time>
+				<TimePoint>1995-03-17T20:00+01:00</TimePoint>
+				<Duration>PT48M56S</Duration>
+			</Time>
+		</SemanticBase>
+		<SemanticBase xsi:type="SemanticTimeType" id="period2_ins-tim">
+			<AbstractionLevel dimension="1"/>
+			<Label>
+				<Name> Start time of 2nd period </Name>
+			</Label>
+			<Time>
+				<TimePoint>1995-03-17T21:03+56:00</TimePoint>
+				<Duration>PT47M6S</Duration>
+			</Time>
+		</SemanticBase>
+		<Graph>
+			<!--  Soccer game event relations  -->
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" source="#soccergame_ins-eve" target="#spanishteam_ins-obj"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" source="#soccergame_ins-eve" target="#Swedishteam_ins-obj"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasLocationOf" source="#soccergame_ins-eve" target="#soccerfield_ins-pla"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame_ins-eve" target="#period1_ins-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="hasPartOf" source="#soccergame_ins-eve" target="#period2_ins-eve"/>
+			<!--  Score event relations  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="partOf" source="#score1_ins-eve" target="#period1_ins-eve"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" source="#score1_ins-eve" target="#morientes_ins-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="partOf" source="#score2_ins-eve" target="#period1_ins-eve"/>
+			<Relation xsi:type="ObjectEventRelationType" name="hasAgentOf" source="#score2_ins-eve" target="#morientes_ins-obj"/>
+			<!--  Semantic times relations  -->
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" source="#period1_ins-eve" target="#period1_ins-tim"/>
+			<Relation xsi:type="SemanticTimeSemanticBaseRelationType" name="hasTimeOf" source="#period2_ins-eve" target="#period2_ins-tim"/>
+			<!--  Soccer team object relations  -->
+			<Relation xsi:type="ObjectObjectRelationType" name="hasMemberOf" source="#spanishteam_ins-obj" target="#morientes_ins-obj"/>
+			<!--  Soccer stadium object relations  -->
+			<Relation xsi:type="ObjectObjectRelationType" name="hasComponentOf" source="#soccerstadium_ins-obj" target="#soccerfield_ins-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" source="#soccerfield_ins-obj" target="#soccerfield_ins-pla"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="identifiedWith" source="#soccerstadium_ins-obj" target="#soccerstadium_ins-pla"/>
+			<!--  Instance (example) relations  -->
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#soccergame_ins-eve" target="#soccergame-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#score1_ins-eve" target="#score-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#score2_ins-eve" target="#score-eve"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#spanishteam_ins-obj" target="#hometeam-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#Swedishteam_ins-obj" target="#visitingteam-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#morientes_ins-obj" target="#player5-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#soccerstadium_ins-obj" target="#soccerstadium-obj"/>
+			<Relation xsi:type="SemanticBaseSemanticBaseRelationType" name="exampleOf" source="#soccerfield_ins-obj" target="#soccerfield-obj"/>
+		</Graph>
+	</Semantic>
+	<!-- 12.6.3.2 NArySemanticBaseRelation DS -->
+	<!-- non-normative element "NArySemanticBaseRelation"  -->
+	<NArySemanticBaseRelation name="combinationOf">
+		<Argument href="#A"/>
+		<Argument href="#car"/>
+		<Argument href="#boat"/>
+	</NArySemanticBaseRelation>
+	<!-- 12.6.3.3 SemanticBaseSemanticBaseRelation DS -->
+	<!-- non-normative element "SemanticBaseSemanticBaseRelation"  -->
+	<SemanticBaseSemanticBaseRelation name="specializationOf" source="#dog" target="#mammal"/>
+	<SemanticBaseSemanticBaseRelation name="similarTo" source="#human" target="#man"/>
+	<SemanticBaseSemanticBaseRelation name="oppositeTo" source="#white" target="#black"/>
+	<SemanticBaseSemanticBaseRelation name="exampleOf" source="#BillClinton" target="#man"/>
+	<SemanticBaseSemanticBaseRelation name="equivalentTo" source="#car" target="#thunderbird"/>
+	<SemanticBaseSemanticBaseRelation name="identifiedWith" source="#Maria_1" target="#Maria_25"/>
+	<SemanticBaseSemanticBaseRelation name="identifiedWith" source="#NewYork1" target="#NewYork2"/>
+	<SemanticBaseSemanticBaseRelation name="partOf" source="#CentralPark" target="#NewYork"/>
+	<SemanticBaseSemanticBaseRelation name="contains" source="#education" target="#learning"/>
+	<SemanticBaseSemanticBaseRelation name="contains" source="#education" target="#reasoning"/>
+	<SemanticBaseSemanticBaseRelation name="identifiedWith" source="#worldwarI" target="#century20"/>
+	<SemanticBaseSemanticBaseRelation name="providesContrastFor" source="#motorcar" target="#Amishfamily"/>
+	<!-- 12.6.3.4 SemanticSemanticBaseRelation DS -->
+	<!-- non-normative element "SemanticSemanticBaseRelation"  -->
+	<SemanticSemanticBaseRelation name="depicts" source="#painting" target="#glasswater"/>
+	<SemanticSemanticBaseRelation name="embodiedIn" source="#liberty" target="#statue"/>
+	<SemanticSemanticBaseRelation name="represents" source="#storm" target="#struggle"/>
+	<!-- 12.6.3.5 SemanticSemanticRelation DS -->
+	<!-- non-normative element "SemanticSemanticRelation"  -->
+	<SemanticSemanticRelation name="contextFor" source="#civilrights" target="#backbus"/>
+	<SemanticSemanticRelation name="interpretationOf" source="#brutality" target="#arrest"/>
+	<SemanticSemanticRelation name="interpreationOf" source="#enforcement" target="#arrest"/>
+	<!-- 12.6.3.6 ObjectObjectRelation DS -->
+	<!-- non-normative element "ObjectObjectRelation"  -->
+	<ObjectObjectRelation name="componentOf" source="#wheel" target="#car"/>
+	<ObjectObjectRelation name="memberOf" source="#player" target="#team"/>
+	<ObjectObjectRelation name="substanceOf" source="#gin" target="#martini"/>
+	<ObjectObjectRelation name="hasSubstanceOf" source="#paper" target="#cellulose"/>
+	<!-- 12.6.3.7 ObjectEventRelation DS -->
+	<!-- non-normative element "ObjectEventRelation"  -->
+	<ObjectEventRelation name="agentOf" source="#Peter" target="#give"/>
+	<ObjectEventRelation name="patientOf" source="#book" target="#give"/>
+	<ObjectEventRelation name="patientOf" source="#chicken" target="#die"/>
+	<ObjectEventRelation name="experiencerOf" source="#John" target="#hate"/>
+	<ObjectEventRelation name="experiencerOf" source="#boy" target="#see"/>
+	<ObjectEventRelation name="agentOf" source="#John" target="#watch"/>
+	<ObjectEventRelation name="stimulusOf" source="#dog" target="#see"/>
+	<ObjectEventRelation name="causerOf" source="#lightening" target="#strike"/>
+	<ObjectEventRelation name="locationOf" source="#street" target="#receive"/>
+	<ObjectEventRelation name="sourceOf" source="#floor" target="#move"/>
+	<ObjectEventRelation name="destinationOf" source="#Mary" target="#receive"/>
+	<ObjectEventRelation name="destinationOf" source="#Toronto" target="#move"/>
+	<ObjectEventRelation name="beneficiaryOf" source="#Mary" target="#bake"/>
+	<ObjectEventRelation name="themeOf" source="#dog" target="#talk"/>
+	<ObjectEventRelation name="resultOf" source="#cake" target="#give"/>
+	<ObjectEventRelation name="instrumentOf" source="#knife" target="#cut"/>
+	<ObjectEventRelation name="pathOf" source="#track" target="#travel"/>
+	<ObjectEventRelation name="accompanierOf" source="#Mary" target="#travel"/>
+	<!-- 12.6.3.8 EventEventRelation DS -->
+	<!-- non-normative element "EventEventRelation"  -->
+	<EventEventRelation name="resultOf" source="#bealone" target="#begone"/>
+	<EventEventRelation name="causeOf" source="#dying" target="#killing"/>
+	<EventEventRelation name="summaryOf" source="#gethurt" target="#fall"/>
+	<EventEventRelation name="entailmentOf" source="#marry" target="#divorce"/>
+	<EventEventRelation name="mannerOf" source="#run" target="#walk"/>
+	<!-- 12.6.3.9 ConceptSemanticBaseRelation DS -->
+	<!-- non-normative element "ConceptSemanticBaseRelationRelation"  -->
+	<ConceptSemanticBaseRelation name="propertyOf" source="#ripeness" target="#banana"/>
+	<ConceptSemanticBaseRelation name="uses" source="#mature" target="#floweropening"/>
+	<!-- 12.6.3.10 SemanticStateSemanticBaseRelation DS -->
+	<!-- non-normative element "SemanticStateSemanticBaseRelation"  -->
+	<SemanticStateSemanticBaseRelation name="stateOf" source="90orange" target="#sunset"/>
+	<!-- 12.6.3.11 SemanticStateSemanticStateRelation DS -->
+	<!-- non-normative element "SemanticStateSemanticStateRelation"  -->
+	<SemanticStateSemanticStateRelation name="dependsOn" source="#colorA" target="#colorB"/>
+	<!-- 12.6.3.12 SemanticPlaceSemanticBaseRelation DS -->
+	<!-- non-normative element "SemanticPlaceSemanticBaseRelation"  -->
+	<SemanticPlaceSemanticBaseRelation name="locationOf" source="#street" target="#receive"/>
+	<SemanticPlaceSemanticBaseRelation name="sourceOf" source="#floor" target="#move"/>
+	<SemanticPlaceSemanticBaseRelation name="destinationOf" source="#Toronto" target="#move"/>
+	<SemanticPlaceSemanticBaseRelation name="pathOf" source="#track" target="#travel"/>
+	<!-- 12.6.3.13 SemanticPlaceSemanticPlaceRelation DS -->
+	<!-- non-normative element "SemanticPlaceSemanticPlaceRelation"  -->
+	<SemanticPlaceSemanticPlaceRelation name="south" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="west" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="northwest" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="southwest" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="left" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="below" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="onTopOf" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="equal" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="inside" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="covers" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="overlaps" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="touches" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="disjoint" source="#B" target="#C"/>
+	<SemanticPlaceSemanticPlaceRelation name="separated" source="#E" target="#O"/>
+	<!-- 12.6.3.14 SemanticTimeSemanticBaseRelation DS -->
+	<!-- non-normative element "SemanticTimeSemanticBaseRelation"  -->
+	<SemanticTimeSemanticBaseRelation name="timeOf" source="#Christmas" target="#beborn"/>
+	<!-- 12.6.3.15 SemanticTimeSemanticTimeRelation DS -->
+	<!-- non-normative element "SemanticTimeSemanticTimeRelation"  -->
+	<SemanticTimeSemanticTimeRelation name="before" source="#B" target="#C"/>
+	<SemanticTimeSemanticTimeRelation name="meets" source="#B" target="#C"/>
+	<SemanticTimeSemanticTimeRelation name="overlaps" source="#B" target="#C"/>
+	<SemanticTimeSemanticTimeRelation name="during" source="#B" target="#C"/>
+	<SemanticTimeSemanticTimeRelation name="strictDuring" source="#B" target="#C"/>
+	<SemanticTimeSemanticTimeRelation name="starts" source="#B" target="#C"/>
+	<SemanticTimeSemanticTimeRelation name="finishes" source="#B" target="#C"/>
+	<SemanticTimeSemanticTimeRelation name="equal" source="#B" target="#C"/>
+	<!-- 12.6.4.1 SemanticRelationSemanticBaseRelation DS -->
+	<!-- non-normative element "SemanticRelationSemanticStateRelation"  -->
+	<SemanticRelationSemanticStateRelation name="membershipIn" source="#stateripeness" target="#bananahaspropertyofripeness"/>
+	<!-- 12.6.5.1 SegmentSemanticBaseRelation DS -->
+	<!-- non-normative element "SegmentSemanticBaseRelation"  -->
+	<SegmentSemanticBaseRelation name="mediaPerceptionOf" source="#imageA" target="#BillClinton"/>
+	<SegmentSemanticBaseRelation name="mediaReferenceOf" source="#videoA" target="#BillClinton"/>
+	<SegmentSemanticBaseRelation name="mediaSymbolOf" source="#imageA" target="#computers"/>
+	<!-- 12.6.6.1 AnalyticModelSemanticBaseRelation DS -->
+	<!-- non-normative element "AnalyticModelSemanticBaseRelation"  -->
+	<AnalyticModelSemanticBaseRelation name="exampleOf" source="#collectionFormula1" target="#Indianapolis500"/>
+	<AnalyticModelSemanticBaseRelation name="qualityOf" source="#collecionred" target="#fireengine"/>
+	<AnalyticModelSemanticBaseRelation name="symbolOf" source="#picture" target="#computers"/>
+	<AnalyticModelSemanticBaseRelation name="similarTo" source="#collection" target="#mostlyred"/>
+	<!-- 12.6.7 Semantic relation examples (informative) -->
+	<!-- non-normative element "Semantic"  -->
+	<Semantic id="example1">
+		<Label>
+			<Name/>
+		</Label>
+		<SemanticBase xsi:type="ObjectType" id="objectA">
+			<Label>
+				<Name/>
+			</Label>
+			<!-- : -->
+		</SemanticBase>
+		<SemanticBase xsi:type="EventType" id="eventB">
+			<Label>
+				<Name/>
+			</Label>
+			<!-- : -->
+		</SemanticBase>
+		<Graph>
+			<!-- "nodeA/B" already used elsewhere -->
+			<Node id="nodeAc" href="#objectA"/>
+			<Node id="nodeBc" href="#eventB"/>
+			<!-- Edge from a->b -->
+			<Relation xsi:type="ObjectEventRelationType" name="agentOf" source="#nodeA" target="#nodeB"/>
+		</Graph>
+	</Semantic>
+	<Semantic id="example2">
+		<Label>
+			<Name/>
+		</Label>
+		<!-- "eventB" already used elsewhere -->
+		<SemanticBase xsi:type="ObjectType" id="eventBa">
+			<Label>
+				<Name/>
+			</Label>
+			<!-- : -->
+		</SemanticBase>
+		<!-- "objectAa" already used elsewhere -->
+		<SemanticBase xsi:type="EventType" id="objectAa">
+			<Label>
+				<Name/>
+			</Label>
+			<Relation xsi:type="ObjectEventRelationType" name="agentOf" target="#eventB"/>
+		</SemanticBase>
+	</Semantic>
+</MdsExampleTest>

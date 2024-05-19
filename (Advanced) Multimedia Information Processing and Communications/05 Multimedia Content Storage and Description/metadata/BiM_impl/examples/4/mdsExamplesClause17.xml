@@ -1,0 +1,4419 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<MdsExampleTest xmlns="http://www.mpeg7.org/2001/MPEG-7_Schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema" xsi:schemaLocation="http://www.mpeg7.org/2001/MPEG-7_Schema .\MdsExampleTestClause17.xsd">
+	<!-- 17.1.1.1.1 MPEG7AudioDomainCS -->
+	<!-- non-normative element "ClassificationScheme"  -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7AudioDomainCS" domain="/..">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaIdentification/AudioDomain">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Source</Name>
+			<Definition xml:lang="en">Type of audio source</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">Synthetic</Name>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">Natural</Name>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Acquisition</Name>
+			<Definition xml:lang="en">Type of Content</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Music</Name>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Speech</Name>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Mixed</Name>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">Multi-track</Name>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Use</Name>
+			<Definition xml:lang="en">Original usage domain</Definition>
+			<Term termId="3.1">
+				<Name xml:lang="en">Scientific</Name>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Medical</Name>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">Security</Name>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">Broadcast</Name>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">CD-A distribution</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.1.2.1 MPEG7VideoDomainCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7VideoDomainCS"	domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/ MediaIdentification/VideoDomain">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Source</Name>
+			<Definition xml:lang="en">Type of video source</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">Synthetic</Name>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">Natural</Name>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Acquisition</Name>
+			<Definition xml:lang="en">Type of Video Content</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Photographic</Name>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Graphic</Name>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Mixed</Name>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">Chart</Name>
+			</Term>
+			<Term termId="2.5">
+				<Name xml:lang="en">Visualization</Name>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Use</Name>
+			<Definition xml:lang="en">Original usage domain</Definition>
+			<Term termId="3.1">
+				<Name xml:lang="en">Scientific</Name>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Medical</Name>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">Aerial</Name>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">Remote-sensing</Name>
+			</Term>
+			<Term termId="3.5">
+				<Name xml:lang="en">Security</Name>
+			</Term>
+			<Term termId="3.6">
+				<Name xml:lang="en">Broadcast</Name>
+			</Term>
+			<Term termId="3.7">
+				<Name xml:lang="en">DVD distribution</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.1.3.1 MPEG7ImageDomainCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7ImageDomainCS" domain="/..">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/ MediaIdentification/ImageDomain">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Source</Name>
+			<Definition xml:lang="en">Type of video source</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">Synthetic</Name>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">Natural</Name>
+			</Term>
+			<Term termId="1.3">
+				<Name xml:lang="en">Scanned document</Name>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Acquisition</Name>
+			<Definition xml:lang="en">Type of Image Content</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">B/W photograph</Name>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">B/W graphic</Name>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Gray photograph</Name>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">Gray graphic</Name>
+			</Term>
+			<Term termId="2.5">
+				<Name xml:lang="en">Color photograph</Name>
+			</Term>
+			<Term termId="2.6">
+				<Name xml:lang="en">Complex color graphic</Name>
+			</Term>
+			<Term termId="2.7">
+				<Name xml:lang="en">Simplex color graphic</Name>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Use</Name>
+			<Definition xml:lang="en">Original usage domain</Definition>
+			<Term termId="3.1">
+				<Name xml:lang="en">Scientific</Name>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Medical</Name>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">Aerial</Name>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">Remote-sensing</Name>
+			</Term>
+			<Term termId="3.5">
+				<Name xml:lang="en">Security</Name>
+			</Term>
+			<Term termId="3.6">
+				<Name xml:lang="en">Printed Publication</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.2.1.1 MPEG7FileFormatCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7FileFormatCS" domain="..">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaFormat/FileFormat">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">jpeg</Name>
+			<Name xml:lang="en">jpg</Name>
+			<Name xml:lang="en">jfif</Name>
+			<Definition xml:lang="en">JPEG file format</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">JPEG 2000</Name>
+			<Definition xml:lang="en">JPEG 2000 file format</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">mpeg</Name>
+			<Name xml:lang="en">mpg</Name>
+			<Definition xml:lang="en">MPEG file format</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">mp3</Name>
+			<Definition xml:lang="en">MP3 audio format</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">mp4</Name>
+			<Definition xml:lang="en">MPEG-4 file format</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">dv</Name>
+			<Definition xml:lang="en">Digital video format</Definition>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">avi</Name>
+			<Definition xml:lang="en">Audio video interleaved format</Definition>
+		</Term>
+		<Term termId="8">
+			<Name xml:lang="en">bdf</Name>
+			<Definition xml:lang="en">Bitmap distribution format</Definition>
+		</Term>
+		<Term termId="9">
+			<Name xml:lang="en">wav</Name>
+			<Definition xml:lang="en">Digital audio file</Definition>
+		</Term>
+		<Term termId="10">
+			<Name xml:lang="en">zip</Name>
+			<Definition xml:lang="en">Compressed binary file format</Definition>
+		</Term>
+		<Term termId="11">
+			<Name xml:lang="en">bmp</Name>
+			<Definition xml:lang="en">Microsoft Windows bitmap format</Definition>
+		</Term>
+		<Term termId="12">
+			<Name xml:lang="en">gif</Name>
+			<Definition xml:lang="en">Graphics interchange format</Definition>
+		</Term>
+		<Term termId="13">
+			<Name xml:lang="en">photocd</Name>
+			<Definition xml:lang="en">Kodak PhotoCD image format</Definition>
+		</Term>
+		<Term termId="14">
+			<Name xml:lang="en">ppm</Name>
+			<Definition xml:lang="en">Portable pixmap format</Definition>
+		</Term>
+		<Term termId="15">
+			<Name xml:lang="en">png</Name>
+			<Definition xml:lang="en">Portable network graphic format</Definition>
+		</Term>
+		<Term termId="16">
+			<Name xml:lang="en">quicktime</Name>
+			<Definition xml:lang="en">QuickTime</Definition>
+		</Term>
+		<Term termId="17">
+			<Name xml:lang="en">spiff</Name>
+			<Definition xml:lang="en">Still picture interchange format</Definition>
+		</Term>
+		<Term termId="18">
+			<Name xml:lang="en">tiff</Name>
+			<Definition xml:lang="en">Tag image file format</Definition>
+		</Term>
+		<Term termId="19">
+			<Name xml:lang="en">asf</Name>
+			<Definition xml:lang="en">Advanced streaming format</Definition>
+		</Term>
+		<Term termId="20">
+			<Name xml:lang="en">iff</Name>
+			<Definition xml:lang="en">Interchange file format</Definition>
+		</Term>
+		<Term termId="21">
+			<Name xml:lang="en">miff</Name>
+			<Definition xml:lang="en">Machine independent file format</Definition>
+		</Term>
+		<Term termId="22">
+			<Name xml:lang="en">pcx</Name>
+			<Definition xml:lang="en">PC paintbrush file format</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.2.1.2 IPTCMimeTypeCS -->
+	<ClassificationScheme uri="urn:mpeg:IPTCMimeTypeCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaFormat/FileFormat">
+	-->
+		<Term termId="text_vnd.IPTC.NewsML">
+			<Name xml:lang="en">text/vnd.IPTC.NewsML</Name>
+			<Definition xml:lang="en">IPTC News Markup xml:language NewsML(tm))
+		</Definition>
+		</Term>
+		<Term termId="text_vnd.IPTC.NITF">
+			<Name xml:lang="en">text/vnd.IPTC.NITF</Name>
+			<Definition xml:lang="en">
+			IPTC News Industry Text Format NITF)
+		</Definition>
+		</Term>
+		<Term termId="text_xml">
+			<Name xml:lang="en">text/xml</Name>
+			<Definition xml:lang="en">eXtensible Markup xml:language</Definition>
+		</Term>
+		<Term termId="text_html">
+			<Name xml:lang="en">text/html</Name>
+			<Definition xml:lang="en">Hypertext Markup xml:language</Definition>
+		</Term>
+		<Term termId="text_plain">
+			<Name xml:lang="en">text/plain</Name>
+			<Definition xml:lang="en">Plain Text</Definition>
+		</Term>
+		<Term termId="text_rtf">
+			<Name xml:lang="en">text/rtf</Name>
+			<Definition xml:lang="en">Rich Text Format</Definition>
+		</Term>
+		<Term termId="application_msword">
+			<Name xml:lang="en">application/msword</Name>
+			<Definition xml:lang="en">Microsoft Word Document</Definition>
+		</Term>
+		<Term termId="image_jpeg">
+			<Name xml:lang="en">image/jpeg</Name>
+			<Definition xml:lang="en">JPEG Image File</Definition>
+		</Term>
+		<Term termId="image_bmp">
+			<Name xml:lang="en">image/bmp</Name>
+			<Definition xml:lang="en">Microsoft Bit Mapped Image</Definition>
+		</Term>
+		<Term termId="audio_mpeg">
+			<Name xml:lang="en">audio/mpeg</Name>
+			<Definition xml:lang="en">ISO MPEG audio</Definition>
+		</Term>
+		<Term termId="audio_x-wav">
+			<Name xml:lang="en">audio/x-wav</Name>
+			<Definition xml:lang="en">Digital Audio file (WAV)</Definition>
+		</Term>
+		<Term termId="video_x-msvideo">
+			<Name xml:lang="en">video/x-msvideo</Name>
+			<Definition xml:lang="en">Audio plus Moving Video(AVI))</Definition>
+		</Term>
+		<Term termId="application_pdf">
+			<Name xml:lang="en">application/pdf</Name>
+			<Definition xml:lang="en">Portable Document File</Definition>
+		</Term>
+		<Term termId="application_zip">
+			<Name xml:lang="en">application/zip</Name>
+			<Definition xml:lang="en">Compressed Binary File (ZIP)</Definition>
+		</Term>
+		<Term termId="application_x-binhex">
+			<Name xml:lang="en">application/x-binhex</Name>
+			<Definition xml:lang="en">BinHex Encoded</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.2.2.1 MPEG7MediumCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7MediumCS" domain="../">
+	<!--XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaFormat/Medium">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Optical Media</Name>
+			<Definition xml:lang="en">
+			Publication stored on optical storage medium
+		</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">CD</Name>
+				<Definition xml:lang="en">
+				Publication stored on Compact Disk
+			</Definition>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">LaserDisc</Name>
+				<Name xml:lang="en">LD</Name>
+				<Definition xml:lang="en">
+				Publication stored on LaserDisc
+			</Definition>
+			</Term>
+			<Term termId="1.3">
+				<Name xml:lang="en">DVD</Name>
+				<Definition xml:lang="en">
+				Publication stored on DVD
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Magnetic Media</Name>
+			<Definition xml:lang="en">
+			Publication stored on magnetic storage medium
+		</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Magnetic Disk</Name>
+				<Definition xml:lang="en">
+				Publication stored on magnetic disk
+			</Definition>
+				<Term termId="2.1.1">
+					<Name xml:lang="en">HardDisk</Name>
+					<Name xml:lang="en">HD</Name>
+					<Definition xml:lang="en">
+					Publication stored on hard disk
+				</Definition>
+				</Term>
+				<Term termId="2.1.2">
+					<Name xml:lang="en">Floppy</Name>
+					<Definition xml:lang="en">
+					Publication stored on 3.5-in. floppy disk
+				</Definition>
+				</Term>
+				<Term termId="2.1.3">
+					<Name xml:lang="en">Zip</Name>
+					<Definition xml:lang="en">
+					Publication stored on Zip disk
+				</Definition>
+				</Term>
+				<Term termId="2.1.4">
+					<Name xml:lang="en">Jaz</Name>
+					<Definition xml:lang="en">
+					Publication stored on Jaz disk
+				</Definition>
+				</Term>
+				<Term termId="2.1.5">
+					<Name xml:lang="en">SuperDISK</Name>
+					<Definition xml:lang="en">
+					Publication stored on SuperDISK
+				</Definition>
+				</Term>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Magnetic Tape</Name>
+				<Definition xml:lang="en">
+				Publication stored on magnetic tape
+			</Definition>
+				<Term termId="2.2.1">
+					<Name xml:lang="en">VHS</Name>
+					<Definition xml:lang="en">
+					Publication stored on VHS tape
+				</Definition>
+				</Term>
+				<Term termId="2.2.2">
+					<Name xml:lang="en">VHS-C</Name>
+					<Definition xml:lang="en">
+					Publication stored on VHS-C tape
+				</Definition>
+				</Term>
+				<Term termId="2.2.3">
+					<Name xml:lang="en">BetaMax</Name>
+					<Definition xml:lang="en">
+					Publication stored on BetaMax tape
+			</Definition>
+				</Term>
+				<Term termId="2.2.4">
+					<Name xml:lang="en">BetaCam</Name>
+					<Definition xml:lang="en">
+					Publication stored on BetaCam tape
+				</Definition>
+				</Term>
+				<Term termId="2.2.5">
+					<Name xml:lang="en">D1</Name>
+					<Definition xml:lang="en">
+					Publication stored on D1 tape
+				</Definition>
+					<Term termId="2.2.6">
+						<Name xml:lang="en">D2</Name>
+						<Definition xml:lang="en">
+					Publication stored on D2(uncompressed composite SDTV)
+					tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.7">
+						<Name xml:lang="en">D3</Name>
+						<Definition xml:lang="en">
+					Publication stored on D3(uncompressed composite SDTV)
+					tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.8">
+						<Name xml:lang="en">D5</Name>
+						<Definition xml:lang="en">
+					Publication stored on D5(uncompressed composite SDTV)
+					tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.9">
+						<Name xml:lang="en">HD-D5</Name>
+						<Definition xml:lang="en">
+					Publication stored on HD-D5(compressed component HDTV)
+					tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.10">
+						<Name xml:lang="en">D6</Name>
+						<Definition xml:lang="en">
+					Publication stored on D6(uncompressed composite HDTV)
+					tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.11">
+						<Name xml:lang="en">D7</Name>
+						<Definition xml:lang="en">
+					Publication stored on D7(compressed component SDTV,
+					DVCPRO, DVCPRO50) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.12">
+						<Name xml:lang="en">D9</Name>
+						<Definition xml:lang="en">
+					Publication stored on D9(compressed component SDTV, DV
+					based, Digital-S) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.13">
+						<Name xml:lang="en">D10</Name>
+						<Definition xml:lang="en">
+					Publication stored on D10(BetaCAM IMX, 
+					compressed component SDTV, MPEG2 422 profile) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.14">
+						<Name xml:lang="en">D11</Name>
+						<Definition xml:lang="en">
+					Publication stored on D11(HDCAM, compressed component
+					HDTV) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.15">
+						<Name xml:lang="en">D12</Name>
+						<Definition xml:lang="en">
+					Publication stored on D12(DVCPRO/HD, compressed
+					component HDTV, DV based) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.16">
+						<Name xml:lang="en">BetaCAM SX</Name>
+						<Definition xml:lang="en">
+						Publication stored on BetaCAM SX(compressed component
+						SDTV, MPEG2 422profile) tape
+						</Definition>
+					</Term>
+					<Term termId="2.2.17">
+						<Name xml:lang="en">1-inch HDTV</Name>
+						<Definition xml:lang="en">
+					Publication stored on 1-inch HDTV(uncompressed
+					component HDTV) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.18">
+						<Name xml:lang="en">8mm</Name>
+						<Definition xml:lang="en">
+					Publication stored on 8mm tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.19">
+						<Name xml:lang="en">DV</Name>
+						<Definition xml:lang="en">
+					Publication stored on Digital Video tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.20">
+						<Name xml:lang="en">DVCPRO</Name>
+						<Definition xml:lang="en">
+					Publication stored on DVCPRO (compressed component
+					SDTV, DV based) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.21">
+						<Name xml:lang="en">DVCPRO50</Name>
+						<Definition xml:lang="en">
+					Publication stored on DVCPRO50 (compressed component
+					SDTV, DV based) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.22">
+						<Name xml:lang="en">DVCPRO/P</Name>
+						<Definition xml:lang="en">
+					Publication stored on DVCPRO/P (compressed component
+					SDTV, DV based, progressive) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.23">
+						<Name xml:lang="en">DVCAM</Name>
+						<Definition xml:lang="en">
+					Publication stored on DVCAM (compressed component SDTV,
+					ISO/IEC DIF compliant) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.24">
+						<Name xml:lang="en">Digital BetaCAM</Name>
+						<Definition xml:lang="en">
+					Publication stored on Digital BetaCAM(compressed
+					component SDTV) tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.25">
+						<Name xml:lang="en">CassetteTape</Name>
+						<Definition xml:lang="en">
+					Publication stored on Audio Cassette Tape
+				</Definition>
+					</Term>
+					<Term termId="2.2.26">
+						<Name xml:lang="en">DAT</Name>
+						<Definition xml:lang="en">
+					Publication stored on Digital Audio Tape
+				</Definition>
+					</Term>
+				</Term>
+			</Term>
+			<Term termId="3">
+				<Name xml:lang="en">Magneto-Optical Media</Name>
+				<Definition xml:lang="en">
+			Publication stored on magneto-optical media
+		</Definition>
+				<Term termId="3.1">
+					<Name xml:lang="en">MiniDisc</Name>
+					<Name xml:lang="en">MD</Name>
+					<Definition xml:lang="en">
+				Publication stored on MiniDisc
+			</Definition>
+				</Term>
+				<Term termId="3.2">
+					<Name xml:lang="en">MO Disc</Name>
+					<Definition xml:lang="en">
+				Publication stored on MO Disc
+			</Definition>
+				</Term>
+			</Term>
+			<Term termId="4">
+				<Name xml:lang="en">Solid State Memory</Name>
+				<Definition xml:lang="en">
+			Publication stored on solid-state memory
+		</Definition>
+				<Term termId="4.1">
+					<Name xml:lang="en">Flash Memory</Name>
+					<Definition xml:lang="en">
+				Publication stored on flash memory
+			</Definition>
+					<Term termId="4.1.1">
+						<Name xml:lang="en">FlashCard</Name>
+						<Definition xml:lang="en">
+					Publication stored on FlashCard
+				</Definition>
+					</Term>
+					<Term termId="4.1.2">
+						<Name xml:lang="en">MemoryStick</Name>
+						<Definition xml:lang="en">
+					Publication stored on MemoryStick
+				</Definition>
+					</Term>
+					<Term termId="4.1.3">
+						<Name xml:lang="en">SD Memory Card</Name>
+						<Definition xml:lang="en">
+					Publication stored on SD Memory Card
+				</Definition>
+					</Term>
+					<Term termId="4.1.4">
+						<Name xml:lang="en">SmartMedia</Name>
+						<Definition xml:lang="en">
+					Publication stored on SmartMedia
+				</Definition>
+					</Term>
+					<Term termId="4.1.5">
+						<Name xml:lang="en">CompactFlash</Name>
+						<Definition xml:lang="en">
+					Publication stored on CompactFlash
+				</Definition>
+					</Term>
+				</Term>
+			</Term>
+			<Term termId="5">
+				<Name xml:lang="en">Vinyl Record</Name>
+				<Definition xml:lang="en">
+			Publication stored on vinyl record
+		</Definition>
+				<Term termId="5.1">
+					<Name xml:lang="en">33</Name>
+					<Name xml:lang="en">LP</Name>
+					<Definition xml:lang="en">
+				Publication stored on 33RPM vinyl record
+			</Definition>
+				</Term>
+				<Term termId="5.2">
+					<Name xml:lang="en">45</Name>
+					<Definition xml:lang="en">
+				Publication stored on 45RPM vinyl record
+			</Definition>
+				</Term>
+				<Term termId="5.3">
+					<Name xml:lang="en">78</Name>
+					<Definition xml:lang="en">
+				Publication stored on 78RPM vinyl record
+			</Definition>
+				</Term>
+			</Term>
+			<Term termId="5">
+				<Name xml:lang="en">Film</Name>
+				<Definition xml:lang="en">
+			Publication stored on film
+		</Definition>
+				<Term termId="5.1">
+					<Name xml:lang="en">8mm</Name>
+				</Term>
+				<Term termId="5.2">
+					<Name xml:lang="en">35mm</Name>
+				</Term>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.2.3.1 MPEG7SystemCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7SystemCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaFormat/System">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">PAL</Name>
+			<Definition xml:lang="en">PAL analog video system</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">SECAM</Name>
+			<Definition xml:lang="en">SECAM analog video system</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">NTSC</Name>
+			<Definition xml:lang="en">NTSC analog video system</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">RealMedia</Name>
+			<Definition xml:lang="en">RealMedia streaming system</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">WindowsMedia</Name>
+			<Definition xml:lang="en">WindowsMedia streaming system</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">QuickTime</Name>
+			<Definition xml:lang="en">QuickTime streaming system</Definition>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">LiquidAudio</Name>
+			<Definition xml:lang="en">LiquidAudio streaming system</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.2.4.1 MPEG7VisualCodingFormatCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7VisualCodingFormatCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaFormat/VisualCoding/Format">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">JPEG</Name>
+			<Definition xml:lang="en">JPEG still picture coding</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">MPEG-1</Name>
+			<Definition xml:lang="en">MPEG-1 video coding</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">MPEG-2</Name>
+			<Definition xml:lang="en">MPEG-2 video coding</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">MPEG-4</Name>
+			<Definition xml:lang="en">MPEG-4 video coding</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">MJPEG</Name>
+			<Definition xml:lang="en">Motion JPEG video coding</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">JPEG2000</Name>
+			<Definition xml:lang="en">JPEG2000 still picture coding</Definition>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">H261</Name>
+			<Definition xml:lang="en">H261 video coding</Definition>
+		</Term>
+		<Term termId="8">
+			<Name xml:lang="en">H263</Name>
+			<Definition xml:lang="en">H263 video coding</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.2.5.1 MPEG7AudioPresentationCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7AudioPresentationCS" domain="../">
+	<!-- XML Spy v.3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaFormat/AudioCoding/Presentation">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">no sound</Name>
+			<Definition xml:lang="en">No sound</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">mono</Name>
+			<Definition xml:lang="en">Monographic sound</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">stereo</Name>
+			<Definition xml:lang="en">Stereographic sound</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">surround</Name>
+			<Definition xml:lang="en">Surround sound</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Home theater 5.1</Name>
+			<Definition xml:lang="en">3/2/1 (L,C,R,Lside,Rside)</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">Movie theater</Name>
+			<Definition xml:lang="en">3/2/2 (L,C,R,Lside,Rside,Lrear,Rrear)
+		</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.2.6.1 MPEG7AudioCodingFormatCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7AudioCodingFormatCS" domain="../">
+	<!-- XML Spy v.35 bug
+	domain="//MediaInformation/MediaProfile/MediaFormat/AudioCoding/Format">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">AC3</Name>
+			<Definition xml:lang="en">Dolby AC-3</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">DTS</Name>
+			<Definition xml:lang="en">Digital theatrical sound</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">MP3</Name>
+			<Name xml:lang="en">MPEG-1</Name>
+			<Name xml:lang="en">MPEG-2 Layer III</Name>
+			<Definition xml:lang="en">MPEG-1 audio coding</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">MPEG-2</Name>
+			<Definition xml:lang="en">MPEG-2 audio coding</Definition>
+			<Term termId="4.1">
+				<Name xml:lang="en">MPEG-2 BC</Name>
+				<Definition xml:lang="en">MPEG-2 backwards-compatible</Definition>
+			</Term>
+			<Term termId="4.2">
+				<Name xml:lang="en">MPEG-2 AAC</Name>
+				<Definition xml:lang="en">MPEG-2 advanced audio coding</Definition>
+			</Term>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">MPEG-4</Name>
+			<Definition xml:lang="en">MPEG-4 audio coding</Definition>
+			<Term termId="5.1">
+				<Definition xml:lang="en">MPEG-4 general audio coding</Definition>
+				<Term termId="5.1.1">
+					<Name xml:lang="en">MPEG-4 AAC</Name>
+					<Definition xml:lang="en">
+					MPEG-4 advanced audio coding
+				</Definition>
+				</Term>
+				<Term termId="5.1.2">
+					<Name xml:lang="en">MPEG-4 TwinVQ</Name>
+					<Definition xml:lang="en">
+					MPEG-4 Transform-domain Weighted Interleave Vector
+					Quantization
+				</Definition>
+				</Term>
+			</Term>
+			<Term termId="5.2">
+				<Definition xml:lang="en">MPEG-4 speech coding</Definition>
+				<Term termId="5.2.1">
+					<Name xml:lang="en">MPEG-4 HVXC</Name>
+					<Definition xml:lang="en">
+					MPEG-4 harmonic vector excitation coding
+				</Definition>
+				</Term>
+				<Term termId="5.2.2">
+					<Name xml:lang="en">MPEG-4 CELP</Name>
+					<Definition xml:lang="en">
+					MPEG-4 code excited linear prediction
+					</Definition>
+				</Term>
+			</Term>
+			<Term termId="5.3">
+				<Name xml:lang="en">MPEG-4 TTSI</Name>
+				<Definition xml:lang="en">
+				MPEG-4 text to speech interface
+			</Definition>
+			</Term>
+			<Term termId="5.4">
+				<Name xml:lang="en">MPEG-4 SA</Name>
+				<Definition xml:lang="en">MPEG-4 structured audio</Definition>
+			</Term>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">AMR</Name>
+			<Definition xml:lang="en">Advanced Multi Rate</Definition>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">ITU-T G.72x</Name>
+			<Definition xml:lang="en">ITU-T G.72x speech coding</Definition>
+			<Term termId="7.1">
+				<Name xml:lang="en">G.723</Name>
+				<Name xml:lang="en">G.723.1</Name>
+				<Definition xml:lang="en">ITU-T G.723 speech coding</Definition>
+			</Term>
+			<Term termId="7.2">
+				<Name xml:lang="en">G.726</Name>
+				<Definition xml:lang="en">ITU-T G.726 speech coding</Definition>
+			</Term>
+			<Term termId="7.3">
+				<Name xml:lang="en">G.728</Name>
+				<Definition xml:lang="en">ITU-T G.728 speech coding</Definition>
+			</Term>
+			<Term termId="7.4">
+				<Name xml:lang="en">G.729</Name>
+				<Definition xml:lang="en">ITU-T G.729 speech coding</Definition>
+			</Term>
+		</Term>
+		<Term termId="8">
+			<Name xml:lang="en">Linear PCM</Name>
+			<Definition xml:lang="en">Linear Pulse Code Modulation</Definition>
+		</Term>
+		<Term termId="9">
+			<Name xml:lang="en">Windows Media Audio</Name>
+			<Definition xml:lang="en">Windows Media Audio</Definition>
+		</Term>
+		<Term termId="10">
+			<Name xml:lang="en">ATRAC</Name>
+			<Definition xml:lang="en">Adaptive Transform Acoustic Coding</Definition>
+		</Term>
+		<Term termId="11">
+			<Name xml:lang="en">ATRAC2</Name>
+			<Definition xml:lang="en">
+			Adaptive Transform Acoustic Coding 2
+		</Definition>
+		</Term>
+		<Term termId="12">
+			<Name xml:lang="en">ATRAC3</Name>
+			<Definition xml:lang="en">
+			Adaptive Transform Acoustic Coding 3
+		</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.3.1.1 MPEG7QualityRatingSchemeCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7QualityRatingSchemeCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaQuality/QualityRating/RatingScheme">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Subjective</Name>
+			<Definition xml:lang="en">Subjective Rating Schemes</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">DSIS</Name>
+				<Definition xml:lang="en">
+					The double-stimulus impairment scale
+				</Definition>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">DSCQS</Name>
+				<Definition xml:lang="en">
+				The double-stimulus continuous quality-scale
+			</Definition>
+			</Term>
+			<Term termId="1.3">
+				<Name xml:lang="en">SSACJM</Name>
+				<Definition xml:lang="en">
+				The single stimulus adjectival categorical judgement methods
+			</Definition>
+			</Term>
+			<Term termId="1.4">
+				<Name xml:lang="en">SSNUCJM</Name>
+				<Definition xml:lang="en">
+				The single stimulus numerical categorical  judgement methods
+			</Definition>
+			</Term>
+			<Term termId="1.5">
+				<Name xml:lang="en">SSNCJM</Name>
+				<Definition xml:lang="en">
+				The single non-categorical judgment methods
+			</Definition>
+			</Term>
+			<Term termId="1.6">
+				<Name xml:lang="en">SSPM</Name>
+				<Definition xml:lang="en">The single stimulus performance methods
+			</Definition>
+			</Term>
+			<Term termId="1.7">
+				<Name xml:lang="en">SCACJM</Name>
+				<Definition xml:lang="en">The stimulus comparison adjectival
+				categorical judgement methods
+			</Definition>
+			</Term>
+			<Term termId="1.8">
+				<Name xml:lang="en">SCNCJM</Name>
+				<Definition xml:lang="en">
+				The stimulus comparison non-categorical judgment methods
+			</Definition>
+			</Term>
+			<Term termId="1.9">
+				<Name xml:lang="en">SCPM</Name>
+				<Definition xml:lang="en">
+				The stimulus comparison performance methods
+			</Definition>
+			</Term>
+			<Term termId="1.10">
+				<Name xml:lang="en">SSCQE</Name>
+				<Definition xml:lang="en">
+				The single stimulus continuous quality evaluation
+			</Definition>
+			</Term>
+			<Term termId="1.11">
+				<Name xml:lang="en">SDSCE</Name>
+				<Definition xml:lang="en">
+				The simultaneous double stimulus for continuous 
+				evaluation method
+			</Definition>
+			</Term>
+			<Term termId="1.16">
+				<Name xml:lang="en">Others</Name>
+				<Definition xml:lang="en">
+				Other subjective rating schemes
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Objective</Name>
+			<Definition xml:lang="en">Objective Rating Schemes</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">HVS_R</Name>
+				<Definition xml:lang="en">Human vision system model with reference
+			</Definition>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">HVS_NR</Name>
+				<Definition xml:lang="en">
+				Human vision system model with no reference
+			</Definition>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">PSNR_Y</Name>
+				<Definition xml:lang="en">PSNR (in dBs) on Y channel</Definition>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">PSNR_U</Name>
+				<Definition xml:lang="en">PSNR (in dBs) on U channel</Definition>
+			</Term>
+			<Term termId="2.5">
+				<Name xml:lang="en">PSNR_V</Name>
+				<Definition xml:lang="en">PSNR (in dBs) on V channel</Definition>
+			</Term>
+			<Term termId="2.6">
+				<Name xml:lang="en">PSNR_R</Name>
+				<Definition xml:lang="en">PSNR (in dBs) on R channel</Definition>
+			</Term>
+			<Term termId="2.7">
+				<Name xml:lang="en">PSNR_G</Name>
+				<Definition xml:lang="en">PSNR (in dBs) on G channel</Definition>
+			</Term>
+			<Term termId="2.8">
+				<Name xml:lang="en">PSNR_B</Name>
+				<Definition xml:lang="en">PSNR (in dBs) on B channel</Definition>
+			</Term>
+			<Term termId="2.9">
+				<Name xml:lang="en">MSE_Y</Name>
+				<Definition xml:lang="en">MSE on Y channel</Definition>
+			</Term>
+			<Term termId="2.10">
+				<Name xml:lang="en">MSE_U</Name>
+				<Definition xml:lang="en">MSE on U channel</Definition>
+			</Term>
+			<Term termId="2.11">
+				<Name xml:lang="en">MSE_V</Name>
+				<Definition xml:lang="en">MSE on V channel</Definition>
+			</Term>
+			<Term termId="2.12">
+				<Name xml:lang="en">MSE_R</Name>
+				<Definition xml:lang="en">MSE on R channel</Definition>
+			</Term>
+			<Term termId="2.13">
+				<Name xml:lang="en">MSE_G</Name>
+				<Definition xml:lang="en">MSE on G channel</Definition>
+			</Term>
+			<Term termId="2.14">
+				<Name xml:lang="en">MSE_B</Name>
+				<Definition xml:lang="en">MSE on B channel</Definition>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.3.2.1 MPEG7VisualDefectsCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7VisualDefectsCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaQuality/VisualDefects">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Block distortion</Name>
+			<Name xml:lang="en">Blockiness</Name>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Blurring</Name>
+			<Name xml:lang="en">Smearing</Name>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Edge noise</Name>
+			<Name xml:lang="en">Ring</Name>
+			<Name xml:lang="en">Edge Busyness</Name>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Error blocks</Name>
+			<Name xml:lang="en">Missing blocks</Name>
+			<Definition xml:lang="en">Missing blocks due to packet loss</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Motion Jerkiness</Name>
+			<Definition xml:lang="en">Jumpy movement of visual objects</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">Motion Jitters</Name>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">Scratches</Name>
+		</Term>
+		<Term termId="8">
+			<Name xml:lang="en">Speckles</Name>
+		</Term>
+		<Term termId="9">
+			<Name xml:lang="en">Noise</Name>
+			<Name xml:lang="en">Random noise</Name>
+		</Term>
+		<Term termId="10">
+			<Name xml:lang="en">Ghosting</Name>
+		</Term>
+		<Term termId="11">
+			<Name xml:lang="en">Contouring</Name>
+			<Definition xml:lang="en">Image contouring effects</Definition>
+		</Term>
+		<Term termId="12">
+			<Name xml:lang="en">Color saturation error</Name>
+		</Term>
+		<Term termId="13">
+			<Name xml:lang="en">Color distortions</Name>
+		</Term>
+		<Term termId="14">
+			<Name xml:lang="en">Dithering</Name>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.1.3.3.1 MPEG7AudioDefectsCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7AudioDefectsCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//MediaInformation/MediaProfile/MediaQuality/AudioDefects">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Noise</Name>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Pops</Name>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Hisses</Name>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Clicks</Name>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Others</Name>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.1.1.1 MPEG7RoleCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7RoleCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Creation/Creator/Role">
+	-->
+		<Term termId="ANCHOR">
+			<Name xml:lang="en">Anchor</Name>
+			<Name xml:lang="en">Anchorman</Name>
+			<Name xml:lang="en">Anchorwoman</Name>
+			<Name xml:lang="en">Anchorperson</Name>
+			<Definition xml:lang="en">
+			A television reporter who coordinates a broadcast 
+			to which several correspondents contribute.
+		</Definition>
+		</Term>
+		<Term termId="REPORTER">
+			<Name xml:lang="en">Reporter</Name>
+			<Name xml:lang="en">Newsman</Name>
+			<Name xml:lang="en">Newswoman</Name>
+			<Name xml:lang="en">Newsperson</Name>
+			<Definition xml:lang="en">A person who gathers news and other
+			journalistic  material and writes or broadcasts it-the basic 
+			job in journalism.
+		</Definition>
+		</Term>
+		<Term termId="INTERVIEWER">
+			<Name xml:lang="en">Interviewer</Name>
+			<Definition xml:lang="en">
+			A person who conducts an interview.
+		</Definition>
+		</Term>
+		<Term termId="NARRATOR">
+			<Name xml:lang="en">Narrator</Name>
+			<Name xml:lang="en">Storyteller</Name>
+			<Definition xml:lang="en">A person who tells a story.</Definition>
+		</Term>
+		<Term termId="ACTOR">
+			<Name xml:lang="en">Actor</Name>
+			<Name xml:lang="en">Actress</Name>
+			<Name xml:lang="en">Histrion</Name>
+			<Name xml:lang="en">Player</Name>
+			<Name xml:lang="en">Thespian</Name>
+			<Name xml:lang="en">Role Player</Name>
+			<Definition xml:lang="en">A person who plays the role of a character.
+		</Definition>
+		</Term>
+		<Term termId="DANCER">
+			<Name xml:lang="en">Dancer</Name>
+			<Definition xml:lang="en">A performer who dances.</Definition>
+		</Term>
+		<Term termId="MUSICIAN">
+			<Name xml:lang="en">Musician</Name>
+			<Name xml:lang="en">Instrumentalist</Name>
+			<Name xml:lang="en">Player</Name>
+			<Definition xml:lang="en">Someone who plays a musical instrument (as a 
+									profession).
+		</Definition>
+		</Term>
+		<Term termId="SINGER">
+			<Name xml:lang="en">Singer</Name>
+			<Name xml:lang="en">Vocalist</Name>
+			<Definition xml:lang="en">A person who sings.</Definition>
+		</Term>
+		<Term termId="PERFORMER">
+			<Name xml:lang="en">Performer</Name>
+			<Name xml:lang="en">Performing Artist</Name>
+			<Definition xml:lang="en">An entertainer who performs a dramatic or 
+			musical work for audience. (Other than above).
+		</Definition>
+		</Term>
+		<Term termId="EXECUTIVE-PRODUCER">
+			<Name xml:lang="en">Executive Producer</Name>
+			<Name xml:lang="en">Executive in Charge of Production</Name>
+			<Definition xml:lang="en">A producer who is not involved in any technical 
+			aspects of the making process, but who is still 
+			responsible for the overall production. Typically 
+			an executive producer handles business and legal issues.
+		</Definition>
+		</Term>
+		<Term termId="PRODUCER">
+			<Name xml:lang="en">Producer</Name>
+			<Definition xml:lang="en">The manager of an event, show, or other work, 
+			usually the individual in charge of finance, 
+			personnel, and other non-artistic aspects in the 
+			development of commercials, plays, movies, and 
+			other works.
+		</Definition>
+		</Term>
+		<Term termId="SCRIPTWRITER">
+			<Name xml:lang="en">Scriptwriter</Name>
+			<Definition xml:lang="en">A person who writes scripts for plays or movies 
+			or broadcast dramas.
+		</Definition>
+		</Term>
+		<Term termId="DIRECTOR">
+			<Name xml:lang="en">Director</Name>
+			<Definition xml:lang="en">A supervisor; generally refers to the person 
+			responsible for all audience-visible components of 
+			a program, film, or show, whereas the producer is 
+			responsible for the financial and other behind-the-
+			scenes aspects. A director's duties might also 
+			include casting, script editing, shot selection, 
+			shot composition, and editing.
+		</Definition>
+		</Term>
+		<Term termId="ASSISTANT-DIRECTOR">
+			<Name xml:lang="en">Assistant Director</Name>
+			<Name xml:lang="en">AD</Name>
+			<Definition xml:lang="en">An assistant director's duties include tracking 
+			the progress of filming versus the production 
+			schedule, and preparing call sheets that is a 
+			listing of which actors will be required for which 
+			scenes, and when they will be required.
+		</Definition>
+		</Term>
+		<Term termId="PRODUCTION-ASSISTANT">
+			<Name xml:lang="en">Production Assistant</Name>
+			<Name xml:lang="en">PA</Name>
+			<Definition xml:lang="en">A person who aids a producer, director, 
+			assistant 
+			director, or others involved in film or TV 
+			production, such as the person who keeps passersby 
+			from waking into a location shoot.
+		</Definition>
+		</Term>
+		<Term termId="CONTINUITY-PERSON">
+			<Name xml:lang="en">Continuity Person</Name>
+			<Definition xml:lang="en">A person who writes a detailed script used     
+			making 
+			a film in order to avoid discontinuities from shot 
+			to shot.
+		</Definition>
+		</Term>
+		<Term termId="TIMEKEEPER">
+			<Name xml:lang="en">Timekeeper</Name>
+			<Name xml:lang="en">Production Associate</Name>
+			<Definition xml:lang="en">A person who keeps track of the time elapsed in 
+			a program.
+		</Definition>
+		</Term>
+		<Term termId="MUSIC-SUPERVISOR">
+			<Name xml:lang="en">Music Supervisor</Name>
+			<Definition xml:lang="en">A person who coordinates the work of the 
+			composer, the editor, and sound mixers.
+		</Definition>
+		</Term>
+		<Term termId="COMPOSER">
+			<Name xml:lang="en">Composer</Name>
+			<Definition xml:lang="en">A musician whose music appears in a program's 
+			score. Most movies have at least some original 
+			music written for the score, usually after the 
+			relevant parts of the movie have been filmed.
+		</Definition>
+		</Term>
+		<Term termId="PRODUCTION-DESIGNER">
+			<Name xml:lang="en">Production Designer</Name>
+			<Definition xml:lang="en">An artist responsible for designing the overall 
+			visual appearance of a program.
+		</Definition>
+		</Term>
+		<Term termId="ART-DIRECTOR">
+			<Name xml:lang="en">Art Director</Name>
+			<Definition xml:lang="en">A person who oversees the artists and   
+			craftspeople who build the sets.
+		</Definition>
+		</Term>
+		<Term termId="SET-DESIGNER">
+			<Name xml:lang="en">Set Designer</Name>
+			<Definition xml:lang="en">A person responsible for designing sets. The 
+			set designer reports to the art director.
+		</Definition>
+		</Term>
+		<Term termId="SET-MAKER">
+			<Name xml:lang="en">Set Maker</Name>
+			<Definition xml:lang="en">A person who makes the set with the 
+			specifications dictated by the set designer.
+		</Definition>
+		</Term>
+		<Term termId="PROPERTY-MASTER">
+			<Name xml:lang="en">Property Master</Name>
+			<Name xml:lang="en">Prop Master</Name>
+			<Name xml:lang="en">Props</Name>
+			<Name xml:lang="en">Property</Name>
+			<Definition xml:lang="en">A person responsible for buying/acquiring any 
+			props needed for a production.
+		</Definition>
+		</Term>
+		<Term termId="PROPERTY-ASSISTANT">
+			<Name xml:lang="en">Property Assistant</Name>
+			<Name xml:lang="en">Prop Assistant</Name>
+			<Definition xml:lang="en">Responsible for the placement and maintenance 
+			of props on a set.
+		</Definition>
+		</Term>
+		<Term termId="SOUND-EFFECTS-PERSON">
+			<Name xml:lang="en">Sound Effects Person</Name>
+			<Name xml:lang="en">Soundman</Name>
+			<Name xml:lang="en">Sound Person</Name>
+			<Name xml:lang="en">SE</Name>
+			<Definition xml:lang="en">The sound-effects person, generally called a 
+			soundman, is responsible for the sound effects, or 
+			sounds other than music and human voices.
+		</Definition>
+		</Term>
+		<Term termId="SFX-SUPERVISOR">
+			<Name xml:lang="en">Special Effects Supervisor</Name>
+			<Name xml:lang="en">Special Effects Co-Ordinator</Name>
+			<Definition xml:lang="en">The chief of a production's special effects
+			crew.
+		</Definition>
+		</Term>
+		<Term termId="SFX-ASSISTANT">
+			<Name xml:lang="en">Special Effects Assistant</Name>
+			<Name xml:lang="en">Special Effects Technician</Name>
+			<Definition xml:lang="en">A person who makes an artificial effect used to 
+			create an illusion in a program.
+		</Definition>
+		</Term>
+		<Term termId="ANIMATOR">
+			<Name xml:lang="en">Animator</Name>
+			<Definition xml:lang="en">An artist who produces animation drawings, or
+			the person in charge of an animation production.
+		</Definition>
+		</Term>
+		<Term termId="CG-ARTIST">
+			<Name xml:lang="en">Computer Graphics Artist</Name>
+			<Name xml:lang="en">CG</Name>
+			<Definition xml:lang="en">An artist who produces computer graphics.
+		</Definition>
+		</Term>
+		<Term termId="MAKEUP-SUPERVISOR">
+			<Name xml:lang="en">Makeup Supervisor</Name>
+			<Definition xml:lang="en">The decorations placed directly on the skin or 
+			hair of an actor for cosmetic or artistic effect. 
+			Practitioners are called artists or supervisors.
+		</Definition>
+		</Term>
+		<Term termId="MAKEUP-ARTIST">
+			<Name xml:lang="en">Makeup Artist</Name>
+			<Definition xml:lang="en">The decorations placed directly on the skin or 
+			hair of an actor for cosmetic or artistic effect. 
+			Practitioners are called artists or supervisors.
+		</Definition>
+		</Term>
+		<Term termId="COSTUME-SUPERVISOR">
+			<Name xml:lang="en">Costume Supervisor</Name>
+			<Definition xml:lang="en">A person responsible for handling the costumes 
+			worn by actors.
+		</Definition>
+		</Term>
+		<Term termId="COSTUMER">
+			<Name xml:lang="en">Costumer</Name>
+			<Name xml:lang="en">Wardrobe</Name>
+			<Name xml:lang="en">Assistant Wardrobe</Name>
+			<Name xml:lang="en">Wardrobe Assistant</Name>
+			<Definition xml:lang="en">A person who handles the costumes worn by
+			actors.
+		</Definition>
+		</Term>
+		<Term termId="TECHNICAL-DIRECTOR">
+			<Name xml:lang="en">Technical Director</Name>
+			<Name xml:lang="en">TD</Name>
+			<Definition xml:lang="en">The director of the technical facilities for a 
+			production.
+		</Definition>
+		</Term>
+		<Term termId="SWITCHER">
+			<Name xml:lang="en">Switcher</Name>
+			<Definition xml:lang="en">A person (studio engineer) responsible for 
+			camera mixing or switching. Switching is the selection 
+			process among the various audio and video sources 
+			in a production.
+		</Definition>
+		</Term>
+		<Term termId="CAMERA-OPERATOR">
+			<Name xml:lang="en">Camera Operator</Name>
+			<Name xml:lang="en">Cameraperson</Name>
+			<Name xml:lang="en">Cameraman</Name>
+			<Definition xml:lang="en">A person who operates the camera to the 
+			specifications dictated by the director.
+		</Definition>
+		</Term>
+		<Term termId="CAMERA-ASSISTANT">
+			<Name xml:lang="en">Camera Assistant</Name>
+			<Name xml:lang="en">Assistant Camera</Name>
+			<Definition xml:lang="en">A member of the camera crew who assists the 
+			camera operator.
+		</Definition>
+		</Term>
+		<Term termId="LIGHTING-SUPERVISOR">
+			<Name xml:lang="en">Lighting Supervisor</Name>
+			<Definition xml:lang="en">The chief of a production's lightning crew.
+		</Definition>
+		</Term>
+		<Term termId="LIGHTING-OPERATOR">
+			<Name xml:lang="en">Lighting Operator</Name>
+			<Name xml:lang="en">Lighting Technician</Name>
+			<Definition xml:lang="en">A technician who installs, operates, and  
+			maintains lighting.
+		</Definition>
+		</Term>
+		<Term termId="SOUND-SUPERVISOR">
+			<Name xml:lang="en">Sound Supervisor</Name>
+			<Name xml:lang="en">Recording Supervisor</Name>
+			<Definition xml:lang="en">The person responsible for the technical  
+			quality of a program's sound.
+		</Definition>
+		</Term>
+		<Term termId="SOUND-ENGINEER">
+			<Name xml:lang="en">Sound Engineer</Name>
+			<Name xml:lang="en">Audio Operator</Name>
+			<Definition xml:lang="en">A person who operates sound recording devices.
+		</Definition>
+		</Term>
+		<Term termId="VISUAL-EFFECTS-SUPERVISOR">
+			<Name xml:lang="en">Visual Effects Supervisor</Name>
+			<Name xml:lang="en">Video Supervisor</Name>
+			<Definition xml:lang="en">The chief of a production's visual effects
+			crew.
+		</Definition>
+		</Term>
+		<Term termId="VIDEO-ENGINEER">
+			<Name xml:lang="en">Video Engineer</Name>
+			<Name xml:lang="en">Video Operator</Name>
+			<Definition xml:lang="en">An engineer who operates the monitors and  
+			camera control units to switch from one camera to another 
+			and maintain color, contrast, and other visual 
+			qualities.
+		</Definition>
+		</Term>
+		<Term termId="TRANPORTATION-CAPTAIN">
+			<Name xml:lang="en">Transportation Captain</Name>
+			<Definition xml:lang="en">A person who drives either equipment or  
+			passenger trucks, typically between location shootings, sets, 
+			and the studio.
+		</Definition>
+		</Term>
+		<Term termId="STAFF">
+			<Name xml:lang="en">Staff</Name>
+			<Name xml:lang="en">Production Staff</Name>
+			<Definition xml:lang="en">Personnel who carries out an assigned  
+			production task. (Other than above).
+		</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.1.1 TVAnytime_v0.1FormatCS -->
+	<ClassificationScheme uri="urn:mpeg:TVAnytime_v0.1FormatCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/Form">
+	-->
+		<!--
+		This dimension is used to classify programs as to their formal structure;
+		in other words: how does the program look, regardless of the subject
+		and/or genre with which the program is dealing
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Non-fiction</Name>
+			<Definition xml:lang="en">
+			All programs dealing with facts, situations, 
+			opinions, theories and forecasts</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">Bulletin</Name>
+				<Definition xml:lang="en">Program with formal desk presentation,
+				usually interspersed with visual material.</Definition>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">Sport news</Name>
+			</Term>
+			<Term termId="1.3">
+				<Name xml:lang="en">Magazine</Name>
+				<Definition xml:lang="en">
+			Program consisting of separate items which has at least one common
+			quality and presented under one main heading.</Definition>
+			</Term>
+			<Term termId="1.4">
+				<Name xml:lang="en">Sport magazine</Name>
+			</Term>
+			<Term termId="1.5">
+				<Name xml:lang="en">Commented event</Name>
+				<Definition xml:lang="en">An outside event covered by the
+				broadcaster and with an accompanying commentary, and
+				transmitted live or deferred (within 24 hours)
+			</Definition>
+			</Term>
+			<Term termId="1.6">
+				<Name xml:lang="en">Documentary</Name>
+				<Definition xml:lang="en">Program concerning a single theme,
+				involving descriptive and/or interpretative commentaries,
+				illustrations, interviews, statements, photos or other
+				documentation.
+			</Definition>
+			</Term>
+			<Term termId="1.7">
+				<Name xml:lang="en">Discussion/Interview/Debate</Name>
+				<Definition xml:lang="en">Mainly verbal program in which more than
+				one person participates.
+			</Definition>
+			</Term>
+			<Term termId="1.8">
+				<Name xml:lang="en">Lecture/Speech/Presentation</Name>
+				<Definition xml:lang="en">Mainly verbal program in which only one
+				person participates.
+			</Definition>
+			</Term>
+			<Term termId="1.9">
+				<Name xml:lang="en">Textual (incl. relayed teletext)</Name>
+				<Definition xml:lang="en">Program consisting only of alphanumerical 
+				information.</Definition>
+			</Term>
+			<Term termId="1.10">
+				<Name xml:lang="en">Phone-in</Name>
+			</Term>
+			<Term termId="1.11">
+				<Name xml:lang="en">Theatre/Cinema</Name>
+				<Definition xml:lang="en">Program about subject concerning the
+				world of film and cinema, e.g. preview of recent films
+			</Definition>
+			</Term>
+			<Term termId="1.12">
+				<Name xml:lang="en">Advertising</Name>
+				<Definition xml:lang="en">Program about (the world of) advertising,
+				e.g. interview with advertising people
+			</Definition>
+			</Term>
+			<Term termId="1.13">
+				<Name xml:lang="en">Arts/Culture magazine</Name>
+			</Term>
+			<Term termId="1.14">
+				<Name xml:lang="en">Factual topics</Name>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Drama</Name>
+			<Definition xml:lang="en">Program consisting of a prose or verse
+			composition telling a story, for performance by actors, puppets or 
+			in animated form
+		</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Performed drama</Name>
+				<Definition xml:lang="en">
+				Program consisting of a dramatic work, performed
+				by live actors
+			</Definition>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Readings</Name>
+				<Definition xml:lang="en">
+				Programs consisting of readings of poems, stories 
+				or other literary works
+			</Definition>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Drama with puppets</Name>
+				<Definition xml:lang="en">Program consisting of a dramatic work, 
+				performed with puppets (e.g. The Muppet Show)
+			</Definition>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">Animated drama</Name>
+				<Definition xml:lang="en">Program consisting of a dramatic work,
+				presented as an animation (e.g. The Flintstones)
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Entertainment</Name>
+			<Term termId="3.1">
+				<Name xml:lang="en">Hosted show</Name>
+				<Definition xml:lang="en">Program that can be regarded neither as
+				non-fiction nor as drama or music/dance and usually of a
+				light entertainment character in which one or more persons
+				fulfill the role of presenter, host, quiz or games master,
+				announcer, chairperson or speaker.
+			</Definition>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Panel-show</Name>
+				<Definition xml:lang="en">Program that can be regarded neither as
+				non-fiction nor as drama or concert and normally of a light
+				entertainment character in which is presented by a more or
+				less fixed group of people (panel)
+			</Definition>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">Non-hosted show</Name>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">Standup comedian(s)</Name>
+				<Definition xml:lang="en">Program performed by a single. a
+					pair or a group of comedians</Definition>
+			</Term>
+			<Term termId="3.5">
+				<Name xml:lang="en">Solo performance</Name>
+				<Definition xml:lang="en">Musical performance by one or more
+				soloists accompanied by an ensemble
+			</Definition>
+			</Term>
+			<Term termId="3.6">
+				<Name xml:lang="en">Small ensemble performance</Name>
+				<Definition xml:lang="en">Musical performance by ensemble of less
+				than 7 performers</Definition>
+			</Term>
+			<Term termId="3.7">
+				<Name xml:lang="en">Orchestral</Name>
+				<Definition xml:lang="en">Musical performance by ensemble of more
+				than 7 performers</Definition>
+			</Term>
+			<Term termId="3.8">
+				<Name xml:lang="en">Choral music</Name>
+			</Term>
+			<Term termId="3.9">
+				<Name xml:lang="en">Theatrical music</Name>
+				<Definition xml:lang="en">Performance by vocalists and musicians in
+				 a theatrical work
+			</Definition>
+			</Term>
+			<Term termId="3.10">
+				<Name xml:lang="en">Mixed music</Name>
+			</Term>
+			<Term termId="3.11">
+				<Name xml:lang="en">Music</Name>
+				<Definition xml:lang="en">Program about a musical subject (e.g. 
+				a biography of Mozart)</Definition>
+			</Term>
+			<Term termId="3.12">
+				<Name xml:lang="en">Serious music</Name>
+			</Term>
+			<Term termId="3.13">
+				<Name xml:lang="en">Classical music</Name>
+			</Term>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Ballet</Name>
+			<Definition xml:lang="en">TV programs (predominantly) consisting of 
+			ballet</Definition>
+			<Term termId="4.1">
+				<Name xml:lang="en">Ballet</Name>
+				<Definition xml:lang="en">Program performed by (ballet) dancers
+				(e.g. The Swan Lake, Jazz Ballet, etc.)</Definition>
+			</Term>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Dance</Name>
+			<Definition xml:lang="en">TV programs (predominantly) consisting of 
+			dance</Definition>
+			<Term termId="5.1">
+				<Name xml:lang="en">Dance</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.2.1 TVAnytime_v0.1ContentCS -->
+	<ClassificationScheme uri="urn:mpeg:TVAnytime_v0.1ContentCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/Genre">
+	-->
+		<!--
+		This dimension is used to classify programs according to their content or 
+		Subject matter. This CS can be used for main genre (e.g. sports) and sub-
+		theme (e.g. magazine show)
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Information</Name>
+			<Term termId="1.1">
+				<Name xml:lang="en">Pure information</Name>
+				<Term termId="1.1.1">
+					<Name xml:lang="en">Infotainment</Name>
+					<Definition xml:lang="en">Programs intended primarily to
+					entertain, but which also contain substantial
+					informative elements
+				</Definition>
+				</Term>
+				<Term termId="1.1.2">
+					<Name xml:lang="en">Advice</Name>
+					<Definition xml:lang="en">Program intended to advise about
+					matters of personal interest, such as consumer prices
+					and quality, financial matters, health, or, for the
+					interest of special groups, weather or traffic 
+					information.
+				</Definition>
+				</Term>
+				<Term termId="1.1.3">
+					<Name xml:lang="en">Politics/the Diet</Name>
+				</Term>
+				<Term termId="1.1.4">
+					<Name xml:lang="en">Economy/Market conditions</Name>
+				</Term>
+				<Term termId="1.1.5">
+					<Name xml:lang="en">Overseas/International</Name>
+				</Term>
+				<Term termId="1.1.6">
+					<Name xml:lang="en">Commentary</Name>
+				</Term>
+				<Term termId="1.1.7">
+					<Name xml:lang="en">Debates/Conferences</Name>
+				</Term>
+				<Term termId="1.1.8">
+					<Name xml:lang="en">Social issues</Name>
+				</Term>
+				<Term termId="1.1.9">
+					<Name xml:lang="en">Economics advisory</Name>
+				</Term>
+				<Term termId="1.1.10">
+					<Name xml:lang="en">Discussion</Name>
+				</Term>
+				<Term termId="1.1.11">
+					<Name xml:lang="en">Social advisory</Name>
+				</Term>
+				<Term termId="1.1.12">
+					<Name xml:lang="en">Interviews</Name>
+				</Term>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">Information/tabloid</Name>
+				<Term termId="1.2.1">
+					<Name xml:lang="en">Entertainment/tabloid</Name>
+				</Term>
+				<Term termId="1.2.2">
+					<Name xml:lang="en">Fashion</Name>
+				</Term>
+				<Term termId="1.2.3">
+					<Name xml:lang="en">Lifestyle/living space</Name>
+				</Term>
+				<Term termId="1.2.4">
+					<Name xml:lang="en">Health/medical</Name>
+				</Term>
+				<Term termId="1.2.5">
+					<Name xml:lang="en">Shopping/mail order and telephone
+					shopping
+				</Name>
+				</Term>
+				<Term termId="1.2.6">
+					<Name xml:lang="en">Gourmet eating/cooking</Name>
+				</Term>
+				<Term termId="1.2.7">
+					<Name xml:lang="en">Special events</Name>
+				</Term>
+				<Term termId="1.2.8">
+					<Name xml:lang="en">Program introductions/notices</Name>
+				</Term>
+				<Term termId="1.2.9">
+					<Name xml:lang="en">Remarkable people</Name>
+				</Term>
+			</Term>
+			<Term termId="1.3">
+				<Name xml:lang="en">General non-fiction topics</Name>
+				<Term termId="1.3.1">
+					<Name xml:lang="en">Daily news</Name>
+				</Term>
+				<Term termId="1.3.2">
+					<Name xml:lang="en">Current affairs</Name>
+				</Term>
+				<Term termId="1.3.3">
+					<Name xml:lang="en">Weather forecast</Name>
+				</Term>
+				<Term termId="1.3.4">
+					<Name xml:lang="en">Service information</Name>
+				</Term>
+				<Term termId="1.3.5">
+					<Name xml:lang="en">Special news programs</Name>
+				</Term>
+				<Term termId="1.3.6">
+					<Name xml:lang="en">Local/regional</Name>
+				</Term>
+				<Term termId="1.3.7">
+					<Name xml:lang="en">Traffic</Name>
+				</Term>
+				<Term termId="1.3.8">
+					<Name xml:lang="en">Magazines</Name>
+				</Term>
+				<Term termId="1.3.9">
+					<Name xml:lang="en">News magazine</Name>
+				</Term>
+			</Term>
+			<Term termId="1.4">
+				<Name xml:lang="en">Philosophies of life</Name>
+				<Term termId="1.4.1">
+					<Name xml:lang="en">Religious philosophies</Name>
+					<Term termId="1.4.1.1">
+						<Name xml:lang="en">Buddhism</Name>
+					</Term>
+					<Term termId="1.4.1.2">
+						<Name xml:lang="en">Hinduism</Name>
+					</Term>
+					<Term termId="1.4.1.3">
+						<Name xml:lang="en">Christianity</Name>
+					</Term>
+					<Term termId="1.4.1.4">
+						<Name xml:lang="en">Islam</Name>
+					</Term>
+					<Term termId="1.4.1.5">
+						<Name xml:lang="en">Judaism</Name>
+					</Term>
+				</Term>
+				<Term termId="1.4.2">
+					<Name xml:lang="en">Non-religious philosophies</Name>
+					<Term termId="1.4.2.1">
+						<Name xml:lang="en">Communism</Name>
+					</Term>
+					<Term termId="1.4.2.2">
+						<Name xml:lang="en">Humanism</Name>
+					</Term>
+				</Term>
+			</Term>
+			<Term termId="1.5">
+				<Name xml:lang="en">Social/Political</Name>
+				<Term termId="1.5.1">
+					<Name xml:lang="en">Political</Name>
+				</Term>
+				<Term termId="1.5.2">
+					<Name xml:lang="en">Social</Name>
+				</Term>
+				<Term termId="1.5.3">
+					<Name xml:lang="en">Economics</Name>
+				</Term>
+				<Term termId="1.5.4">
+					<Name xml:lang="en">Legal</Name>
+				</Term>
+			</Term>
+			<Term termId="1.6">
+				<Name xml:lang="en">Sports</Name>
+				<Term termId="1.6.1">
+					<Name xml:lang="en">Aeronautics</Name>
+				</Term>
+				<Term termId="1.6.2">
+					<Name xml:lang="en">Aikido</Name>
+				</Term>
+				<Term termId="1.6.3">
+					<Name xml:lang="en">American football</Name>
+				</Term>
+				<Term termId="1.6.4">
+					<Name xml:lang="en">Archery</Name>
+				</Term>
+				<Term termId="1.6.5">
+					<Name xml:lang="en">Athletics</Name>
+				</Term>
+				<Term termId="1.6.6">
+					<Name xml:lang="en">Badminton</Name>
+				</Term>
+				<Term termId="1.6.7">
+					<Name xml:lang="en">Bandy</Name>
+				</Term>
+				<Term termId="1.6.8">
+					<Name xml:lang="en">Baseball</Name>
+				</Term>
+				<Term termId="1.6.9">
+					<Name xml:lang="en">Basketball</Name>
+				</Term>
+				<Term termId="1.6.10">
+					<Name xml:lang="en">Biathlon</Name>
+				</Term>
+				<Term termId="1.6.11">
+					<Name xml:lang="en">Bicycle</Name>
+				</Term>
+				<Term termId="1.6.12">
+					<Name xml:lang="en">Billiards</Name>
+				</Term>
+				<Term termId="1.6.13">
+					<Name xml:lang="en">Bobsleigh/tobogganing</Name>
+				</Term>
+				<Term termId="1.6.14">
+					<Name xml:lang="en">Body-building</Name>
+				</Term>
+				<Term termId="1.6.15">
+					<Name xml:lang="en">Boules sport</Name>
+				</Term>
+				<Term termId="1.6.16">
+					<Name xml:lang="en">Bowling</Name>
+				</Term>
+				<Term termId="1.6.17">
+					<Name xml:lang="en">Boxing</Name>
+				</Term>
+				<Term termId="1.6.18">
+					<Name xml:lang="en">Canoeing</Name>
+				</Term>
+				<Term termId="1.6.19">
+					<Name xml:lang="en">Casting</Name>
+				</Term>
+				<Term termId="1.6.20">
+					<Name xml:lang="en">Cricket</Name>
+				</Term>
+				<Term termId="1.6.21">
+					<Name xml:lang="en">Croquet</Name>
+				</Term>
+				<Term termId="1.6.22">
+					<Name xml:lang="en">Curling</Name>
+				</Term>
+				<Term termId="1.6.23">
+					<Name xml:lang="en">Cycling</Name>
+				</Term>
+				<Term termId="1.6.24">
+					<Name xml:lang="en">Dance sport</Name>
+				</Term>
+				<Term termId="1.6.25">
+					<Name xml:lang="en">Diving</Name>
+				</Term>
+				<Term termId="1.6.26">
+					<Name xml:lang="en">Equestrian</Name>
+				</Term>
+				<Term termId="1.6.27">
+					<Name xml:lang="en">Faustball</Name>
+				</Term>
+				<Term termId="1.6.28">
+					<Name xml:lang="en">Fencing</Name>
+				</Term>
+				<Term termId="1.6.29">
+					<Name xml:lang="en">Fishing</Name>
+				</Term>
+				<Term termId="1.6.30">
+					<Name xml:lang="en">Flying disc</Name>
+				</Term>
+				<Term termId="1.6.31">
+					<Name xml:lang="en">Football</Name>
+				</Term>
+				<Term termId="1.6.32">
+					<Name xml:lang="en">Golf</Name>
+				</Term>
+				<Term termId="1.6.33">
+					<Name xml:lang="en">Gymnastics</Name>
+				</Term>
+				<Term termId="1.6.34">
+					<Name xml:lang="en">Handball</Name>
+				</Term>
+				<Term termId="1.6.35">
+					<Name xml:lang="en">Hockey</Name>
+				</Term>
+				<Term termId="1.6.36">
+					<Name xml:lang="en">Ice hockey</Name>
+				</Term>
+				<Term termId="1.6.37">
+					<Name xml:lang="en">Jai-alai</Name>
+				</Term>
+				<Term termId="1.6.38">
+					<Name xml:lang="en">Judo</Name>
+				</Term>
+				<Term termId="1.6.39">
+					<Name xml:lang="en">Jujitsu</Name>
+				</Term>
+				<Term termId="1.6.40">
+					<Name xml:lang="en">Karate</Name>
+				</Term>
+				<Term termId="1.6.41">
+					<Name xml:lang="en">Korfball</Name>
+				</Term>
+				<Term termId="1.6.42">
+					<Name xml:lang="en">Lacrosse</Name>
+				</Term>
+				<Term termId="1.6.43">
+					<Name xml:lang="en">Luge</Name>
+				</Term>
+				<Term termId="1.6.44">
+					<Name xml:lang="en">Maccabi</Name>
+				</Term>
+				<Term termId="1.6.45">
+					<Name xml:lang="en">Marathon</Name>
+				</Term>
+				<Term termId="1.6.46">
+					<Name xml:lang="en">Modern pentathlon</Name>
+				</Term>
+				<Term termId="1.6.47">
+					<Name xml:lang="en">Motor boarding</Name>
+				</Term>
+				<Term termId="1.6.48">
+					<Name xml:lang="en">Motor racing</Name>
+				</Term>
+				<Term termId="1.6.49">
+					<Name xml:lang="en">Motor cycling</Name>
+				</Term>
+				<Term termId="1.6.50">
+					<Name xml:lang="en">Mountaineering</Name>
+				</Term>
+				<Term termId="1.6.51">
+					<Name xml:lang="en">Netball</Name>
+				</Term>
+				<Term termId="1.6.52">
+					<Name xml:lang="en">Orienteering</Name>
+				</Term>
+				<Term termId="1.6.53">
+					<Name xml:lang="en">Polo</Name>
+				</Term>
+				<Term termId="1.6.54">
+					<Name xml:lang="en">Power lifting</Name>
+				</Term>
+				<Term termId="1.6.55">
+					<Name xml:lang="en">Racquetball</Name>
+				</Term>
+				<Term termId="1.6.56">
+					<Name xml:lang="en">Roller skating</Name>
+				</Term>
+				<Term termId="1.6.57">
+					<Name xml:lang="en">Rowing</Name>
+				</Term>
+				<Term termId="1.6.58">
+					<Name xml:lang="en">Rugby</Name>
+				</Term>
+				<Term termId="1.6.59">
+					<Name xml:lang="en">Running</Name>
+				</Term>
+				<Term termId="1.6.60">
+					<Name xml:lang="en">Shooting</Name>
+				</Term>
+				<Term termId="1.6.61">
+					<Name xml:lang="en">Skating</Name>
+				</Term>
+				<Term termId="1.6.62">
+					<Name xml:lang="en">Skiing</Name>
+				</Term>
+				<Term termId="1.6.63">
+					<Name xml:lang="en">Skibob</Name>
+				</Term>
+				<Term termId="1.6.64">
+					<Name xml:lang="en">Sled dog</Name>
+				</Term>
+				<Term termId="1.6.65">
+					<Name xml:lang="en">Soccer</Name>
+				</Term>
+				<Term termId="1.6.66">
+					<Name xml:lang="en">Softball</Name>
+				</Term>
+				<Term termId="1.6.67">
+					<Name xml:lang="en">Soft tennis</Name>
+				</Term>
+				<Term termId="1.6.68">
+					<Name xml:lang="en">Sombo</Name>
+				</Term>
+				<Term termId="1.6.69">
+					<Name xml:lang="en">Sport acrobatics</Name>
+				</Term>
+				<Term termId="1.6.70">
+					<Name xml:lang="en">Squash</Name>
+				</Term>
+				<Term termId="1.6.71">
+					<Name xml:lang="en">Subaquatics</Name>
+				</Term>
+				<Term termId="1.6.72">
+					<Name xml:lang="en">Surfing</Name>
+				</Term>
+				<Term termId="1.6.73">
+					<Name xml:lang="en">Swimming/diving</Name>
+				</Term>
+				<Term termId="1.6.74">
+					<Name xml:lang="en">Table tennis</Name>
+				</Term>
+				<Term termId="1.6.75">
+					<Name xml:lang="en">Tae Kwondo</Name>
+				</Term>
+				<Term termId="1.6.76">
+					<Name xml:lang="en">Tennis</Name>
+				</Term>
+				<Term termId="1.6.77">
+					<Name xml:lang="en">Trampoline</Name>
+				</Term>
+				<Term termId="1.6.78">
+					<Name xml:lang="en">Track/field</Name>
+					<Definition xml:lang="en">
+						Collection of sports in athletic track and field 
+					</Definition>
+				</Term>
+				<Term termId="1.6.79">
+					<Name xml:lang="en">Triathlon</Name>
+				</Term>
+				<Term termId="1.6.80">
+					<Name xml:lang="en">Tug-of-war</Name>
+				</Term>
+				<Term termId="1.6.81">
+					<Name xml:lang="en">Volleyball</Name>
+				</Term>
+				<Term termId="1.6.82">
+					<Name xml:lang="en">Water polo</Name>
+				</Term>
+				<Term termId="1.6.83">
+					<Name xml:lang="en">Waterskiing</Name>
+				</Term>
+				<Term termId="1.6.84">
+					<Name xml:lang="en">Weightlifting</Name>
+				</Term>
+				<Term termId="1.6.85">
+					<Name xml:lang="en">Wrestling</Name>
+				</Term>
+				<Term termId="1.6.86">
+					<Name xml:lang="en">Yachting</Name>
+				</Term>
+				<Term termId="1.6.87">
+					<Name xml:lang="en">Other ball games</Name>
+				</Term>
+				<Term termId="1.6.88">
+					<Name xml:lang="en">Combative sports</Name>
+				</Term>
+				<Term termId="1.6.89">
+					<Name xml:lang="en">Snowboarding</Name>
+				</Term>
+				<Term termId="1.6.90">
+					<Name xml:lang="en">Team sport (excluding
+						football/soccer)
+					</Name>
+				</Term>
+				<Term termId="1.6.91">
+					<Name xml:lang="en">Martial sports</Name>
+				</Term>
+			</Term>
+			<Term termId="1.7">
+				<Name xml:lang="en">Sport events</Name>
+				<Term termId="1.7.1">
+					<Name xml:lang="en">International competitions</Name>
+				</Term>
+				<Term termId="1.7.2">
+					<Name xml:lang="en">Horseracing/Government-sponsored
+						sporting events (cycling, boat races, etc.)
+					</Name>
+				</Term>
+				<Term termId="1.7.3">
+					<Name xml:lang="en">Marine</Name>
+				</Term>
+				<Term termId="1.7.4">
+					<Name xml:lang="en">Sport events</Name>
+				</Term>
+				<Term termId="1.7.5">
+					<Name xml:lang="en">Winter sports</Name>
+				</Term>
+				<Term termId="1.7.6">
+					<Name xml:lang="en">Sports non-event</Name>
+				</Term>
+				<Term termId="1.7.7">
+					<Name xml:lang="en">Sports talk</Name>
+				</Term>
+				<Term termId="1.7.8">
+					<Name xml:lang="en">Track and field</Name>
+				</Term>
+				<Term termId="1.7.9">
+					<Name xml:lang="en">Special events</Name>
+				</Term>
+				<Term termId="1.7.10">
+					<Name xml:lang="en">Olympic games</Name>
+				</Term>
+				<Term termId="1.7.11">
+					<Name xml:lang="en">World cup</Name>
+				</Term>
+				<Term termId="1.7.12">
+					<Name xml:lang="en">Sports magazine</Name>
+				</Term>
+				<Term termId="1.7.13">
+					<Name xml:lang="en">Water sport</Name>
+				</Term>
+			</Term>
+			<Term termId="1.8">
+				<Name xml:lang="en">Human interest</Name>
+				<Term termId="1.8.1">
+					<Name xml:lang="en">Reality</Name>
+				</Term>
+				<Term termId="1.8.2">
+					<Name xml:lang="en">Show business</Name>
+				</Term>
+				<Term termId="1.8.3">
+					<Name xml:lang="en">Notable personalities</Name>
+				</Term>
+				<Term termId="1.8.4">
+					<Name xml:lang="en">Personal problems</Name>
+				</Term>
+			</Term>
+			<Term termId="1.9">
+				<Name xml:lang="en">Leisure</Name>
+				<Term termId="1.9.1">
+					<Name xml:lang="en">Do-it-yourself</Name>
+				</Term>
+				<Term termId="1.9.2">
+					<Name xml:lang="en">Cookery</Name>
+				</Term>
+				<Term termId="1.9.3">
+					<Name xml:lang="en">Gardening</Name>
+				</Term>
+				<Term termId="1.9.4">
+					<Name xml:lang="en">Tourist</Name>
+				</Term>
+				<Term termId="1.9.5">
+					<Name xml:lang="en">Travel</Name>
+				</Term>
+				<Term termId="1.9.6">
+					<Name xml:lang="en">Fishing</Name>
+				</Term>
+				<Term termId="1.9.7">
+					<Name xml:lang="en">Outdoors</Name>
+					<Definition xml:lang="en">
+						Sports just for fun or personal health 
+					</Definition>
+				</Term>
+				<Term termId="1.9.8">
+					<Name xml:lang="en">Motoring</Name>
+				</Term>
+				<Term termId="1.9.9">
+					<Name xml:lang="en">Keep-fit</Name>
+				</Term>
+				<Term termId="1.9.10">
+					<Name xml:lang="en">Fashion</Name>
+				</Term>
+				<Term termId="1.9.11">
+					<Name xml:lang="en">Computing</Name>
+				</Term>
+				<Term termId="1.9.12">
+					<Name xml:lang="en">Handicrafts</Name>
+				</Term>
+				<Term termId="1.9.13">
+					<Name xml:lang="en">Pets</Name>
+				</Term>
+				<Term termId="1.9.14">
+					<Name xml:lang="en">Music</Name>
+				</Term>
+				<Term termId="1.9.15">
+					<Name xml:lang="en">Igo/shogi (Japanese chess)</Name>
+				</Term>
+				<Term termId="1.9.16">
+					<Name xml:lang="en">Mah-jongg/pachinko</Name>
+				</Term>
+				<Term termId="1.9.17">
+					<Name xml:lang="en">Fitness</Name>
+				</Term>
+				<Term termId="1.9.18">
+					<Name xml:lang="en">Health/medical</Name>
+				</Term>
+				<Term termId="1.9.19">
+					<Name xml:lang="en">Advertisement/Shopping</Name>
+				</Term>
+			</Term>
+			<Term termId="1.10">
+				<Name xml:lang="en">Arts and Media</Name>
+				<Term termId="1.10.1">
+					<Name xml:lang="en">Music</Name>
+					<Definition xml:lang="en">Program about a musical subject
+					(not a program consisting of music)
+				</Definition>
+				</Term>
+				<Term termId="1.10.2">
+					<Name xml:lang="en">Art</Name>
+				</Term>
+				<Term termId="1.10.3">
+					<Name xml:lang="en">Industrial arts</Name>
+				</Term>
+				<Term termId="1.10.4">
+					<Name xml:lang="en">Plastic arts</Name>
+				</Term>
+				<Term termId="1.10.5">
+					<Name xml:lang="en">Theater/Cinema</Name>
+					<Definition xml:lang="en">Program about subject concerning 
+					the world of 
+					film and cinema (not a program consisting of films)
+				</Definition>
+				</Term>
+				<Term termId="1.10.6">
+					<Name xml:lang="en">Advertising</Name>
+					<Definition xml:lang="en">
+					Program about (the world of) advertising
+				</Definition>
+				</Term>
+				<Term termId="1.10.7">
+					<Name xml:lang="en">Press</Name>
+				</Term>
+				<Term termId="1.10.8">
+					<Name xml:lang="en">Performing</Name>
+				</Term>
+				<Term termId="1.10.9">
+					<Name xml:lang="en">Fine arts</Name>
+				</Term>
+				<Term termId="1.10.10">
+					<Name xml:lang="en">Traditional arts</Name>
+				</Term>
+				<Term termId="1.10.11">
+					<Name xml:lang="en">Experimental arts</Name>
+					<Definition xml:lang="en">Film/Video</Definition>
+				</Term>
+				<Term termId="1.10.12">
+					<Name xml:lang="en">New media</Name>
+				</Term>
+			</Term>
+			<Term termId="1.11">
+				<Name xml:lang="en">Humanities</Name>
+				<Definition xml:lang="en">
+				The branches of learning regarded as having primarily a
+				cultural character and which usually include language,
+				literature, history, mathematics and philosophy.
+			</Definition>
+				<Term termId="1.11.1">
+					<Name xml:lang="en">Literature</Name>
+				</Term>
+				<Term termId="1.11.2">
+					<Name xml:lang="en">Languages</Name>
+				</Term>
+				<Term termId="1.11.3">
+					<Name xml:lang="en">History</Name>
+				</Term>
+			</Term>
+			<Term termId="1.12">
+				<Name xml:lang="en">Sciences</Name>
+				<Term termId="1.12.1">
+					<Name xml:lang="en">Applied sciences</Name>
+					<Definition xml:lang="en">
+					Sciences dealing with material phenomena or industrial
+					processes.
+				</Definition>
+				</Term>
+				<Term termId="1.12.2">
+					<Name xml:lang="en">Natural sciences</Name>
+					<Definition xml:lang="en">
+					Biology, botany, geology and zoology
+				</Definition>
+				</Term>
+				<Term termId="1.12.3">
+					<Name xml:lang="en">Physical sciences</Name>
+					<Definition xml:lang="en">
+					Astronomy, chemistry, electricity, mechanics, physics
+				</Definition>
+				</Term>
+				<Term termId="1.12.4">
+					<Name xml:lang="en">Medicine</Name>
+					<Definition xml:lang="en">
+					Programs about medical subjects, health, etc.
+				</Definition>
+				</Term>
+				<Term termId="1.12.5">
+					<Name xml:lang="en">Technology</Name>
+				</Term>
+				<Term termId="1.12.6">
+					<Name xml:lang="en">Physiology</Name>
+				</Term>
+				<Term termId="1.12.7">
+					<Name xml:lang="en">Psychology</Name>
+				</Term>
+				<Term termId="1.12.8">
+					<Name xml:lang="en">Social</Name>
+				</Term>
+				<Term termId="1.12.9">
+					<Name xml:lang="en">Spiritual</Name>
+				</Term>
+			</Term>
+			<Term termId="1.13">
+				<Name xml:lang="en">Documentary</Name>
+				<Definition xml:lang="en">
+				Program concerning a single theme, involving descriptive
+				and/or interpretative commentaries, illustrations,
+				interviews, statements, 
+				photos or other documentation
+			</Definition>
+				<Term termId="1.13.1">
+					<Name xml:lang="en">Society</Name>
+				</Term>
+				<Term termId="1.13.2">
+					<Name xml:lang="en">Current events</Name>
+				</Term>
+				<Term termId="1.13.3">
+					<Name xml:lang="en">History</Name>
+				</Term>
+				<Term termId="1.13.4">
+					<Name xml:lang="en">Travelogues</Name>
+				</Term>
+				<Term termId="1.13.5">
+					<Name xml:lang="en">Nature</Name>
+				</Term>
+				<Term termId="1.13.6">
+					<Name xml:lang="en">Animals</Name>
+				</Term>
+				<Term termId="1.13.7">
+					<Name xml:lang="en">The environment</Name>
+				</Term>
+				<Term termId="1.13.8">
+					<Name xml:lang="en">Space</Name>
+				</Term>
+				<Term termId="1.13.9">
+					<Name xml:lang="en">Science</Name>
+				</Term>
+				<Term termId="1.13.10">
+					<Name xml:lang="en">Medicine</Name>
+				</Term>
+				<Term termId="1.13.11">
+					<Name xml:lang="en">Culture</Name>
+				</Term>
+				<Term termId="1.13.12">
+					<Name xml:lang="en">Tradition</Name>
+				</Term>
+				<Term termId="1.13.13">
+					<Name xml:lang="en">Literature and the arts</Name>
+				</Term>
+				<Term termId="1.13.14">
+					<Name xml:lang="en">Sports</Name>
+				</Term>
+				<Term termId="1.13.15">
+					<Name xml:lang="en">General documentaries</Name>
+				</Term>
+				<Term termId="1.13.16">
+					<Name xml:lang="en">Interviews</Name>
+				</Term>
+				<Term termId="1.13.17">
+					<Name xml:lang="en">Debates</Name>
+				</Term>
+				<Term termId="1.13.18">
+					<Name xml:lang="en">Discussion</Name>
+					<Definition xml:lang="en">
+					Mainly verbal program in which more than one person
+					participates 
+				</Definition>
+				</Term>
+				<Term termId="1.13.19">
+					<Name xml:lang="en">Lecture</Name>
+					<Definition xml:lang="en">
+					Mainly verbal program in which only one person
+					participates 
+				</Definition>
+				</Term>
+				<Term termId="1.13.20">
+					<Name xml:lang="en">Speech</Name>
+				</Term>
+				<Term termId="1.13.21">
+					<Name xml:lang="en">Presentation</Name>
+				</Term>
+				<Term termId="1.13.22">
+					<Name xml:lang="en">Textual (incl. relayed teletext)</Name>
+					<Definition xml:lang="en">
+					Program consisting only of alphanumeric information
+				</Definition>
+				</Term>
+				<Term termId="1.13.23">
+					<Name xml:lang="en">Special features</Name>
+				</Term>
+				<Term termId="1.13.24">
+					<Name xml:lang="en">Foreign countries</Name>
+				</Term>
+				<Term termId="1.13.25">
+					<Name xml:lang="en">Expeditions</Name>
+				</Term>
+			</Term>
+			<Term termId="1.14">
+				<Name xml:lang="en">Education</Name>
+				<Term termId="1.14.1">
+					<Name xml:lang="en">Education</Name>
+				</Term>
+				<Term termId="1.14.2">
+					<Name xml:lang="en">Further education</Name>
+				</Term>
+				<Term termId="1.14.3">
+					<Name xml:lang="en">Languages</Name>
+				</Term>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Drama</Name>
+			<Definition xml:lang="en">
+			Program consisting of a prose or verse composition, resp. one
+			telling a  story, written for or as if for performance by actors,
+			puppets or animated
+		</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Popular drama</Name>
+				<Definition xml:lang="en">Drama written after approximately 1918
+				and without literary or cultural pretensions
+			</Definition>
+				<Term termId="2.1.1">
+					<Name xml:lang="en">General light drama</Name>
+				</Term>
+				<Term termId="2.1.2">
+					<Name xml:lang="en">Comedy</Name>
+					<Definition xml:lang="en">Dramatized series in a humorous
+					style and performed by a varying cast
+				</Definition>
+				</Term>
+				<Term termId="2.1.3">
+					<Name xml:lang="en">"Broken" comedy</Name>
+					<Definition xml:lang="en">Humorous and/or satirical program 
+					consisting of short dramatic sequences, sketches,
+					performed by comedians (e.g. The Benny Hill Show,
+					Monty Python, etc.)
+				</Definition>
+				</Term>
+				<Term termId="2.1.4">
+					<Name xml:lang="en">Sitcom</Name>
+					<Definition xml:lang="en">Dramatized series in a humorous
+					style and  performed by a more or less fixed cast
+				</Definition>
+				</Term>
+				<Term termId="2.1.5">
+					<Name xml:lang="en">Soap</Name>
+					<Definition xml:lang="en">Dramatized serial program dealing
+					with easy- to-grasp situations performed by a limited
+					cast
+				</Definition>
+				</Term>
+				<Term termId="2.1.6">
+					<Name xml:lang="en">Soap opera</Name>
+				</Term>
+				<Term termId="2.1.7">
+					<Name xml:lang="en">Soap special</Name>
+				</Term>
+				<Term termId="2.1.8">
+					<Name xml:lang="en">Soap talk</Name>
+				</Term>
+				<Term termId="2.1.9">
+					<Name xml:lang="en">Medical melodrama</Name>
+					<Definition xml:lang="en">Drama production situated in
+					hospitals and/or  dealing with medical subjects
+				</Definition>
+				</Term>
+				<Term termId="2.1.10">
+					<Name xml:lang="en">Legal melodrama</Name>
+					<Definition xml:lang="en">Drama production where the primary
+					action  takes place in law courts and/or law firms
+				</Definition>
+					<Term termId="2.1.10.1">
+						<Name xml:lang="en">Adventure/disaster</Name>
+					</Term>
+					<Term termId="2.1.10.2">
+						<Name xml:lang="en">Detective/thriller</Name>
+					</Term>
+					<Term termId="2.1.10.3">
+						<Name xml:lang="en">Epic</Name>
+						<Definition xml:lang="en">
+						Dramatized narrative about the deeds of a
+						traditional or historical hero or heroes and/or
+						dealing with or characterized by
+						events of historical or legendary importance
+					</Definition>
+					</Term>
+					<Term termId="2.1.10.4">
+						<Name xml:lang="en">Horror</Name>
+					</Term>
+					<Term termId="2.1.10.5">
+						<Name xml:lang="en">Science fiction</Name>
+					</Term>
+					<Term termId="2.1.10.6">
+						<Name xml:lang="en">War</Name>
+					</Term>
+					<Term termId="2.1.10.7">
+						<Name xml:lang="en">Western</Name>
+					</Term>
+					<Term termId="2.1.10.8">
+						<Name xml:lang="en">Folkloric</Name>
+					</Term>
+				</Term>
+				<Term termId="2.1.11">
+					<Name xml:lang="en">Fantasy/Fairy tale</Name>
+				</Term>
+				<Term termId="2.1.12">
+					<Name xml:lang="en">Erotica</Name>
+				</Term>
+				<Term termId="2.1.13">
+					<Name xml:lang="en">Romance</Name>
+				</Term>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Serious drama</Name>
+				<Definition xml:lang="en">
+				Drama with literary and/or cultural value
+			</Definition>
+				<Term termId="2.2.1">
+					<Name xml:lang="en">Classical drama</Name>
+					<Definition xml:lang="en">
+					Drama written before approximately 1918
+				</Definition>
+				</Term>
+				<Term termId="2.2.2">
+					<Name xml:lang="en">Contemporary drama</Name>
+					<Definition xml:lang="en">
+					Drama written after approximately 1918 and with 
+					literary and/or  cultural value.
+				</Definition>
+				</Term>
+				<Term termId="2.2.3">
+					<Name xml:lang="en">Religious</Name>
+				</Term>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Docudrama</Name>
+				<Definition xml:lang="en">
+				Drama based upon reality sometimes with documentary inserts
+			</Definition>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">Poems</Name>
+				<Term termId="2.4.1">
+					<Name xml:lang="en">Readings</Name>
+					<Definition xml:lang="en">
+					Programs consisting of poem readings
+				</Definition>
+				</Term>
+			</Term>
+			<Term termId="2.5">
+				<Name xml:lang="en">Stories</Name>
+				<Term termId="2.5.1">
+					<Name xml:lang="en">Readings</Name>
+					<Definition xml:lang="en">Programs consisting of readings of
+					stories or other literary works
+			</Definition>
+				</Term>
+			</Term>
+			<Term termId="2.6">
+				<Name xml:lang="en">Performed drama</Name>
+				<Definition xml:lang="en">Program consisting of a dramatic work,
+				performed  by live actors
+			</Definition>
+			</Term>
+			<Term termId="2.7">
+				<Name xml:lang="en">Drama with puppets</Name>
+				<Definition xml:lang="en">Program consisting of a dramatic work,
+				performed  with puppets(e.g. The Muppet Show)
+			</Definition>
+			</Term>
+			<Term termId="2.8">
+				<Name xml:lang="en">Animated drama</Name>
+				<Definition xml:lang="en">Program consisting of a dramatic work,
+				presented  as an animation (e.g. the Flintstones)
+			</Definition>
+			</Term>
+			<Term termId="2.9">
+				<Name xml:lang="en">Action</Name>
+			</Term>
+			<Term termId="2.10">
+				<Name xml:lang="en">Japanese dramas</Name>
+			</Term>
+			<Term termId="2.11">
+				<Name xml:lang="en">Foreign dramas</Name>
+			</Term>
+			<Term termId="2.12">
+				<Name xml:lang="en">Samurai dramas</Name>
+			</Term>
+			<Term termId="2.13">
+				<Name xml:lang="en">Kabuki/classical theater</Name>
+			</Term>
+			<Term termId="2.14">
+				<Name xml:lang="en">Adult</Name>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Entertainment</Name>
+			<Term termId="3.1">
+				<Name xml:lang="en">Pure entertainment</Name>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Informative entertainment</Name>
+				<Definition xml:lang="en">Programs intended primarily to entertain
+				but with substantial informative elements
+			</Definition>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">Hosted show</Name>
+				<Definition xml:lang="en">
+				Program that can be regarded neither as non-fiction nor as
+				drama or music/dance and usually of a light entertainment
+				character in which one  or more persons fulfill the role of
+				presenter, host, quiz or games  master, announcer,
+				chairperson or speaker
+			</Definition>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">Panel-show</Name>
+				<Definition xml:lang="en">
+				Program that can be regarded neither as non-fiction nor as
+				drama or concert and normally of a light entertainment
+				character in which is presented by a more or less fixed group 
+				of people (panel)
+			</Definition>
+			</Term>
+			<Term termId="3.5">
+				<Name xml:lang="en">Non-hosted show</Name>
+			</Term>
+			<Term termId="3.6">
+				<Name xml:lang="en">Simple game show</Name>
+				<Definition xml:lang="en">Competition of a pure entertainment
+				character (normally contest) of low production value
+			</Definition>
+			</Term>
+			<Term termId="3.7">
+				<Name xml:lang="en">Game show</Name>
+			</Term>
+			<Term termId="3.8">
+				<Name xml:lang="en">Big game show</Name>
+				<Definition xml:lang="en">Competition of a pure entertainment
+				character (normally contest) of high production value
+			</Definition>
+			</Term>
+			<Term termId="3.9">
+				<Name xml:lang="en">Game shows</Name>
+			</Term>
+			<Term termId="3.10">
+				<Name xml:lang="en">Quiz/Contest</Name>
+				<Definition xml:lang="en">
+				Competitions calling into play the competitors' special
+				knowledge and intelligence and/or which involve considerable
+				production work and form part of a broadcaster's mission in
+				the fields of cultural formation and education
+			</Definition>
+			</Term>
+			<Term termId="3.11">
+				<Name xml:lang="en">Variety show</Name>
+				<Definition xml:lang="en">Program with various performers such as 
+				comedians, magicians, singers, etc.
+			</Definition>
+			</Term>
+			<Term termId="3.12">
+				<Name xml:lang="en">Surprise show</Name>
+				<Definition xml:lang="en">Program of "dream comes true" type
+			</Definition>
+			</Term>
+			<Term termId="3.13">
+				<Name xml:lang="en">Talk shows</Name>
+			</Term>
+			<Term termId="3.14">
+				<Name xml:lang="en">Humor</Name>
+				<Definition xml:lang="en">
+				Program without sketches or "broken drama", consisting
+				(mainly) of verbal jokes, gags, bloopers, etc.
+			</Definition>
+			</Term>
+			<Term termId="3.15">
+				<Name xml:lang="en">Comedy</Name>
+				<Definition xml:lang="en">
+				Program without sketches or "broken drama", consisting
+				(mainly) of verbal jokes, gags, bloopers, etc.
+			</Definition>
+			</Term>
+			<Term termId="3.16">
+				<Name xml:lang="en">Stand-up comedian(s)</Name>
+				<Definition xml:lang="en">
+				Program performed by one or more stand-up comedians
+			</Definition>
+			</Term>
+			<Term termId="3.17">
+				<Name xml:lang="en">"Rakugo"/stand-up performance</Name>
+			</Term>
+			<Term termId="3.18">
+				<Name xml:lang="en">Candid camera etc.</Name>
+			</Term>
+			<Term termId="3.19">
+				<Name xml:lang="en">Surprise show</Name>
+				<Definition xml:lang="en">Program of "dream comes true" type
+			</Definition>
+			</Term>
+			<Term termId="3.20">
+				<Name xml:lang="en">Travel variety</Name>
+			</Term>
+			<Term termId="3.21">
+				<Name xml:lang="en">Music variety</Name>
+			</Term>
+			<Term termId="3.22">
+				<Name xml:lang="en">Musicals</Name>
+			</Term>
+			<Term termId="3.23">
+				<Name xml:lang="en">Musical comedy</Name>
+			</Term>
+			<Term termId="3.24">
+				<Name xml:lang="en">Musical romance</Name>
+			</Term>
+			<Term termId="3.25">
+				<Name xml:lang="en">Cooking variety</Name>
+			</Term>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Music</Name>
+			<Definition xml:lang="en">
+			Example: Ballet "The Swan Lake" should be classified as "serious
+			music, classical/romantic"
+		</Definition>
+			<Term termId="4.1">
+				<Name xml:lang="en">Serious music</Name>
+				<Definition xml:lang="en">
+				Serious music including chamber, instrumental, operatic,
+				symphonic,  choral and sacred music.</Definition>
+				<Term termId="4.1.1">
+					<Name xml:lang="en">Early</Name>
+					<Definition xml:lang="en">
+					Music written before the middle of the 17th Century
+				</Definition>
+				</Term>
+				<Term termId="4.1.2">
+					<Name xml:lang="en">Classical and Romantic</Name>
+					<Definition xml:lang="en">Serious music from the middle of
+					the 18th until the end of the 19th Century
+				</Definition>
+				</Term>
+				<Term termId="4.1.3">
+					<Name xml:lang="en">Contemporary</Name>
+					<Definition xml:lang="en">
+					Serious music written during the 20th Century
+				</Definition>
+				</Term>
+				<Term termId="4.1.4">
+					<Name xml:lang="en">Light classical</Name>
+					<Definition xml:lang="en">Music by Strauss, Lehar etc.
+				</Definition>
+				</Term>
+				<Term termId="4.1.5">
+					<Name xml:lang="en">Opera</Name>
+				</Term>
+			</Term>
+			<Term termId="4.2">
+				<Name xml:lang="en">Popular music</Name>
+				<Term termId="4.2.1">
+					<Name xml:lang="en">Foreign rock/pop</Name>
+				</Term>
+				<Term termId="4.2.2">
+					<Name xml:lang="en">Japanese rock/pop</Name>
+				</Term>
+				<Term termId="4.2.3">
+					<Name xml:lang="en">Japanese ballads/"Enka"</Name>
+				</Term>
+				<Term termId="4.2.4">
+					<Name xml:lang="en">Live performances/concerts</Name>
+				</Term>
+				<Term termId="4.2.5">
+					<Name xml:lang="en">Rankings/request</Name>
+				</Term>
+				<Term termId="4.2.6">
+					<Name xml:lang="en">Karaoke/singing contests</Name>
+				</Term>
+				<Term termId="4.2.7">
+					<Name xml:lang="en">Folk music/(Japanese)folk music</Name>
+				</Term>
+				<Term termId="4.2.8">
+					<Name xml:lang="en">Nursery songs/children's music</Name>
+				</Term>
+				<Term termId="4.2.9">
+					<Name xml:lang="en">Culture-specific music/world music</Name>
+				</Term>
+			</Term>
+			<Term termId="4.3">
+				<Name xml:lang="en">Ballet</Name>
+				<Definition xml:lang="en">TV programs (predominantly) consisting of
+				music, dance or ballet
+			</Definition>
+				<Term termId="4.3.1">
+					<Name xml:lang="en">Ballet</Name>
+				</Term>
+			</Term>
+			<Term termId="4.4">
+				<Name xml:lang="en">Dance</Name>
+				<Term termId="4.4.1">
+					<Name xml:lang="en">Dance</Name>
+					<Definition xml:lang="en">
+					Program performed by (ballet) dancers 
+				</Definition>
+				</Term>
+			</Term>
+			<Term termId="4.5">
+				<Name xml:lang="en">Jazz</Name>
+				<Definition xml:lang="en">
+				Indigenous American popular music, born in New Orleans of
+				African slaves social circumstances. The jazz idiom is
+				characterized by certain syncopations over strongly 
+				reiterated rhythms in which improvisation plays an important
+				part.
+			</Definition>
+				<Term termId="4.5.1">
+					<Name xml:lang="en">Jazz/fusion</Name>
+				</Term>
+				<Term termId="4.5.2">
+					<Name xml:lang="en">Traditional</Name>
+				</Term>
+				<Term termId="4.5.3">
+					<Name xml:lang="en">Modern</Name>
+				</Term>
+			</Term>
+			<Term termId="4.6">
+				<Name xml:lang="en">Middle-of-the-road</Name>
+				<Definition xml:lang="en">
+				Music which, in varying circumstances, gives pleasure to the
+				widest possible spectrum of the music-loving audience
+			</Definition>
+			</Term>
+			<Term termId="4.7">
+				<Name xml:lang="en">Pop</Name>
+				<Definition xml:lang="en">
+				The most central and widely circulated types of popular
+				music, in particular rock and roll, reggae, etc.
+			</Definition>
+				<Term termId="4.7.1">
+					<Name xml:lang="en">European popular traditional</Name>
+				</Term>
+				<Term termId="4.7.2">
+					<Name xml:lang="en">Ethnic</Name>
+					<Definition xml:lang="en">
+					Music which has not changed throughout the course of 
+					history and is normally played on traditional
+					instruments e.g. Raga in India or  koto in Japan
+				</Definition>
+				</Term>
+				<Term termId="4.7.3">
+					<Name xml:lang="en">World music</Name>
+					<Definition xml:lang="en">
+					Commercial music based on traditional music mainly from
+					the Caribbean, and often using new instruments such as
+					synthesizers
+				</Definition>
+				</Term>
+				<Term termId="4.7.4">
+					<Name xml:lang="en">Folk</Name>
+					<Definition xml:lang="en">
+					Music that is the product of a tradition that has been
+					evolved through the process of oral transmission
+				</Definition>
+				</Term>
+				<Term termId="4.7.4.1">
+					<Name xml:lang="en">Traditional</Name>
+				</Term>
+				<Term termId="4.7.4.2">
+					<Name xml:lang="en">Contemporary</Name>
+				</Term>
+			</Term>
+			<Term termId="4.8">
+				<Name xml:lang="en">Rock</Name>
+				<Definition xml:lang="en">
+				The most central and widely circulated types of popular 
+				music, in particular rock and roll, reggae, etc.
+			</Definition>
+			</Term>
+			<Term termId="4.9">
+				<Name xml:lang="en">Pop-rock</Name>
+				<Definition xml:lang="en">
+				The most central and widely circulated types of popular 
+				music, in particular rock and roll, reggae, etc.
+			</Definition>
+			</Term>
+			<Term termId="4.10">
+				<Name xml:lang="en">Traditional</Name>
+			</Term>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Enrichment</Name>
+			<Definition xml:lang="en">
+			Program primarily intended to increase knowledge about non-current
+			subjects in a didactic or non-didactic way, or to religiously 
+			inspire (e.g. travelogues, war documentaries, educational programs,
+			religious programs)
+		</Definition>
+			<Term termId="5.1">
+				<Name xml:lang="en">General enrichment</Name>
+				<Definition xml:lang="en">
+				Program primarily intended to increase knowledge about 
+				non-current subjects in a non-didactic way
+			</Definition>
+			</Term>
+			<Term termId="5.2">
+				<Name xml:lang="en">Inspirational enrichment</Name>
+				<Definition xml:lang="en">
+				Program based on different forms of religious beliefs or 
+				intended to edify the audience
+			</Definition>
+			</Term>
+			<Term termId="5.3">
+				<Name xml:lang="en">Education</Name>
+				<Definition xml:lang="en">
+				Program primarily intended to increase knowledge about 
+				non-current subjects in a explicitly didactic way
+			</Definition>
+			</Term>
+			<Term termId="5.4">
+				<Name xml:lang="en">Language studies</Name>
+			</Term>
+			<Term termId="5.5">
+				<Name xml:lang="en">Foreign language conversation</Name>
+			</Term>
+			<Term termId="5.6">
+				<Name xml:lang="en">Informational</Name>
+			</Term>
+			<Term termId="5.7">
+				<Name xml:lang="en">School programs</Name>
+			</Term>
+			<Term termId="5.8">
+				<Name xml:lang="en">Entrance exams</Name>
+			</Term>
+			<Term termId="5.9">
+				<Name xml:lang="en">Lifelong education</Name>
+			</Term>
+			<Term termId="5.10">
+				<Name xml:lang="en">Certification</Name>
+			</Term>
+			<Term termId="5.11">
+				<Name xml:lang="en">Educational issues</Name>
+			</Term>
+		</Term>
+		<Term termId="8">
+			<Name xml:lang="en">Movies</Name>
+			<Definition xml:lang="en">Film, Cinema</Definition>
+			<Term termId="6.1">
+				<Name xml:lang="en">Eastern</Name>
+			</Term>
+			<Term termId="6.2">
+				<Name xml:lang="en">Effect movies</Name>
+				<Definition xml:lang="en">Monster Movies, Live Action Hero, etc.
+			</Definition>
+			</Term>
+			<Term termId="6.3">
+				<Name xml:lang="en">Fiction</Name>
+			</Term>
+			<Term termId="6.4">
+				<Name xml:lang="en">Science fiction</Name>
+			</Term>
+			<Term termId="6.5">
+				<Name xml:lang="en">Horror</Name>
+			</Term>
+			<Term termId="6.6">
+				<Name xml:lang="en">Romance</Name>
+			</Term>
+			<Term termId="6.7">
+				<Name xml:lang="en">Romance comedy</Name>
+			</Term>
+			<Term termId="6.8">
+				<Name xml:lang="en">Thriller</Name>
+			</Term>
+			<Term termId="6.9">
+				<Name xml:lang="en">War</Name>
+			</Term>
+			<Term termId="6.10">
+				<Name xml:lang="en">Western</Name>
+			</Term>
+			<Term termId="6.11">
+				<Name xml:lang="en">Western comedy</Name>
+			</Term>
+			<Term termId="6.12">
+				<Name xml:lang="en">Detective</Name>
+			</Term>
+			<Term termId="6.13">
+				<Name xml:lang="en">Adventure</Name>
+			</Term>
+			<Term termId="6.14">
+				<Name xml:lang="en">Fantasy</Name>
+			</Term>
+			<Term termId="6.15">
+				<Name xml:lang="en">Comedy</Name>
+			</Term>
+			<Term termId="6.16">
+				<Name xml:lang="en">Romance</Name>
+			</Term>
+			<Term termId="6.17">
+				<Name xml:lang="en">Historical</Name>
+			</Term>
+			<Term termId="6.18">
+				<Name xml:lang="en">Adult</Name>
+			</Term>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">Animations/special effects</Name>
+			<Term termId="7.1">
+				<Name xml:lang="en">Animated films</Name>
+			</Term>
+			<Term termId="7.2">
+				<Name xml:lang="en">Animated musical</Name>
+			</Term>
+			<Term termId="7.3">
+				<Name xml:lang="en">Japanese animations</Name>
+			</Term>
+			<Term termId="7.4">
+				<Name xml:lang="en">Foreign animations</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.3.1 TVAnytime_v0.1IntentionCS -->
+	<ClassificationScheme uri="urn:mpeg:TVAnytime_v0.1IntentionCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/Purpose">
+	-->
+		<!--
+		The broadcaster's primary apparent intention in transmitting the program
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Entertainment</Name>
+			<Definition xml:lang="en">
+			Program intended primarily to evoke relaxation, feelings of 
+			pleasure and/or awareness of beauty
+		</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">Pure entertainment</Name>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">Informative entertainment</Name>
+				<Definition xml:lang="en">Program primarily intended to increase
+				knowledge about non-current subjects in a didactic or 
+				non-didactic way, or to religiously inspire
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Information</Name>
+			<Definition xml:lang="en">
+			Program intended primarily to inform about current facts,
+			situations, events, theories or forecasts, or to provide 
+			explanatory background information and advice
+		</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Pure information</Name>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Infotainment</Name>
+				<Definition xml:lang="en">Program primarily intended to increase
+				knowledge about non-current subjects in a didactic or 
+				non-didactic way, or to religiously inspire
+			</Definition>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Advice</Name>
+				<Definition xml:lang="en">Program primarily intended to increase
+				knowledge about non-current subjects in a didactic or 
+				non-didactic way, or to religiously inspire
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Enrichment</Name>
+			<Definition xml:lang="en">Program primarily intended to increase 
+			knowledge  about non-current subjects in a didactic or non-didactic
+			way, or to religiously inspire
+		</Definition>
+			<Term termId="3.1">
+				<Name xml:lang="en">General enrichment</Name>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Education</Name>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">Inspirational enrichment</Name>
+			</Term>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Involvement</Name>
+			<Definition xml:lang="en">Program intended to involve people in social
+			action, such as fund raising, good causes etc.
+		</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Keywords</Name>
+			<Term termId="5.1">
+				<Name xml:lang="en">Main keyword</Name>
+				<Definition xml:lang="en">Program primarily intended to increase
+				knowledge about non-current subjects in a didactic or 
+				non-didactic way, or to religiously inspire.
+			</Definition>
+			</Term>
+			<Term termId="5.2">
+				<Name xml:lang="en">Sub keyword</Name>
+				<Definition xml:lang="en">Program primarily intended to increase
+				knowledge about non-current subjects in a didactic or 
+				non-didactic way, or to religiously inspire.
+			</Definition>
+			</Term>
+			<Term termId="5.3">
+				<Name xml:lang="en">Keywords</Name>
+				<Definition xml:lang="en">Program primarily intended to increase
+				knowledge about non-current subjects in a didactic or 
+				non-didactic way, or to religiously inspire.
+			</Definition>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.4.1 TVAnytime_v0.1TargetGroupCS -->
+	<ClassificationScheme uri="urn:mpeg:TVAnytime_v0.1TargetGroupCS" domain="../">
+	<!--
+	domain="//CreationInformation/Classification/Market">
+	-->
+		<!--
+		Program intended for special audiences defined by age, cultural/ethnic 
+		background, profession etc.
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">General audience</Name>
+			<Definition xml:lang="en">
+			Programs not intended for a specific target group
+		</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">Family</Name>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Age groups</Name>
+			<Definition xml:lang="en">
+			The age group levels for which the program is primarily intended
+		</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Adults only</Name>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">Young children (approx. 3-5 years)</Name>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">Children (approx. 6-12 years)</Name>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">Teenagers (approx. 13-19 years)</Name>
+			</Term>
+			<Term termId="2.5">
+				<Name xml:lang="en">Young adults (approx. 20-34 years)</Name>
+			</Term>
+			<Term termId="2.6">
+				<Name xml:lang="en">Senior citizens (35-54)</Name>
+			</Term>
+			<Term termId="2.7">
+				<Name xml:lang="en">Elderly (55+)</Name>
+			</Term>
+			<Term termId="2.18">
+				<Name xml:lang="en">Pre-school children</Name>
+			</Term>
+			<Term termId="2.9">
+				<Name xml:lang="en">Entertainment for 6 to 14</Name>
+			</Term>
+			<Term termId="2.10">
+				<Name xml:lang="en">Entertainment for 10 to 16</Name>
+			</Term>
+			<Term termId="2.11">
+				<Name xml:lang="en">Elementary school students</Name>
+			</Term>
+			<Term termId="2.12">
+				<Name xml:lang="en">Junior high school</Name>
+			</Term>
+			<Term termId="2.13">
+				<Name xml:lang="en">High school students</Name>
+			</Term>
+			<Term termId="2.14">
+				<Name xml:lang="en">University students</Name>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Regional groups</Name>
+			<Term termId="3.1">
+				<Name xml:lang="en">Regional</Name>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">Local</Name>
+			</Term>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Minority groups</Name>
+			<Term termId="4.1">
+				<Name xml:lang="en">Ethnic groups</Name>
+				<Definition xml:lang="en">
+				Program for native-born people differing in language and/or
+				culture
+			</Definition>
+			</Term>
+			<Term termId="4.2">
+				<Name xml:lang="en">Immigrant groups</Name>
+				<Definition xml:lang="en">
+				Program for non-native born people and their immediate
+				descendants, differing in language and/or culture
+			</Definition>
+			</Term>
+			<Term termId="4.3">
+				<Name xml:lang="en">Linguistic groups</Name>
+			</Term>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Occupational groups</Name>
+			<Term termId="5.1">
+				<Name xml:lang="en">Mainshoppers</Name>
+			</Term>
+			<Term termId="5.2">
+				<Name xml:lang="en">Business people</Name>
+			</Term>
+			<Term termId="5.3">
+				<Name xml:lang="en">Farmers</Name>
+			</Term>
+			<Term termId="5.4">
+				<Name xml:lang="en">Fishermen/Sailors</Name>
+			</Term>
+			<Term termId="5.5">
+				<Name xml:lang="en">Schoolchildren/Students</Name>
+			</Term>
+			<Term termId="5.6">
+				<Name xml:lang="en">Unemployed people</Name>
+			</Term>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">Other special interest groups</Name>
+			<Term termId="6.1">
+				<Name xml:lang="en">Motorist</Name>
+			</Term>
+			<Term termId="6.2">
+				<Name xml:lang="en">Tourist</Name>
+			</Term>
+			<Term termId="6.3">
+				<Name xml:lang="en">Women</Name>
+			</Term>
+			<Term termId="6.3">
+				<Name xml:lang="en">Man</Name>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.1 JapaneseAdmCommMotionPictureCodeEthicsParentalRatingCS -->
+	<ClassificationScheme uri="urn:mpeg:JapaneseAdmCommMotionPictureCodeEthicsParentalRatingCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for movie rating
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">PG12</Name>
+			<Definition xml:lang="en">It is desirable for those under 12 to be 
+			accompanied by parent or adult guardian.
+		</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">R-15</Name>
+			<Definition xml:lang="en">Nobody under 15 is admitted because of 
+			inappropriate content.
+		</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">R-18</Name>
+			<Definition xml:lang="en">Nobody under 18 is admitted because of 
+			inappropriate content.
+		</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">None</Name>
+			<Definition xml:lang="en">Not rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.2 ICRAParentalRatingCS -->
+	<ClassificationScheme uri="urn:mpeg:ICRAParentalRatingCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//Creationnformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for Language Rating
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Level4</Name>
+			<Definition xml:lang="en">Crude, vulgar language or extreme hate speech
+		</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Level3</Name>
+			<Definition xml:lang="en">Strong language or hate speech</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Level2</Name>
+			<Definition xml:lang="en">Moderate expletives or profanity</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Level1</Name>
+			<Definition xml:lang="en">Mild expletives</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Level0</Name>
+			<Definition xml:lang="en">None of the above</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">None</Name>
+			<Definition xml:lang="en">Not Rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.3 MPAAParentalRatingCS -->
+	<ClassificationScheme uri="urn:mpeg:MPAAParentalRatingCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for movie rating
+		-->
+		<Term termId="G">
+			<Name xml:lang="en">G</Name>
+			<Definition xml:lang="en">General audiences (all ages 
+			admitted)</Definition>
+		</Term>
+		<Term termId="PG">
+			<Name xml:lang="en">PG</Name>
+			<Definition xml:lang="en">Parental guidance suggested (Some material may
+			not be suitable for children)
+		</Definition>
+		</Term>
+		<Term termId="PG-13">
+			<Name xml:lang="en">PG-13</Name>
+			<Definition xml:lang="en">Parents strongly cautioned (Some material may
+			be inappropriate for children under 13)
+		</Definition>
+		</Term>
+		<Term termId="R">
+			<Name xml:lang="en">R</Name>
+			<Definition xml:lang="en">Restricted (Under 17 requires accompanying
+			parent of adult guardian)
+		</Definition>
+		</Term>
+		<Term termId="NC-17">
+			<Name xml:lang="en">NC-17</Name>
+			<Definition xml:lang="en">No one 17 and under admitted</Definition>
+		</Term>
+		<Term termId="NR">
+			<Name xml:lang="en">NR</Name>
+			<Definition xml:lang="en">Not rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.4 ICRAParentalRatingNudityCS -->
+	<ClassificationScheme uri="urn:mpeg:ICRAParentalRatingNudityCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for Nudity Rating
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Level 4</Name>
+			<Definition xml:lang="en">Frontal nudity (qualifying as provocative
+			display)
+		</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Level 3</Name>
+			<Definition xml:lang="en">Frontal nudity</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Level 2</Name>
+			<Definition xml:lang="en">Partial nudity</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Level 1</Name>
+			<Definition xml:lang="en">Revealing attire</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Level 0</Name>
+			<Definition xml:lang="en">None of the above</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">None</Name>
+			<Definition xml:lang="en">Not Rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.5 RIAAParentalRatingCS -->
+	<ClassificationScheme uri="urn:mpeg:RIAAParentalRatingCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for Rating
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Parental advisory</Name>
+			<Definition xml:lang="en">Strong language or depictions of violence, sex 
+			or substance abuse. Parental discretion is advised.
+		</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">None</Name>
+			<Definition xml:lang="en">Not Rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.6 ICRAParentalRatingSexCS -->
+	<ClassificationScheme uri="urn:mpeg:ICRAParentalRatingSexCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for Sex Rating
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Level 4</Name>
+			<Definition xml:lang="en">Explicit sexual acts or sex crimes</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Level 3</Name>
+			<Definition xml:lang="en">Non-explicit sexual acts</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Level 2</Name>
+			<Definition xml:lang="en">Clothed sexual touching</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Level 1</Name>
+			<Definition xml:lang="en">Passionate kissing</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Level 0</Name>
+			<Definition xml:lang="en">None of the above or innocent kissing; 
+									romance
+		</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">None</Name>
+			<Definition xml:lang="en">Not Rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.7 MPAAParentalRatingTVCS -->
+	<ClassificationScheme uri="urn:mpeg:MPAAParentalRatingTVCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for TV program rating
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">TVY</Name>
+			<Definition xml:lang="en">All children. (This program is designed to be 
+			appropriate for all children. Whether animated or 
+			live-action, the themes and elements in this 
+			program are specifically designed for a very young 
+			audience, including children from ages 2 - 6. This 
+			program is not expected to frighten younger 
+			children.)
+		</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">TVY7</Name>
+			<Definition xml:lang="en">Directed to older children. (This program is 
+			designed for children age 7 and above. It may be 
+			more appropriate for children who have acquired the 
+			developmental skills needed to distinguish between 
+			make-believe and reality. Themes and elements in 
+			this program may include mild fantasy violence or 
+			comedic violence, or may frighten children under 
+			the age of 7. Therefore, parents may wish to 
+			consider the suitability of this program for their 
+			very young children. Note: For those programs where 
+			fantasy violence may be more intense or more 
+			combative than other programs in this category, 
+			such programs will be designated TV-Y7-FV.)
+		</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">TVG</Name>
+			<Definition xml:lang="en">General Audience. (Most parents would find this
+			program suitable for all ages. Although this rating 
+			does not signify a program designed specifically 
+			for children, most parents may let younger children 
+			watch this program unattended. It contains little 
+			or no violence, no strong language and little or no 
+			sexual dialogue or situations.)
+		</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">TVPG</Name>
+			<Definition xml:lang="en">Parental guidance suggested. (This program 
+			contains material that parents may find unsuitable 
+			for younger children. Many parents may want to 
+			watch it with their younger children. The theme 
+			itself may call for parental guidance and/or the 
+			program contains one or more of the following: 
+			moderate violence (V), some sexual situations (S), 
+			infrequent coarse language (L), or some suggestive 
+			dialogue (D).)
+		</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">TV14</Name>
+			<Definition xml:lang="en">Parents strongly cautioned. (This program 
+			contains some material that many parents would find 
+			unsuitable for children under 14 years of age. 
+			Parents are strongly urged to exercise greater care 
+			in monitoring this program and are cautioned 
+			against letting children under the age of 14 watch 
+			unattended. This program contains one or more of 
+			the following: intense violence (V), intense sexual 
+			situations (S), strong coarse language (L), or 
+			intensely suggestive dialogue (D).)
+		</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">TVMA</Name>
+			<Definition xml:lang="en">Mature audience only. (This program is 
+			specifically designed to be viewed by adults and 
+			therefore may be unsuitable for children under 17. 
+			This program contains one or more of the following: 
+			graphic violence (V), explicit sexual activity (S), 
+			or crude indecent language (L).) 
+		</Definition>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">None</Name>
+			<Definition xml:lang="en">Not rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.2.5.8 IRCAParentalRatingViolenceCS -->
+	<ClassificationScheme uri="urn:mpeg:IRCAParentalRatingViolenceCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/Classification/ParentalGuidance/ParentalRating">
+	-->
+		<!--
+		Thesaurus for Violence Rating
+		-->
+		<Term termId="1">
+			<Name xml:lang="en">Level 4</Name>
+			<Definition xml:lang="en">Rape or wanton, gratuitous violence
+		</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Level 3</Name>
+			<Definition xml:lang="en">Aggressive violence or death to humans
+		</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Level 2</Name>
+			<Definition xml:lang="en">Destruction of realistic objects</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Level 1</Name>
+			<Definition xml:lang="en">Injury to human being</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Level 0</Name>
+			<Definition xml:lang="en">None of the above or sports related
+		</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">None</Name>
+			<Definition xml:lang="en">Not Rated</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.2.3.1.1 MPEG7PublicationTypeCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7PublicationTypeCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//CreationInformation/RelatedMaterial/PublicationType" domain="//UsageInformation/Availability/PublicationType" domain="//UserPreference/UsagePreferences/FilteringAndSearchPreferences/SourcePreferences/PublicationType">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Terrestrial</Name>
+			<Definition xml:lang="en">
+			Publication available through a terrestrial 
+			channel
+		</Definition>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Cable</Name>
+			<Definition xml:lang="en">
+			Publication available through cable
+		</Definition>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Satellite</Name>
+			<Definition xml:lang="en">
+			Publication available through satellite
+		</Definition>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Internet</Name>
+			<Definition xml:lang="en">
+			Publication available through the Internet
+		</Definition>
+		</Term>
+		<Term termId="5">
+			<Name xml:lang="en">Print</Name>
+			<Definition xml:lang="en">
+			Publication available in print form
+		</Definition>
+		</Term>
+		<Term termId="6">
+			<Name xml:lang="en">Optical Media</Name>
+			<Definition xml:lang="en">
+			Publication stored on optical storage medium
+		</Definition>
+			<Term termId="6.1">
+				<Name xml:lang="en">CD</Name>
+				<Definition xml:lang="en">
+				Publication stored on Compact Disk
+			</Definition>
+			</Term>
+			<Term termId="6.2">
+				<Name xml:lang="en">LaserDisc</Name>
+				<Name xml:lang="en">LD</Name>
+				<Definition xml:lang="en">
+				Publication stored on LaserDisc
+			</Definition>
+			</Term>
+			<Term termId="6.3">
+				<Name xml:lang="en">DVD</Name>
+				<Definition xml:lang="en">
+				Publication stored on DVD
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="7">
+			<Name xml:lang="en">Magnetic Media</Name>
+			<Definition xml:lang="en">
+			Publication stored on magnetic storage medium
+		</Definition>
+			<Term termId="7.1">
+				<Name xml:lang="en">Magnetic Disk</Name>
+				<Definition xml:lang="en">
+				Publication stored on magnetic disk
+			</Definition>
+				<Term termId="7.1.1">
+					<Name xml:lang="en">HardDisk</Name>
+					<Name xml:lang="en">HD</Name>
+					<Definition xml:lang="en">
+					Publication stored on hard disk
+				</Definition>
+				</Term>
+				<Term termId="7.1.2">
+					<Name xml:lang="en">Floppy</Name>
+					<Definition xml:lang="en">
+					Publication stored on 3.5-in. floppy disk
+				</Definition>
+				</Term>
+				<Term termId="7.1.3">
+					<Name xml:lang="en">Zip</Name>
+					<Definition xml:lang="en">
+					Publication stored on Zip disk
+				</Definition>
+				</Term>
+				<Term termId="7.1.4">
+					<Name xml:lang="en">Jaz</Name>
+					<Definition xml:lang="en">
+					Publication stored on Jaz disk
+				</Definition>
+				</Term>
+				<Term termId="7.1.5">
+					<Name xml:lang="en">SuperDISK</Name>
+					<Definition xml:lang="en">
+					Publication stored on SuperDISK
+				</Definition>
+				</Term>
+			</Term>
+			<Term termId="7.2">
+				<Name xml:lang="en">Magnetic Tape</Name>
+				<Definition xml:lang="en">
+				Publication stored on magnetic tape
+			</Definition>
+				<Term termId="7.2.1">
+					<Name xml:lang="en">VHS</Name>
+					<Definition xml:lang="en">
+					Publication stored on VHS tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.2">
+					<Name xml:lang="en">VHS-C</Name>
+					<Definition xml:lang="en">
+					Publication stored on VHS-C tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.3">
+					<Name xml:lang="en">BetaMax</Name>
+					<Definition xml:lang="en">
+					Publication stored on BetaMax tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.4">
+					<Name xml:lang="en">BetaCam</Name>
+					<Definition xml:lang="en">
+					Publication stored on BetaCam tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.5">
+					<Name xml:lang="en">D1</Name>
+					<Definition xml:lang="en">
+					Publication stored on D1 tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.6">
+					<Name xml:lang="en">D2</Name>
+					<Definition xml:lang="en">
+					Publication stored on D2(uncompressed composite SDTV)
+					tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.7">
+					<Name xml:lang="en">D3</Name>
+					<Definition xml:lang="en">
+					Publication stored on D3(uncompressed composite SDTV)
+					tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.8">
+					<Name xml:lang="en">D5</Name>
+					<Definition xml:lang="en">
+					Publication stored on D5(uncompressed composite SDTV)
+					tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.9">
+					<Name xml:lang="en">HD-D5</Name>
+					<Definition xml:lang="en">
+					Publication stored on HD-D5(compressed component HDTV)
+					tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.10">
+					<Name xml:lang="en">D6</Name>
+					<Definition xml:lang="en">
+					Publication stored on D6(uncompressed composite HDTV)
+					tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.11">
+					<Name xml:lang="en">D7</Name>
+					<Definition xml:lang="en">
+					Publication stored on D7(compressed component SDTV,
+					DVCPRO, DVCPRO50) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.12">
+					<Name xml:lang="en">D9</Name>
+					<Definition xml:lang="en">
+					Publication stored on D9(compressed component SDTV, DV
+					based, Digital-S) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.13">
+					<Name xml:lang="en">D10</Name>
+					<Definition xml:lang="en">
+					Publication stored on D10(BetaCAM IMX, 
+					compressed component SDTV, MPEG2 422 profile) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.14">
+					<Name xml:lang="en">D11</Name>
+					<Definition xml:lang="en">
+					Publication stored on D11(HDCAM, compressed component
+					HDTV) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.15">
+					<Name xml:lang="en">D12</Name>
+					<Definition xml:lang="en">
+					Publication stored on D12(DVCPRO/HD, compressed 
+					component HDTV, DV based) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.16">
+					<Name xml:lang="en">BetaCAM SX</Name>
+					<Definition xml:lang="en">
+					Publication stored on BetaCAM SX(compressed component
+					SDTV, MPEG2 422profile) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.17">
+					<Name xml:lang="en">1-inch HDTV</Name>
+					<Definition xml:lang="en">
+					Publication stored on 1-inch HDTV(uncompressed
+					component HDTV) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.18">
+					<Name xml:lang="en">8mm</Name>
+					<Definition xml:lang="en">
+					Publication stored on 8mm tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.19">
+					<Name xml:lang="en">DV</Name>
+					<Definition xml:lang="en">
+					Publication stored on Digital Video tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.20">
+					<Name xml:lang="en">DVCPRO</Name>
+					<Definition xml:lang="en">
+					Publication stored on DVCPRO (compressed component
+					SDTV, DV based) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.21">
+					<Name xml:lang="en">DVCPRO50</Name>
+					<Definition xml:lang="en">
+					Publication stored on DVCPRO50 (compressed component
+					SDTV, DV based) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.22">
+					<Name xml:lang="en">DVCPRO/P</Name>
+					<Definition xml:lang="en">
+					Publication stored on DVCPRO/P (compressed component
+					SDTV, DV based, progressive) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.23">
+					<Name xml:lang="en">DVCAM</Name>
+					<Definition xml:lang="en">
+					Publication stored on DVCAM (compressed component SDTV, 
+					ISO/IEC DIF compliant) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.24">
+					<Name xml:lang="en">Digital BetaCAM</Name>
+					<Definition xml:lang="en">
+					Publication stored on Digital BetaCAM(comressed
+					component SDTV) tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.25">
+					<Name xml:lang="en">CassetteTape</Name>
+					<Definition xml:lang="en">
+					Publication stored on Audio Cassette Tape
+				</Definition>
+				</Term>
+				<Term termId="7.2.26">
+					<Name xml:lang="en">DAT</Name>
+					<Definition xml:lang="en">
+					Publication stored on Digital Audio Tape
+				</Definition>
+				</Term>
+			</Term>
+		</Term>
+		<Term termId="8">
+			<Name xml:lang="en">Magneto-Optical Media</Name>
+			<Definition xml:lang="en">
+			Publication stored on magneto-optical media
+		</Definition>
+			<Term termId="8.1">
+				<Name xml:lang="en">MiniDisc</Name>
+				<Name xml:lang="en">MD</Name>
+				<Definition xml:lang="en">
+				Publication stored on MiniDisc
+			</Definition>
+			</Term>
+			<Term termId="8.2">
+				<Name xml:lang="en">MO Disc</Name>
+				<Definition xml:lang="en">
+				Publication stored on MO Disc
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="9">
+			<Name xml:lang="en">Solid State Memory</Name>
+			<Definition xml:lang="en">
+			Publication stored on solid-state memory
+		</Definition>
+			<Term termId="9.1">
+				<Name xml:lang="en">Flash Memory</Name>
+				<Definition xml:lang="en">
+				Publication stored on flash memory
+			</Definition>
+				<Term termId="9.1.1">
+					<Name xml:lang="en">FlashCard</Name>
+					<Definition xml:lang="en">
+					Publication stored on FlashCard
+				</Definition>
+				</Term>
+				<Term termId="9.1.2">
+					<Name xml:lang="en">MemoryStick</Name>
+					<Definition xml:lang="en">
+					Publication stored on MemoryStick
+				</Definition>
+				</Term>
+				<Term termId="9.1.3">
+					<Name xml:lang="en">SD Memory Card</Name>
+					<Definition xml:lang="en">
+					Publication stored on SD Memory Card
+				</Definition>
+				</Term>
+				<Term termId="9.1.4">
+					<Name xml:lang="en">SmartMedia</Name>
+					<Definition xml:lang="en">
+					Publication stored on SmartMedia
+				</Definition>
+				</Term>
+				<Term termId="9.1.5">
+					<Name xml:lang="en">CompactFlash</Name>
+					<Definition xml:lang="en">
+					Publication stored on CompactFlash
+				</Definition>
+				</Term>
+			</Term>
+		</Term>
+		<Term termId="10">
+			<Name xml:lang="en">Vinyl Record</Name>
+			<Definition xml:lang="en">
+			Publication stored on vinyl record
+		</Definition>
+			<Term termId="10.1">
+				<Name xml:lang="en">33</Name>
+				<Name xml:lang="en">LP</Name>
+				<Definition xml:lang="en">
+				Publication stored on 33RPM vinyl record
+			</Definition>
+			</Term>
+			<Term termId="10.2">
+				<Name xml:lang="en">45</Name>
+				<Definition xml:lang="en">
+				Publication stored on 45RPM vinyl record
+			</Definition>
+			</Term>
+			<Term termId="10.3">
+				<Name xml:lang="en">78</Name>
+				<Definition xml:lang="en">
+				Publication stored on 78RPM vinyl record
+			</Definition>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.4.1.1.1 MPEG7ActionTypeCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7ActionTypeCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//UsageHistory/UserActionHistory/UserActionList/ActionType">
+	-->
+		<Term termId="1">
+			<Name xml:lang="en">Audio-Video</Name>
+			<Definition xml:lang="en">
+			Actions Related to Audio and Video
+		</Definition>
+			<Term termId="1.1">
+				<Name xml:lang="en">PlayRecording</Name>
+				<Definition xml:lang="en">
+				Play content from a recording
+			</Definition>
+			</Term>
+			<Term termId="1.2">
+				<Name xml:lang="en">PlayStream</Name>
+				<Definition xml:lang="en">
+				Play content from input stream
+			</Definition>
+			</Term>
+			<Term termId="1.3">
+				<Name xml:lang="en">Record</Name>
+				<Definition xml:lang="en">
+				Record input stream to local storage media
+			</Definition>
+			</Term>
+			<Term termId="1.4">
+				<Name xml:lang="en">Preview</Name>
+				<Definition xml:lang="en">
+				View or listen to a summary of the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.5">
+				<Name xml:lang="en">Pause</Name>
+				<Definition xml:lang="en">
+				Pause the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.6">
+				<Name xml:lang="en">FastForward</Name>
+				<Definition xml:lang="en">
+				Fast forward the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.7">
+				<Name xml:lang="en">Rewind</Name>
+				<Definition xml:lang="en">
+				Rewind the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.8">
+				<Name xml:lang="en">SkipForward</Name>
+				<Definition xml:lang="en">
+				Skip forward over a portion of the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.9">
+				<Name xml:lang="en">SkipBackward</Name>
+				<Definition xml:lang="en">
+				Skip backward over a portion of the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.10">
+				<Name xml:lang="en">Mute</Name>
+				<Definition xml:lang="en">
+				Turn sound off
+			</Definition>
+			</Term>
+			<Term termId="1.11">
+				<Name xml:lang="en">VolumeUp</Name>
+				<Definition xml:lang="en">
+				Increase volume
+			</Definition>
+			</Term>
+			<Term termId="1.12">
+				<Name xml:lang="en">VolumeDown</Name>
+				<Definition xml:lang="en">
+				Reduce volume
+			</Definition>
+			</Term>
+			<Term termId="1.13">
+				<Name xml:lang="en">Repeat</Name>
+				<Name xml:lang="en">Loop</Name>
+				<Definition xml:lang="en">
+				Repeat/loop (part of) the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.14">
+				<Name xml:lang="en">Shuffle</Name>
+				<Definition xml:lang="en">
+				Randomly select next track
+			</Definition>
+			</Term>
+			<Term termId="1.15">
+				<Name xml:lang="en">SkipToEnd</Name>
+				<Definition xml:lang="en">
+				Go to the beginning of the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.16">
+				<Name xml:lang="en">SkipForward</Name>
+				<Definition xml:lang="en">
+				Go to the end of the input stream
+			</Definition>
+			</Term>
+			<Term termId="1.17">
+				<Name xml:lang="en">CopyCD</Name>
+				<Definition xml:lang="en">
+				Copy all or parts of a CD
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="2">
+			<Name xml:lang="en">Video</Name>
+			<Definition xml:lang="en">
+			Actions Related to Video
+		</Definition>
+			<Term termId="2.1">
+				<Name xml:lang="en">Zoom</Name>
+				<Definition xml:lang="en">
+				Zoom (in) to the on-screen image or sequence
+			</Definition>
+			</Term>
+			<Term termId="2.2">
+				<Name xml:lang="en">SlowMotion</Name>
+				<Definition xml:lang="en">
+				View input stream in slow motion
+			</Definition>
+			</Term>
+			<Term termId="2.3">
+				<Name xml:lang="en">CCOn</Name>
+				<Definition xml:lang="en">
+				Closed caption is on
+			</Definition>
+			</Term>
+			<Term termId="2.4">
+				<Name xml:lang="en">StepForward</Name>
+				<Definition xml:lang="en">
+				Advance to next frame
+		</Definition>
+			</Term>
+		</Term>
+		<Term termId="3">
+			<Name xml:lang="en">Data</Name>
+			<Definition xml:lang="en">
+			Actions Related to Miscellaneous Data
+		</Definition>
+			<Term termId="3.1">
+				<Name xml:lang="en">ClickThrough</Name>
+				<Definition xml:lang="en">
+				Follow an available link
+			</Definition>
+			</Term>
+			<Term termId="3.2">
+				<Name xml:lang="en">ScrollUp</Name>
+				<Definition xml:lang="en">
+				Scroll up in a web page/composite page
+			</Definition>
+			</Term>
+			<Term termId="3.3">
+				<Name xml:lang="en">ScrollDown</Name>
+				<Definition xml:lang="en">
+				Scroll down in a web page/composite page
+			</Definition>
+			</Term>
+			<Term termId="3.4">
+				<Name xml:lang="en">ViewGuide</Name>
+				<Definition xml:lang="en">
+				View program/resource guide
+			</Definition>
+			</Term>
+			<Term termId="3.5">
+				<Name xml:lang="en">SavePage</Name>
+				<Definition xml:lang="en">
+				Save web page/composite page
+			</Definition>
+			</Term>
+			<Term termId="3.6">
+				<Name xml:lang="en">PrintPage</Name>
+				<Definition xml:lang="en">
+				Print web page/composite page
+			</Definition>
+			</Term>
+			<Term termId="3.7">
+				<Name xml:lang="en">Search</Name>
+				<Definition xml:lang="en">
+				Search the web or local resources
+			</Definition>
+			</Term>
+			<Term termId="3.8">
+				<Name xml:lang="en">SubmitForm</Name>
+				<Definition xml:lang="en">
+				Submit a form with requested information
+			</Definition>
+			</Term>
+			<Term termId="3.9">
+				<Name xml:lang="en">SubmitQuery</Name>
+				<Definition xml:lang="en">
+				Submit a query 
+			</Definition>
+			</Term>
+			<Term termId="3.10">
+				<Name xml:lang="en">Archive</Name>
+				<Definition xml:lang="en">
+				Archive content to persistent local storage media
+			</Definition>
+			</Term>
+		</Term>
+		<Term termId="4">
+			<Name xml:lang="en">Commerce</Name>
+			<Definition xml:lang="en">
+			Actions Related to Commerce
+		</Definition>
+			<Term termId="4.1">
+				<Name xml:lang="en">Buy</Name>
+				<Definition xml:lang="en">
+				Purchase a product or item
+			</Definition>
+			</Term>
+			<Term termId="4.2">
+				<Name xml:lang="en">AddToWishList</Name>
+				<Definition xml:lang="en">
+				Designate a product or item as possible future purchasing
+				item
+			</Definition>
+			</Term>
+			<Term termId="4.3">
+				<Name xml:lang="en">AddToCart</Name>
+				<Definition xml:lang="en">
+				Designate a product or item as potential 
+			immediate purchase item
+			</Definition>
+			</Term>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.6.1.1.1 MPEG7EvolutionTypeCS -->
+	<ClassificationScheme uri="urn:mpeg:MPEG7EvolutionTypeCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//AnalyticTransition/EvolutionType">
+	-->
+		<!--
+		Informative types of transition evolution for EvolutionType D in 
+		AnalyticTransition DS
+		-->
+		<Term termId="Cut">
+			<Name xml:lang="en">Cut</Name>
+			<Definition xml:lang="en-us">
+			A cut is an abrupt transition between two edited video segments.
+			When the transition is a cut, the duration of the video segment
+			representing the transition is 0. 
+		</Definition>
+		</Term>
+		<Term termId="AnalogResidualCut">
+			<Name xml:lang="en">Analog-Residual-Cut</Name>
+			<Definition xml:lang="en-us">
+			The transition is a cut that was not intended to be visible.
+			Analog residual cuts are used to introduce gradual transition 
+			segments, or are caused by fixing the film when some frames of a 
+			movie have burnt in the projector. Sometimes, these cuts induce a 
+			change of luminosity and so they may be detectable.
+		</Definition>
+		</Term>
+		<Term termId="Gradual">
+			<Name xml:lang="en">Gradual</Name>
+			<Definition xml:lang="en-us">
+			The transition evolves progressively from an edited video segment 
+			to another one. A gradual transition can be a fade, a dissolve, or 
+			a wipe, among others.
+		</Definition>
+		</Term>
+		<Term termId="Cross-dissolve">
+			<Name xml:lang="en">Cross-dissolve</Name>
+			<Definition xml:lang="en-us">
+			The pixels values of the current frame are modified progressively 
+			to obtain the values of the pixels of the next frame. 
+		</Definition>
+		</Term>
+		<Term termId="Fade-in">
+			<Name xml:lang="en">Fade in</Name>
+			<Definition xml:lang="en-us">
+			The pixels values of the current frame are modified progressively 
+			to obtain the values of the pixels of the next frame. The evolution 
+			is made from a flat color to a complex scene.
+		</Definition>
+		</Term>
+		<Term termId="Fade-out">
+			<Name xml:lang="en">Fade out</Name>
+			<Definition xml:lang="en-us">
+			The pixels values of the current frame are modified progressively 
+			to obtain the values of the pixels of the next frame. The evolution 
+			is made from a scene to a flat color.
+		</Definition>
+		</Term>
+		<Term termId="IrisOpen">
+			<Name xml:lang="en">Iris Opening</Name>
+			<Definition xml:lang="en-us">
+			The pixels of the new frame replace progressively the pixel of the 
+			current one. At the beginning the new pixels appear in a circle 
+			centered on the screen. The circle grows progressively taking all 
+			the screen and showing the new frame.
+		</Definition>
+		</Term>
+		<Term termId="IrisClose">
+			<Name xml:lang="en">Iris Closing</Name>
+			<Definition xml:lang="en-us">
+			The pixels of the new frame replace progressively the pixel of the 
+			current one. At the beginning, the new pixels appear out of a 
+			circle centered on the screen. The circle decreases progressively 
+			until it disappears from the screen only the new frame can then be 
+			seen.
+		</Definition>
+		</Term>
+		<Term termId="Wipe">
+			<Name xml:lang="en">Wipe</Name>
+			<Definition xml:lang="en-us">
+			The pixels of the new frame appear progressively behind a line 
+			which crosses the whole screen on several consecutive frames.
+		</Definition>
+		</Term>
+		<Term termId="Push">
+			<Name xml:lang="en">Push wipe</Name>
+			<Definition xml:lang="en-us">
+			The pixels of the new frame appear progressively behind a line
+			which crosses the whole screen on several consecutive frames. The 
+			last frames of the previous shot are moved out of the screen while 
+			the first frames of the new shot are moved in. Visually, the new 
+			frame seems to "push" the current one.
+		</Definition>
+		</Term>
+	</ClassificationScheme>
+	<!-- 17.7.1.1.1 AffectTypeCS -->
+	<ClassificationScheme uri="urn:mpeg:AffectTypeCS" domain="../">
+	<!-- XML Spy v3.5 bug
+	domain="//Affective/Type">
+	-->
+		<!--
+		Informative affect types for Affective D
+		-->
+		<Term termId="interested">
+			<Definition xml:lang="en-us">
+			Indicates how interested audience is
+		</Definition>
+		</Term>
+		<Term termId="excited">
+			<Definition xml:lang="en-us">
+			Indicates how excited audience is
+		</Definition>
+		</Term>
+		<Term termId="bored">
+			<Definition xml:lang="en-us">
+			Indicates how bored audience is
+		</Definition>
+		</Term>
+		<Term termId="surprised">
+			<Definition xml:lang="en-us">
+			Indicates how surprised audience is
+		</Definition>
+		</Term>
+		<Term termId="sad">
+			<Definition xml:lang="en-us">
+			Indicates how sad audience is
+		</Definition>
+		</Term>
+		<Term termId="hateful">
+			<Definition xml:lang="en-us">
+			Indicates how hateful audience is
+		</Definition>
+		</Term>
+		<Term termId="angry">
+			<Definition xml:lang="en-us">
+			Indicates how angry audience is
+		</Definition>
+		</Term>
+		<Term termId="expectant">
+			<Definition xml:lang="en-us">
+			Indicates how expectant audience is
+		</Definition>
+		</Term>
+		<Term termId="happy">
+			<Definition xml:lang="en-us">
+			Indicates how happy audience is
+		</Definition>
+		</Term>
+		<Term termId="scared">
+			<Definition xml:lang="en-us">
+			Indicates how scared audience is
+		</Definition>
+		</Term>
+		<Term termId="storyComplication">
+			<Definition xml:lang="en-us">
+			Indicates the intensity of the story complication
+		</Definition>
+		</Term>
+		<Term termId="storyShape">
+			<Definition xml:lang="en-us">
+			Indicates how a story is developing along the story timeline.
+			Its peak depicts the climax of the story
+		</Definition>
+		</Term>
+	</ClassificationScheme>
+</MdsExampleTest>

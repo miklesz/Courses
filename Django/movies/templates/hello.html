@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Witaj świecie z HTML!</h1>
+
+<p>
+    Aktualny użytkownik to: {{ request.user }}
+</p>
+
+<p>
+    Aktualny czas: {{ time }}
+</p>
+
+<p>
+    Czy aktualny uzytkownik jest uwierzytelniony: {{ user.is_authenticated }}
+</p>
+{% endblock %}
