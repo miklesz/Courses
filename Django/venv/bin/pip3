@@ -1,4 +1,4 @@
-#!/Users/miklesz/Documents/Teaching/Courses/Django/venv/bin/python3.12
+#!/Users/miklesz/Documents/Courses/Courses/Django/venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys
