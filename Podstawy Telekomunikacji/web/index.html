@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="pl">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Podstawy Telekomunikacji</title><link rel="stylesheet" href="index.css"></head>
+  <body><main><h1>Podstawy Telekomunikacji</h1><p>Prezentacje uruchamiane lokalnie. Materiały do samodzielnej nauki znajdują się w Markdownie obok oryginalnych plików PPTX.</p><nav id="lectures"></nav></main><script src="catalog.js"></script><script>document.querySelector('#lectures').replaceChildren(...PT_CATALOG.map(d => { const a=document.createElement('a'); a.href=`player.html?deck=${d.id}`; a.textContent=`${d.id}. ${d.title} (${d.count} slajdów)`; return a; }));</script></body>
+</html>

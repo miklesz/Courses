@@ -1,0 +1,11 @@
+:root { color-scheme: dark; font-family: Arial, sans-serif; background: #111820; color: #eef3f6; }
+body { margin: 0; min-height: 100vh; }
+main { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+header, footer { display: flex; align-items: center; gap: 1rem; padding: .8rem 1.2rem; background: #18232e; }
+header a { color: #7ed4ff; text-decoration: none; font-weight: 700; }
+#title { color: #c8d2db; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#stage { display: grid; place-items: center; padding: 1rem; min-height: 0; }
+#slide { max-width: 100%; max-height: calc(100vh - 7.5rem); box-shadow: 0 8px 24px #0009; }
+footer { justify-content: center; }
+button { min-width: 2.5rem; min-height: 2.25rem; border: 1px solid #587080; border-radius: 4px; background: #223541; color: inherit; font-size: 1.2rem; cursor: pointer; }
+#media a { color: #7ed4ff; margin-left: .8rem; }
